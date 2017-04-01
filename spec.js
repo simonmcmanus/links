@@ -35,12 +35,15 @@ module.exports = {
             'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
             'client/freesketch/freesketch_gothic_light_demo-webfont.woff',
             'client/freesketch/freesketch_gothic_light_demo-webfont.ttf',
-            'client/icons/vimeo.png',
-            'client/icons/youtube.png',
-            'client/icons/wordpress.png',
-            'client/icons/github.png',
-            'client/icons/twitter.png',
-            'client/icons/facebook.png'
+            'client/icons/stamp/vimeo.png',
+            'client/icons/stamp/youtube.png',
+            'client/icons/stamp/wordpress.png',
+            'client/icons/stamp/github.png',
+            'client/icons/stamp/twitter.png',
+            'client/icons/stamp/facebook.png',
+            'client/icons/stamp/mail.png',
+            'client/icons/stamp/delicous.png'
+
         ]
     }
 }
