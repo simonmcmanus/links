@@ -46,7 +46,7 @@ html {
 	/* margin: 0 25%; */
 	/* padding: 10px 20px; */
 	/* min-width: 400px; */
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 @media only screen and (min-width: 900px)  {
@@ -90,7 +90,7 @@ h4 {
     color: #E91E63;
     margin: 0;
     padding: 0;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     font-size: 1.3em;
     overflow: hidden;
     /* width: 80%; */
@@ -110,9 +110,13 @@ li {
 	line-height: 2em;
 
 }
+ul.home {
+    min-height: 8em;
+}
 
 ul.home li {
     padding-left: 53px;
+    /* background: red; */
     padding-top: 9px;
     /* background-size: 40px; */
     height: 30px;
@@ -207,11 +211,11 @@ html[data-speclate-page=links] .home li   {
     max-height: 0;
     min-height: 0;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 0px;
     opacity: 0;
     background-size: 0;
-
-
+    margin: 0;
+    pointer-events: none;
 }
 
 
@@ -265,7 +269,7 @@ a {
     padding: .5em;
     min-height: 40px;
     /* width: 90%; */
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 .links_holder li  h3 {
     margin: 0;
@@ -335,5 +339,4 @@ a {
 #container.loading .home li {
     background-size: 10px;
     opacity: 0;
-    background-position: 30px;
-}
+    background-position: 30p
