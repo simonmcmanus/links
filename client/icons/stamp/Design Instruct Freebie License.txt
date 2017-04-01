@@ -1,0 +1,25 @@
+/**
+ * Vintage Social Media Stamps: Icon Pack
+ *
+ * URL: http://designinstruct.com/free-resources/icons/vintage-social-media-stamps-icon-pack/
+ *
+ * This downloadable freebie source file package includes 14 social icons
+ * at 256x256px. It also contains a PSD template for making your own icons.
+ *
+ * You MAY use the source files in this package for commercial
+ * purposes.
+ *
+ * You MAY NOT redistribute or sell the source files in this package.
+ *
+ * Design Instruct (designinstruct.com)
+ *
+ * LICENSE: This source file package is subject to the
+ * Design Instruct Downloadable Freebie Files Usage Terms
+ * that is viewable through the following URL:
+ * http://designinstruct.com/freebie-usage-terms/
+ *
+ * Author     John Negoita
+ * Author     Design Instruct
+ * Copyright  John Negoita  and Design Instruct
+ * License    http://designinstruct.com/freebie-usage-terms/
+ */
