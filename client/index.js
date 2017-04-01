@@ -37,25 +37,25 @@ if(history.pushState) {
         }
     })
 
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-            analytics('send', 'event', 'service-worker-started')
-        }).catch(function (err) {
-            analytics('send', 'event', 'service-worker-register-failed')
-            console.error(err)
-        })
-    } else {
-        appCacheNanny.start()
-        analytics('send', 'event', 'app-cache-nanny-started')
-    }
+    // if ('serviceWorker' in navigator) {
+    //     // navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+    //     //     analytics('send', 'event', 'service-worker-started')
+    //     // }).catch(function (err) {
+    //     //     analytics('send', 'event', 'service-worker-register-failed')
+    //     //     console.error(err)
+    //     // })
+    // } else {
+    //     appCacheNanny.start()
+    //     analytics('send', 'event', 'app-cache-nanny-started')
+    // }
 
-    appCacheNanny.on('updateready', function () {
-        location.reload()
-        analytics('send', 'event', 'app-cache-nanny-reload')
-    })
-} else {
-    analytics('send', 'event', 'no-history-push-state')
-}
+//     appCacheNanny.on('updateready', function () {
+//         location.reload()
+//         analytics('send', 'event', 'app-cache-nanny-reload')
+//     })
+// } else {
+//     analytics('send', 'event', 'no-history-push-state')
+ }
 
 //analytics('create', 'UA-40911437-5', 'auto')
 analytics('send', 'pageview')

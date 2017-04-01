@@ -93,7 +93,6 @@ h4 {
     white-space: nowrap;
     font-size: 1.3em;
     overflow: hidden;
-    letter-spacing: 1px;
     /* width: 80%; */
 }
 
@@ -283,7 +282,7 @@ a {
 }
 
 .links_holder {
-    background: url('https://media.istockphoto.com/illustrations/yellow-watercolor-splatter-illustration-id162669367?k=6&m=162669367&s=170667a&w=0&h=FaaFxcMZDjbXNzeEjydma0M1PSYgHh2WmI81dR1G-60=');
+    background: url('http://media.istockphoto.com/illustrations/yellow-watercolor-splatter-illustration-id162669367?k=6&m=162669367&s=170667a&w=0&h=FaaFxcMZDjbXNzeEjydma0M1PSYgHh2WmI81dR1G-60=');
     background-position: bottom right;
     background-repeat: no-repeat;
     margin: 0;

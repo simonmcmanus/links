@@ -21,7 +21,7 @@
     "moment": "^2.18.1",
     "speclate": "12.x.x",
     "superagent": "^3.5.2",
-    "speclate-router": "5.4.x",
+    "speclate-router": "5.5.x",
     "speclate-service-worker": "1.3.x",
     "uglifyjs": "^2.4.10",
     "watchify": "^3.8.0",
