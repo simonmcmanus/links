@@ -43,7 +43,6 @@ module.exports = {
             'client/icons/stamp/facebook.png',
             'client/icons/stamp/mail.png',
             'client/icons/stamp/delicious.png'
-
         ]
     }
 }
