@@ -174,10 +174,10 @@ li.mail {
 html[speclate-page=home] .home li {
 
     transition:
-        opacity .1s ease-in .3s,
-        height 0.3s ease-in,
-        min-height 0.3s ease-in,
-        padding 0.3s ease-in,
+        opacity .2s ease-in .2s,
+        height .3s ease-in,
+        min-height .3s ease-in,
+        padding .3s ease-in,
         background-size .3s ease-in,
         font-size .3s ease-in;
 
@@ -273,6 +273,7 @@ a {
 }
 
 .home li {
+    /* load page */
     transition:
         opacity .1s ease-in,
         height 0.3s ease-in,
@@ -296,12 +297,12 @@ a {
     max-height: 0;
 }
 
-
+/*
 .home li:hover {
     background-size: 45px;
     background-position: 2.5px;
 
-}
+}*/
 
 #container.loading .home li {
     background-size: 10px;
