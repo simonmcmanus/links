@@ -4,13 +4,13 @@ module.exports = {
     "/": {
         page: 'home',
         spec: {
-            title: 'simonmcmanus.com'
+            title: 'Simon McManus'
         }
     },
     "/hire.html": {
         page: 'hire',
         spec: {
-            title: 'hire simonmcmanus.com'
+            title: 'Hire Simon McManus'
         }
     },
     "/links.html": {
