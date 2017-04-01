@@ -60,11 +60,10 @@ h1, h2, h3, h4 {
 }
 h1 {
 	font-size: 5em;
-	text-shadow: 1px -2px rgb(107, 122, 143);
+	/* text-shadow: 1px -2px #4BB3FD; */
 	margin: 0px;
 	font-weight: lighter !important;
-	color: rgb(247, 187, 99);
-	/* color: #d1b233; */
+	color: #B2CEDE;
 }
 
 h2 {
@@ -72,20 +71,13 @@ h2 {
 	padding: 0;
 	letter-spacing: 1px;
 	margin: .5em;
-	color: #92877e;
+	color: #3E6680;
 }
 
-h3 {
-
-        color: #6b7a8f;
-
-	line-height: 1.5em;
-	padding: 0;
-	letter-spacing: 1px;
-}
+h3 {color: #6b7a8f;line-height: 1.5em;padding: 0;letter-spacing: 1px;}
 
 h4 {
-    color: #E91E63;
+    color: #DE6B48;
     margin: 0;
     padding: 0;
     /* white-space: nowrap; */
@@ -281,6 +273,9 @@ a {
     float: right;
     font-size: 0.7em;
     color: #cfccd2;
+    margin: 0;
+    padding: 0;
+    height: 2em;
 }
 
 .links_holder {
@@ -332,7 +327,7 @@ a {
 }*/
 
 #container {
-    /* padding-left: 2em; */
+    padding: 0 2em;
 }
 #container.loading .home li {
     background-size: 10px;
