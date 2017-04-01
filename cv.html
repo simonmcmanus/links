@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Simon McManus</title>
+		<style type='text/css'>
+			body{color:#444;font-family:Georgia;background:#ccc;}
+			a{color:#04044A;}
+			h3{font-size:0.9em;margin-top:0em;}
+			.item{margin:0.2em 4em 1.5em;border-bottom:1px solid #ddd;height:auto;}
+			.box{float:left;padding:0.2em 0em 0em 0em;margin-bottom:1em;}
+			.dates{font-size:0.7em; display: inline-block; margin-bottom: 1.5em; }
+			.experience,.education{list-style-image:none;list-style-position:inside;list-style-type:none;margin-left:-2.6em; margin-bottom: 1em	;}
+			.description li,.courses li{font-size: 0.9em; padding-bottom:0.8em;list-style-position:outside;list-style:disc;margin-left:-1.4em;line-height:1.4em;}
+			.courses li{padding:0.2em;list-style:none;}
+			.last{border-bottom:0em;}
+			#container{width:70%;border:1px solid #c2c2c2;background:#FFF;margin:auto;}
+			#top-item{padding:0em;}
+			#main-title{font-size:2.4em;}
+			#contactDetails{font-size:0.9em; margin-bottom: 10px;}
+			.skill-description {font-size:0.8em;height:10em;padding:0.5em 0em 0em 0.5em;line-height:1.4em;}
+			.rating {padding:0.3em;font-size:0.6em;vertical-align:top;}
+
+			@media (min-width: 800px) {
+				.box {width:50%;}
+				h3.summary, div.dates {display: inline-block;}
+				.dates{top: .4em; float: right; position: relative; }
+				.item-title{font-size:1em;font-style:italic;position:relative;text-align:right;top:0.62em;width:7em;}
+				.section{padding-left:8.5em;position:relative;top:-1.5em;}
+				#contactDetails{float:right;position:relative;text-align:right;top:-6em;}
+
+			}
+			@media (max-width: 1100px) {
+				#container{width:99%;border:1px solid #c2c2c2;background:#FFF;margin:auto;}
+			}
+			@media print {
+				body{font-size:0.7em;}
+				a{text-decoration: none;}
+				.box {width:50%;}
+				#contactDetails{float:right;position:relative;text-align:right;top:-6em;}
+				h3.summary, div.dates {display: inline-block;}
+				.dates{top: .4em; float: right; position: relative; }
+				.experience,.education{margin-left:-3.5em;}
+				#container{width:100%;border:0px;margin:auto;}
+			}
+		</style>
+	</head>
+	<body>
+			<div id='container'>
+			<div id='top-item' class='item'>
+				<div class='title'>
+					<h1 id='main-title'>
+						Simon<br>
+						McManus
+					</h1>
+				</div>
+				<div id='contactDetails'>
+					0781 454 5689<br />
+					<a href='http://www.simonmcmanus.com'>simonmcmanus.com</a><br />
+					<a href='mailto:mcmanus.simon@gmail.com'>mcmanus.simon@gmail.com</a><br />
+				</div>
+			</div>
+			<div class='item'>
+				<h2 class='item-title'>
+					Profile
+				</h2>
+				<div class='section'>
+					<p class="summary">
+						London based Node.js specialist passionate about making life for the end user better. Turning ideas into a compelling user experience is what I do best.
+					</p>
+				</div>
+			</div>
+
+
+			<div class='item'>
+				<h2 class='item-title'>
+					Experience
+				</h2>
+				<div class='section'>
+					<ol class="vcalendar">
+						<li class="experience vevent">
+							<h3 class="summary">
+								<a href='http://www.tesco.com'>Tesco</a>
+							</h3>
+							<div class='dates'>
+								<abbr class="dtstart" title="2014-06-01">June 2014</abbr> - <abbr>Present</abbr>
+							</div>
+							<ul class='description'>
+								<li>Developed a component architecture (Using <a href="http://duojs.org/">Duo</a>) to share application code across sites such as <a href="www.tesco.com/groceries/">Tesco Groceries</a>, <a href="http://tesco.com/direct">Tesco Direct</a>, <a href="http://www.clothingattesco.com/">F&amp;F</a> and their other International offerings.
+								<li>Developed a Node.js architecture that can render entirely on the server but also in the browser to give users the best possible experience.</li>
+								<li>Trained a team of front end JS developers to build components using the above Node.js framework.</li>
+							</ul>
+						</li>
+						<li class="experience vevent">
+							<h3 class="summary">
+								<a href='http://www.adstream.com/uk/home' >AdStream</a>
+							</h3>
+							<div class='dates'>
+								<abbr class="dtstart" title="2013-02-01">February 2013</abbr> - <abbr>June 2014</abbr>
+							</div>
+							<ul class='description'>
+								<li>
+									Developed a <a href="https://a5.adstream.com/api/v1">client facing API</a> and built <a href="https://github.com/simonmcmanus/livedocs">LiveDocs</a> a Node.js framework for building, documenting and providing a HTML testing interface for the RESTful APIs.
+								</li>
+							</ul>
+						</li>
+						<li class="experience vevent">
+							<h3 class="summary">
+								<a href='http://clock.co.uk' >Clock</a>
+							</h3>
+							<div class='dates'>
+								<abbr class="dtstart" title="2013-08-01">August 2013</abbr> - <abbr>November 2013</abbr>
+							</div>
+							<ul class='description'>
+								<li>Lead architect/developer building a mobile web app to allow journalists to publish stories/pictures from their mobile phones. Initially built for <a href="http://www.sundayworld.com">Sunday World</a>.</li>
+								<li>Helped support various Node.js projects including Sun Lotto, <a href="http://perks.thesun.co.uk/">Sun Perks</a> and the <a href="http://www.mytimesplus.co.uk/">new Times Plus</a> website.</li>
+							</ul>
+						</li>
+						<li class="experience vevent">
+							<h3 class="summary">
+								<a href='http://news.co.uk'>News UK</a>
+							</h3>
+							<div class='dates'>
+								<abbr class="dtstart" title="2013-03-01">April 2013</abbr> - <abbr>August 2013</abbr>
+							</div>
+							<ul class='description'>
+								<li>Lead Node.js architect/developer working to move <a href="http://www.thesun.co.uk/sol/homepage/">The Sun</a> mobile app (iOS and Android) over to server side rendering.</li>
+								<li>Trained a team of front end developers to the point of competency with Node.js.</li>
+							</ul>
+						</li>
+						<li class="experience vevent">
+							<h3 class="summary">
+								<a href='http://gosquared.com'>GoSquared</a>
+							</h3>
+							<div class='dates'>
+								<abbr class="dtstart" title="2012-03-01">March 2012</abbr> - <abbr>April 2013</abbr>
+							</div>
+							<ul class='description'>
+								<li>Lead Node.js developer and maintainer of the Timeline, Twitter Search, Twitter Followers and sources widget along with the back end API's which power them.</li>
+								<li>Introduced a culture of writing tests, continuous integration and many other industry best practices at GoSquared.</li>
+							</ul>
+						</li>
+
+
+						<li class="experience vevent last">
+							<h3 class="summary">
+								<a href='http://AKQA.com'>AKQA</a>
+							</h3>
+							<div class='dates'>
+								<abbr class="dtstart" title="2010-08-01">August 2010</abbr> - <abbr title="2012-05-01">March 2012</abbr>
+							</div>
+							<ul class='description'>
+								<li><a href="http://configurator.vw.com/ihdcc/configurator.html">Volkswagen Configurator</a>.
+									Owned delivery of Holtzauto page (landing page), primary navigation, share, profanity checking (send to friend), exit confirmation, tray filtering, explore view, Omniture tracking and tenant admin interface. Lead developer on finance interface and disclaimers framework.
+								</li>
+								<li>Lead developer on <a href="http://www.nike.com/nikefootball/academy/about?locale=en_GB">Nike Academy</a> micro site.
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+			<div class='item'>
+				<h2 class='item-title'>
+					Education
+				</h2>
+				<div class='section'>
+					<ol class="education last">
+						<li class="school">
+							<a href="http://www.staffs.ac.uk/" class="institution">Staffordshire University</a>
+							<ul class="courses">
+								<li>BSc(Hons) Internet Technology
+								</li>
+							</ul>
+						</li>
+						<!-- <li class="school last">
+							<a href="http://www.staffs.ac.uk/" class="institution">Epping Forest College</a>
+							<ul class="courses">
+								<li>AVCE (2 A-Levels) ICT
+								</li>
+								<li>A-Level Government and Politics
+								</li>
+							</ul>
+						</li> -->
+					</ol>
+				</div>
+			</div>
+			<div style="page-break-after:always"></div>
+				<div class='item'>
+					<h2 class='item-title'>
+						Tools
+					</h2>
+					<div class='section'>
+
+
+						<div class='box'>
+							<a class="skill" href="http://en.wikipedia.org/wiki/JavaScript" rel="tag">Javascript</a>
+							<div class='skill-description'>
+								<a href="http://unobtrusify.com/" class="skill" rel="tag">Unobtrusive</a> cross browser coding techniques.
+								<a href="http://jquery.com/" class="skill" rel="tag">jQuery</a>,
+								<a href="http://zeptojs.com/" class="skill" rel="tag">Zepto</a>,
+								<a href="http://jquery.com/" class="skill" rel="tag">Backbone</a>,
+								AJAX,
+								 <a href="http://www.json.org/" class="skill" rel="tag">JSON</a>,
+								 <a href="http://en.wikipedia.org/wiki/JSON#JSONP">JSONP</a>.
+								 <a href="http://en.wikipedia.org/wiki/Ajax_%28programming%29" class="skill" rel="tag">AJAX</a>,
+<a href="http://code.shutterstock.com/rickshaw/" class="skill" rel="tag">Rickshaw.js</a>,
+								 <a href="http://d3js.org/" class="skill" rel="tag">D3</a>
+								 .
+								Experience using and creating various custom and open source MV* frameworks.
+							</div>
+						</div>
+						<div class='box'>
+							<a href="http://nodejs.org/" class="skill" rel="tag">Node.js</a><br>
+							<div class='skill-description'>
+
+								<%= moment("20120301", "YYYYMMDD").fromNow().replace('ago', '') %> commercial experience and even longer contributing to the open source community.
+								Experience developing frameworks for sharing code (templates/routes) between the client and server.
+							</div>
+						</div>
+						<div class='box'>
+							<a class="skill" href="https://en.wikipedia.org/wiki/HTML" rel="tag" >HTML 4/5</a>
+							<div class='skill-description'>
+								Clean, <a href="http://www.w3.org/TR/WCAG10/" class="skill" rel="tag">accessible</a>, <a href="http://en.wikipedia.org/wiki/Semantic_HTML" class="skill" rel="tag">semantic</a>, <a href="http://seleniumhq.org/"  class="skill" rel="tag">cross browser</a>, <a href="http://en.wikipedia.org/wiki/Cross-platform">cross platform</a>, <a href="http://en.wikipedia.org/wiki/Search_engine_optimization" class="skill" rel="tag">search engine friendly</a>, hand crafted.
+							</div>
+						</div>
+
+						<div class='box'>
+							<a class="skill" href="http://www.w3.org/Style/CSS/" rel="tag">CSS</a>
+							<div class='skill-description'>
+								Cross browser, simple, clean, elegant designs. Lots of experience building responsive designs that scale down well when viewed on mobile devices.
+								Experience with Less and SASS preprocessor
+							</div>
+						</div>
+
+
+
+						<div class='box'>
+							<a class="skill" href='http://www.w3schools.com/sql/sql_intro.asp'>SQL</a>/<a href="https://en.wikipedia.org/wiki/NoSQL" >NoSQL</a>
+							<div class='skill-description'>
+								Experience using <a href="http://www.mysql.com/" rel="tag" class="skill">MySQL</a>. Enterprise experience with <a href="http://en.wikipedia.org/wiki/Microsoft_SQL_Server"  class="skill" rel="tag">MSSQL</a> and various <a href="http://www.oracle.com/us/products/database/index.html">Oracle offerings</a>. Experience with <a href="http://redis.io/">Redis</a>, <a href="http://www.elasticsearch.org/">Elastic Search</a> <a href="http://www.mongodb.org/">MongoDB</a> and other custom NoSQL solutions.
+							</div>
+						</div>
+						<div class='box'>
+							<a class="skill" href="http://en.wikipedia.org/wiki/Git_%28software%29" rel="tag">Git</a>/<a class="skill" href="http://subversion.apache.org/" rel="tag">SVN</a>
+							<div class='skill-description'>
+								 I use Git for a number of <a href="http://github.com/simonmcmanus/sizlate">personal</a> and <a href="http://github.com/simonmcmanus/nestedSortable">professional</a> projects. Experience with tagging, forking, branching merging and rebasing.
+							</div>
+						</div>
+
+						<div class='box'>
+							<a href="http://en.wikipedia.org/wiki/Linux" class='skill'>External APIs</a>
+							<div class='skill-description'>
+								Implemented a number of applications to the <a href="https://www.heroku.com/">Heroku platform</a>.
+								Built <a href="https://github.com/simonmcmanus/tauth">tAuth (twitter oAuth library)</a> to work with the new <a href="https://dev.twitter.com/docs/auth/oauth">twitter oAuth API</a> in Node.js.
+
+							</div>
+						</div>
+
+						<div class='box'>
+							<a href="http://en.wikipedia.org/wiki/Agile_software_development" class='skill'>Agile</a>
+							<div class='skill-description'>
+								A strong advocate of agile methodologies. Experience with Scrum, Kanban and less formal implementations.
+							</div>
+						</div>
+
+						<div class='box'>
+							<a href="http://en.wikipedia.org/wiki/Test-driven_development" class='skill'>TDD</a>/<a href="http://en.wikipedia.org/wiki/Test-driven_development" class='skill'>BDD</a>
+							<div class='skill-description'>
+
+								Experience with <a href="http://visionmedia.github.io/mocha/">Mocha</a>, <a href="http://sinonjs.org/">Sinon</a> and <a href="http://pivotal.github.io/jasmine/" >Jasmine</a>.
+								Published <a href="https://github.com/simonmcmanus/jasmine.async">Jasmine.async</a> to allow Jasmine tests to work easily with Node.js and NPM.
+								 Coverage reports with <a href="https://github.com/gotwarlost/istanbul">Istanbul</a>.
+							</div>
+						</div>
+
+
+						<div class='box'>
+							Templating
+							<div class='skill-description'>
+							Author of <a href="http://sizlate.com">Sizlate</a> a templating engine for Node.js.
+
+							Experience using the following commercially:
+							<a  href="http://jade-lang.com/">Jade</a>,
+							<a href="https://github.com/visionmedia/ejs">ejs</a>.
+							<a href="http://handlebarsjs.com/">Handlebars</a>,
+							<a href="https://github.com/tmpvar/jsdom">JSDOM</a>,
+							<a href="https://github.com/cheeriojs/cheerio">Cheerio</a>,
+							<a href="http://mustache.github.io/">Mustache</a>
+
+							<a href="https://developer.mozilla.org/en-US/docs/Web/XSLT">XSLT</a>
+							and many more.
+							</div>
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			<div class='item'>
+				<h2 class='item-title'>
+					Interests
+				</h2>
+				<div class='section'>
+					<p class="summary">
+						In my spare time I enjoy walking my dog, photography and keeping up to date with politics.
+					</p>
+					<p>
+					I help run and mentor at the <a href="http://nodeschool.io/london/">London Node School events</a> and help to organise the <a href="http://lnug.org">London Node User Group (LNUG).</a>
+					</p>
+					<p>
+						I have written an article for <a href="http://www.creativebloq.com/net-magazine">Net magazine</a> on 'Writing Maintainable Express applications' and have previously contributed evidence to the <a href='http://www.parliament.uk/business/committees/committees-archive/hlinformationcommittee/hlinfocom/'>House of Lords Information Committee</a> explaining the best ways to publish data on the web. <a href='http://simonmcmanus.wordpress.com/2009/06/24/my-recent-contribution-to-the-house-of-lords-information-committee/'>My contribution</a> was <a href='http://www.publications.parliament.uk/pa/ld200809/ldselect/ldinformation/138/138we26.htm'>published</a> and referenced several times in the <a href='http://www.publications.parliament.uk/pa/ld200809/ldselect/ldinformation/138/13807.htm'>committee report</a>.
+					</p>
+					<p>
+						I also like <a href='http://www.marmite.com/'>Marmite</a>.
+					</p>
+				</div>
+			</div>
+			<div class='item last'>
+				<h2 class='item-title'>
+					References
+				</h2>
+				<div class='section'>
+					<p class="summary">
+						Available on request.
+					</p>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

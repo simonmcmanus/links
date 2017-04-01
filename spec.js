@@ -30,6 +30,7 @@ module.exports = {
             w3c: 'error'
         },
         files: [
+            'cv.html',
             'client/style.css',
             'client/index-compiled.js',
             'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
