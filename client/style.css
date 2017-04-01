@@ -36,8 +36,9 @@
 html {
 	/*background: url(https://previews.123rf.com/images/dimitarmitev/dimitarmitev1404/dimitarmitev140400088/27754912-Flying-splash-yellow-liquid-on-a-white-background-Stock-Photo.jpg) no-repeat top right;*/
 	padding-top: 50px;
-	font-family: arial;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 	height: 80%;
+    line-height: 1.5em;
 }
 
 
@@ -59,11 +60,12 @@ h1, h2, h3, h4 {
 	font-family: sketch_gothiclight;
 }
 h1 {
-	font-size: 5em;
+	font-size: 4.5em;
 	/* text-shadow: 1px -2px #4BB3FD; */
 	margin: 0px;
 	font-weight: lighter !important;
 	color: #B2CEDE;
+	line-height: 0.9em;
 }
 
 h2 {
@@ -109,6 +111,7 @@ ul.home li {
     height: 30px;
     top: 30px;
     position: relative;
+    margin-left: 20px;
 }
 
 
@@ -187,6 +190,7 @@ html[data-speclate-url="/index.html"] .home li {
         opacity .2s ease-in .1s,
         height .2s ease-in,
         min-height .2s ease-in,
+        margin .2s ease-in,
         padding .2s ease-in,
         background-size .2s ease-in,
         font-size .2s ease-in;
@@ -290,12 +294,13 @@ a {
 .home li {
     /* load page */
     transition:
-        opacity .1s ease-in,
-        height .2s ease-in,
-        font-size .2s ease-in,
-        min-height .2s ease-in,
-        padding .2s ease-in,
-        background-size .2s ease-in;
+        opacity .1s ease-in-out,
+        height .2s ease-in-out,
+        font-size .2s ease-in-out,
+        margin .25s ease-in-out,
+        min-height .25s ease-in-out,
+        padding .25s ease-in-out,
+        background-size .25s ease-in-out;
 
 
 
@@ -312,7 +317,7 @@ a {
 .home li a {
     margin-top: 0;
     position: relative;
-    /* top: 8px; */
+    top: -2px;
     /* color: #6a7a96; */
     height: 0;
     max-height: 0;
@@ -331,4 +336,5 @@ a {
 
  ul.talks li li {
     list-style-type: circle;
- }
+    margin-left: 3em;
+    font-family: arial;
