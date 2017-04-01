@@ -37,6 +37,7 @@ module.exports = {
             'client/freesketch/freesketch_gothic_light_demo-webfont.ttf',
             'client/icons/stamp/vimeo.png',
             'client/icons/stamp/youtube.png',
+            'client/icons/stamp/flickr.png',
             'client/icons/stamp/wordpress.png',
             'client/icons/stamp/github.png',
             'client/icons/stamp/twitter.png',

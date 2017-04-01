@@ -36,7 +36,7 @@
 html {
 	/*background: url(https://previews.123rf.com/images/dimitarmitev/dimitarmitev1404/dimitarmitev140400088/27754912-Flying-splash-yellow-liquid-on-a-white-background-Stock-Photo.jpg) no-repeat top right;*/
 	padding-top: 50px;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: arial;
 	height: 80%;
 }
 
@@ -60,13 +60,11 @@ h1, h2, h3, h4 {
 }
 h1 {
 	font-size: 5em;
-
-	text-shadow: 1px -1px rgb(100, 48, 26);
+	text-shadow: 1px -2px rgb(107, 122, 143);
 	margin: 0px;
 	font-weight: lighter !important;
 	color: rgb(247, 187, 99);
-        color: #f7c331;
-
+	color: #d6d2cc;
 }
 
 h2 {
