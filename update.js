@@ -10,7 +10,11 @@ superagent
   .end(function (error, data) {
     console.log('links', data.body)
 
-    var selectors = data.body.map((link) => {
+    var selectors = data.body
+    .filter((link) => {
+        return (link.title, link.url)
+    })
+    .map((link) => {
         return {
             '.title': link.title,
             '.summary': link.summary,

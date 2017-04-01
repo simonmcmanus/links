@@ -48,7 +48,7 @@ html {
 	min-width: 400px;
 }
 
-@media only screen and (min-width: 1200px)  {
+@media only screen and (min-width: 900px)  {
     #content {
 	    margin: 0 25%;
     }
@@ -83,7 +83,7 @@ h3 {
 
 ul {
 	margin:  0;
-	padding: 20px 6px;
+	padding: 0px 25px;
 }
 
 li {
@@ -99,8 +99,8 @@ ul.home li {
     padding-left: 53px;
     padding-top: 9px;
     /* background-size: 40px; */
-    height: 45px;
-    top: 32px;
+    height: 30px;
+    top: 30px;
     position: relative;
 }
 
@@ -171,7 +171,7 @@ li.twitter {
 li.mail {
 	background: url(/client/icons/stamp/mail.png) no-repeat;
 }
-html[speclate-page=home] .home li {
+html[data-speclate-page=home] .home li {
 
     transition:
         opacity .2s ease-in .2s,
@@ -186,8 +186,8 @@ html[speclate-page=home] .home li {
 
 
 
-html[speclate-page=hire] .home li,
-html[speclate-page=links] .home li   {
+html[data-speclate-page=hire] .home li,
+html[data-speclate-page=links] .home li   {
     height: 0;
     max-height: 0;
     min-height: 0;
@@ -200,8 +200,8 @@ html[speclate-page=links] .home li   {
 }
 
 
-html[speclate-page=hire] ul.home li.hire,
-html[speclate-page=links] ul.home li.links {
+html[data-speclate-page=hire] ul.home li.hire,
+html[data-speclate-page=links] ul.home li.links {
     opacity: 1;
     min-height: 50px;
     background-size: 55px;
@@ -248,7 +248,7 @@ a {
     margin: .5em 0;
     background: rgba(238, 238, 238, 0.44);
     padding: .5em;
-    height: 40px;
+    min-height: 40px;
 }
 .links_holder li  h3 {
     margin: 0;
@@ -288,11 +288,19 @@ a {
     opacity: 1;
 }
 
+.home li  h3{
+    margin: 0px;
+    padding: 0;
+    /* background: red; */
+    /* top: 10px; */
+    /* position: relative; */
+}
+
 .home li a {
     margin-top: 0;
     position: relative;
-    top: 8px;
-    color: #6a7a96;
+    /* top: 8px; */
+    /* color: #6a7a96; */
     height: 0;
     max-height: 0;
 }
@@ -304,6 +312,9 @@ a {
 
 }*/
 
+#container {
+    padding-left: 2em;
+}
 #container.loading .home li {
     background-size: 10px;
     opacity: 0;

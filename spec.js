@@ -2,14 +2,21 @@
 const links = require('./links');
 module.exports = {
     "/": {
-        page: 'home'
+        page: 'home',
+        spec: {
+            title: 'simonmcmanus.com'
+        }
     },
     "/hire.html": {
         page: 'hire',
+        spec: {
+            title: 'hire simonmcmanus.com'
+        }
     },
     "/links.html": {
         page: 'links',
         spec: {
+            title: 'Links from Simon McManus',
             ".links_holder": {
                 component: 'link',
                 limit: 5,
@@ -19,6 +26,9 @@ module.exports = {
     },
     options: {
         outputDir: '/docs',
+        validate: {
+            w3c: 'error'
+        },
         files: [
             'client/style.css',
             'client/index-compiled.js',
