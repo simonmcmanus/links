@@ -89,7 +89,7 @@ h4 {
 
 ul {
 	margin:  0;
-	padding: 0px 25px;
+	padding: 0px 0px;
 }
 
 li {
@@ -98,7 +98,6 @@ li {
 	margin: 5px 0;
 	min-height: 30px;
 	line-height: 2em;
-
 }
 ul.home {
     min-height: 8em;
@@ -106,9 +105,7 @@ ul.home {
 
 ul.home li {
     padding-left: 53px;
-    /* background: red; */
     padding-top: 9px;
-    /* background-size: 40px; */
     height: 30px;
     top: 30px;
     position: relative;
@@ -156,7 +153,13 @@ li.wordpress {
 li.youtube {
 	background: url(/client/icons/stamp/youtube.png) no-repeat;
 }
+li.youtube {
+	background: url(/client/icons/stamp/youtube.png) no-repeat;
+}
 
+li.talks {
+	background: url(/client/icons/stamp/digg.png) no-repeat;
+}
 
 li.vimeo {
 	background: url(/client/icons/stamp/vimeo.png) no-repeat;
@@ -166,9 +169,6 @@ li.links, h2.links {
 	background: url(/client/icons/stamp/delicious.png) no-repeat;
 }
 
-h2.links {
-
-}
 li.hire {
 	background: url(/client/icons/stamp/mail.png) no-repeat;
 }
@@ -181,7 +181,7 @@ li.twitter {
 li.mail {
 	background: url(/client/icons/stamp/mail.png) no-repeat;
 }
-html[data-speclate-page=home] .home li {
+html[data-speclate-url="/index.html"] .home li {
 
     transition:
         opacity .2s ease-in .1s,
@@ -195,8 +195,9 @@ html[data-speclate-page=home] .home li {
 
 
 
-html[data-speclate-page=hire] .home li,
-html[data-speclate-page=links] .home li   {
+html[data-speclate-url="/hire.html"] .home li,
+html[data-speclate-url="/links.html"] .home li,
+html[data-speclate-url="/talks.html"] .home li    {
     height: 0;
     max-height: 0;
     min-height: 0;
@@ -209,15 +210,15 @@ html[data-speclate-page=links] .home li   {
 }
 
 
-html[data-speclate-page=hire] ul.home li.hire,
-html[data-speclate-page=links] ul.home li.links {
+html[data-speclate-url="/hire.html"] ul.home li.hire,
+html[data-speclate-url="/links.html"] ul.home li.links,
+html[data-speclate-url="/talks.html"] ul.home li.talks {
     opacity: 1;
     min-height: 50px;
     background-size: 55px;
     padding-left: 68px;
-    font-size: 1.4em;
+    font-size: 2em;
     font-weight: bold;
-
 }
 
 
@@ -290,10 +291,11 @@ a {
     /* load page */
     transition:
         opacity .1s ease-in,
-        height 0.3s ease-in,
-        min-height 0.3s ease-in,
-        padding 0.3s ease-in,
-        background-size .3s ease-in;
+        height .2s ease-in,
+        font-size .2s ease-in,
+        min-height .2s ease-in,
+        padding .2s ease-in,
+        background-size .2s ease-in;
 
 
 
@@ -305,9 +307,6 @@ a {
 .home li  h3{
     margin: 0px;
     padding: 0;
-    /* background: red; */
-    /* top: 10px; */
-    /* position: relative; */
 }
 
 .home li a {
@@ -329,7 +328,7 @@ a {
 #container {
     padding: 0 2em;
 }
-#container.loading .home li {
-    background-size: 10px;
-    opacity: 0;
-    background-position: 30p
+
+ ul.talks li li {
+    list-style-type: circle;
+ }
