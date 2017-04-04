@@ -38,7 +38,7 @@ html {
 	padding-top: 50px;
 	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 	height: 80%;
-    line-height: 1.5em;
+	line-height: 1.5em;
 }
 
 
@@ -60,11 +60,11 @@ h1, h2, h3, h4 {
 	font-family: sketch_gothiclight;
 }
 h1 {
-	font-size: 4.5em;
-	/* text-shadow: 1px -2px #4BB3FD; */
+	font-size: 4.9em;
+	/* text-shadow: 1px 1px #e4ddca; */
 	margin: 0px;
 	font-weight: lighter !important;
-	color: #B2CEDE;
+	color: #6b7a8f;
 	line-height: 0.9em;
 }
 
@@ -73,10 +73,10 @@ h2 {
 	padding: 0;
 	letter-spacing: 1px;
 	margin: .5em;
-	color: #3E6680;
+	color: #879faf;
 }
 
-h3 {color: #6b7a8f;line-height: 1.5em;padding: 0;letter-spacing: 1px;}
+h3 {color: #6b7a8f;line-height: 2em;padding: 0;letter-spacing: 1px;}
 
 h4 {
     color: #DE6B48;
@@ -107,8 +107,9 @@ ul.home {
 
 ul.home li {
     padding-left: 53px;
-    padding-top: 9px;
-    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 33px;
     top: 30px;
     position: relative;
     margin-left: 20px;
@@ -184,16 +185,9 @@ li.twitter {
 li.mail {
 	background: url(/client/icons/stamp/mail.png) no-repeat;
 }
-html[data-speclate-url="/index.html"] .home li {
-
-    transition:
-        opacity .2s ease-in .1s,
-        height .2s ease-in,
-        min-height .2s ease-in,
-        margin .2s ease-in,
-        padding .2s ease-in,
-        background-size .2s ease-in,
-        font-size .2s ease-in;
+html[data-speclate-url="/index.html"] .home li {transition: opacity .2s ease-in .2s,         height .2s ease-in,         min-height .2s ease-in,         margin .2s ease-in,         padding .2s ease-in,         background-size .2s ease-in,         font-size .2s ease-in;}
+html[data-speclate-url="/index.html"] .home li  a{
+    /* top: -5px; */
 }
 
 
@@ -221,46 +215,23 @@ html[data-speclate-url="/talks.html"] ul.home li.talks {
     min-height: 50px;
     background-size: 55px;
     padding-left: 68px;
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 1.7em;
+    /* font-weight: bold; */
 }
 
-
-/*
-li.vimeo {
-	background: url(/client/icons/vimeo.png) no-repeat;
-}
-
-li.youtube {
-	background: url(/client/icons/youtube.png) no-repeat;
-}
-
-li.wordpress {
-	background: url(/client/icons/wordpress.png) no-repeat;
-}
-li.github {
-	background: url(/client/icons/github.png) no-repeat;
-}
-li.twitter {
-	background: url(/client/icons/twitter.png) no-repeat;
-}
-li.facebook {
-	background: url(/client/icons/facebook.png) no-repeat;
-}*/
 
 a {
 	text-decoration: none;
 }
 
 .links_holder {
-    display: grid;
-    grid-gap: 10px;
-
+    /* display: grid; */
+    /* grid-gap: 10px; */
 }
 
 .links_holder li {
     margin: .5em 0;
-    background: rgba(238, 238, 238, 0.44);
+    background: rgba(238, 238, 238, 0.21);
     padding: .5em;
     min-height: 40px;
     /* width: 90%; */
@@ -275,18 +246,28 @@ a {
     /* min-width: 50%; */
 }
 .created {
-    float: right;
+    text-align: right;
     font-size: 0.7em;
     color: #cfccd2;
     margin: 0;
     padding: 0;
     height: 2em;
 }
+/*
+html[data-speclate-url="/links.html"] body {
+    background: url('http://media.istockphoto.com/illustrations/yellow-watercolor-splatter-illustration-id162669367?k=6&m=162669367&s=170667a&w=0&h=FaaFxcMZDjbXNzeEjydma0M1PSYgHh2WmI81dR1G-60=');
+     background-position: bottom right;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: 10em;
+    height: 100%;
+}
+*/
+
+
+
 
 .links_holder {
-    background: url('http://media.istockphoto.com/illustrations/yellow-watercolor-splatter-illustration-id162669367?k=6&m=162669367&s=170667a&w=0&h=FaaFxcMZDjbXNzeEjydma0M1PSYgHh2WmI81dR1G-60=');
-    background-position: bottom right;
-    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
 }
@@ -312,12 +293,14 @@ a {
 .home li  h3{
     margin: 0px;
     padding: 0;
+    font-size: 1em;
+    font-weight: lighter;
 }
 
 .home li a {
     margin-top: 0;
-    position: relative;
-    top: -2px;
+    /* position: relative; */
+    top: -23px;
     /* color: #6a7a96; */
     height: 0;
     max-height: 0;
@@ -332,9 +315,10 @@ a {
 
 #container {
     padding: 0 2em;
+    color: #686b6f;
 }
 
  ul.talks li li {
     list-style-type: circle;
     margin-left: 3em;
-    font-family: arial;
+    font-family: arial
