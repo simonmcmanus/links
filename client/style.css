@@ -44,10 +44,8 @@ html {
 
 
 #content {
-	/* margin: 0 25%; */
-	/* padding: 10px 20px; */
-	/* min-width: 400px; */
-	/* overflow: hidden; */
+    font-family:Poppins;
+
 }
 
 @media only screen and (min-width: 900px)  {
@@ -185,7 +183,17 @@ li.twitter {
 li.mail {
 	background: url(/client/icons/stamp/mail.png) no-repeat;
 }
-html[data-speclate-url="/index.html"] .home li {transition: opacity .2s ease-in .2s,         height .2s ease-in,         min-height .2s ease-in,         margin .2s ease-in,         padding .2s ease-in,         background-size .2s ease-in,         font-size .2s ease-in;}
+html[data-speclate-url="/index.html"] .home li {
+    transition:
+        opacity .2s ease-in .2s,
+        height .2s ease-in,
+        min-height .2s ease-in,
+        margin .2s ease-in,
+        padding .2s ease-in,
+        background-size .2s ease-in,
+        font-size .2s ease-in;
+    transform: scale(1);
+}
 html[data-speclate-url="/index.html"] .home li  a{
     /* top: -5px; */
 }
@@ -220,14 +228,33 @@ html[data-speclate-url="/talks.html"] ul.home li.talks {
 }
 
 
+.home li {
+    /* load page */
+    /*transition:
+
+        height .2s ease-in-out,
+        font-size .2s ease-in-out,
+        margin .2s ease-in-out,
+        min-height .2s ease-in-out,
+        padding .2s ease-in-out,
+        background-size .2s ease-in-out
+        ;*/
+    transition: .4s ease-out,
+        opacity .2s ease-in;
+    transform: scale(1);
+
+
+    background-position: 5px;
+    background-size: 40px;
+    opacity: 1;
+}
+
+
 a {
 	text-decoration: none;
 }
 
-.links_holder {
-    /* display: grid; */
-    /* grid-gap: 10px; */
-}
+
 
 .links_holder li {
     margin: .5em 0;
@@ -272,23 +299,6 @@ html[data-speclate-url="/links.html"] body {
     padding: 0;
 }
 
-.home li {
-    /* load page */
-    transition:
-        opacity .1s ease-in-out,
-        height .2s ease-in-out,
-        font-size .2s ease-in-out,
-        margin .25s ease-in-out,
-        min-height .25s ease-in-out,
-        padding .25s ease-in-out,
-        background-size .25s ease-in-out;
-
-
-
-    background-position: 5px;
-    background-size: 40px;
-    opacity: 1;
-}
 
 .home li  h3{
     margin: 0px;
@@ -306,12 +316,6 @@ html[data-speclate-url="/links.html"] body {
     max-height: 0;
 }
 
-/*
-.home li:hover {
-    background-size: 45px;
-    background-position: 2.5px;
-
-}*/
 
 #container {
     padding: 0 2em;
@@ -321,4 +325,4 @@ html[data-speclate-url="/links.html"] body {
  ul.talks li li {
     list-style-type: circle;
     margin-left: 3em;
-    font-family: arial
+ }
