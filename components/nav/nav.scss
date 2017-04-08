@@ -1,0 +1,82 @@
+.home li.youtube::before {
+	background-image: url('http://simpleicon.com/wp-content/uploads/youtube_1.svg');
+	background-position: top;
+	background-size: cover;
+}
+
+.home li.wordpress::before {
+	background-image: url('http://simpleicon.com/wp-content/uploads/wordpress.png');
+	background-position: top;
+	background-size: cover;
+}
+
+li.facebook { background: url(/client/icons/stamp/facebook.png) no-repeat; }
+li.github { background: url(/client/icons/stamp/github.png) no-repeat; }
+li.email { background: url(/client/icons/stamp/email.png) no-repeat; }
+li.flickr { background: url(/client/icons/stamp/flickr.png) no-repeat; }
+li.wordpress { background: url(/client/icons/stamp/wordpress.png) no-repeat; }
+li.youtube { background: url(/client/icons/stamp/youtube.png) no-repeat; }
+li.youtube {	background: url(/client/icons/stamp/youtube.png) no-repeat; }
+li.talks { background: url(/client/icons/stamp/digg.png) no-repeat;}
+li.vimeo { background: url(/client/icons/stamp/vimeo.png) no-repeat; }
+li.links, h2.links { background: url(/client/icons/stamp/delicious.png) no-repeat; }
+li.hire { background: url(/client/icons/stamp/mail.png) no-repeat; }
+li.twitter { background: url(/client/icons/stamp/twitter.png) no-repeat; }
+li.mail { background: url(/client/icons/stamp/mail.png) no-repeat; }
+
+
+html[data-speclate-url="/index.html"] .home li {
+    transition:
+        opacity .2s ease-in .2s,
+        height .2s ease-in,
+        min-height .2s ease-in,
+        margin .2s ease-in,
+        padding .2s ease-in,
+        background-size .2s ease-in,
+        font-size .2s ease-in;
+    transform: scale(1);
+}
+
+html[data-speclate-url="/hire.html"] .home li,
+html[data-speclate-url="/links.html"] .home li,
+html[data-speclate-url="/talks.html"] .home li    {
+    height: 0;
+    max-height: 0;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0px;
+    opacity: 0;
+    background-size: 0;
+    margin: 0;
+    pointer-events: none;
+}
+
+html[data-speclate-url="/hire.html"] ul.home li.hire,
+html[data-speclate-url="/links.html"] ul.home li.links,
+html[data-speclate-url="/talks.html"] ul.home li.talks {
+    opacity: 1;
+    min-height: 50px;
+    background-size: 55px;
+    padding-left: 68px;
+    font-size: 1.7em;
+}
+
+ul.home {
+    min-height: 4em;
+}
+
+ul.home li {
+    padding-left: 53px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 33px;
+}
+
+.home li {
+    transition: .4s ease-out,
+    opacity .2s ease-in;
+    transform: scale(1);
+    background-position: 5px;
+    background-size: 40px;
+    opacity: 1;
+}

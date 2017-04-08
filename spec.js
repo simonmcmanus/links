@@ -30,14 +30,20 @@ module.exports = {
             }
         }
     },
+    defaultSpec: {
+
+    },
     options: {
         outputDir: '/docs',
+        build: {
+            css: 'scss-global'
+        },
         validate: {
             w3c: 'error'
         },
         files: [
             'cv.html',
-            'client/style.css',
+            'client/global-styles-compiled.css',
             'client/index-compiled.js',
             'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
             'client/freesketch/freesketch_gothic_light_demo-webfont.woff',
@@ -50,7 +56,8 @@ module.exports = {
             'client/icons/stamp/twitter.png',
             'client/icons/stamp/facebook.png',
             'client/icons/stamp/mail.png',
-            'client/icons/stamp/delicious.png'
+            'client/icons/stamp/delicious.png',
+            'client/loading.svg'
         ]
     }
 }

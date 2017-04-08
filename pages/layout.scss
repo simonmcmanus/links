@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'sketch_gothiclight';
+    src: url('/client/freesketch/freesketch_gothic_light_demo-webfont.eot');
+    src: url('/client/freesketch/freesketch_gothic_light_demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/client/freesketch/freesketch_gothic_light_demo-webfont.woff') format('woff'),
+         url('/client/freesketch/freesketch_gothic_light_demo-webfont.ttf') format('truetype'),
+         url('/fonts/freesketch/freesketch_gothic_light_demo-webfont.svg#sketch_gothiclight') format('svg');
+
+    font-style: normal;
+}
+
+html {
+	padding-top: 50px;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+	height: 80%;
+	line-height: 1.5em;
+}
+
+#content {
+    font-family:Poppins;
+}
+
+@media only screen and (min-width: 900px)  {
+    #content {
+	    margin: 0 25%;
+    }
+}
+
+h1, h2, h3, h4 {
+	font-family: sketch_gothiclight;
+}
+h1 {
+	font-size: 4.9em;
+	margin: 0px;
+	font-weight: lighter !important;
+	color: #6b7a8f;
+	line-height: 0.9em;
+}
+
+h2 {
+
+	line-height: 1.5em;
+	padding: 0;
+	letter-spacing: 1px;
+	margin: .5em;
+	color: #879faf;
+}
+
+h3 {color: #6b7a8f;line-height: 2em;padding: 0;letter-spacing: 1px;}
+
+h4 {
+    color: #DE6B48;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+    overflow: hidden;
+
+}
+
+
+ul {
+	margin:  0;
+	padding: 0px 0px;
+}
+
+li {
+	list-style-type: none;
+	margin: 5px 0;
+	min-height: 30px;
+	line-height: 2em;
+}
+
+
+
+a {
+	text-decoration: none;
+}
+
+#container {
+    padding: 0 1em;
+    color: #686b6f;
+}
+
+// @import '../components/loader/loader.scss';
+@import '../components/nav/nav.scss';
+@import '../components/loader/loader.scss';

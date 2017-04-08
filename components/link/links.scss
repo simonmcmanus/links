@@ -1,0 +1,36 @@
+
+.links_holder li {
+    margin: .5em 0;
+    background: rgba(238, 238, 238, 0.21);
+    padding: .5em;
+    min-height: 40px;
+    /* width: 90%; */
+    /* white-space: nowrap; */
+}
+.links_holder li  h3 {
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.links_holder li:first-child {
+    /* min-width: 50%; */
+}
+.created {
+    text-align: right;
+    font-size: 0.7em;
+    color: #cfccd2;
+    margin: 0;
+    padding: 0;
+    height: 2em;
+}
+/*
+html[data-speclate-url="/links.html"] body {
+    background: url('http://media.istockphoto.com/illustrations/yellow-watercolor-splatter-illustration-id162669367?k=6&m=162669367&s=170667a&w=0&h=FaaFxcMZDjbXNzeEjydma0M1PSYgHh2WmI81dR1G-60=');
+     background-position: bottom right;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: 10em;
+    height: 100%;
+}
+*/
+

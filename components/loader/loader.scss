@@ -1,0 +1,52 @@
+ /*load icon*/
+
+.loader {
+      transition: opacity .5s ease-in .4s;
+      opacity: 0;
+}
+
+html.loading .loader{
+  height: .2em;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  margin: 2%;
+  background-color: #ddd;
+}
+
+html.loading .loader:before{
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 0.2em;
+  animation: loading 2s linear infinite;
+
+  background: #dddddd; /* Old browsers */
+  background: -moz-linear-gradient(left, #dddddd 0%, #2989d8 50%, #207cca 67%, #dddddd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #dddddd 0%,#2989d8 50%,#207cca 67%,#dddddd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #dddddd 0%,#2989d8 50%,#207cca 67%,#dddddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#dddddd',GradientType=1 ); /* IE6-9 */
+
+}
+
+@keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}
+
+ html #container {
+    opacity: 1;
+
+    transition: opacity 1s ease-in 0s;
+ }
+html.loading #container {
+    opacity: 0;
+}
+
