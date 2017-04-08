@@ -3,15 +3,17 @@
 .loader {
       transition: opacity .5s ease-in .4s;
       opacity: 0;
+    height: .2em;
+      width: 100%;
+      position: relative;
+    margin: 2%;
+  overflow: hidden;
 }
 
 html.loading .loader{
-  height: .2em;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+
+
   opacity: 1;
-  margin: 2%;
   background-color: #ddd;
 }
 
