@@ -48,6 +48,7 @@ module.exports = {
             'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
             'client/freesketch/freesketch_gothic_light_demo-webfont.woff',
             'client/freesketch/freesketch_gothic_light_demo-webfont.ttf',
+            '/client/icons/stamp/digg.png',
             'client/icons/stamp/vimeo.png',
             'client/icons/stamp/youtube.png',
             'client/icons/stamp/flickr.png',
