@@ -2,3 +2,5 @@ node_modules
 docs
 .DS_Store
 links.json
+client/global-styles-compiled.css
+client/index-compiled.js
