@@ -42,6 +42,7 @@ module.exports = {
             w3c: 'error'
         },
         files: [
+            'favicon.ico',
             'cv.html',
             'client/global-styles-compiled.css',
             'client/index-compiled.js',
