@@ -7,7 +7,7 @@ var analytics = require('ga-browser')(window)
 window.Raven = require('raven-js');
 var consolePlugin = require('raven-js/plugins/console');
 
-Raven.config('https://8ccba625cd374b7b81cbc3ee8ea7c78a@sentry.io/139697').install()
+Raven.config('https://70b5edd3041d40659e92ae57e9e9808b@sentry.io/156588').install()
 consolePlugin(Raven, console, {});
 
 if(history.pushState) {
@@ -57,5 +57,5 @@ if(history.pushState) {
 //     analytics('send', 'event', 'no-history-push-state')
  }
 
-//analytics('create', 'UA-40911437-5', 'auto')
+analytics('create', 'UA-40911437-2', 'auto')
 analytics('send', 'pageview')
