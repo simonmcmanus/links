@@ -26,6 +26,8 @@ html {
     }
 }
 
+
+
 h1, h2, h3, h4 {
 	font-family: sketch_gothiclight;
 }
@@ -83,4 +85,6 @@ a {
 
 // @import '../components/loader/loader.scss';
 @import '../components/nav/nav.scss';
+
 @import '../components/loader/loader.scss';
+@import '../components/link/link.scss';
