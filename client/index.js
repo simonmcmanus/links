@@ -28,7 +28,7 @@ if(history.pushState) {
         },
         error: function (err, $container) {
             if (err) {
-                $container.html('<div class="markdown"><h1>Error</h1><p>Something went wrong fetching the page.</p><p>' + err + '</p></div>')
+                $container.html('<div class="markdown"><h3>Error</h3><p>Something went wrong fetching the page.</p><p>' + err + '</p></div>')
                 console.error(err)
                 analytics('send', 'exception', {
                     exDescription: err.message
