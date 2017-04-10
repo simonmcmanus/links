@@ -1,8 +1,15 @@
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-40911437-2', 'auto');
+  ga('send', 'pageview');
 
 
 var router = require('speclate-router')
 var appCacheNanny = require('appcache-nanny')
-var analytics = require('ga-browser')(window)
 
 window.Raven = require('raven-js');
 var consolePlugin = require('raven-js/plugins/console');
@@ -12,7 +19,7 @@ consolePlugin(Raven, console, {});
 
 if(history.pushState) {
 
-    analytics('send', 'event', 'history-push-state')
+    ga('send', 'event', 'history-push-state')
     window.$ = require('jquery')
 
     router({
@@ -20,7 +27,7 @@ if(history.pushState) {
             var scrollTo = 0;
             $('html,body').scrollTop(scrollTo)
 
-            analytics('send', 'pageview', {
+            ga('send', 'pageview', {
                 page: window.location.pathname,
                 title: document.title
             })
@@ -30,7 +37,7 @@ if(history.pushState) {
             if (err) {
                 $container.html('<div class="markdown"><h3>Error</h3><p>Something went wrong fetching the page.</p><p>' + err + '</p></div>')
                 console.error(err)
-                analytics('send', 'exception', {
+                ga('send', 'exception', {
                     exDescription: err.message
                 })
             }
@@ -39,23 +46,23 @@ if(history.pushState) {
 
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-            analytics('send', 'event', 'service-worker-started')
+            ga('send', 'event', 'service-worker-started')
         }).catch(function (err) {
-            analytics('send', 'event', 'service-worker-register-failed')
+            ga('send', 'event', 'service-worker-register-failed')
             console.error(err)
         })
     } else {
         appCacheNanny.start()
-        analytics('send', 'event', 'app-cache-nanny-started')
+        ga('send', 'event', 'app-cache-nanny-started')
     }
 
     appCacheNanny.on('updateready', function () {
         location.reload()
-        analytics('send', 'event', 'app-cache-nanny-reload')
+        ga('send', 'event', 'app-cache-nanny-reload')
     })
 } else {
     analytics('send', 'event', 'no-history-push-state')
  }
 
-analytics('create', 'UA-40911437-2', 'auto')
-analytics('send', 'pageview')
+ga('create', 'UA-40911437-2', 'auto')
+ga('send', 'pageview')
