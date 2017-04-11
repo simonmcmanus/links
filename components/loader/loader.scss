@@ -1,7 +1,7 @@
  /*load icon*/
 
 .loader {
-      transition: opacity .5s ease-in .4s;
+      transition: opacity .2s ease-in .5s;
       opacity: 0;
     height: .2em;
       width: 100%;
@@ -45,7 +45,6 @@ html.loading .loader:before{
 
  html #container {
     opacity: 1;
-
     transition: opacity 1s ease-in 0s;
  }
 html.loading #container {
