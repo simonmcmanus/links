@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "speclate --watch",
-    "build": "mkdir -p docs && npm run update && speclate --build && npm run js",
+    "build": "mkdir -p docs && npm run update && npm run js && speclate --build ",
     "style": "speclate --scss",
     "start": "speclate --dev 5009",
     "update": "node update.js",
