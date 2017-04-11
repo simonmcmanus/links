@@ -61,6 +61,7 @@ html.loading #container {
     opacity: 0;
 }
 
-html.loading[data-speclate-url="/index.html"] .loader {
+html.loading[data-speclate-url="/index.html"] .loader,
+html.loading[data-speclate-url="/"] .loader {
     opacity: 0;
 }
