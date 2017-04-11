@@ -44,18 +44,18 @@ if(history.pushState) {
         }
     })
 
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-            console.log('register sw')
-            ga('send', 'event', 'service-worker-started')
-        }).catch(function (err) {
-            ga('send', 'event', 'service-worker-register-failed')
-            console.error(err)
-        })
-    } else {
-        appCacheNanny.start()
-        ga('send', 'event', 'app-cache-nanny-started')
-    }
+    // if ('serviceWorker' in navigator) {
+    //     navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+    //         console.log('register sw')
+    //         ga('send', 'event', 'service-worker-started')
+    //     }).catch(function (err) {
+    //         ga('send', 'event', 'service-worker-register-failed')
+    //         console.error(err)
+    //     })
+    // } else {
+    //     appCacheNanny.start()
+    //     ga('send', 'event', 'app-cache-nanny-started')
+    // }
 
     appCacheNanny.on('updateready', function () {
         location.reload()
