@@ -3,7 +3,7 @@
 .loader {
       transition: opacity .2s ease-in .5s;
       opacity: 0;
-    height: .3em;
+    height: 5px;
       width: 84%;
       position: relative;
     margin: 2%;
@@ -26,7 +26,7 @@ html.loading .loader:before{
   content: "";
   left: -200px;
   width: 200px;
-  height: 0.3em;
+  height: 3px;
   animation: loading 2s linear infinite;
 
   background: #dddddd; /* Old browsers */
