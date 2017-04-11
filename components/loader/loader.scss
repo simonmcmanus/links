@@ -3,8 +3,8 @@
 .loader {
       transition: opacity .2s ease-in .5s;
       opacity: 0;
-    height: .2em;
-      width: 100%;
+    height: .3em;
+      width: 84%;
       position: relative;
     margin: 2%;
   overflow: hidden;
@@ -14,8 +14,11 @@ html.loading .loader{
 
 
   opacity: 1;
-  background-color: #ddd;
-}
+background: #f5f7f4; /* Old browsers */
+background: -moz-linear-gradient(top, #f5f7f4 0%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f5f7f4 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f5f7f4 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7f4', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */}
 
 html.loading .loader:before{
   display: block;
@@ -23,7 +26,7 @@ html.loading .loader:before{
   content: "";
   left: -200px;
   width: 200px;
-  height: 0.2em;
+  height: 0.3em;
   animation: loading 2s linear infinite;
 
   background: #dddddd; /* Old browsers */
@@ -47,7 +50,17 @@ html.loading .loader:before{
     opacity: 1;
     transition: opacity 1s ease-in 0s;
  }
+
+html #container {
+    opacity: 1;
+    transition: opacity 1s ease-in 0s;
+ }
+
+
 html.loading #container {
     opacity: 0;
 }
 
+html.loading[data-speclate-url="/index.html"] .loader {
+    opacity: 0;
+}
