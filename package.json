@@ -11,7 +11,7 @@
     "update": "node update.js",
     "js": "npm run prep-js && npm run js-app && npm run js-service-worker",
     "prep-js": "mkdir -p ./docs/client",
-    "js-app-uncompiled": "browserify ./client/index.js  > ./client/index-compiled.js",
+    "js-app-uncompiled": "browserify ./client/index.js  > ./docs/client/index-compiled.js",
     "js-app": "browserify ./client/index.js  | uglifyjs -mc > ./client/index-compiled.js",
     "js-service-worker": "browserify ./client/service-worker.js > ./docs/service-worker.js",
     "js-watch": "watchify ./client/index.js -o ./client/index-compiled.js",
