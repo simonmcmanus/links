@@ -97,6 +97,7 @@ module.exports = {
         files: [
             'favicon.ico',
             'cv.html',
+            'google7da3937a27ed31cd.html',
             'client/global-styles-compiled.css',
             'client/index-compiled.js',
             'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
