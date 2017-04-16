@@ -20,14 +20,15 @@
 
     .tags {
         height: 3em;
+        font-size: 0.7em;
         line-height: 3em;
     }
     .tag {
         background: white;
         color: black;
-        font-size: 0.7em;
         border: 1px solid #e6e9ec;
         padding: .3em .8em;
+        margin: 0 .5em 0 0;
     }
 }
 

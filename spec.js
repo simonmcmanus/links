@@ -1,5 +1,5 @@
 
-const links = require('./links');
+const links = require('./links').reverse();
 module.exports = {
     "/": {
         page: 'home',
@@ -26,18 +26,16 @@ module.exports = {
             title: 'Links from Simon McManus',
             ".links_holder": {
                 component: 'link',
-                sortBy: ['dates', 'tags'],
-                limit: 5,
-                data: links.reverse()
+                data: links
             }
         }
     },
 
     "/links/:date/index.html": {
         page: 'links',
-        data: links.reverse(),
+        data: links,
         url: function(group) {
-            return '/links/' + group.replace(/ /g, '-') + '/index.html'
+            return '/links/' + group + '/index.html'
         },
         group: (pages, item) => {
             created = item['.dateUrl'];
@@ -57,7 +55,7 @@ module.exports = {
     },
     "/tags/:tag/index.html": {
         page: 'links',
-        data: links.reverse(),
+        data: links,
         url: function(group) {
             return '/tags/' + group.replace(/ /g, '-') + '/index.html'
         },
@@ -78,8 +76,8 @@ module.exports = {
             return pages;
         },
         spec: {
-            title: 'Things tagged :group',
-            ".links-title": 'Things tagged:  :group',
+            title: 'Links tagged :group',
+            ".links-title": 'Links tagged:  :group',
             ".links_holder": {
                 component: 'link'
             }

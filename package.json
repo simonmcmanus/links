@@ -22,7 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "moment": "^2.18.1",
-    "speclate": "13.x.x",
+    "speclate": "13.1.x",
     "superagent": "^3.5.2",
     "speclate-router": "7.1.x",
     "speclate-service-worker": "1.3.x",
