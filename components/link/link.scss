@@ -17,6 +17,18 @@
         padding: 0;
         height: 2em;
     }
+
+    .tags {
+        height: 3em;
+        line-height: 3em;
+    }
+    .tag {
+        background: white;
+        color: black;
+        font-size: 0.7em;
+        border: 1px solid #e6e9ec;
+        padding: .3em .8em;
+    }
 }
 
 

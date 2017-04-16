@@ -17,6 +17,7 @@ module.exports = {
         page: 'hire',
         spec: {
             title: 'Hire Simon McManus'
+
         }
     },
     "/links.html": {
@@ -25,13 +26,68 @@ module.exports = {
             title: 'Links from Simon McManus',
             ".links_holder": {
                 component: 'link',
+                sortBy: ['dates', 'tags'],
                 limit: 5,
                 data: links.reverse()
             }
         }
     },
-    defaultSpec: {
 
+    "/links/:date/index.html": {
+        page: 'links',
+        data: links.reverse(),
+        url: function(group) {
+            return '/links/' + group.replace(/ /g, '-') + '/index.html'
+        },
+        group: (pages, item) => {
+            created = item['.dateUrl'];
+            if(!pages[created]) {
+                pages[created] = [];
+            }
+            pages[created].push(item);
+            return pages;
+        },
+        spec: {
+            title: 'Links for :group',
+            ".links-title": 'Links for :group',
+            ".links_holder": {
+                component: 'link'
+            }
+        }
+    },
+    "/tags/:tag/index.html": {
+        page: 'links',
+        data: links.reverse(),
+        url: function(group) {
+            return '/tags/' + group.replace(/ /g, '-') + '/index.html'
+        },
+        group: (pages, item) => {
+            console.log(item['.tag'])
+            if(!item['.tag']) {
+                return pages
+            }
+
+            const tags = item['.tag']
+            tags.forEach(function(tag) {
+                var tagName = tag.innerHTML  // hacky
+                if(!pages[tagName]) {
+                    pages[tagName] = [];
+                }
+                pages[tagName].push(item);
+            })
+            return pages;
+        },
+        spec: {
+            title: 'Things tagged :group',
+            ".links-title": 'Things tagged:  :group',
+            ".links_holder": {
+                component: 'link'
+            }
+        }
+
+    },
+
+    defaultSpec: {
     },
     options: {
         outputDir: '/docs',

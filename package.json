@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "watch": "speclate --watch",
-    "build": "mkdir -p docs && npm run update && npm run js && speclate --build ",
+    "build": "mkdir -p docs && npm run update && npm run js && npm run html",
+    "html": "speclate --build ",
     "style": "speclate --scss",
     "start": "speclate --dev 5009",
     "update": "node update.js",
     "js": "npm run prep-js && npm run js-app && npm run js-service-worker",
     "prep-js": "mkdir -p ./docs/client",
     "js-app-uncompiled": "browserify ./client/index.js  > ./docs/client/index-compiled.js",
-    "js-app": "browserify ./client/index.js  | uglifyjs -mc > ./client/index-compiled.js",
+    "js-app": "browserify ./client/index.js  | uglifyjs > ./client/index-compiled.js",
     "js-service-worker": "browserify ./client/service-worker.js > ./docs/service-worker.js",
     "js-watch": "watchify ./client/index.js -o ./client/index-compiled.js",
     "sass-watch": "node-sass ./pages/layout.scss  --watch"

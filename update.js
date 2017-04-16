@@ -14,11 +14,27 @@ superagent
         return (link.title, link.url)
     })
     .map((link) => {
+        var urlFormat ='YYYY-MM-DD';
+        var tags = false;
+        if(link.tags !== '') {
+
+            tags = link.tags.split(',').map(function(item) {
+                return {
+                    innerHTML: item,
+                    href: '/tags/' + item + '/index.html'
+                }
+            });
+        }
         return {
-            '.title': link.title,
+            '.title': link.title || 'sd',
+            '.dateUrl':  moment(link.created).format(urlFormat),
             '.summary': link.summary,
-            '.created': moment(link.created).format('MMMM Do YYYY'),
-            'a': {
+            '.tag': tags,
+            'a.created': {
+                href: '/links/' + moment(link.created).format(urlFormat) + '/index.html',
+                innerHTML: moment(link.created).format('MMMM Do YYYY')
+            },
+            'a.link': {
                 href: link.url
             }
         }

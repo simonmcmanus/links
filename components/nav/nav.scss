@@ -39,7 +39,10 @@ html[data-speclate-url="/index.html"] .home li {
 
 html[data-speclate-url="/hire.html"] .home li,
 html[data-speclate-url="/links.html"] .home li,
-html[data-speclate-url="/talks.html"] .home li    {
+html[data-speclate-page="links"] .home li,
+html[data-speclate-url="/talks.html"] .home li
+
+   {
     height: 0;
     max-height: 0;
     min-height: 0;
@@ -53,6 +56,7 @@ html[data-speclate-url="/talks.html"] .home li    {
 
 html[data-speclate-url="/hire.html"] ul.home li.hire,
 html[data-speclate-url="/links.html"] ul.home li.links,
+html[data-speclate-page="links"] ul.home li.links,
 html[data-speclate-url="/talks.html"] ul.home li.talks {
     opacity: 1;
     min-height: 50px;
