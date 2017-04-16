@@ -88,6 +88,7 @@ module.exports = {
     },
     options: {
         outputDir: '/docs',
+        domain: 'https://simonmcmanus.com',
         build: {
             css: 'scss-global'
         },
