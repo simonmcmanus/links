@@ -60,7 +60,6 @@ module.exports = {
             return '/tags/' + group.replace(/ /g, '-') + '/index.html'
         },
         group: (pages, item) => {
-            console.log(item['.tag'])
             if(!item['.tag']) {
                 return pages
             }
