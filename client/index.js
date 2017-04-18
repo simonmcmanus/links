@@ -23,6 +23,9 @@ if(history.pushState) {
     window.$ = require('jquery')
 
     router({
+        preFetch: function($container) {
+            $container.empty()
+        },
         after: function (error,  markup, page) {
             var scrollTo = 0;
             $('html,body').scrollTop(scrollTo)
