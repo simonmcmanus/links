@@ -1,5 +1,7 @@
 
 const links = require('./links')
+const allLinks = links.slice(0)
+links.reverse();
 module.exports = {
     "/": {
         page: 'home',
@@ -26,7 +28,7 @@ module.exports = {
             ".links-title": '5 Most recent links',
             ".links_holder": {
                 component: 'link',
-                data: links.slice(0).slice(-5).reverse()
+                data: allLinks.slice(-5).reverse()
             }
         }
     },
