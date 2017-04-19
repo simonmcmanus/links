@@ -1,5 +1,5 @@
 
-const links = require('./links').reverse();
+const links = require('./links')
 module.exports = {
     "/": {
         page: 'home',
@@ -17,16 +17,16 @@ module.exports = {
         page: 'hire',
         spec: {
             title: 'Hire Simon McManus'
-
         }
     },
     "/links.html": {
         page: 'links',
         spec: {
-            title: 'Links from Simon McManus',
+            title: 'Recent links from Simon McManus',
+            ".links-title": '5 Most recent links',
             ".links_holder": {
                 component: 'link',
-                data: links
+                data: links.slice(0).slice(-5).reverse()
             }
         }
     },
@@ -75,7 +75,7 @@ module.exports = {
             return pages;
         },
         spec: {
-            title: 'Links tagged :group',
+            title: ':group links from Simon McManus',
             ".links-title": 'Links tagged:  :group',
             ".links_holder": {
                 component: 'link'
@@ -93,7 +93,7 @@ module.exports = {
             css: 'scss-global'
         },
         validate: {
-            w3c: 'error'
+            w3c: 'ignore'
         },
         files: [
             'favicon.ico',
