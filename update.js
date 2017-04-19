@@ -15,7 +15,7 @@ superagent
     })
     .map((link) => {
         var urlFormat ='YYYY-MM-DD';
-        var tags = false;
+        var tags = [ false ];
         if(link.tags !== '') {
 
             tags = link.tags.split(',').map(function(item) {
