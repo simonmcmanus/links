@@ -21,7 +21,7 @@ superagent
             tags = link.tags.split(',').map(function(item) {
                 return {
                     innerHTML: item,
-                    href: '/tags/' + item + '/index.html'
+                    href: '/tags/' + item.replace(/ /g, '-')  + '/index.html'
                 }
             });
         }
