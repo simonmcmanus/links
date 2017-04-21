@@ -25,10 +25,10 @@ module.exports = {
         page: 'links',
         spec: {
             title: 'Recent links from Simon McManus',
-            ".links-title": '5 Most recent links',
+            ".links-title": '10 most recent links',
             ".links_holder": {
                 component: 'link',
-                data: allLinks.slice(-5).reverse()
+                data: allLinks.slice(-10).reverse()
             }
         }
     },

@@ -25,10 +25,14 @@ superagent
                 }
             });
         }
+
+
+
+
         return {
             '.title': link.title || 'sd',
             '.dateUrl':  moment(link.created).format(urlFormat),
-            '.summary': link.summary,
+            '.summary': (link.summary !== '') ? link.summary : false,
             '.tag': tags,
             'a.created': {
                 href: '/links/' + moment(link.created).format(urlFormat) + '/index.html',
