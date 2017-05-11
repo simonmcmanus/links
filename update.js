@@ -1,9 +1,11 @@
 
-
 var superagent = require('superagent')
 var fs = require('fs')
 var moment = require('moment')
 var chalk = require('chalk')
+
+var Encoder = require('node-html-encoder').Encoder
+var encoder = new Encoder('entity')
 
 superagent
   .get('https://5vu7ki44h5.execute-api.eu-west-2.amazonaws.com/dev/links')
@@ -15,7 +17,7 @@ superagent
     })
     .map((link) => {
         var urlFormat ='YYYY-MM-DD';
-        var tags = [ false ];
+        var tags = [ false ]; // if no tags remove the list.
         if(link.tags !== '') {
 
             tags = link.tags.split(',').map(function(item) {
@@ -32,7 +34,7 @@ superagent
         return {
             '.title': link.title || 'sd',
             '.dateUrl':  moment(link.created).format(urlFormat),
-            '.summary': (link.summary !== '') ? link.summary : false,
+            '.summary': (link.summary !== '') ? encoder.htmlEncode(link.summary) : false,
             '.tag': tags,
             'a.created': {
                 href: '/links/' + moment(link.created).format(urlFormat) + '/index.html',
