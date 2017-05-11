@@ -90,8 +90,16 @@ a {
     border-radius: .1em;
 }
 
+
+html[data-speclate-url="/tags/index.html"] a.tag {
+    display: block;
+    margin: 1em;
+}
+
 // @import '../components/loader/loader.scss';
 @import '../components/nav/nav.scss';
 
 @import '../components/loader/loader.scss';
 @import '../components/link/link.scss';
+
+
