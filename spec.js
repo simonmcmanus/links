@@ -71,7 +71,9 @@ module.exports = {
             ".links-title": 'Tags from Simon McManus',
             ".links_holder": {
                 component: 'tag',
-                data: tags
+                data: {
+                    '.tag': tags
+                }
             }
 
         }
