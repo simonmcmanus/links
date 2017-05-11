@@ -1,5 +1,8 @@
 
 const links = require('./links')
+
+var tags = require('./lib/tags')(links);
+
 const allLinks = links.slice(0)
 links.reverse();
 module.exports = {
@@ -50,10 +53,29 @@ module.exports = {
         spec: {
             title: 'Links for :group',
             ".links-title": 'Links for :group',
+            // "meta[name=description]": {
+            //     content: 'Links for '
+            // },
+            // "meta[name=keywords]": {
+            //     content: 'Links for '
+            // },
             ".links_holder": {
                 component: 'link'
             }
         }
+    },
+    "/tags/index.html": {
+        page: 'links',
+        spec: {
+            title: 'Tags from Simon McManus',
+            ".links-title": 'Tags from Simon McManus',
+            ".links_holder": {
+                component: 'tag',
+                data: tags
+            }
+
+        }
+
     },
     "/tags/:tag/index.html": {
         page: 'links',
@@ -79,6 +101,12 @@ module.exports = {
         spec: {
             title: ':group links from Simon McManus',
             ".links-title": 'Links tagged:  :group',
+            // "meta[name=description]": {
+            //     content: 'Links for aasd'
+            // },
+            // "meta[name=keywords]": {
+            //     content: 'Links for asd'
+            // },
             ".links_holder": {
                 component: 'link'
             }
