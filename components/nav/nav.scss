@@ -18,6 +18,10 @@ html[data-speclate-url="/index.html"] ul.nav li {
     }
 }
 
+
+
+
+// dont show all nav items on the pages
 html[data-speclate-url="/hire.html"] ul.nav li,
 html[data-speclate-url="/links.html"] ul.nav li,
 html[data-speclate-page="links"] ul.nav li,
@@ -27,8 +31,6 @@ html[data-speclate-url="/talks.html"] ul.nav li
     max-height: 0;
     min-height: 0;
     opacity: 0;
-    background-size: 0;
-    font-size: 2em;
     margin: 0;
     pointer-events: none;
 
@@ -48,14 +50,22 @@ html[data-speclate-url="/talks.html"] ul.nav li
 }
 
 
-/* in page */
+/* override to show current nav item  */
 html[data-speclate-url="/hire.html"] ul.nav li.hire,
 html[data-speclate-url="/links.html"] ul.nav li.links,
 html[data-speclate-page="links"] ul.nav li.links,
 html[data-speclate-url="/talks.html"] ul.nav li.talks {
     opacity: 1;
+    // transform: scale(3);
     h3 {
-        top: -52px;
+        font-size: 2em;
+        top: -50px;
+        margin: .4em;
+    }
+    svg {
+        height: 2em;
+        width: 2em;
+
     }
 }
 
@@ -63,7 +73,8 @@ ul.nav {
     li {
         height: 2.5em;
         a {
-            display: inline-block;
+            display: inline;
+              vertical-align: middle;
 
             svg {
                 display:inline-block;
@@ -73,17 +84,50 @@ ul.nav {
                 overflow: visible;
                 margin: 1em;
                 background:#eee;
-                border-radius: 1em;
-                border: 0;
+                      border-radius: 3em;
+
             }
             h3 {
                 display:inline-block;
-                // margin:0;
-                // position: relative;
-                // top: -26px;
-                // left: -13px;
+                vertical-align: top;
             }
         }
     }
 }
+html {
+    ul.nav {
+        svg {
+                animation-name: pulse_animation;
+                animation-duration: 5000ms;
+                transform-origin:70% 70%;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                  animation: spin 2s linear infinite;
 
+                 border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+
+        }
+
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.08); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+
+       0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
