@@ -1,20 +1,27 @@
 
-html[data-speclate-url="/index.html"] .home li {
+
+// /* transition from page to home */
+html[data-speclate-url="/index.html"] ul.nav li {
+
     transition:
         opacity .2s ease-in .2s,
-        height .2s ease-in,
         min-height .2s ease-in,
         margin .2s ease-in,
         padding .2s ease-in,
         background-size .2s ease-in,
-        font-size .2s ease-in;
+        font-size .1s ease-in;
 
+    svg {
+        transition:
+            width .2s ease-in,
+            height .2s ease-in;
+    }
 }
 
-html[data-speclate-url="/hire.html"] .home li,
-html[data-speclate-url="/links.html"] .home li,
-html[data-speclate-page="links"] .home li,
-html[data-speclate-url="/talks.html"] .home li
+html[data-speclate-url="/hire.html"] ul.nav li,
+html[data-speclate-url="/links.html"] ul.nav li,
+html[data-speclate-page="links"] ul.nav li,
+html[data-speclate-url="/talks.html"] ul.nav li
 {
     height: 0;
     max-height: 0;
@@ -24,39 +31,57 @@ html[data-speclate-url="/talks.html"] .home li
     font-size: 2em;
     margin: 0;
     pointer-events: none;
-}
 
-html[data-speclate-url="/hire.html"] ul.home li.hire,
-html[data-speclate-url="/links.html"] ul.home li.links,
-html[data-speclate-page="links"] ul.home li.links,
-html[data-speclate-url="/talks.html"] ul.home li.talks {
-    opacity: 1;
-    span {
-        width: 100px;
-        height: 100px;
-        background-size: cover;
+    transition:
+        opacity 0s ease-in,
+        min-height .2s ease-in,
+        margin .2s ease-in,
+        padding .2s ease-in,
+        font-size .1s ease-in;
+
+
+    svg {
+        transition:
+            width .2s ease-in,
+            height .2s ease-in;
     }
 }
 
 
+/* in page */
+html[data-speclate-url="/hire.html"] ul.nav li.hire,
+html[data-speclate-url="/links.html"] ul.nav li.links,
+html[data-speclate-page="links"] ul.nav li.links,
+html[data-speclate-url="/talks.html"] ul.nav li.talks {
+    opacity: 1;
+    h3 {
+        top: -52px;
+    }
+}
 
-ul {
+ul.nav {
     li {
-        height: 4em;
-        svg {
-            display:inline-block;
-            padding: 1em;
-            margin: 1em;
-            background:#eee;
-            border-radius: 5px;
-            border: 0;
-        }
-
+        height: 2.5em;
         a {
+            display: inline-block;
+
+            svg {
+                display:inline-block;
+                height: 1em;
+                width: 1em;
+                padding: .5em;
+                overflow: visible;
+                margin: 1em;
+                background:#eee;
+                border-radius: 1em;
+                border: 0;
+            }
             h3 {
                 display:inline-block;
-                top: -2em;
-                position: relative;
+                // margin:0;
+                // position: relative;
+                // top: -26px;
+                // left: -13px;
             }
         }
     }
