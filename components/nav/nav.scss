@@ -85,8 +85,39 @@ ul.nav {
                 margin: 1em;
                 background:#eee;
                       border-radius: 3em;
+                      border: 3px solid #aaa;
+
+//                       line {
+//                         transform-origin: 50% 50%;
+//                         transform-origin: 193px 164px;
+//   -webkit-transform-origin: 50% 50%;
+//   -webkit-animation: rotate 4s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
+//   animation: rotate 4s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
+
+//                       }
 
             }
+
+            h3::before {
+                        transform-origin: 50% 50%;
+                        transform-origin: 193px 164px;
+                    -webkit-transform-origin: 50% 50%;
+                    animation: rotate 4s  infinite alternate;
+
+                border-left: 3px solid #fff;
+
+
+                border-radius: 2em;
+                content: ' ';
+
+                position: relative;
+                display: block;
+                left: -86px;
+                top: 7px;
+                width: 47px;
+                height: 46px;
+            }
+
             h3 {
                 display:inline-block;
                 vertical-align: top;
@@ -94,40 +125,14 @@ ul.nav {
         }
     }
 }
-html {
-    ul.nav {
-        svg {
-                animation-name: pulse_animation;
-                animation-duration: 5000ms;
-                transform-origin:70% 70%;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                  animation: spin 2s linear infinite;
-
-                 border-top: 16px solid #3498db; /* Blue */
-            border-radius: 50%;
-
-        }
-
-    }
+@-webkit-keyframes rotate {
+  50% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-
-@keyframes pulse_animation {
-	0% { transform: scale(1); }
-	30% { transform: scale(1); }
-	40% { transform: scale(1.08); }
-	50% { transform: scale(1); }
-	60% { transform: scale(1); }
-	70% { transform: scale(1.05); }
-	80% { transform: scale(1); }
-	100% { transform: scale(1); }
-
-       0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes rotate {
+  50% {
+    transform: rotate(360deg);
+  }
 }
