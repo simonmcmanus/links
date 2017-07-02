@@ -128,34 +128,13 @@ module.exports = {
             w3c: 'ignore'
         },
         files: [
-            'favicon.ico',
+            'user.svg',
             'cv.html',
-            'google7da3937a27ed31cd.html',
             'client/global-styles-compiled.css',
             'client/index-compiled.js',
             'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
             'client/freesketch/freesketch_gothic_light_demo-webfont.woff',
             'client/freesketch/freesketch_gothic_light_demo-webfont.ttf',
-            'client/icons/feather/logos/facebook.svg',
-            'client/icons/feather/logos/twitter.svg',
-            'client/icons/feather/logos/github.svg',
-            'client/icons/feather/communication/mail.svg',
-            'client/icons/feather/photo-and-video/camera.svg',
-            'client/icons/feather/photo-and-video/video.svg',
-            'client/icons/feather/core/link.svg',
-            'client/icons/feather/core/mic.svg',
-            'client/icons/feather/core/tag.svg',
-            'client/icons/stamp/digg.png',
-            'client/icons/stamp/vimeo.png',
-            'client/icons/stamp/youtube.png',
-            'client/icons/stamp/flickr.png',
-            'client/icons/stamp/wordpress.png',
-            'client/icons/stamp/github.png',
-            'client/icons/stamp/twitter.png',
-            'client/icons/stamp/facebook.png',
-            'client/icons/stamp/mail.png',
-            'client/icons/stamp/delicious.png',
-            'client/loading.svg'
         ]
     }
 }

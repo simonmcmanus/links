@@ -61,6 +61,7 @@ html[data-speclate-url="/talks.html"] ul.nav li.talks {
         font-size: 2em;
         top: -50px;
         margin: .4em;
+        margin-left: 0;
     }
     svg {
         height: 2em;
@@ -74,7 +75,7 @@ ul.nav {
         height: 2.5em;
         a {
             display: inline;
-              vertical-align: middle;
+            vertical-align: middle;
 
             svg {
                 display:inline-block;
@@ -84,40 +85,9 @@ ul.nav {
                 overflow: visible;
                 margin: 1em;
                 background:#eee;
-                      border-radius: 3em;
-                      border: 3px solid #aaa;
-
-//                       line {
-//                         transform-origin: 50% 50%;
-//                         transform-origin: 193px 164px;
-//   -webkit-transform-origin: 50% 50%;
-//   -webkit-animation: rotate 4s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
-//   animation: rotate 4s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
-
-//                       }
-
+                border-radius: 3em;
+                border: 3px solid #eee;
             }
-
-            h3::before {
-                        transform-origin: 50% 50%;
-                        transform-origin: 193px 164px;
-                    -webkit-transform-origin: 50% 50%;
-                    animation: rotate 4s  infinite alternate;
-
-                border-left: 3px solid #fff;
-
-
-                border-radius: 2em;
-                content: ' ';
-
-                position: relative;
-                display: block;
-                left: -86px;
-                top: 7px;
-                width: 47px;
-                height: 46px;
-            }
-
             h3 {
                 display:inline-block;
                 vertical-align: top;
@@ -125,14 +95,26 @@ ul.nav {
         }
     }
 }
-@-webkit-keyframes rotate {
-  50% {
-    -webkit-transform: rotate(360deg);
-  }
+
+
+
+html.loading ul.nav svg {
+    animation: rotate 2s infinite;
+
 }
 
 @keyframes rotate {
+ 25% {
+     border-right: 3px solid #879faf;
+ }
   50% {
-    transform: rotate(360deg);
+     border-bottom: 3px solid #879faf;
+  }
+
+  75% {
+     border-left: 3px solid #879faf;
+  }
+ 100% {
+     border-top: 3px solid #879faf;
   }
 }
