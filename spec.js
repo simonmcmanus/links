@@ -103,12 +103,12 @@ module.exports = {
         spec: {
             title: ':group links from Simon McManus',
             ".links-title": 'Links tagged:  :group',
-            // "meta[name=description]": {
-            //     content: 'Links for aasd'
-            // },
-            // "meta[name=keywords]": {
-            //     content: 'Links for asd'
-            // },
+            "meta[name=description]": {
+                content: 'Links tagged :group'
+            },
+            "meta[name=keywords]": {
+                content: ':group'
+            },
             ".links_holder": {
                 component: 'link'
             }
