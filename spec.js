@@ -32,6 +32,12 @@ module.exports = {
             ".links_holder": {
                 component: 'link',
                 data: allLinks.slice(-10).reverse()
+            },
+            "meta[name=description]": {
+                content: 'Links from Simon McManus'
+            },
+            "meta[name=keywords]": {
+                content: 'links'
             }
         }
     },
@@ -53,12 +59,12 @@ module.exports = {
         spec: {
             title: 'Links for :group',
             ".links-title": 'Links for :group',
-            // "meta[name=description]": {
-            //     content: 'Links for '
-            // },
-            // "meta[name=keywords]": {
-            //     content: 'Links for '
-            // },
+            "meta[name=description]": {
+                content: 'Links for :group'
+            },
+            "meta[name=keywords]": {
+                content: ':group'
+            },
             ".links_holder": {
                 component: 'link'
             }
@@ -74,7 +80,13 @@ module.exports = {
                 data: {
                     '.tag': tags
                 }
-            }
+            },
+            "meta[name=description]": {
+                content: 'Tags from Simon McManus'
+            },
+            "meta[name=keywords]": {
+                content: 'tags,links'
+            },
 
         }
 
