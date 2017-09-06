@@ -113,7 +113,7 @@ module.exports = {
             return pages;
         },
         spec: {
-            title: ':group links from Simon McManus',
+            title: ':group | Simon McManus',
             ".links-title": 'Links tagged:  :group',
             "meta[name=description]": {
                 content: 'Links tagged :group'
