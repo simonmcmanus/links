@@ -21,6 +21,7 @@ html[data-speclate-url="/index.html"] ul.nav li {
 
 
 
+
 // dont show all nav items on the pages
 html[data-speclate-url="/hire.html"] ul.nav li,
 html[data-speclate-url="/links.html"] ul.nav li,
@@ -72,10 +73,15 @@ html[data-speclate-url="/talks.html"] ul.nav li.talks {
     }
 }
 
+
+
+
 ul.nav {
     li {
         margin: 1px;
         line-height: .1em;
+
+
         a {
             display: block;
             svg {
@@ -85,12 +91,13 @@ ul.nav {
                 width: 1em;
                 padding: .3em;
                 overflow: visible;
-
+                stroke: #fff !important;
                 background:#eee;
                 border-radius: 3em;
-                border: 3px solid #eee;
+                border: 4px solid #eee;
             }
             h3 {
+
                 display:inline-block;
                 vertical-align: middle;
                 margin-left: .7em;
@@ -101,25 +108,54 @@ ul.nav {
     }
 }
 
+@mixin item($background, $class) {
+    @keyframes rotate-#{$class}  {
+        25% {
+            border-right: 4px solid #eee;
+        }
+        50% {
+            border-bottom: 4px solid #eee;
+        }
+        75% {
+            border-left: 4px solid #eee;
+        }
+        100% {
+            border-top: 4px solid #eee;
+        }
+    }
+
+    html.loading ul.nav li.#{$class} svg {
+        border: 4px solid $background;
+        animation: rotate-#{$class} 2s infinite;
+    }
 
 
-html.loading ul.nav svg {
-    animation: rotate 2s infinite;
+    html[data-speclate-page=#{$class}] h3 {
+        color: $background;
+    }
 
+    // html[data-speclate-page=#{$class}] h5 {
+    //     color: $background;
+    // }
+
+    html[data-speclate-page=#{$class}] ul.nav li.#{$class} a h3 {
+        color: $background;
+    }
+
+    html body  {
+        li.#{$class} a svg {
+            background: $background;
+        }
+    }
 }
 
-@keyframes rotate {
- 25% {
-     border-right: 3px solid #879faf;
- }
-  50% {
-     border-bottom: 3px solid #879faf;
-  }
-
-  75% {
-     border-left: 3px solid #879faf;
-  }
- 100% {
-     border-top: 3px solid #879faf;
-  }
-}
+@include item(#92B558, 'links');
+@include item(#8e44ad, 'hire');
+@include item(#d35400, 'talks');
+@include item(#C48F65, 'wordpress');
+@include item(#1da1f2, 'twitter');
+@include item(#c6cbd1, 'github');
+@include item(#F2552C, 'vimeo');
+@include item(#ff0084, 'flickr');
+@include item(#ff0000, 'youtube');
+@include item(#29487d, 'facebook');
