@@ -3,9 +3,11 @@ var superagent = require('superagent')
 var fs = require('fs')
 var moment = require('moment')
 var chalk = require('chalk')
+var urlSafe = require('./lib/url-safe');
 
 var Encoder = require('node-html-encoder').Encoder
 var encoder = new Encoder('entity')
+var urlFormat ='YYYY-MM-DD';
 
 superagent
   .get('https://5vu7ki44h5.execute-api.eu-west-2.amazonaws.com/dev/links')
@@ -16,13 +18,12 @@ superagent
         return (link.title, link.url)
     })
     .map((link) => {
-        var urlFormat ='YYYY-MM-DD';
         var tags = [ false ]; // if no tags remove the list.
         if(link.tags !== '') {
 
             tags = link.tags.split(',').map(function(item) {
                 return {
-                    innerHTML: item,
+                    innerHTML: item.replace(/ /g, '&nbsp;') ,
                     href: '/tags/' + item.replace(/ /g, '-')  + '/index.html'
                 }
             });
@@ -51,3 +52,39 @@ superagent
          console.log(chalk.green('  ok'))
      })
   });
+
+
+  var postSelectors = require('./posts').filter((post) => {
+    return (
+        post.title !== '' &&
+        post.content !== '' &&
+        post.title.slice(0, 10) !== 'links for '
+    )
+  }).map((post) => {
+
+    return {
+        '.title': post.title,
+        url: '/posts/' + urlSafe(post.title) + '/index.html',
+        '.dateUrl':  moment(post.created).format(urlFormat),
+        '.summary': post.content,
+        '.tag': post.tags.split(',').map(function(item) {
+            return {
+                innerHTML: item.replace(/ /g, '&nbsp;'),
+                href: '/tags/' + item.replace(/ /g, '-')  + '/index.html'
+            }
+        }),
+        'a.created': {
+            href: '/posts/' + urlSafe(post.title) + '/index.html',
+            innerHTML: moment(post.created).format('MMMM Do YYYY')
+        },
+        'a.link': {
+            href: '/posts/' + urlSafe(post.title) + '/index.html'
+        }
+    }
+  });
+
+  fs.writeFile(__dirname + '/posts-selectors.json', JSON.stringify(  postSelectors, null, 4), function (e, d) {
+    console.log(chalk.blue('Updating blog posts'))
+    console.log(chalk.green('  ok'))
+})
+

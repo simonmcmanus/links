@@ -1,8 +1,21 @@
 
 const links = require('./links')
+const posts = require('./posts-selectors')
+const SpecData = require('../lib/datas')
 
-var tags = require('./lib/tags')(links);
 
+
+
+
+
+
+const postsSummary = posts.map((link) => {
+    delete link['.summary']
+    return link
+});
+
+var tags = require('./lib/tags')(links.concat(postsSummary));
+const urlSafe = require('./lib/url-safe');
 const allLinks = links.slice(0)
 links.reverse();
 module.exports = {
@@ -41,6 +54,65 @@ module.exports = {
             }
         }
     },
+    "/posts.html": {
+        page: 'posts',
+        spec: {
+            title: 'Recent posts from Simon McManus',
+            ".page-title": 'Blog posts',
+            ".holder": {
+                component: 'posts',
+                data: posts.slice(50).reverse()
+            },
+            "meta[name=description]": {
+                content: 'Links from Simon McManus'
+            },
+            "meta[name=keywords]": {
+                content: 'links'
+            }
+        }
+    },
+
+
+
+
+    // "/posts/:title/index.html": {
+    //     page: 'post',
+    //     data: [
+    //         {
+    //             id: 1,
+    //             url: '/hi.html',
+    //             title: 'hi there',
+    //             '.title': 'hi there',
+    //             '.summary': 'this is the full summary'
+
+    //         },
+    //         {
+    //             id: 2,
+    //             url: '/bye.html',
+    //             title: 'bye there',
+    //             '.title': 'bye there',
+    //             '.summary': 'this is the full summary of bye'
+    //         }
+    //     ],
+    // },
+
+
+    "/posts/:title/index.html": {
+        page: 'post',
+        data: posts,
+        spec: {
+            title: ':group',
+            ".links-title": ':group',
+            "meta[name=description]": {
+                content: ' :group'
+            },
+            "meta[name=keywords]": {
+                content: ':group'
+            }
+        }
+    },
+
+
 
     "/links/:date/index.html": {
         page: 'links',
@@ -95,7 +167,7 @@ module.exports = {
         page: 'links',
         data: links,
         url: function(group) {
-            return '/tags/' + group.replace(/ /g, '-') + '/index.html'
+            return '/tags/' + urlSafe(group) + '/index.html'
         },
         group: (pages, item) => {
             if(!item['.tag']) {
@@ -136,9 +208,7 @@ module.exports = {
         build: {
             css: 'scss-global'
         },
-        validate: {
-            w3c: 'ignore'
-        },
+
         files: [
             'user.svg',
             'cv.html',

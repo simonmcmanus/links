@@ -1,0 +1,27 @@
+.post-full {
+    .summary {
+        font-size: 1.2em;
+        line-height: 1.8em;
+        margin: 2em 0;
+        p {
+            margin: 2em 0;
+        }
+        pre {
+            margin: 2em 3em;
+        }
+
+    }
+    .tags {
+            font-size: 0.7em;
+            line-height: 3em;
+            background-color: #eeeeee;
+            padding: 1em;
+        .tag {
+            background-color: #fff;
+            font-size: 1.2em;
+            border: #dddddd;
+            padding: .4em 2em;
+            margin: 1em;
+        }
+    }
+}
