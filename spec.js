@@ -1,20 +1,15 @@
 
 const links = require('./links')
-const posts = require('./posts-selectors')
-const SpecData = require('../lib/datas')
+const posts = require('./posts.json')
+const SpecData = require('./lib/datas')
 
+const maps = require('./lib/maps')
 
+var linksData = SpecData([links]);
+var postData = SpecData([posts]);
 
+var tags = require('./lib/tags')([].concat( postData ));
 
-
-
-
-const postsSummary = posts.map((link) => {
-    delete link['.summary']
-    return link
-});
-
-var tags = require('./lib/tags')(links.concat(postsSummary));
 const urlSafe = require('./lib/url-safe');
 const allLinks = links.slice(0)
 links.reverse();
@@ -37,23 +32,23 @@ module.exports = {
             title: 'Hire Simon McManus'
         }
     },
-    "/links.html": {
-        page: 'links',
-        spec: {
-            title: 'Recent links from Simon McManus',
-            ".links-title": '10 most recent links',
-            ".links_holder": {
-                component: 'link',
-                data: allLinks.slice(-10).reverse()
-            },
-            "meta[name=description]": {
-                content: 'Links from Simon McManus'
-            },
-            "meta[name=keywords]": {
-                content: 'links'
-            }
-        }
-    },
+    // "/links.html": {
+    //     page: 'links',
+    //     spec: {
+    //         title: 'Recent links from Simon McManus',
+    //         ".links-title": '10 most recent links',
+    //         ".links_holder": {
+    //             component: 'link',
+    //             data: linksData()
+    //         },
+    //         "meta[name=description]": {
+    //             content: 'Links from Simon McManus'
+    //         },
+    //         "meta[name=keywords]": {
+    //             content: 'links'
+    //         }
+    //     }
+    // },
     "/posts.html": {
         page: 'posts',
         spec: {
@@ -61,7 +56,10 @@ module.exports = {
             ".page-title": 'Blog posts',
             ".holder": {
                 component: 'posts',
-                data: posts.slice(50).reverse()
+                data: postData({
+                    sort: (a, b) => a.epoch < b.epoch,
+                    maps: [maps.postSummary]
+                })
             },
             "meta[name=description]": {
                 content: 'Links from Simon McManus'
@@ -96,85 +94,91 @@ module.exports = {
     //     ],
     // },
 
-
-    "/posts/:title/index.html": {
-        page: 'post',
-        data: posts,
-        spec: {
-            title: ':group',
-            ".links-title": ':group',
-            "meta[name=description]": {
-                content: ' :group'
-            },
-            "meta[name=keywords]": {
-                content: ':group'
-            }
-        }
-    },
-
-
-
-    "/links/:date/index.html": {
-        page: 'links',
-        data: links,
-        url: function(group) {
-            return '/links/' + group + '/index.html'
-        },
-        group: (pages, item) => {
-            created = item['.dateUrl'];
-            if(!pages[created]) {
-                pages[created] = [];
-            }
-            pages[created].push(item);
-            return pages;
-        },
-        spec: {
-            title: 'Links for :group',
-            ".links-title": 'Links for :group',
-            "meta[name=description]": {
-                content: 'Links for :group'
-            },
-            "meta[name=keywords]": {
-                content: ':group'
-            },
-            ".links_holder": {
-                component: 'link'
-            }
-        }
-    },
-    "/tags/index.html": {
-        page: 'links',
-        spec: {
-            title: 'Tags from Simon McManus',
-            ".links-title": 'Tags from Simon McManus',
-            ".links_holder": {
-                component: 'tag',
-                data: {
-                    '.tag': tags
+        "/posts/:title/index.html": {
+            page: 'post',
+            data: postData({
+                maps: [maps.postDetail]
+            }),
+            spec: {
+                title: ':group',
+                ".links-title": ':group',
+                "meta[name=description]": {
+                    content: ' :group'
+                },
+                "meta[name=keywords]": {
+                    content: ':group'
                 }
-            },
-            "meta[name=description]": {
-                content: 'Tags from Simon McManus'
-            },
-            "meta[name=keywords]": {
-                content: 'tags,links'
-            },
+            }
+        },
 
-        }
 
-    },
+
+    // "/links/:date/index.html": {
+    //     page: 'links',
+    //     data: linksData(),
+    //     url: function(group) {
+    //         return '/links/' + group + '/index.html'
+    //     },
+    //     group: (pages, item) => {
+    //         created = item['.dateUrl'];
+    //         if(!pages[created]) {
+    //             pages[created] = [];
+    //         }
+    //         pages[created].push(item);
+    //         return pages;
+    //     },
+    //     spec: {
+    //         title: 'Links for :group',
+    //         ".links-title": 'Links for :group',
+    //         "meta[name=description]": {
+    //             content: 'Links for :group'
+    //         },
+    //         "meta[name=keywords]": {
+    //             content: ':group'
+    //         },
+    //         ".links_holder": {
+    //             component: 'link'
+    //         }
+    //     }
+    // },
+    // "/tags/index.html": {
+    //     page: 'links',
+    //     spec: {
+    //         title: 'Tags from Simon McManus',
+    //         ".links-title": 'Tags from Simon McManus',
+    //         ".links_holder": {
+    //             component: 'tag',
+    //             data: {
+    //                 '.tag': tags
+    //             }
+    //         },
+    //         "meta[name=description]": {
+    //             content: 'Tags from Simon McManus'
+    //         },
+    //         "meta[name=keywords]": {
+    //             content: 'tags,links'
+    //         },
+
+    //     }
+
+    // },
     "/tags/:tag/index.html": {
         page: 'links',
-        data: links,
+        data: linksData({
+            maps: [maps.tags]
+        }),
         url: function(group) {
+
             return '/tags/' + urlSafe(group) + '/index.html'
         },
         group: (pages, item) => {
-            if(!item['.tag']) {
+            console.log('item', item);
+
+            if(!item['tags']) {
                 return pages
             }
 
-            const tags = item['.tag']
+            const tags = item['tags']
             tags.forEach(function(tag) {
                 var tagName = tag.innerHTML  // hacky
                 if(!pages[tagName]) {
