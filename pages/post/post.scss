@@ -1,7 +1,5 @@
 .post-full {
     .summary {
-        font-size: 1.2em;
-        line-height: 1.8em;
         margin: 2em 0;
         p {
             margin: 2em 0;
@@ -12,16 +10,39 @@
 
     }
     .tags {
-            font-size: 0.7em;
-            line-height: 3em;
-            background-color: #eeeeee;
-            padding: 1em;
+        float: left;
+        width: 100%;
+        background-color: #eeeeee;
+
         .tag {
+            display: inline-block;
             background-color: #fff;
-            font-size: 1.2em;
             border: #dddddd;
-            padding: .4em 2em;
-            margin: 1em;
+            padding: .2em 1em;
+            margin: .3em .5em;
         }
     }
+    .tags,
+    .direction {
+        font-size: 0.7em;
+        line-height: 2em;
+        padding: 1em;
+        border-radius: 0.3em;
+    }
+    .next,
+    .previous {
+        border-radius: 0.3em;
+        background-color: #de6a48;
+        font-size: 1.3em;
+        color: #ffffff;
+        padding: .2em 1em;
+        margin: 0em .5em 2em .5em;
+    }
+    .previous {
+        float: left;
+    }
+    .next {
+        float: right;
+    }
 }
+

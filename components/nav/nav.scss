@@ -1,4 +1,15 @@
 
+ul.nav {
+    margin:  0;
+    padding: 0px 0px;
+    li {
+        list-style-type: none;
+        margin: 5px 0;
+        min-height: 30px;
+        line-height: 2em;
+    }
+}
+
 
 // /* transition from page to home */
 html[data-speclate-url="/index.html"] ul.nav li {

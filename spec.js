@@ -5,13 +5,19 @@ const SpecData = require('./lib/datas')
 
 const maps = require('./lib/maps')
 
-var linksData = SpecData([links]);
-var postData = SpecData([posts]);
+var linksData = new SpecData([links]);
+var postData = new SpecData([posts], {
+    filters: [(post) => {
+        return (post.epoch !== null)
+    }]
+});
 
-var tags = require('./lib/tags')([].concat( postData ));
+
+
+//var tags = require('./lib/tags')([].concat( postData ));
 
 const urlSafe = require('./lib/url-safe');
-const allLinks = links.slice(0)
+//const allLinks = links.slice(0)
 links.reverse();
 module.exports = {
     "/": {
@@ -32,23 +38,25 @@ module.exports = {
             title: 'Hire Simon McManus'
         }
     },
-    // "/links.html": {
-    //     page: 'links',
-    //     spec: {
-    //         title: 'Recent links from Simon McManus',
-    //         ".links-title": '10 most recent links',
-    //         ".links_holder": {
-    //             component: 'link',
-    //             data: linksData()
-    //         },
-    //         "meta[name=description]": {
-    //             content: 'Links from Simon McManus'
-    //         },
-    //         "meta[name=keywords]": {
-    //             content: 'links'
-    //         }
-    //     }
-    // },
+    "/links.html": {
+        page: 'links',
+        spec: {
+            title: 'Recent links from Simon McManus',
+            ".links-title": '10 most recent links',
+            ".links_holder": {
+                component: 'link',
+                data: linksData.get({
+                    maps: [maps.linksSummary]
+                })
+            },
+            "meta[name=description]": {
+                content: 'Links from Simon McManus'
+            },
+            "meta[name=keywords]": {
+                content: 'links'
+            }
+        }
+    },
     "/posts.html": {
         page: 'posts',
         spec: {
@@ -56,8 +64,10 @@ module.exports = {
             ".page-title": 'Blog posts',
             ".holder": {
                 component: 'posts',
-                data: postData({
-                    sort: (a, b) => a.epoch < b.epoch,
+                data: postData.get({
+                    sort: (a, b) => {
+                        return a.epoch < b.epoch
+                    },
                     maps: [maps.postSummary]
                 })
             },
@@ -71,45 +81,22 @@ module.exports = {
     },
 
 
-
-
     // "/posts/:title/index.html": {
     //     page: 'post',
-    //     data: [
-    //         {
-    //             id: 1,
-    //             url: '/hi.html',
-    //             title: 'hi there',
-    //             '.title': 'hi there',
-    //             '.summary': 'this is the full summary'
-
+    //     data: postData.get({
+    //         maps: [maps.postDetail]
+    //     }),
+    //     spec: {
+    //         title: ':group',
+    //         ".links-title": ':group',
+    //         "meta[name=description]": {
+    //             content: ' :group'
     //         },
-    //         {
-    //             id: 2,
-    //             url: '/bye.html',
-    //             title: 'bye there',
-    //             '.title': 'bye there',
-    //             '.summary': 'this is the full summary of bye'
+    //         "meta[name=keywords]": {
+    //             content: ':group'
     //         }
-    //     ],
+    //     }
     // },
-
-        "/posts/:title/index.html": {
-            page: 'post',
-            data: postData({
-                maps: [maps.postDetail]
-            }),
-            spec: {
-                title: ':group',
-                ".links-title": ':group',
-                "meta[name=description]": {
-                    content: ' :group'
-                },
-                "meta[name=keywords]": {
-                    content: ':group'
-                }
-            }
-        },
 
 
 
@@ -162,47 +149,47 @@ module.exports = {
     //     }
 
     // },
-    "/tags/:tag/index.html": {
-        page: 'links',
-        data: linksData({
-            maps: [maps.tags]
-        }),
-        url: function(group) {
+    // "/tags/:tag/index.html": {
+    //     page: 'links',
+    //     data: linksData({
+    //         maps: [maps.tags],
+    //         group: [(pages, item) => {
+    //             console.log('item', item);
 
-            return '/tags/' + urlSafe(group) + '/index.html'
-        },
-        group: (pages, item) => {
-            console.log('item', item);
+    //             if (!item['tags']) {
+    //                 return pages
+    //             }
 
-            if(!item['tags']) {
-                return pages
-            }
+    //             const tags = item['tags']
+    //             tags.forEach(function (tag) {
+    //                 var tagName = tag.innerHTML  // hacky
+    //                 if (!pages[tagName]) {
+    //                     pages[tagName] = [];
+    //                 }
+    //                 pages[tagName].push(item);
+    //             })
+    //             return pages;
+    //         }]
+    //     }),
+    //     url: function(group) {
 
-            const tags = item['tags']
-            tags.forEach(function(tag) {
-                var tagName = tag.innerHTML  // hacky
-                if(!pages[tagName]) {
-                    pages[tagName] = [];
-                }
-                pages[tagName].push(item);
-            })
-            return pages;
-        },
-        spec: {
-            title: ':group | Simon McManus',
-            ".links-title": 'Links tagged:  :group',
-            "meta[name=description]": {
-                content: 'Links tagged :group'
-            },
-            "meta[name=keywords]": {
-                content: ':group'
-            },
-            ".links_holder": {
-                component: 'link'
-            }
-        }
+    //         return '/tags/' + urlSafe(group) + '/index.html'
+    //     },
+    //     spec: {
+    //         title: ':group | Simon McManus',
+    //         ".links-title": 'Links tagged:  :group',
+    //         "meta[name=description]": {
+    //             content: 'Links tagged :group'
+    //         },
+    //         "meta[name=keywords]": {
+    //             content: ':group'
+    //         },
+    //         ".links_holder": {
+    //             component: 'link'
+    //         }
+    //     }
 
-    },
+    // },
 
     defaultSpec: {
     },
