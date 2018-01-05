@@ -6,12 +6,33 @@ const SpecData = require('./lib/datas')
 const maps = require('./lib/maps')
 
 var linksData = new SpecData([links]);
+
+
 var postData = new SpecData([posts], {
     filters: [(post) => {
         return (post.epoch !== null)
     }]
 });
 
+
+var combinedData = new SpecData([links, posts], {
+    group: (pages, item) => {
+
+        if (!item['tags']) {
+            return pages
+        }
+
+        const tags = item['tags']
+        tags.forEach(function (tag) {
+            var tagName = tag.innerHTML  // hacky
+            if (!pages[tagName]) {
+                pages[tagName] = [];
+            }
+            pages[tagName].push(item);
+        })
+        return pages;
+    }
+});
 
 
 //var tags = require('./lib/tags')([].concat( postData ));
@@ -149,47 +170,39 @@ module.exports = {
     //     }
 
     // },
-    // "/tags/:tag/index.html": {
-    //     page: 'links',
-    //     data: linksData({
-    //         maps: [maps.tags],
-    //         group: [(pages, item) => {
-    //             console.log('item', item);
+    "/tags/:tag/index.html": {
+        page: 'links',
+        data: [
+                {
+                    id: 'bacon',
+                    title: 'bacon',
+                    tag: 'bacon',
+                    created: '',
+                    links: []
+                }
+        ],
+        urls: function(key) {
+            return '/tags/' + key + '/index.html'
+        },
+        // data: combinedData.get({
+        //     maps: [maps.tags],
+        // }),
 
-    //             if (!item['tags']) {
-    //                 return pages
-    //             }
+        spec: {
+            title: ':group | Simon McManus',
+            ".links-title": 'Links tagged:  :group',
+            "meta[name=description]": {
+                content: 'Links tagged :group'
+            },
+            "meta[name=keywords]": {
+                content: ':group'
+            },
+            ".links_holder": {
+                component: 'link'
+            }
+        }
 
-    //             const tags = item['tags']
-    //             tags.forEach(function (tag) {
-    //                 var tagName = tag.innerHTML  // hacky
-    //                 if (!pages[tagName]) {
-    //                     pages[tagName] = [];
-    //                 }
-    //                 pages[tagName].push(item);
-    //             })
-    //             return pages;
-    //         }]
-    //     }),
-    //     url: function(group) {
-
-    //         return '/tags/' + urlSafe(group) + '/index.html'
-    //     },
-    //     spec: {
-    //         title: ':group | Simon McManus',
-    //         ".links-title": 'Links tagged:  :group',
-    //         "meta[name=description]": {
-    //             content: 'Links tagged :group'
-    //         },
-    //         "meta[name=keywords]": {
-    //             content: ':group'
-    //         },
-    //         ".links_holder": {
-    //             component: 'link'
-    //         }
-    //     }
-
-    // },
+    },
 
     defaultSpec: {
     },

@@ -18,32 +18,13 @@ superagent
         return (link.title, link.url)
     })
     .map((link) => {
-        var tags = [ false ]; // if no tags remove the list.
-        if(link.tags !== '') {
-
-            tags = link.tags.split(',').map(function(item) {
-                return {
-                    innerHTML: item.replace(/ /g, '&nbsp;') ,
-                    href: '/tags/' + item.replace(/ /g, '-')  + '/index.html'
-                }
-            });
-        }
-
-
-
-
         return {
-            '.title': link.title || 'sd',
-            '.dateUrl':  moment(link.created).format(urlFormat),
-            '.summary': (link.summary !== '') ? encoder.htmlEncode(link.summary) : false,
-            '.tag': tags,
-            'a.created': {
-                href: '/links/' + moment(link.created).format(urlFormat) + '/index.html',
-                innerHTML: moment(link.created).format('MMMM Do YYYY')
-            },
-            'a.link': {
-                href: link.url
-            }
+            title: link.title,
+            epoch: moment(link.created).valueOf(),
+            url: link.url,
+            tags: link.tags.split(','),
+            created: moment(link.created).format(urlFormat),
+            summary: (link.summary !== '') ? encoder.htmlEncode(link.summary) : false,
         }
     })
 
