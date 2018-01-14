@@ -4,6 +4,7 @@ const posts = require('./posts.json')
 const SpecData = require('./lib/datas')
 
 const maps = require('./lib/maps')
+const sort = require('./lib/sort')
 
 var linksData = new SpecData([links]);
 
@@ -67,7 +68,9 @@ module.exports = {
             ".links_holder": {
                 component: 'link',
                 data: linksData.get({
-                    maps: [maps.linksSummary]
+                    maps: [maps.linksSummary],
+                    sort: sort.byEpoch,
+                    limit: 10
                 })
             },
             "meta[name=description]": {
@@ -86,9 +89,8 @@ module.exports = {
             ".holder": {
                 component: 'posts',
                 data: postData.get({
-                    sort: (a, b) => {
-                        return a.epoch < b.epoch
-                    },
+                    sort: sort.byEpoch,
+                    limit: 10,
                     maps: [maps.postSummary]
                 })
             },

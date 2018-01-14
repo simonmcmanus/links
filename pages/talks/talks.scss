@@ -1,4 +1,8 @@
- ul.talks li li {
-    list-style-type: circle;
-    margin-left: 3em;
+ ul.talks li {
+    list-style-type: none;
+    margin-left: 1em;
+    padding: .5em;
+    ul {
+       padding-left: 1em;
+    }
  }
