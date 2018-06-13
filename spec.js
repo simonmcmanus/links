@@ -56,7 +56,8 @@ module.exports = {
     },
 
     "/links/create.html": {
-        page: 'link-send'
+        page: 'link-send',
+        spec: {}
     },
     "/posts.html": {
         page: 'posts',
