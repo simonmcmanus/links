@@ -1,7 +1,7 @@
 
 const links = require('./links')
 const posts = require('./posts-selectors')
-const SpecData = require('../lib/datas')
+const SpecData = require('./lib/datas')
 
 
 
