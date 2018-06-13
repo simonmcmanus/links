@@ -54,6 +54,10 @@ module.exports = {
             }
         }
     },
+
+    "/links/create.html": {
+        page: 'link-send'
+    },
     "/posts.html": {
         page: 'posts',
         spec: {
