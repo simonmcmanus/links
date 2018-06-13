@@ -1,10 +1,12 @@
 <h1>hi</h1>
 
+This is a test page.
+
 <script>
 
 
     chrome.identity.getAuthToken({ 'interactive': true }, function (token) {
         // Use the token.
-        console.log(token);
+        alert(token);
     });
 </script>
