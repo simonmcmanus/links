@@ -10,11 +10,13 @@ const SpecData = require('./lib/datas')
 
 
 const postsSummary = posts.map((link) => {
+    console.log('link', link)
     delete link['.summary']
     return link
 });
 
-var tags = require('./lib/tags')(links.concat(postsSummary));
+//var tags = require('./lib/tags')(links.concat(postsSummary));
+var tags = require('./lib/tags')(links);
 const urlSafe = require('./lib/url-safe');
 const allLinks = links.slice(0)
 links.reverse();
@@ -54,28 +56,23 @@ module.exports = {
             }
         }
     },
-
-    "/links/create.html": {
-        page: 'link-send',
-        spec: {}
-    },
-    "/posts.html": {
-        page: 'posts',
-        spec: {
-            title: 'Recent posts from Simon McManus',
-            ".page-title": 'Blog posts',
-            ".holder": {
-                component: 'posts',
-                data: posts.slice(50).reverse()
-            },
-            "meta[name=description]": {
-                content: 'Links from Simon McManus'
-            },
-            "meta[name=keywords]": {
-                content: 'links'
-            }
-        }
-    },
+    // "/posts.html": {
+    //     page: 'posts',
+    //     spec: {
+    //         title: 'Recent posts from Simon McManus',
+    //         ".page-title": 'Blog posts',
+    //         ".holder": {
+    //             component: 'posts',
+    //             data: posts.slice(50).reverse()
+    //         },
+    //         "meta[name=description]": {
+    //             content: 'Links from Simon McManus'
+    //         },
+    //         "meta[name=keywords]": {
+    //             content: 'links'
+    //         }
+    //     }
+    // },
 
     // "/posts/:title/index.html": {
     //     page: 'post',

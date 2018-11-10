@@ -4,6 +4,7 @@ var fs = require('fs')
 var moment = require('moment')
 var chalk = require('chalk')
 var urlSafe = require('./lib/url-safe');
+var url = require('url')
 
 var Encoder = require('node-html-encoder').Encoder
 var encoder = new Encoder('entity')
@@ -41,8 +42,11 @@ superagent
                 href: '/links/' + moment(link.created).format(urlFormat) + '/index.html',
                 innerHTML: moment(link.created).format('MMMM Do YYYY')
             },
+            img: {
+                src: 'https://www.google.com/s2/favicons?domain=' + url.parse(link.url).hostname 
+            },
             'a.link': {
-                href: link.url
+                href: link.url.slice('/')
             }
         }
     })

@@ -1,11 +1,18 @@
 
 .links_holder li {
     margin: 2em 0;
-    background: rgba(238, 238, 238, 0.21);
+    border: 2px solid #cfccd2;
+    border-radius: 3px;
     min-height: 40px;
     padding-top: .5em;
 
     h5 {
+        .favIcon {
+            margin-right: 6px;
+            top: 1px;
+            position: relative;
+            
+        }
         margin: 0;
         font-size: 1.2em;
         margin-bottom: .5em;
@@ -20,7 +27,7 @@
     }
 
     blockquote {
-        background: #f9f9f9;
+        background: #fbfafa;
         border-left: 5px solid #ccc;
         margin: 1em 0;
         padding: 0.5em 10px;
@@ -51,12 +58,13 @@
 
     .tags {
         height: 3em;
-        font-size: 0.7em;
+        font-size: 0.8em;
         line-height: 3em;
     }
     .tag {
-        background: white;
-        color: black;
+        background: #88b748;
+        color: white;
+        border-radius: 7px;
         border: 1px solid #e6e9ec;
         padding: .3em .8em;
         margin: 0 .5em 0 0;
