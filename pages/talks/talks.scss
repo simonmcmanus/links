@@ -1,4 +1,30 @@
- ul.talks li li {
-    list-style-type: circle;
-    margin-left: 3em;
- }
+[data-speclate-page="talks"] #container {
+
+    ul {
+        margin-left: 1em;
+        
+    }
+     li   {
+        list-style-type: circle;
+        margin-left:3em;
+     }
+    
+     .resources li {
+        display: inline-block;
+
+        background-repeat: no-repeat;
+        background-position: 10px;
+        background-size: 1em;
+        padding-left: 2em;
+        margin-left: 1em;
+
+        &.video {
+            background-image: url(/client/icons/play.svg);
+        }
+        &.slides {
+            background-image: url(/client/icons/monitor.svg);
+        }
+     }
+
+}
+

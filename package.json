@@ -16,7 +16,6 @@
     "js-app-uncompiled": "browserify ./client/index.js  > ./docs/client/index-compiled.js",
     "js-app": "browserify ./client/index.js  | uglifyjs > ./client/index-compiled.js",
     "js-service-worker": "browserify ./client/service-worker.js > ./docs/service-worker.js",
-
     "js-watch": "watchify ./client/index.js -o ./client/index-compiled.js",
     "sass-watch": "node-sass ./pages/layout.scss  --watch"
   },

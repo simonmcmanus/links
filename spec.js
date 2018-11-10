@@ -77,9 +77,6 @@ module.exports = {
         }
     },
 
-
-
-
     // "/posts/:title/index.html": {
     //     page: 'post',
     //     data: [
@@ -217,6 +214,8 @@ module.exports = {
         files: [
             'user.svg',
             'cv.html',
+            'client/icons/play.svg',
+            'client/icons/monitor.svg',
             'client/global-styles-compiled.css',
             'client/index-compiled.js',
             'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
