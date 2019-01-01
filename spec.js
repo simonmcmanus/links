@@ -4,11 +4,6 @@ const posts = require('./posts-selectors')
 const SpecData = require('./lib/datas')
 
 
-
-
-
-
-
 const postsSummary = posts.map((link) => {
     console.log('link', link)
     delete link['.summary']
@@ -46,7 +41,12 @@ module.exports = {
             ".links-title": '10 most recent links',
             ".links_holder": {
                 component: 'link',
-                data: allLinks.slice(-10).reverse()
+                data: allLinks.slice(-10).reverse(),
+                groupBy: (item) => {
+                    console.log('item', item)
+                    return item && item['.dateUrl']
+
+                }
             },
             "meta[name=description]": {
                 content: 'Links from Simon McManus'
