@@ -1,20 +1,7 @@
 
-const links = require('./links')
-const posts = require('./posts-selectors')
-const SpecData = require('./lib/datas')
+const LinksReducer = require('./reducers/links')
+var tags = require('./lib/tags')(LinksReducer.get());
 
-
-const postsSummary = posts.map((link) => {
-    console.log('link', link)
-    delete link['.summary']
-    return link
-});
-
-//var tags = require('./lib/tags')(links.concat(postsSummary));
-var tags = require('./lib/tags')(links);
-const urlSafe = require('./lib/url-safe');
-const allLinks = links.slice(0)
-links.reverse();
 module.exports = {
     "/": {
         page: 'home',
@@ -32,7 +19,7 @@ module.exports = {
         page: 'hire',
         spec: {
             title: 'Hire Simon McManus'
-        }
+        } 
     },
     "/links.html": {
         page: 'links',
@@ -41,12 +28,7 @@ module.exports = {
             ".links-title": '10 most recent links',
             ".links_holder": {
                 component: 'link',
-                data: allLinks.slice(-10).reverse(),
-                groupBy: (item) => {
-                    console.log('item', item)
-                    return item && item['.dateUrl']
-
-                }
+                data: LinksReducer.get()
             },
             "meta[name=description]": {
                 content: 'Links from Simon McManus'
@@ -56,66 +38,12 @@ module.exports = {
             }
         }
     },
-    // "/posts.html": {
-    //     page: 'posts',
-    //     spec: {
-    //         title: 'Recent posts from Simon McManus',
-    //         ".page-title": 'Blog posts',
-    //         ".holder": {
-    //             component: 'posts',
-    //             data: posts.slice(50).reverse()
-    //         },
-    //         "meta[name=description]": {
-    //             content: 'Links from Simon McManus'
-    //         },
-    //         "meta[name=keywords]": {
-    //             content: 'links'
-    //         }
-    //     }
-    // },
-
-    // "/posts/:title/index.html": {
-    //     page: 'post',
-    //     data: [
-    //         {
-    //             id: 1,
-    //             url: '/hi.html',
-    //             title: 'hi there',
-    //             '.title': 'hi there',
-    //             '.summary': 'this is the full summary'
-
-    //         },
-    //         {
-    //             id: 2,
-    //             url: '/bye.html',
-    //             title: 'bye there',
-    //             '.title': 'bye there',
-    //             '.summary': 'this is the full summary of bye'
-    //         }
-    //     ],
-    // },
-
-
-    "/posts/:title/index.html": {
-        page: 'post',
-        data: posts,
-        spec: {
-            title: ':group',
-            ".links-title": ':group',
-            "meta[name=description]": {
-                content: ' :group'
-            },
-            "meta[name=keywords]": {
-                content: ':group'
-            }
-        }
-    },
-
 
 
     "/links/:date/index.html": {
         page: 'links',
-        data: links,
+        data: LinksReducer.get(),
+        
         url: function(group) {
             return '/links/' + group + '/index.html'
         },
@@ -149,7 +77,7 @@ module.exports = {
             ".links_holder": {
                 component: 'tag',
                 data: {
-                    '.tag': tags
+                    '.tag': tags,
                 }
             },
             "meta[name=description]": {
@@ -158,14 +86,13 @@ module.exports = {
             "meta[name=keywords]": {
                 content: 'tags,links'
             },
-
         }
-
     },
     "/tags/:tag/index.html": {
         page: 'links',
-        data: links,
+        data: LinksReducer.get(),
         url: function(group) {
+            return '/tags/' + group + '/index.html'
             return '/tags/' + urlSafe(group) + '/index.html'
         },
         group: (pages, item) => {
