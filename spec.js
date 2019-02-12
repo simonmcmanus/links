@@ -1,6 +1,6 @@
 
-const LinksReducer = require('./reducers/links')
-var tags = require('./lib/tags')(LinksReducer.get());
+const LinksList = require('./reducers/links')
+var tags = require('./lib/tags')(LinksList.get());
 
 module.exports = {
     "/": {
@@ -28,7 +28,7 @@ module.exports = {
             ".links-title": '10 most recent links',
             ".links_holder": {
                 component: 'link',
-                data: LinksReducer.get()
+                data: LinksList.get()
             },
             "meta[name=description]": {
                 content: 'Links from Simon McManus'
@@ -42,7 +42,7 @@ module.exports = {
 
     "/links/:date/index.html": {
         page: 'links',
-        data: LinksReducer.get(),
+        data: LinksList.get(),
         
         url: function(group) {
             return '/links/' + group + '/index.html'
@@ -90,7 +90,7 @@ module.exports = {
     },
     "/tags/:tag/index.html": {
         page: 'links',
-        data: LinksReducer.get(),
+        data: LinksList.get(),
         url: function(group) {
             return '/tags/' + group + '/index.html'
             return '/tags/' + urlSafe(group) + '/index.html'
