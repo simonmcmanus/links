@@ -34,20 +34,14 @@ superagent
 
 
         return {
-            '.title': link.title || 'sd',
-            '.dateUrl':  moment(link.created).format(urlFormat),
-            '.summary': (link.summary !== '') ? encoder.htmlEncode(link.summary) : false,
-            '.tag': tags,
-            'a.created': {
-                href: '/links/' + moment(link.created).format(urlFormat) + '/index.html',
-                innerHTML: moment(link.created).format('MMMM Do YYYY')
-            },
-            img: {
-                src: 'https://www.google.com/s2/favicons?domain=' + url.parse(link.url).hostname 
-            },
-            'a.link': {
-                href: link.url.slice('/')
-            }
+            title: link.title,
+            url:  link.url.slice('/'),
+            dateUrl:  moment(link.created).format(urlFormat),
+            summary: (link.summary !== '') ? encoder.htmlEncode(link.summary) : false,
+            'tags': tags,
+            createdUrl: '/links/' + moment(link.created).format(urlFormat) + '/index.html',
+            createdDate: moment(link.created).format('MMMM Do YYYY'),
+            favIcon: 'https://www.google.com/s2/favicons?domain=' + url.parse(link.url).hostname 
         }
     })
 
