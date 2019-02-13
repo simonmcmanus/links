@@ -60,10 +60,16 @@ superagent
     )
   }).map((post) => {
 
+        var created = moment();
+    if(post.created) {
+        created = moment(post.created)
+
+    }
+
     return {
         '.title': post.title,
         url: '/posts/' + urlSafe(post.title) + '/index.html',
-        '.dateUrl':  moment(post.created).format(urlFormat),
+        '.dateUrl':  created.format(urlFormat),
         '.summary': post.content,
         '.tag': post.tags.split(',').map(function(item) {
             return {
@@ -73,7 +79,7 @@ superagent
         }),
         'a.created': {
             href: '/posts/' + urlSafe(post.title) + '/index.html',
-            innerHTML: moment(post.created).format('MMMM Do YYYY')
+            innerHTML: created.format('MMMM Do YYYY')
         },
         'a.link': {
             href: '/posts/' + urlSafe(post.title) + '/index.html'

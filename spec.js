@@ -28,7 +28,9 @@ module.exports = {
             ".links-title": '10 most recent links',
             ".links_holder": {
                 component: 'link',
-                data: LinksList.get()
+                data: LinksList.get({
+                    limit: 10
+                })
             },
             "meta[name=description]": {
                 content: 'Links from Simon McManus'
@@ -42,7 +44,15 @@ module.exports = {
 
     "/links/:date/index.html": {
         page: 'links',
-        data: LinksList.get(),
+        data: LinksList.get({
+            filters: [
+                function(item, params) {
+                    return true
+                    return item.date === params.date
+
+                }
+            ]
+        }),
         
         url: function(group) {
             return '/links/' + group + '/index.html'
