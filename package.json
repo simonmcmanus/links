@@ -11,10 +11,12 @@
     "style": "speclate --scss",
     "start": "speclate --dev 5009",
     "update": "node update.js",
+    "js-dev": "npm run js && mv ./client/index-compiled.js ./docs/client/index-compiled.js",
     "js": "npm run prep-js && npm run js-app && npm run js-service-worker",
     "prep-js": "mkdir -p ./docs/client",
     "js-app-uncompiled": "browserify ./client/index.js  > ./docs/client/index-compiled.js",
-    "js-app": "browserify ./client/index.js  | uglifyjs > ./client/index-compiled.js",
+    "js-app-all": "browserify ./client/index.js  | uglifyjs > ./client/index-compiled.js",
+    "js-app": "browserify ./client/index.js  > ./client/index-compiled.js",
     "js-service-worker": "browserify ./client/service-worker.js > ./docs/service-worker.js",
     "js-watch": "watchify ./client/index.js -o ./client/index-compiled.js",
     "sass-watch": "node-sass ./pages/layout.scss  --watch"
@@ -23,18 +25,17 @@
   "license": "ISC",
   "dependencies": {
     "appcache-nanny": "^1.1.0",
+    "async": "^2.6.2",
     "browserify": "14.x.x",
     "ga-browser": "^1.0.0",
-    "jquery": "^3.1.1",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "node-html-encoder": "0.0.2",
     "raven-js": "^3.11.0",
-    "speclate": "16.1.x",
-    "speclate-router": "8.3.x",
+    "speclate": "19.x.x",
     "speclate-service-worker": "1.3.x",
     "superagent": "^3.5.2",
     "uglify-js": "^2.4.10",
-    "watchify": "^3.8.0"
+    "watchify": "^3.11.1"
   }
 }
