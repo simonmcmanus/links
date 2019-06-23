@@ -90,20 +90,20 @@ module.exports = {
     // },
 
 
-    "/posts/:title/index.html": {
-        page: 'post',
-        data: posts,
-        spec: {
-            title: ':group',
-            ".links-title": ':group',
-            "meta[name=description]": {
-                content: ' :group'
-            },
-            "meta[name=keywords]": {
-                content: ':group'
-            }
-        }
-    },
+    // "/posts/:title/index.html": {
+    //     page: 'post',
+    //     data: posts,
+    //     spec: {
+    //         title: ':group',
+    //         ".links-title": ':group',
+    //         "meta[name=description]": {
+    //             content: ' :group'
+    //         },
+    //         "meta[name=keywords]": {
+    //             content: ':group'
+    //         }
+    //     }
+    // },
 
 
 
