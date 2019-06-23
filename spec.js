@@ -4,13 +4,7 @@ const posts = require('./posts-selectors')
 const SpecData = require('./lib/datas')
 
 
-
-
-
-
-
 const postsSummary = posts.map((link) => {
-    console.log('link', link)
     delete link['.summary']
     return link
 });
@@ -217,7 +211,7 @@ module.exports = {
             'client/index-compiled.js',
             'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
             'client/freesketch/freesketch_gothic_light_demo-webfont.woff',
-            'client/freesketch/freesketch_gothic_light_demo-webfont.ttf',
+            'client/freesketch/freesketch_gothic_light_demo-webfont.ttf'
         ]
     }
 }

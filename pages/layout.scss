@@ -1,4 +1,14 @@
 
+
+$background: #373638 !default;
+$text: #a0a3a7 !default;
+$text-highlight: #d4d4d4 !default;
+$focus: #000 !default;
+$heading: #8f8d9a !default;
+$shadow:#1f1e1e !default;
+$boxes: #ccc !default;
+
+
 @font-face {
     font-family: 'sketch_gothiclight';
     src: url('/client/freesketch/freesketch_gothic_light_demo-webfont.eot');
@@ -13,8 +23,25 @@
 html {
 	padding-top: 50px;
 	height: 80%;
-	line-height: 1.5em;
+    line-height: 1.5em;
+    background: $background;
+    color: $text;
 }
+
+section, .section {
+    background: $boxes;
+    padding: .5em;
+    border-radius: 3px;
+    min-height: 40px;
+    margin-bottom: 1em;
+    background: #d2d2d208;
+
+    h4 {
+        margin: 0.4em;
+        padding-bottom: 1em;
+    }
+}
+
 
 #content {
     font-family:Poppins;
@@ -26,18 +53,20 @@ html {
     }
 }
 
-
-
-h1, h2, h3, h4 {
-
+a {
+    color: $text;
 }
+
 h1 {
-	font-size: 4.9em;
-	margin: 0px;
+    font-size: 4.9em;
+    
+    margin: 0;
 	font-weight: lighter !important;
-	color:#6f6f7a;
+	color:$heading;
     line-height: 0.9em;
+    box-shadow: #000;
     font-family: sketch_gothiclight;
+    text-shadow: 2px 2px $shadow;
 }
 
 h2 {
@@ -45,10 +74,11 @@ h2 {
 	line-height: 1.5em;
 	padding: 0;
 	margin: .5em;
-	color: #879faf;
+    color: $heading;
+    text-shadow: 1px 1px $shadow;
 }
 
-h3 {color: #6b7a8f;line-height: 2em;padding: 0;}
+h3 {color: $text-highlight;  line-height: 2em;padding: 0; }
 
 h4 {
     color: #DE6B48;
@@ -73,12 +103,12 @@ li {
 
 
 a {
-	text-decoration: none;
+    text-decoration: none;
+    color: #d4d4d4;
 }
 
 #container {
     padding: 0 1em;
-    color: #686b6f;
 }
 
 .notice {

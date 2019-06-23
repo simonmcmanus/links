@@ -66,7 +66,6 @@ html[data-speclate-page="post"] ul.nav li.wordpress {
         font-size: 2em;
         margin: .4em;
         margin-left: 1em;
-        margin-top:.6em;
     }
     svg {
          transform: scale(1.3);
@@ -81,6 +80,7 @@ html[data-speclate-page="post"] ul.nav li.wordpress {
 
 
 ul.nav {
+    margin-left:  2em;
     li {
         margin: 1px;
         line-height: .1em;
@@ -93,20 +93,20 @@ ul.nav {
                 vertical-align: middle;
                 height: 1em;
                 width: 1em;
-                padding: .3em;
+                padding: .6em;
                 overflow: visible;
                 stroke: #fff !important;
                 background:#eee;
                 border-radius: 50%;
-                border: 4px solid #eee;
+                border: 4px solid #373638;
+                box-shadow: inset 0px 0px 0px .3px black;
+
             }
             h3 {
 
                 display:inline-block;
                 vertical-align: middle;
-                margin-left: 3px;
-                margin-bottom: 5px;
-                margin-top: 8px;
+                margin: .3em;
             }
         }
     }
@@ -114,23 +114,24 @@ ul.nav {
 
 @mixin item($background, $class) {
     @keyframes rotate-#{$class}  {
+        0% {
+            border-right: 4px solid  $background;
+        }
         25% {
-            border-right: 4px solid #eee;
+            border-bottom: 4px solid $background;
         }
         50% {
-            border-bottom: 4px solid #eee;
+            border-left: 4px solid $background;
         }
         75% {
-            border-left: 4px solid #eee;
-        }
-        100% {
-            border-top: 4px solid #eee;
+            border-top: 4px solid $background;
         }
     }
 
     html.loading ul.nav li.#{$class} svg {
-        border: 4px solid $background;
+        border: 4px solid $shadow;
         animation: rotate-#{$class} 2s infinite;
+        border: 4px solid $shadow;
     }
 
 
