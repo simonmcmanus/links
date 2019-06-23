@@ -55,37 +55,37 @@ superagent
   });
 
 
-  var postSelectors = require('./posts').filter((post) => {
-    return (
-        post.title !== '' &&
-        post.content !== '' &&
-        post.title.slice(0, 10) !== 'links for '
-    )
-  }).map((post) => {
+//   var postSelectors = require('./posts').filter((post) => {
+//     return (
+//         post.title !== '' &&
+//         post.content !== '' &&
+//         post.title.slice(0, 10) !== 'links for '
+//     )
+//   }).map((post) => {
 
-    return {
-        '.title': post.title,
-        url: '/posts/' + urlSafe(post.title) + '/index.html',
-        '.dateUrl':  moment(new Date(post.created)).format(urlFormat),
-        '.summary': post.content,
-        '.tag': post.tags.split(',').map(function(item) {
-            return {
-                innerHTML: item.replace(/ /g, '&nbsp;'),
-                href: '/tags/' + item.replace(/ /g, '-')  + '/index.html'
-            }
-        }),
-        'a.created': {
-            href: '/posts/' + urlSafe(post.title) + '/index.html',
-            innerHTML: moment(new Date(post.created)).format('MMMM Do YYYY')
-        },
-        'a.link': {
-            href: '/posts/' + urlSafe(post.title) + '/index.html'
-        }
-    }
-  });
+//     return {
+//         '.title': post.title,
+//         url: '/posts/' + urlSafe(post.title) + '/index.html',
+//         '.dateUrl':  moment(new Date(post.created)).format(urlFormat),
+//         '.summary': post.content,
+//         '.tag': post.tags.split(',').map(function(item) {
+//             return {
+//                 innerHTML: item.replace(/ /g, '&nbsp;'),
+//                 href: '/tags/' + item.replace(/ /g, '-')  + '/index.html'
+//             }
+//         }),
+//         'a.created': {
+//             href: '/posts/' + urlSafe(post.title) + '/index.html',
+//             innerHTML: moment(new Date(post.created)).format('MMMM Do YYYY')
+//         },
+//         'a.link': {
+//             href: '/posts/' + urlSafe(post.title) + '/index.html'
+//         }
+//     }
+//   });
 
-  fs.writeFile(__dirname + '/posts-selectors.json', JSON.stringify(  postSelectors, null, 4), function (e, d) {
-    console.log(chalk.blue('Updating blog posts'))
-    console.log(chalk.green('  ok'))
-})
+//   fs.writeFile(__dirname + '/posts-selectors.json', JSON.stringify(  postSelectors, null, 4), function (e, d) {
+//     console.log(chalk.blue('Updating blog posts'))
+//     console.log(chalk.green('  ok'))
+// })
 
