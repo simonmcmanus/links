@@ -30,17 +30,14 @@ superagent
             });
         }
 
-
-
-
         return {
             '.title': link.title || 'sd',
-            '.dateUrl':  moment(link.created).format(urlFormat),
+            '.dateUrl':  moment(new Date(link.created)).format(urlFormat),
             '.summary': (link.summary !== '') ? encoder.htmlEncode(link.summary) : false,
             '.tag': tags,
             'a.created': {
-                href: '/links/' + moment(link.created).format(urlFormat) + '/index.html',
-                innerHTML: moment(link.created).format('MMMM Do YYYY')
+                href: '/links/' + moment(new Date(link.created)).format(urlFormat) + '/index.html',
+                innerHTML: moment(new Date(link.created)).format( 'MMMM Do YYYY')
             },
             img: {
                 src: 'https://www.google.com/s2/favicons?domain=' + url.parse(link.url).hostname 
@@ -69,7 +66,7 @@ superagent
     return {
         '.title': post.title,
         url: '/posts/' + urlSafe(post.title) + '/index.html',
-        '.dateUrl':  moment(post.created).format(urlFormat),
+        '.dateUrl':  moment(new Date(post.created)).format(urlFormat),
         '.summary': post.content,
         '.tag': post.tags.split(',').map(function(item) {
             return {
@@ -79,7 +76,7 @@ superagent
         }),
         'a.created': {
             href: '/posts/' + urlSafe(post.title) + '/index.html',
-            innerHTML: moment(post.created).format('MMMM Do YYYY')
+            innerHTML: moment(new Date(post.created)).format('MMMM Do YYYY')
         },
         'a.link': {
             href: '/posts/' + urlSafe(post.title) + '/index.html'

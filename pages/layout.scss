@@ -26,8 +26,13 @@ html {
     line-height: 1.5em;
     background: $background;
     color: $text;
+
+  transition: background-color 0.2s ease;
 }
 
+html.loading {
+    background: $shadow;
+}
 section, .section {
     background: $boxes;
     padding: .5em;
