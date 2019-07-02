@@ -840,13 +840,6 @@
         "created": "Wed, 28 Nov 2007 12:18:59 +0000"
     },
     {
-        "title": "Could ccTiddly 2.x solve the Robbie Problem?",
-        "url": "local",
-        "content": "I was thinking on the train home how it would be cool to store a reference to peoples online identities (facebook, twitter, del.icio.us, blogs.....) in the ccTiddly user profiles.\r\n\r\nIt was interesting to see <a href=\"http://blog.iclutton.com/2007/11/lifestreaming-or-robbie-clutton-problem.html\" title=\"Robbies post\">Robbies post </a>about lifestreaming when I arrived home.\r\n\r\nI like the idea of this life streaming stuff,  Im thinking we could either store the URLs of our users various online profiles, or maybe just links to their various RSS feeds all of which can then be comsumed by Tiddlywiki or anything else for that matter.\r\n\r\nhmmm.. interesting stuff\r\n\r\nideas welcome",
-        "tags": "ccTiddly,lifestream,SimonMcManus,simonmcmanus.com,tiddlywiki",
-        "created": "Wed, 28 Nov 2007 21:06:28 +0000"
-    },
-    {
         "title": "links for 2007-11-30",
         "url": "local",
         "content": "<ul class=\"delicious\">\n\t<li>\n\t\t<div class=\"delicious-link\"><a href=\"http://www.thescripts.com/forum/thread435850.html\">How ot test if an internet connection exists... - JavaScript</a></div>\n\t\t<div class=\"delicious-extended\">afew ways to test if you have a net connection is javascript</div>\n\t</li>\n</ul>\n",
