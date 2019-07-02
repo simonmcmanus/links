@@ -35,6 +35,7 @@
     "node-html-encoder": "0.0.2",
     "raven-js": "^3.11.0",
     "showdown": "^1.9.0",
+    "slugify": "^1.3.4",
     "speclate": "^19.0.1",
     "speclate-service-worker": "1.3.x",
     "superagent": "^3.5.2",
