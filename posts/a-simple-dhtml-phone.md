@@ -7,7 +7,7 @@ I spent a while searching for this script only to realise it would be quicker to
   
 This simple application uses javascript and HTML to allow the user to enter a number using the keypad and then let them make a call. This example can link to makeCall.php in the examples directory if you wish to make calls.  
   
-[![phone_call.gif](http://simonmcmanus.files.wordpress.com/2007/07/phone_call.gif)](http://simonmcmanus.files.wordpress.com/2007/07/phone_call.gif "phone_call.gif")  
+[![phone_call.gif](https://simonmcmanus.files.wordpress.com/2007/07/phone_call.gif)](https://simonmcmanus.files.wordpress.com/2007/07/phone_call.gif "phone_call.gif")  
   
 Just copy the code into a HTML file in the root of the BT PHP directory and you should be in business.  
   

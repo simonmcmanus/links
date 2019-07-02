@@ -15,11 +15,11 @@ The plug-in (you need to update the server,  url and then create a tiddler and 
   
 Plugin :  
   
-[search.txt](http://simonmcmanus.files.wordpress.com/2008/01/search.txt "search.txt")  
+[search.txt](https://simonmcmanus.files.wordpress.com/2008/01/search.txt "search.txt")  
   
 PHP Code :  
   
-[searchphp.txt](http://simonmcmanus.files.wordpress.com/2008/01/searchphp.txt "searchphp.txt")  
+[searchphp.txt](https://simonmcmanus.files.wordpress.com/2008/01/searchphp.txt "searchphp.txt")  
   
 (you will need to rename the file from searchphp.txt to search.php)  
   

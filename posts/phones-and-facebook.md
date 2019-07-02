@@ -5,7 +5,7 @@ date: Thu, 19 Jul 2007 10:35:41 +0000
 ---
 This is what my Facebook application for the [BT SDK](http://sdk.bt.com/ "BT SDK") currently looks like,  
 
-[![callmeo_facebook.gif](http://simonmcmanus.files.wordpress.com/2007/07/callmeo_facebook.gif)](http://simonmcmanus.files.wordpress.com/2007/07/callmeo_facebook.gif "callmeo_facebook.gif")
+[![callmeo_facebook.gif](https://simonmcmanus.files.wordpress.com/2007/07/callmeo_facebook.gif)](https://simonmcmanus.files.wordpress.com/2007/07/callmeo_facebook.gif "callmeo_facebook.gif")
 
   
 

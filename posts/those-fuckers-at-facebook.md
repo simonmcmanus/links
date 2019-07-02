@@ -5,10 +5,10 @@ date: Thu, 13 Sep 2007 10:47:11 +0000
 ---
 So last week i attended BarCamp and wrote the BT Mojo application, which lets people have a box on their facebook profile page from which people can send them text messages.  
   
-![Facebook Screen shot](http://simonmcmanus.files.wordpress.com/2007/09/picture-2.png)  
+![Facebook Screen shot](https://simonmcmanus.files.wordpress.com/2007/09/picture-2.png)  
 It does a very simple job, but there was plenty of potential to expand. So yesterday I was asked to present about the work I have been doing over the last few weeks. Clearly I wanted to show my MojoMob application. When I attempted to send myself a text (sad i know) i got the following error message. I knew for a fact that none of the code had been changed since I had last tested and also confirmed the remote file it was calling was present.  
   
-![Error1](http://simonmcmanus.files.wordpress.com/2007/09/picture-3.png)  
+![Error1](https://simonmcmanus.files.wordpress.com/2007/09/picture-3.png)  
   
 The Page at http://www.facebook.com says:  
   

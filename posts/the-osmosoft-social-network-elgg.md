@@ -9,7 +9,7 @@ I have always found social networking sites fascinating, so when i got the oppor
   
 In BT we are keen to understand social networks. We love facebook, but we know it has some openness issues. I have previously asked the question what would happen if Facebook were to be open sourced? Well here we have an app that is open source and does facebook type stuff.  
   
-So at a first glance it looks nice : [![picture-5.png](http://simonmcmanus.files.wordpress.com/2007/09/picture-5.png)](http://simonmcmanus.files.wordpress.com/2007/09/picture-5.png "picture-5.png")  
+So at a first glance it looks nice : [![picture-5.png](https://simonmcmanus.files.wordpress.com/2007/09/picture-5.png)](https://simonmcmanus.files.wordpress.com/2007/09/picture-5.png "picture-5.png")  
   
 You get all the things you would expect, most notably RSS everywhere. The problem with social networking applications is that its very hard to evaluate them when you are the only user.  
   

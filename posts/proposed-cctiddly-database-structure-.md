@@ -5,9 +5,9 @@ date: Fri, 02 Nov 2007 15:54:36 +0000
 ---
 Over the past few week I have been working with cool cold, Martin and [Jeremy](http://jermolene.wordpress.com/2=J11qqnKPIVNXkJ6uFLCadA) to decide where we want to take ccTiddly going forward. The idea is to make ccTiddly completely self service without removing any functionality. In order to do this we need to store what is currently stored in the /config/default.php file and store it in a single database.  
   
-This is the currently the proposed design. Any comments and suggestions are welcome. I will be publishing more about road map for this project very soon. [![erm_summary.jpg](http://simonmcmanus.files.wordpress.com/2007/11/erm_summary.jpg)](http://simonmcmanus.files.wordpress.com/2007/11/erm_summary.jpg "erm_summary.jpg")  
+This is the currently the proposed design. Any comments and suggestions are welcome. I will be publishing more about road map for this project very soon. [![erm_summary.jpg](https://simonmcmanus.files.wordpress.com/2007/11/erm_summary.jpg)](https://simonmcmanus.files.wordpress.com/2007/11/erm_summary.jpg "erm_summary.jpg")  
   
-[![erm1.jpg](http://simonmcmanus.files.wordpress.com/2007/11/erm1.jpg)](http://simonmcmanus.files.wordpress.com/2007/11/erm1.jpg "erm1.jpg")  
+[![erm1.jpg](https://simonmcmanus.files.wordpress.com/2007/11/erm1.jpg)](https://simonmcmanus.files.wordpress.com/2007/11/erm1.jpg "erm1.jpg")  
   
 ```js
 

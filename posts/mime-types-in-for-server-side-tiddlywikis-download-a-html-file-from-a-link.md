@@ -15,7 +15,7 @@ There a many different MIME types available, Wikipedia provides a summary of som
   
 Setting the MIME type to HTML simple loads the webpage into the browser becuase it knows how to display html files. There were two ways to produce the save dialog box, firstly the above example. By telling the browser to expect a Zip file it immediately returns the save as box. I was not overly happy with this because it was not a zip file and the dialog box informed the user they were going to be downloading a PC ZIP Achive :  
 
-![picture-2.png](http://simonmcmanus.files.wordpress.com/2007/11/picture-2.png)
+![picture-2.png](https://simonmcmanus.files.wordpress.com/2007/11/picture-2.png)
 
   
 

@@ -3,7 +3,7 @@ tags: BT,ccTiddly,database design,mysql,Osmosoft,phpmyadmin,SimonMcManus
 title: Latest Database design for ccTiddly 
 date: Fri, 09 Nov 2007 13:33:27 +0000
 ---
-[![erm2.jpg](http://simonmcmanus.files.wordpress.com/2007/11/erm2.jpg)](http://simonmcmanus.files.wordpress.com/2007/11/erm2.jpg "erm2.jpg")  
+[![erm2.jpg](https://simonmcmanus.files.wordpress.com/2007/11/erm2.jpg)](https://simonmcmanus.files.wordpress.com/2007/11/erm2.jpg "erm2.jpg")  
   
 and the sql :  
 \[sourcecode language='sql'\]  
