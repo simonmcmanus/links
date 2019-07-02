@@ -10,7 +10,7 @@ var turndownService = new TurndownService({
 })
 
 turndownService.addRule('pre', {
-  filter: ['pre'],
+  filter: ['pre', 'code'],
   replacement: function (content) {
     return '\n```js\n' + content + '\n```\n'
   }
@@ -44,9 +44,9 @@ var postSelectors = require('../posts').filter((post) => {
 })
   . forEach((post) => {
     const year = moment(new Date(post.created)).format('YYYY/MM/DD')
-    const fileName = year + '/' + post.title + '.md'
+    const fileName = post.title + '.md'
 
-    var markdown = turndownService.turndown(post.content)
+    var markdown = turndownService.turndown(post.content.replace(/\n/g, '<br />'))
 
     const content = `---
 tags: ${post.tags || ''}
