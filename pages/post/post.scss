@@ -1,27 +1,38 @@
 .post-full {
+    pre {
+        background: $background;
+        width: 100%;
+        padding: 1em;
+    }
     .summary {
         font-size: 1.2em;
         line-height: 1.8em;
-        margin: 2em 0;
+        margin: 1em 0;
         p {
-            margin: 2em 0;
+            margin: 1em 0;
         }
         pre {
-            margin: 2em 3em;
+            margin: 2em 1em;
         }
 
     }
+    img {
+        max-width: 80%;
+    }
     .tags {
-            font-size: 0.7em;
-            line-height: 3em;
-            background-color: #eeeeee;
-            padding: 1em;
-        .tag {
-            background-color: #fff;
-            font-size: 1.2em;
-            border: #dddddd;
-            padding: .4em 2em;
-            margin: 1em;
-        }
+        margin-top: 1em;
+        margin-bottom: 1em;
+        li {
+            display: inline-block;
+        }        
+    }
+    .tag {
+        background: #afe7604a;
+        color: white;
+        border-radius: 7px;
+        border: 1px solid $background;
+        line-height: 2em;
+        padding: .3em .8em;
+        margin: 0 .5em 0 0;
     }
 }
