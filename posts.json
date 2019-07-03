@@ -83,13 +83,7 @@
         "tags": "",
         "created": "Wed, 18 Jul 2007 12:24:19 +0000"
     },
-    {
-        "title": "Phones and Facebook",
-        "url": "local",
-        "content": "This is what my Facebook application for the <a href=\"http://sdk.bt.com/\" title=\"BT SDK\">BT SDK</a> currently looks like,\r\n<p align=\"left\"><a href=\"https://simonmcmanus.files.wordpress.com/2007/07/callmeo_facebook.gif\" title=\"callmeo_facebook.gif\"><img src=\"https://simonmcmanus.files.wordpress.com/2007/07/callmeo_facebook.gif\" alt=\"callmeo_facebook.gif\" /></a></p>\r\n<p align=\"left\">Unfortunately you can not install this application yourself yet because the payment method/model have still not been confirmed.  </p>\r\n Yesterday I tinkered slightly, the variables are all now posted (as opposed to being passed in the url) to the SDK file and I added the Text Me functionality.\r\n\r\n As I played some nifty functionality presented itself :\r\n<ul>\r\n\t<li> Call Me button with no number entry, facebook knows the phone number of most users, if the user viewing a page and the person whos page they are  viewing have their number stored in facebook meaning we could present a button to the viewer that lets them talk over the phone from one button click. </li>\r\n\t<li>Currently any text sent from the Text Me boxes are recieved from \"Facebook\".  It would be nice to pass the username of the person sending the text so that the sending user can be identified from the message.</li>\r\n</ul>\r\nThe code for the default FBML is below (replacing YOURURL):\r\n<pre>&lt;form action=\"<a href=\"http://yoururl/facebook/phpWeb21C/examples/cmds/makeCall.php\">http://YOURURL/facebook/phpWeb21C/examples/cmds/makeCall.php</a>\" method=\"get\"&gt;</pre>\r\n<pre>&lt;br /&gt;</pre>\r\n<pre>&lt;input type=\"text\" name=\"tel\" /&gt;</pre>\r\n<pre>&lt;br /&gt;</pre>\r\n<pre>&lt;input type=\"SUBMIT\" name=\"SUBMIT\"  value=\"Call Me\"/&gt;</pre>\r\n<pre>&lt;br /&gt;</pre>\r\n<pre>&lt;/form&gt;</pre>\r\n<pre>&lt;p&gt;&lt;br /&gt;</pre>\r\n<pre>&lt;form action=\"<a href=\"http://www.yourproblemshared.com/facebook/phpWeb21C/examples/cmds/sendSMS.php\">http://YOURURL/facebook/phpWeb21C/examples/cmds/sendSMS.php</a>\" method=\"post\"&gt;</pre>\r\n<pre>&lt;br /&gt;</pre>\r\n<pre>&lt;textarea name=\"text\" rows=\"8\" cols=\"24\"&gt;&lt;/textarea&gt;</pre>\r\n<pre>&lt;br /&gt;</pre>\r\n<pre>&lt;input type=\"SUBMIT\" name=\"SUBMIT\"  value=\"Text Me\"/&gt;</pre>\r\n<pre>&lt;/form&gt;&lt;/p&gt;</pre>\r\n________________________________",
-        "tags": "API,BT,Facebook API,Phones,PHP,SDK,Web21C",
-        "created": "Thu, 19 Jul 2007 10:35:41 +0000"
-    },
+
     {
         "title": "links for 2007-07-19",
         "url": "local",

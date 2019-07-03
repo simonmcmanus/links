@@ -5,7 +5,8 @@ const getPosts = require('./lib/get-posts')
 
 const posts = getPosts()
 
-
+//console.log(posts)
+return
 
 // var tags = require('./lib/tags')(links.concat(postsSummary));
 var tags = require('./lib/tags')(links)
