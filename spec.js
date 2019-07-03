@@ -5,8 +5,6 @@ const getPosts = require('./lib/get-posts')
 
 const posts = getPosts()
 
-//console.log(posts)
-return
 
 // var tags = require('./lib/tags')(links.concat(postsSummary));
 var tags = require('./lib/tags')(links)
@@ -18,6 +16,12 @@ module.exports = {
     page: 'home',
     spec: {
       title: 'Simon McManus'
+    }
+  },
+  '/404.html':{
+    page: 'talks',
+    spec: {
+      title: 'Page not found'
     }
   },
   '/talks.html': {
