@@ -19,7 +19,9 @@
     "js-app": "browserify ./client/index.js  > ./client/index-compiled.js",
     "js-service-worker": "browserify ./client/service-worker.js > ./docs/service-worker.js",
     "js-watch": "watchify ./client/index.js -o ./client/index-compiled.js",
-    "sass-watch": "node-sass ./pages/layout.scss  --watch"
+    "sass-watch": "node-sass ./pages/layout.scss  --watch",
+    "import-blog": "node ./scripts/import-blog.js",
+    "clean":  " rm -Rf posts &&  rm -Rf docs"
   },
   "author": "",
   "license": "ISC",

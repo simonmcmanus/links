@@ -24,7 +24,7 @@ const writeFile = function (fileName, contents) {
 
   console.log(folder)
   fs.mkdir(__dirname + '/../posts/' + folder, { recursive: true }, function () {
-    const fullPath = __dirname + '/../posts/' + fileName
+    const fullPath = __dirname + '/../posts/' + fileName + '.md'
 
     fs.writeFile(fullPath, contents, function (e, d) {
       console.log(chalk.blue('Updating blog ', fullPath), e, d)
@@ -44,7 +44,7 @@ var postSelectors = require('../posts').filter((post) => {
 })
   . forEach((post) => {
     const year = moment(new Date(post.created)).format('YYYY/MM/DD')
-    const fileName = post.title + '.md'
+    const fileName = post.title
 
     var markdown = turndownService.turndown(post.content.replace(/\n/g, '<br />'))
 
