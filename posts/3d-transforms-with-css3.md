@@ -40,7 +40,6 @@ Wrap two divs round the elements to appear in 3D :
 Set the following CSS:  
 ```js
 .perspective { -webkit-perspective: 2400; }
-  
 .three-d { -webkit-transform-style: preserve-3d; }
 ```
   
@@ -50,21 +49,16 @@ Set the following CSS:
   
 Set translateZ for each item to appear 3D:  
 ```js
-\-webkit-transform: translateZ(3em);
+-webkit-transform: translateZ(3em);
 ```
   
 In my example I set it for the following items:  
 ```js
 h1,
-  
 .item,
-  
 .twitter-bird.sign,
-  
 .vcard{
-  
-   -webkit-transform: translateZ(3em);
-  
+   -webkit-transform: translateZ(3em); 
 }
 ```
   
@@ -76,56 +70,33 @@ In this case each z-index will be represented by 3ems.
 Define the animation :  
 ```js
 #rotator {
-  
    -webkit-animation-name: rotate;
-  
-   -webkit-animation-duration: 15s;
-  
+   -webkit-animation-duration: 15s; 
    -webkit-animation-iteration-count: infinite;
-  
 }
 ```
   
 And then specify the steps of the animation:  
 ```js
 @-webkit-keyframes rotate {
-  
-   0% {
-  
-      -webkit-transform:rotateY(0deg);
-  
+    0% {
+       -webkit-transform:rotateY(0deg); 
    }
-  
    5% {
-  
       -webkit-transform:rotateY(0deg);
-  
    }
-  
    30% {
-  
       -webkit-transform:rotateY(-40deg);
-  
    }
-  
    50% {
-  
       -webkit-transform:rotateY(85deg);
-  
    }
-  
    55% {
-  
       -webkit-transform:rotateY(85deg);
-  
    }
-  
    90% {
-  
       -webkit-transform:rotateY(0deg);
-  
-   }
-  
+   } 
 }
 ```
   
@@ -136,56 +107,33 @@ And then specify the steps of the animation:
   
 To give a zoom effect I created a second animation:  
 ```js
-#perspective {
-  
+#perspective { 
    -webkit-animation-name: perspective;
-  
    -webkit-animation-duration: 15s;
-  
    -webkit-animation-iteration-count: infinite;
-  
  }
 ```
   
 ```js
 @-webkit-keyframes perspective {
-  
    0% {
-  
       -webkit-perspective: 2400;
-  
    }
-  
    5% {
-  
       -webkit-perspective:2400;
-  
    }
-  
    30% {
-  
       -webkit-perspective:650;
-  
    }
-  
    50% {
-  
       -webkit-perspective:2000;
-  
    }
-  
    55% {
-  
       -webkit-perspective:2000;
-  
    }
-  
    70% {
-  
       -webkit-perspective: 2400;
-  
-   }
-  
+   }  
 }
 ```
   
