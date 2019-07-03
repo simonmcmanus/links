@@ -2,11 +2,7 @@
 const links = require('./links')
 const getPosts = require('./lib/get-posts')
 
-
 const posts = getPosts()
-
-//console.log(posts)
-return
 
 // var tags = require('./lib/tags')(links.concat(postsSummary));
 var tags = require('./lib/tags')(links)
@@ -86,20 +82,20 @@ module.exports = {
   //             '.summary': 'this is the full summary of bye'
   //         }
   //     ],
-  //},
-  "/posts/:title/index.html": {
-      page: 'post',
-      data: posts,
-      // spec: {
-      //     title: ':group',
-      //     ".links-title": ':group',
-      //     "meta[name=description]": {
-      //         content: ' :group'
-      //     },
-      //     "meta[name=keywords]": {
-      //         content: ':group'
-      //     }
-      // }
+  // },
+  '/posts/:title/index.html': {
+    page: 'post',
+    data: posts
+    // spec: {
+    //     title: ':group',
+    //     ".links-title": ':group',
+    //     "meta[name=description]": {
+    //         content: ' :group'
+    //     },
+    //     "meta[name=keywords]": {
+    //         content: ':group'
+    //     }
+    // }
   },
 
   '/links/:date/index.html': {
