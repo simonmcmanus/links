@@ -3,9 +3,6 @@ tags: application architecture,application templates,javascript application,java
 title: Learning from Single Page Web Applications
 date: Thu, 05 Jan 2012 19:56:54 +0000
 ---
-Learning from Single Page Web Applications
-==========================================
-
   
 I've spent the last three years working on single page applications of various shapes and sizes. I don't like em,  this post isn't about why but I will just say I like data to be exposed at the lowest level (HTTP) and not require Javascript to turn it into something useful.   All that being said I've been lucky enough to work with some clever folks and the end results have all been very interesting and pushed boundaries in their own way.  
   
@@ -23,14 +20,6 @@ I wanted to try defining all of these things on the server, so they could be con
 
 As soon as the talk finished I found myself writing code. This blog post talks about what I have been building and why.  
   
-  
-  
-  
-  
-
-  
-
-  
 
 Sharing URLs between client and server
 --------------------------------------
@@ -41,13 +30,9 @@ Allow me to deviate for a moment.
 On large applications it's common practice to split the code and teams between front and back end developers.  This often results in duplication and unnecessary bugs.  A common example being maintaining URLs in two places.  In the browser we might a have a URLs object:  
 ```js
 namespace.urls = {
-  
-     login: '/login',
-  
-     user: '/user/:username',
-  
-     ....
-  
+    login: '/login',  
+    user: '/user/:username',
+    ....
 }
 ```
   
@@ -58,29 +43,17 @@ With [Node.js](http://nodejs.org/) it's particularly easy to share exactly the
 This is what I've been doing in some of my Node apps:  
 ```js
 (function(exports){
-  
-    exports.HOME = '/';
-  
+      exports.HOME = '/';
     exports.LOGIN = '/login';
-  
     exports.USERS = '/users';
-  
-    exports.USER = '/users/:user';
-  
-    // also add URL functions here that can be shared between client and server.
-  
+    exports.USER = '/users/:user';
+    // also add URL functions here that can be shared between client and server.
     exports.build = function(str, tokens) {
-  
         for(token in tokens){
-  
             str = str.replace(':'+token, tokens\[token\]);
-  
         }
-  
         return str;
-  
     };
-  
 })(typeof exports === 'undefined' ? namespace.urls={} : exports);
 ```
   
@@ -110,21 +83,13 @@ I started to build a simple Node.js app which could parse a modules folder and s
 Generated the following URLs:  
 ```js
 /contact.css
-  
 /contact.html
-  
 /contact.js
-  
 /content.css
-  
 /content.html
-  
 /content.js
-  
 /flickr.css
-  
 /flickr.html
-  
 /flickr.js
 ```
   
@@ -138,23 +103,15 @@ In browserland it's really easy to mess around with the DOM. You can completely 
   
 I decided to create a view specification which could be read by the server and also served to the browser. Doing so should make it really easy to render the exact same HTML with or without Javascript enabled.  Using [Sizlate](https://github.com/simonmcmanus/sizlate) I started with this (it has since changed):  
 ```js
-var views = \[{
-  
-    url: '/user/:user'
-  
+var views = [{
+    url: '/user/:user'  
     view: 'userpage',
-  
-    modules: \[
-  
+    modules: [
         'photos',
-  
         'login',
-  
         'timeline'
-  
-    \]
-  
- }\];
+    ]
+ }];
 ```
   
 In the following example I have left out the JS and CSS files.  The view is just a folder containing a HTML file of the same name and an optional app.js (as with the modules). It assumes the view HTML file contains a  tag with a id corresponding to each of the modules specified for the view.  
@@ -165,50 +122,30 @@ I like this simple approach but in order for it to scale I may soon need to star
 project/views/userpage/userpage.html (the view HTML file) contains:  
 ```js
 <html>
-  
 <body>
-  
     <nav>...</nav>
-  
-    <div id="photos" /> 
-  
+    <div id="photos" />
     <div id="login" />
-  
-    <div id="timeline" /> 
-  
+    <div id="timeline" />
 </body>
-  
 </html>
 ```
   
 The end result would look something like this:  
 ```js
 <html>
-  
 <body>
-  
     <nav>...</nav>
-  
     <div id="photos">
-  
         .. contents of /modules/photos/photos.html appended in here
-  
-    </div> 
-  
+    </div>
     <div id="login">
-  
         .. contents of /modules/login/login.html appended in here
-  
-    </div> 
-  
-    <div id="timeline"> 
-  
+    </div>
+    <div id="timeline">
         .. contents of /modules/timeline/timeline.html appended in here
-  
-    </div>  
-  
+    </div>
 </body>
-  
 </html>
 ```
   
