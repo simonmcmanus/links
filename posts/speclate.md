@@ -47,10 +47,10 @@ Rendering can be broken down into three steps. Firstly we replace the main page 
   
 In the example there are three commands in the [package.json](https://github.com/simonmcmanus/speclate-example/blob/master/package.json) to generate the[ site](http://speclate-example.netlify.com/):  
 ```js
-"scripts": {  
-    "markup": "speclate",  
-    "client": "browserify ./client/router.js > ./client/router-compiled.js",  
-    "build": "npm run client && npm run markup"  
+"scripts": {
+    "markup": "speclate",
+    "client": "browserify ./client/router.js > ./client/router-compiled.js",
+    "build": "npm run client && npm run markup"
 }
 ```
   
@@ -62,10 +62,10 @@ Offline
   
 Currently, the [LNUG](http://lnug.org) website works offline using an [AppCache.manifest](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache) file. That file is generated from the spec like so:  
 ```js
-speclate.site.appCache(spec, \[  
+speclate.site.appCache(spec, [  
 '/css.css',  
 '/images/lnug-logo.svg'  
-\])
+])
 ```
   
 We use [appCache Nanny](https://github.com/gr2m/appcache-nanny) to handle updates but the experience is still not great. The latest releases of Speclate now use the fetch API so it opens up lots of possibilities with Service Workers.
