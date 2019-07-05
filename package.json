@@ -10,7 +10,7 @@
     "html": "speclate --build ",
     "style": "speclate --scss",
     "start": "speclate --dev 5009",
-    "update": "node update.js",
+    "update": "node scripts/update.js",
     "js-dev": "npm run js && mv ./client/index-compiled.js ./docs/client/index-compiled.js",
     "js": "npm run prep-js && npm run js-app && npm run js-service-worker",
     "prep-js": "mkdir -p ./docs/client",
