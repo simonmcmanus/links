@@ -63,39 +63,9 @@ module.exports = {
     }
   },
 
-  // "/posts/:title/index.html": {
-  //     page: 'post',
-  //     data: [
-  //         {
-  //             id: 1,
-  //             url: '/hi.html',
-  //             title: 'hi there',
-  //             '.title': 'hi there',
-  //             '.summary': 'this is the full summary'
-
-  //         },
-  //         {
-  //             id: 2,
-  //             url: '/bye.html',
-  //             title: 'bye there',
-  //             '.title': 'bye there',
-  //             '.summary': 'this is the full summary of bye'
-  //         }
-  //     ],
-  // },
   '/posts/:title/index.html': {
     page: 'post',
     data: posts
-    // spec: {
-    //     title: ':group',
-    //     ".links-title": ':group',
-    //     "meta[name=description]": {
-    //         content: ' :group'
-    //     },
-    //     "meta[name=keywords]": {
-    //         content: ':group'
-    //     }
-    // }
   },
 
   '/links/:date/index.html': {
@@ -105,7 +75,7 @@ module.exports = {
       return '/links/' + group + '/index.html'
     },
     group: (pages, item) => {
-      created = item['.dateUrl']
+      var created = item['.dateUrl']
       if (!pages[created]) {
         pages[created] = []
       }
