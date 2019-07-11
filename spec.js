@@ -40,7 +40,8 @@ module.exports = {
       '.links-title': '10 most recent links',
       '.links_holder': {
         component: 'link',
-        data: allLinks.slice(-10).reverse()
+        lists: ['links'],
+        filters: ['mostRecent']
       },
       'meta[name=description]': {
         content: 'Links from Simon McManus'
@@ -57,7 +58,8 @@ module.exports = {
       '.page-title': 'Blog posts',
       '.holder': {
         component: 'posts',
-        data: posts
+        lists: ['posts'],
+        filters: ['recent']
       },
       'meta[name=description]': {
         content: 'Links from Simon McManus'
@@ -70,31 +72,21 @@ module.exports = {
 
   '/posts/:title/index.html': {
     page: 'post',
-    data: posts
+    lists: ['posts']
   },
 
   '/links/:date/index.html': {
     page: 'links',
-    data: links,
-    url: function (group) {
-      return '/links/' + group + '/index.html'
-    },
-    group: (pages, item) => {
-      var created = item['.dateUrl']
-      if (!pages[created]) {
-        pages[created] = []
-      }
-      pages[created].push(item)
-      return pages
-    },
+    lists: ['posts', 'links'],
+    filter: ['byDate'],
     spec: {
-      title: 'Links for :group',
-      '.links-title': 'Links for :group',
+      title: 'Links for :date',
+      '.links-title': 'Links for :date',
       'meta[name=description]': {
-        content: 'Links for :group'
+        content: 'Links for :date'
       },
       'meta[name=keywords]': {
-        content: ':group'
+        content: ':date'
       },
       '.links_holder': {
         component: 'link'
@@ -124,7 +116,8 @@ module.exports = {
   },
   '/tags/:tag/index.html': {
     page: 'links',
-    data: links,
+    lists: ['posts', 'links'],
+
     url: function (group) {
       return '/tags/' + urlSafe(group) + '/index.html'
     },

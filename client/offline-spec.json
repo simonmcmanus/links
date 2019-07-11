@@ -19,20 +19,22 @@
         "/hire.html",
         "/links.html",
         "/posts.html",
+        "/links/:date/index.html",
         "/tags/index.html",
-        "/posts/2019/12/03/wicked-elements/index.html",
-        "/posts/2019/09/10/local-development-on-npm-packages/index.html",
-        "/posts/2019/08/27/speclate@19/index.html",
         "/posts/2019/07/04/blog-migration/index.html",
         "/posts/2017/09/25/include-a-branch-from-a-private-git-repo-into-npm-package-json/index.html",
         "/posts/2016/10/12/speclate-and-service-workers/index.html",
         "/posts/2016/08/13/speclate/index.html",
         "/posts/2016/02/14/enhanceconf-scholarship/index.html",
+<<<<<<< HEAD
         "/posts/2016/01/26/enhanceconf-line-up/index.html",
+=======
+>>>>>>> 2a6e6e9... lists latest
         "/posts/2014/04/08/dotjs-ltd-one-year-old/index.html",
         "/posts/2014/02/19/sublime-3-build-system-to-run-npm-test/index.html",
         "/posts/2013/01/03/forcing-garbage-collection-with-nodejs-and-v8/index.html",
         "/posts/2012/04/12/expressjs-publicstatic-directory-in-one-line/index.html",
+<<<<<<< HEAD
         "/posts/2012/04/11/http-requests-with-nodejs/index.html",
         "/posts/2012/01/05/learning-from-single-page-web-applications/index.html",
         "/posts/2011/11/22/sizlate/index.html",
@@ -691,6 +693,95 @@
         "/tags/loughton/index.html",
         "/tags/brook/index.html",
         "/tags/display/index.html",
+=======
+        "/posts/2012/01/05/learning-from-single-page-web-applications/index.html",
+        "/posts/2011/04/05/cross-browser-css3-gradient/index.html",
+        "/posts/2012/04/11/http-requests-with-nodejs/index.html",
+        "/posts/2016/01/26/enhanceconf-line-up/index.html",
+        "/posts/2010/06/28/installing-ckeditor-with-standalone-tiddlywiki/index.html",
+        "/posts/2009/09/21/installing-tiddlydocs-latest-on-tiddlyweb-(mac)/index.html",
+        "/posts/2010/05/12/a-simple-ckeditor-plugin-template/index.html",
+        "/posts/2011/01/05/3d-transforms-with-css3/index.html",
+        "/posts/2011/02/11/building-on-the-web/index.html",
+        "/posts/2008/03/11/avoid-being-civil-serfed/index.html",
+        "/posts/2008/04/11/how-to-save-your-enterprise-some-money/index.html",
+        "/posts/2008/02/29/innovating-with-small-pieces-loosely-joined/index.html",
+        "/posts/2008/01/21/google-images-in-tiddlywikiand-maybe-flickr/index.html",
+        "/posts/2008/01/15/server-side-search-for-cctiddly/index.html",
+        "/posts/2008/03/10/rest-in-peace-civil-serf/index.html",
+        "/posts/2008/03/26/free-our-bills/index.html",
+        "/posts/2008/01/07/product-streaming-for-cctiddly/index.html",
+        "/posts/2007/12/24/the-ultimate-n95-hack-helicopters/index.html",
+        "/posts/2008/04/23/politics-twitter-and-accessibility-(politically-speaking)/index.html",
+        "/posts/2009/02/06/tiddlydocs-collaborating-on-large-documents/index.html",
+        "/posts/2008/03/10/announcing-cctiddly-151/index.html",
+        "/posts/2008/01/15/time-for-a-blog-post-about-twitter/index.html",
+        "/posts/2008/03/20/cctiddly-file-uploading/index.html",
+        "/posts/2008/08/11/offline-is-back-online/index.html",
+        "/posts/2008/02/21/off-the-shelf-integration-in-enterprises/index.html",
+        "/posts/2008/01/23/nokia-n95-stuff/index.html",
+        "/posts/2009/06/24/my-recent-contribution-to-the-house-of-lords-information-committee/index.html",
+        "/posts/2011/11/22/sizlate/index.html",
+        "/posts/2007/09/14/open-source-facebook/index.html",
+        "/posts/2007/08/01/mock-ajax-in-facebook/index.html",
+        "/posts/2007/11/26/cctiddly-2x-an-overview/index.html",
+        "/posts/2007/07/20/mashing-up-bt-web21c-location-service-with-google-maps/index.html",
+        "/posts/2007/10/19/macs-in-btc/index.html",
+        "/posts/2007/10/16/macro-template-for-tiddlywiki/index.html",
+        "/posts/2007/10/17/output-text-into-a-tiddler-without-changing-the-tiddler-macro/index.html",
+        "/posts/2007/07/23/phpweb21c-certificate-generation-(using-the-wizard)/index.html",
+        "/posts/2007/11/09/latest-database-design-for-cctiddly/index.html",
+        "/posts/2007/08/08/is-facebook-the-answer-to-everything-facebook-for-the-enterprise/index.html",
+        "/posts/2007/12/10/pondering-pagerank-and-tinyurls/index.html",
+        "/posts/2007/11/02/proposed-cctiddly-database-structure/index.html",
+        "/posts/2007/09/06/server-side-tiddlywikis-and-plugins/index.html",
+        "/posts/2007/09/14/server-side-tiddlywikis/index.html",
+        "/posts/2007/07/24/a-simple-dhtml-phone/index.html",
+        "/posts/2007/08/16/social-network-aggregator/index.html",
+        "/posts/2007/08/13/steps-for-setting-up-the-sdk/index.html",
+        "/posts/2007/09/24/hacking-for-a-wii/index.html",
+        "/posts/2007/07/20/the-google-maps-api/index.html",
+        "/posts/2007/09/25/giving-tiddlywiki-a-restmysql-to-rest-in-php/index.html",
+        "/posts/2007/08/08/getting-your-friends-out-of-facebook/index.html",
+        "/posts/2007/08/09/get-your-friends-details-out-of-facebook/index.html",
+        "/posts/2007/10/16/the-most-simple-ajax-call-in-tiddlywiki/index.html",
+        "/posts/2007/09/19/the-osmosoft-social-network-elgg/index.html",
+        "/posts/2007/09/21/facebook-want-to-take-developers-to-court!!/index.html",
+        "/posts/2007/10/23/facebook-screen-scraping-get-your-friends-back-from-facebook-and-into-tiddlywiki!/index.html",
+        "/posts/2007/11/28/the-robbie-clutton-problem/index.html",
+        "/posts/2007/12/03/epoch-to-tiddlytime/index.html",
+        "/posts/2007/08/14/enterprise-tiddlywiki/index.html",
+        "/posts/2007/09/13/those-fuckers-at-facebook-part-two/index.html",
+        "/posts/2007/09/13/those-fuckers-at-facebook-trying-to-hush-me-up/index.html",
+        "/posts/2007/09/15/enable-php-error-reporting-for-a-page/index.html",
+        "/posts/2007/10/22/enable-and-use-mod-rewrite/index.html",
+        "/posts/2007/09/13/those-fuckers-at-facebook/index.html",
+        "/posts/2007/12/06/delicious-feed-removal/index.html",
+        "/posts/2007/11/01/video-on-open-social/index.html",
+        "/posts/2007/08/29/confused-by-convergence/index.html",
+        "/posts/2007/07/20/conference-calls-on-the-bt-sdk-(web21c)/index.html",
+        "/posts/2007/07/24/conference-calling-with-web21c-php-sdk/index.html",
+        "/posts/2007/12/10/cctiddly-system-tiddler-plugins/index.html",
+        "/posts/2007/09/15/writing-to-the-facebook-news-feed/index.html",
+        "/posts/2007/12/12/bullshit-20/index.html",
+        "/posts/2007/11/21/mime-types-in-for-server-side-tiddlywikis-download-a-html-file-from-a-link/index.html",
+        "/posts/2007/06/29/ip-in-action-security-event/index.html",
+        "/posts/2007/07/16/my-first-(very-simple)-facebook-application-using-the-bt-web21c-sdk/index.html",
+        "/posts/2007/07/05/my-second-look-at-tiddlywiki/index.html",
+        "/posts/2007/07/16/php-sdk-for-dummies-using-windows/index.html",
+        "/posts/2007/07/03/simon-mcmanus-and-osmosoft/index.html",
+        "/posts/2007/07/20/your-location-from-the-bt-sdk-(web21c)-in-google-maps/index.html",
+        "/posts/2008/01/04/life-streaming-in-cctiddly/index.html",
+        "/tags/2018/index.html",
+        "/tags/2019/index.html",
+        "/tags/google/index.html",
+        "/tags/fonts/index.html",
+        "/tags/display/index.html",
+        "/tags/amazon/index.html",
+        "/tags/jobs/index.html",
+        "/tags/node/index.html",
+        "/tags/web/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/sustainability/index.html",
         "/tags/environments/index.html",
         "/tags/which/index.html",
@@ -705,43 +796,87 @@
         "/tags/webcam/index.html",
         "/tags/webpagetest/index.html",
         "/tags/video/index.html",
+<<<<<<< HEAD
         "/tags/bag/index.html",
+=======
+        "/tags/web-components/index.html",
+        "/tags/svelte/index.html",
+        "/tags/micro/index.html",
+        "/tags/microfrontend/index.html",
+        "/tags/bag/index.html",
+        "/tags/nuxt/index.html",
+        "/tags/api/index.html",
+        "/tags/vue/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/config/index.html",
         "/tags/forms/index.html",
         "/tags/inputs/index.html",
         "/tags/rebar/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/css/index.html",
+        "/tags/layout/index.html",
+        "/tags/sqlite3/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/database/index.html",
         "/tags/expressive/index.html",
         "/tags/lifecycle/index.html",
         "/tags/base/index.html",
+<<<<<<< HEAD
         "/tags/audit/index.html",
         "/tags/context/index.html",
         "/tags/getting/index.html",
+=======
+        "/tags/speed/index.html",
+        "/tags/audit/index.html",
+        "/tags/undefined/index.html",
+        "/tags/context/index.html",
+        "/tags/getting/index.html",
+        "/tags/routing/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/vuejs/index.html",
         "/tags/colours/index.html",
         "/tags/plotly/index.html",
         "/tags/plotlyreact/index.html",
         "/tags/finallyfixedit/index.html",
         "/tags/quotes/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/indieweb/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/indiweb/index.html",
         "/tags/gettingstarted/index.html",
         "/tags/recruiters/index.html",
         "/tags/ecommerce/index.html",
         "/tags/bias/index.html",
         "/tags/cognitive/index.html",
+<<<<<<< HEAD
         "/tags/styling/index.html",
+=======
+        "/tags/tutorials/index.html",
+        "/tags/styling/index.html",
+        "/tags/images/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/responsive/index.html",
         "/tags/tools/index.html",
         "/tags/missionary/index.html",
         "/tags/mercenary/index.html",
         "/tags/binding/index.html",
         "/tags/zoom/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/react/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/graphs/index.html",
         "/tags/unflux/index.html",
         "/tags/sql/index.html",
         "/tags/distinct/index.html",
         "/tags/influxdb/index.html",
         "/tags/debt/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/functions/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/retention/index.html",
         "/tags/downsampling/index.html",
         "/tags/resolution/index.html",
@@ -753,18 +888,39 @@
         "/tags/nodemon/index.html",
         "/tags/docker/index.html",
         "/tags/issue/index.html",
+<<<<<<< HEAD
         "/tags/workers/index.html",
         "/tags/parallel/index.html",
         "/tags/building/index.html",
         "/tags/naming/index.html",
         "/tags/liner/index.html",
+=======
+        "/tags/testing/index.html",
+        "/tags/workers/index.html",
+        "/tags/parallel/index.html",
+        "/tags/speclate/index.html",
+        "/tags/building/index.html",
+        "/tags/naming/index.html",
+        "/tags/pond/index.html",
+        "/tags/garden/index.html",
+        "/tags/liner/index.html",
+        "/tags/design/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/sprints/index.html",
         "/tags/designsprints/index.html",
         "/tags/birdguard/index.html",
         "/tags/mutate/index.html",
+<<<<<<< HEAD
         "/tags/venue/index.html",
         "/tags/lawsuite/index.html",
         "/tags/questionaire/index.html",
+=======
+        "/tags/js/index.html",
+        "/tags/venue/index.html",
+        "/tags/lawsuite/index.html",
+        "/tags/questionaire/index.html",
+        "/tags/modules/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/cssmodules/index.html",
         "/tags/uml/index.html",
         "/tags/diagram/index.html",
@@ -773,15 +929,32 @@
         "/tags/lenses/index.html",
         "/tags/photography/index.html",
         "/tags/focus/index.html",
+<<<<<<< HEAD
         "/tags/cloudflare/index.html",
         "/tags/availability/index.html",
         "/tags/service-workers/index.html",
         "/tags/autofill/index.html",
         "/tags/apple/index.html",
+=======
+        "/tags/podcast/index.html",
+        "/tags/atg/index.html",
+        "/tags/cloudflare/index.html",
+        "/tags/cdn/index.html",
+        "/tags/availability/index.html",
+        "/tags/service-workers/index.html",
+        "/tags/autofill/index.html",
+        "/tags/html/index.html",
+        "/tags/apple/index.html",
+        "/tags/london/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/office/index.html",
         "/tags/gshq/index.html",
         "/tags/spies/index.html",
         "/tags/window/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/components/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/discovery/index.html",
         "/tags/styleguide/index.html",
         "/tags/channel4/index.html",
@@ -794,6 +967,11 @@
         "/tags/backgrounds/index.html",
         "/tags/remove/index.html",
         "/tags/editing/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/frameworks/index.html",
+        "/tags/javascript/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/developmentandnbsp/index.html",
         "/tags/app-store/index.html",
         "/tags/tfl/index.html",
@@ -809,18 +987,32 @@
         "/tags/mockups/index.html",
         "/tags/lowfi/index.html",
         "/tags/cleaner/index.html",
+<<<<<<< HEAD
         "/tags/hosting/index.html",
+=======
+        "/tags/performance/index.html",
+        "/tags/hosting/index.html",
+        "/tags/avoid/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/words/index.html",
         "/tags/english/index.html",
         "/tags/gds/index.html",
         "/tags/chrome/index.html",
         "/tags/platform/index.html",
         "/tags/status/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/lnug/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/fakerocks/index.html",
         "/tags/screencast/index.html",
         "/tags/recording/index.html",
         "/tags/petitions/index.html",
         "/tags/parliament/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/uk/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/democracy/index.html",
         "/tags/intro/index.html",
         "/tags/seo/index.html",
@@ -828,8 +1020,17 @@
         "/tags/markup/index.html",
         "/tags/litepages/index.html",
         "/tags/scrum/index.html",
+<<<<<<< HEAD
         "/tags/guide/index.html",
         "/tags/perception/index.html",
+=======
+        "/tags/agile/index.html",
+        "/tags/guide/index.html",
+        "/tags/loading/index.html",
+        "/tags/animation/index.html",
+        "/tags/perception/index.html",
+        "/tags/accessibility/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/mspaint/index.html",
         "/tags/lint/index.html",
         "/tags/floorplan/index.html",
@@ -849,6 +1050,10 @@
         "/tags/wip/index.html",
         "/tags/microsoft/index.html",
         "/tags/developer/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/businessmodel/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/hiding/index.html",
         "/tags/jam/index.html",
         "/tags/collaboration/index.html",
@@ -858,27 +1063,52 @@
         "/tags/flags/index.html",
         "/tags/continuousdelivery/index.html",
         "/tags/simple/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/headless/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/dom/index.html",
         "/tags/bikes/index.html",
         "/tags/rubbish/index.html",
         "/tags/pseudo-classes/index.html",
         "/tags/functional/index.html",
+<<<<<<< HEAD
         "/tags/2d/index.html",
         "/tags/atomicdesign/index.html",
         "/tags/patternlabs/index.html",
+=======
+        "/tags/state/index.html",
+        "/tags/2d/index.html",
+        "/tags/atomicdesign/index.html",
+        "/tags/patternlabs/index.html",
+        "/tags/documentation/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/eslint/index.html",
         "/tags/danglingandnbspcontainers/index.html",
         "/tags/disallow/index.html",
         "/tags/sizes/index.html",
         "/tags/large/index.html",
+<<<<<<< HEAD
         "/tags/views/index.html",
         "/tags/urls/index.html",
+=======
+        "/tags/perf/index.html",
+        "/tags/transitions/index.html",
+        "/tags/views/index.html",
+        "/tags/urls/index.html",
+        "/tags/npm/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/photo/index.html",
         "/tags/blackleopard/index.html",
         "/tags/offline/index.html",
         "/tags/docs/index.html",
         "/tags/hcm/index.html",
         "/tags/towerbridge/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/logging/index.html",
+        "/tags/ux/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/netlify/index.html",
         "/tags/shorteners/index.html",
         "/tags/formik/index.html",
@@ -894,15 +1124,28 @@
         "/tags/conference/index.html",
         "/tags/freelance/index.html",
         "/tags/serverless/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/aws/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/commit/index.html",
         "/tags/convention/index.html",
         "/tags/git/index.html",
         "/tags/mobile/index.html",
         "/tags/coverage/index.html",
         "/tags/bestandnbsppractice/index.html",
+<<<<<<< HEAD
         "/tags/default/index.html",
         "/tags/svg/index.html",
         "/tags/polyfills/index.html",
+=======
+        "/tags/vscode/index.html",
+        "/tags/es6/index.html",
+        "/tags/default/index.html",
+        "/tags/svg/index.html",
+        "/tags/polyfills/index.html",
+        "/tags/browsers/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/support/index.html",
         "/tags/browserlist/index.html",
         "/tags/designandnbspsprint/index.html",
@@ -912,24 +1155,43 @@
         "/tags/contentful/index.html",
         "/tags/dates/index.html",
         "/tags/position/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/newrelic/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/kitchen/index.html",
         "/tags/floor/index.html",
         "/tags/scrolling/index.html",
         "/tags/scott/index.html",
+<<<<<<< HEAD
         "/tags/proptypes/index.html",
         "/tags/hotjar/index.html",
+=======
+        "/tags/police/index.html",
+        "/tags/proptypes/index.html",
+        "/tags/hotjar/index.html",
+        "/tags/tracking/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/faq/index.html",
         "/tags/recompose/index.html",
         "/tags/styled-components/index.html",
         "/tags/styled-system/index.html",
         "/tags/hex/index.html",
         "/tags/hapi/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/react-router@4/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/talks/index.html",
         "/tags/videos/index.html",
         "/tags/versions/index.html",
         "/tags/testdouble/index.html",
         "/tags/indy/index.html",
         "/tags/testcafe/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/e2e/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/buds/index.html",
         "/tags/rightofaccess/index.html",
         "/tags/async/index.html",
@@ -942,7 +1204,13 @@
         "/tags/travis/index.html",
         "/tags/carpet/index.html",
         "/tags/dogs/index.html",
+<<<<<<< HEAD
         "/tags/trade/index.html",
+=======
+        "/tags/variable/index.html",
+        "/tags/trade/index.html",
+        "/tags/check-list/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/house/index.html",
         "/tags/designandnbspsystems/index.html",
         "/tags/disney/index.html",
@@ -960,9 +1228,17 @@
         "/tags/progressiveandnbspenhancement/index.html",
         "/tags/metadata/index.html",
         "/tags/contract/index.html",
+<<<<<<< HEAD
         "/tags/specificity/index.html",
         "/tags/conferences/index.html",
         "/tags/fast/index.html",
+=======
+        "/tags/history/index.html",
+        "/tags/specificity/index.html",
+        "/tags/conferences/index.html",
+        "/tags/fast/index.html",
+        "/tags/bundler/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/principles/index.html",
         "/tags/alley/index.html",
         "/tags/blueandnbspball/index.html",
@@ -970,6 +1246,11 @@
         "/tags/colour/index.html",
         "/tags/color/index.html",
         "/tags/just/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/desk/index.html",
+        "/tags/standingandnbspdesk/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/cornerandnbspdesk/index.html",
         "/tags/audi/index.html",
         "/tags/q5/index.html",
@@ -978,7 +1259,13 @@
         "/tags/netflix/index.html",
         "/tags/jenkins/index.html",
         "/tags/ci/index.html",
+<<<<<<< HEAD
         "/tags/choo/index.html",
+=======
+        "/tags/devops/index.html",
+        "/tags/choo/index.html",
+        "/tags/budget/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/numbers/index.html",
         "/tags/voice/index.html",
         "/tags/guidelines/index.html",
@@ -986,6 +1273,10 @@
         "/tags/writing/index.html",
         "/tags/cheatandnbspsheet/index.html",
         "/tags/cheat/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/remote/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/snap/index.html",
         "/tags/osx/index.html",
         "/tags/inclusiveandnbspdesign/index.html",
@@ -998,8 +1289,15 @@
         "/tags/excel/index.html",
         "/tags/product/index.html",
         "/tags/changeandnbspmanagement/index.html",
+<<<<<<< HEAD
         "/tags/dragandnbspnandnbspdrop/index.html",
         "/tags/ui/index.html",
+=======
+        "/tags/government/index.html",
+        "/tags/dragandnbspnandnbspdrop/index.html",
+        "/tags/ui/index.html",
+        "/tags/retail/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/matching/index.html",
         "/tags/fallback/index.html",
         "/tags/fout/index.html",
@@ -1011,12 +1309,22 @@
         "/tags/assertions/index.html",
         "/tags/spaces/index.html",
         "/tags/ternary/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/code/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/bundle/index.html",
         "/tags/homepage/index.html",
         "/tags/morph/index.html",
         "/tags/borderandnbspgradient/index.html",
         "/tags/background/index.html",
+<<<<<<< HEAD
         "/tags/materialandnbspconference/index.html",
+=======
+        "/tags/pwas/index.html",
+        "/tags/materialandnbspconference/index.html",
+        "/tags/playlist/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/meetings/index.html",
         "/tags/declarativeandnbsppipe/index.html",
         "/tags/declarativeandnbsppipeline/index.html",
@@ -1035,11 +1343,19 @@
         "/tags/solutions/index.html",
         "/tags/analysis/index.html",
         "/tags/progressiveandnbspimages/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/optimisation/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/hacking/index.html",
         "/tags/pentest/index.html",
         "/tags/criticalandnbsppath/index.html",
         "/tags/rendering/index.html",
         "/tags/request/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/microservices/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/wisebox/index.html",
         "/tags/lights/index.html",
         "/tags/sedley/index.html",
@@ -1051,6 +1367,10 @@
         "/tags/commandandnbspqueue/index.html",
         "/tags/stable/index.html",
         "/tags/nodeandnbsp/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/monitoring/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/prometheus/index.html",
         "/tags/guideandnbspdogs/index.html",
         "/tags/sharedandnbspsurfaces/index.html",
@@ -1061,6 +1381,10 @@
         "/tags/storyandnbsppoints/index.html",
         "/tags/noestimates/index.html",
         "/tags/eppingandnbspforest/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/recycling/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/tdd/index.html",
         "/tags/teams/index.html",
         "/tags/waste/index.html",
@@ -1069,6 +1393,10 @@
         "/tags/disabled/index.html",
         "/tags/validation/index.html",
         "/tags/custom-commands/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/bundling/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/classnames/index.html",
         "/tags/cssandnbspscope/index.html",
         "/tags/ffmpeg/index.html",
@@ -1076,13 +1404,23 @@
         "/tags/metrics/index.html",
         "/tags/notandnbsptested/index.html",
         "/tags/datacenter/index.html",
+<<<<<<< HEAD
         "/tags/jeffconf/index.html",
+=======
+        "/tags/scale/index.html",
+        "/tags/jeffconf/index.html",
+        "/tags/maps/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/intelligence/index.html",
         "/tags/business/index.html",
         "/tags/swardley/index.html",
         "/tags/change/index.html",
         "/tags/boilingandnbspfrogs/index.html",
         "/tags/gchq/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/deployment/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/strategy/index.html",
         "/tags/timeandnbspwellandnbspspent/index.html",
         "/tags/darkandnbsppatterns/index.html",
@@ -1093,6 +1431,10 @@
         "/tags/philosophies/index.html",
         "/tags/domandnbspdiffing/index.html",
         "/tags/grandstand/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/bbc/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/sass/index.html",
         "/tags/skeleton/index.html",
         "/tags/serviceandnbspworkers/index.html",
@@ -1116,18 +1458,30 @@
         "/tags/store/index.html",
         "/tags/revert/index.html",
         "/tags/undo/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/auth/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/ssh/index.html",
         "/tags/ios/index.html",
         "/tags/andnbspapple/index.html",
         "/tags/andnbspscam/index.html",
         "/tags/hugo/index.html",
         "/tags/finances/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/no-js/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/div/index.html",
         "/tags/open-rights-group/index.html",
         "/tags/watch/index.html",
         "/tags/ansible/index.html",
         "/tags/uri/index.html",
         "/tags/gmail/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/filter/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/email/index.html",
         "/tags/plus/index.html",
         "/tags/flexbox/index.html",
@@ -1137,19 +1491,34 @@
         "/tags/fegreater/index.html",
         "/tags/jsdom/index.html",
         "/tags/webdriver/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/fetch/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/amp/index.html",
         "/tags/mtb/index.html",
         "/tags/olympics/index.html",
         "/tags/forgiveness/index.html",
         "/tags/istio/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/kubernetes/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/trainline/index.html",
         "/tags/www/index.html",
         "/tags/camping/index.html",
         "/tags/cornwall/index.html",
         "/tags/campsite/index.html",
         "/tags/contraintlayout/index.html",
+<<<<<<< HEAD
         "/tags/imagesperf/index.html",
         "/tags/horizontal/index.html",
+=======
+        "/tags/semanticandnbspreleases/index.html",
+        "/tags/imagesperf/index.html",
+        "/tags/horizontal/index.html",
+        "/tags/libs/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/fold/index.html",
         "/tags/crawl/index.html",
         "/tags/testandnbspit/index.html",
@@ -1163,12 +1532,22 @@
         "/tags/virtual-dom/index.html",
         "/tags/diffing/index.html",
         "/tags/webhooks/index.html",
+<<<<<<< HEAD
         "/tags/openandnbspsource/index.html",
+=======
+        "/tags/streaming/index.html",
+        "/tags/openandnbspsource/index.html",
+        "/tags/caching/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/tables/index.html",
         "/tags/contrast/index.html",
         "/tags/anaytics/index.html",
         "/tags/css-animation/index.html",
         "/tags/keyframes/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/code-reviews/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/quality/index.html",
         "/tags/team-work/index.html",
         "/tags/pageobject/index.html",
@@ -1179,6 +1558,10 @@
         "/tags/realtime/index.html",
         "/tags/bash/index.html",
         "/tags/terminal/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/automation/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/gif/index.html",
         "/tags/diversity/index.html",
         "/tags/spreadsheet/index.html",
@@ -1188,10 +1571,18 @@
         "/tags/vagrant/index.html",
         "/tags/nearform/index.html",
         "/tags/peerdependencies/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/graphql/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/moving/index.html",
         "/tags/specs/index.html",
         "/tags/cobol/index.html",
         "/tags/legacy/index.html",
+<<<<<<< HEAD
+=======
+        "/tags/redux/index.html",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/json/index.html"
     ],
     "specs": [
@@ -1200,20 +1591,29 @@
         "/hire.json",
         "/links.json",
         "/posts.json",
+<<<<<<< HEAD
         "/tags/index.json",
         "/posts/2019/12/03/wicked-elements/index.json",
         "/posts/2019/09/10/local-development-on-npm-packages/index.json",
         "/posts/2019/08/27/speclate@19/index.json",
+=======
+        "/links/:date/index.json",
+        "/tags/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/posts/2019/07/04/blog-migration/index.json",
         "/posts/2017/09/25/include-a-branch-from-a-private-git-repo-into-npm-package-json/index.json",
         "/posts/2016/10/12/speclate-and-service-workers/index.json",
         "/posts/2016/08/13/speclate/index.json",
         "/posts/2016/02/14/enhanceconf-scholarship/index.json",
+<<<<<<< HEAD
         "/posts/2016/01/26/enhanceconf-line-up/index.json",
+=======
+>>>>>>> 2a6e6e9... lists latest
         "/posts/2014/04/08/dotjs-ltd-one-year-old/index.json",
         "/posts/2014/02/19/sublime-3-build-system-to-run-npm-test/index.json",
         "/posts/2013/01/03/forcing-garbage-collection-with-nodejs-and-v8/index.json",
         "/posts/2012/04/12/expressjs-publicstatic-directory-in-one-line/index.json",
+<<<<<<< HEAD
         "/posts/2012/04/11/http-requests-with-nodejs/index.json",
         "/posts/2012/01/05/learning-from-single-page-web-applications/index.json",
         "/posts/2011/11/22/sizlate/index.json",
@@ -1872,6 +2272,95 @@
         "/tags/loughton/index.json",
         "/tags/brook/index.json",
         "/tags/display/index.json",
+=======
+        "/posts/2012/01/05/learning-from-single-page-web-applications/index.json",
+        "/posts/2011/04/05/cross-browser-css3-gradient/index.json",
+        "/posts/2012/04/11/http-requests-with-nodejs/index.json",
+        "/posts/2016/01/26/enhanceconf-line-up/index.json",
+        "/posts/2010/06/28/installing-ckeditor-with-standalone-tiddlywiki/index.json",
+        "/posts/2009/09/21/installing-tiddlydocs-latest-on-tiddlyweb-(mac)/index.json",
+        "/posts/2010/05/12/a-simple-ckeditor-plugin-template/index.json",
+        "/posts/2011/01/05/3d-transforms-with-css3/index.json",
+        "/posts/2011/02/11/building-on-the-web/index.json",
+        "/posts/2008/03/11/avoid-being-civil-serfed/index.json",
+        "/posts/2008/04/11/how-to-save-your-enterprise-some-money/index.json",
+        "/posts/2008/02/29/innovating-with-small-pieces-loosely-joined/index.json",
+        "/posts/2008/01/21/google-images-in-tiddlywikiand-maybe-flickr/index.json",
+        "/posts/2008/01/15/server-side-search-for-cctiddly/index.json",
+        "/posts/2008/03/10/rest-in-peace-civil-serf/index.json",
+        "/posts/2008/03/26/free-our-bills/index.json",
+        "/posts/2008/01/07/product-streaming-for-cctiddly/index.json",
+        "/posts/2007/12/24/the-ultimate-n95-hack-helicopters/index.json",
+        "/posts/2008/04/23/politics-twitter-and-accessibility-(politically-speaking)/index.json",
+        "/posts/2009/02/06/tiddlydocs-collaborating-on-large-documents/index.json",
+        "/posts/2008/03/10/announcing-cctiddly-151/index.json",
+        "/posts/2008/01/15/time-for-a-blog-post-about-twitter/index.json",
+        "/posts/2008/03/20/cctiddly-file-uploading/index.json",
+        "/posts/2008/08/11/offline-is-back-online/index.json",
+        "/posts/2008/02/21/off-the-shelf-integration-in-enterprises/index.json",
+        "/posts/2008/01/23/nokia-n95-stuff/index.json",
+        "/posts/2009/06/24/my-recent-contribution-to-the-house-of-lords-information-committee/index.json",
+        "/posts/2011/11/22/sizlate/index.json",
+        "/posts/2007/09/14/open-source-facebook/index.json",
+        "/posts/2007/08/01/mock-ajax-in-facebook/index.json",
+        "/posts/2007/11/26/cctiddly-2x-an-overview/index.json",
+        "/posts/2007/07/20/mashing-up-bt-web21c-location-service-with-google-maps/index.json",
+        "/posts/2007/10/19/macs-in-btc/index.json",
+        "/posts/2007/10/16/macro-template-for-tiddlywiki/index.json",
+        "/posts/2007/10/17/output-text-into-a-tiddler-without-changing-the-tiddler-macro/index.json",
+        "/posts/2007/07/23/phpweb21c-certificate-generation-(using-the-wizard)/index.json",
+        "/posts/2007/11/09/latest-database-design-for-cctiddly/index.json",
+        "/posts/2007/08/08/is-facebook-the-answer-to-everything-facebook-for-the-enterprise/index.json",
+        "/posts/2007/12/10/pondering-pagerank-and-tinyurls/index.json",
+        "/posts/2007/11/02/proposed-cctiddly-database-structure/index.json",
+        "/posts/2007/09/06/server-side-tiddlywikis-and-plugins/index.json",
+        "/posts/2007/09/14/server-side-tiddlywikis/index.json",
+        "/posts/2007/07/24/a-simple-dhtml-phone/index.json",
+        "/posts/2007/08/16/social-network-aggregator/index.json",
+        "/posts/2007/08/13/steps-for-setting-up-the-sdk/index.json",
+        "/posts/2007/09/24/hacking-for-a-wii/index.json",
+        "/posts/2007/07/20/the-google-maps-api/index.json",
+        "/posts/2007/09/25/giving-tiddlywiki-a-restmysql-to-rest-in-php/index.json",
+        "/posts/2007/08/08/getting-your-friends-out-of-facebook/index.json",
+        "/posts/2007/08/09/get-your-friends-details-out-of-facebook/index.json",
+        "/posts/2007/10/16/the-most-simple-ajax-call-in-tiddlywiki/index.json",
+        "/posts/2007/09/19/the-osmosoft-social-network-elgg/index.json",
+        "/posts/2007/09/21/facebook-want-to-take-developers-to-court!!/index.json",
+        "/posts/2007/10/23/facebook-screen-scraping-get-your-friends-back-from-facebook-and-into-tiddlywiki!/index.json",
+        "/posts/2007/11/28/the-robbie-clutton-problem/index.json",
+        "/posts/2007/12/03/epoch-to-tiddlytime/index.json",
+        "/posts/2007/08/14/enterprise-tiddlywiki/index.json",
+        "/posts/2007/09/13/those-fuckers-at-facebook-part-two/index.json",
+        "/posts/2007/09/13/those-fuckers-at-facebook-trying-to-hush-me-up/index.json",
+        "/posts/2007/09/15/enable-php-error-reporting-for-a-page/index.json",
+        "/posts/2007/10/22/enable-and-use-mod-rewrite/index.json",
+        "/posts/2007/09/13/those-fuckers-at-facebook/index.json",
+        "/posts/2007/12/06/delicious-feed-removal/index.json",
+        "/posts/2007/11/01/video-on-open-social/index.json",
+        "/posts/2007/08/29/confused-by-convergence/index.json",
+        "/posts/2007/07/20/conference-calls-on-the-bt-sdk-(web21c)/index.json",
+        "/posts/2007/07/24/conference-calling-with-web21c-php-sdk/index.json",
+        "/posts/2007/12/10/cctiddly-system-tiddler-plugins/index.json",
+        "/posts/2007/09/15/writing-to-the-facebook-news-feed/index.json",
+        "/posts/2007/12/12/bullshit-20/index.json",
+        "/posts/2007/11/21/mime-types-in-for-server-side-tiddlywikis-download-a-html-file-from-a-link/index.json",
+        "/posts/2007/06/29/ip-in-action-security-event/index.json",
+        "/posts/2007/07/16/my-first-(very-simple)-facebook-application-using-the-bt-web21c-sdk/index.json",
+        "/posts/2007/07/05/my-second-look-at-tiddlywiki/index.json",
+        "/posts/2007/07/16/php-sdk-for-dummies-using-windows/index.json",
+        "/posts/2007/07/03/simon-mcmanus-and-osmosoft/index.json",
+        "/posts/2007/07/20/your-location-from-the-bt-sdk-(web21c)-in-google-maps/index.json",
+        "/posts/2008/01/04/life-streaming-in-cctiddly/index.json",
+        "/tags/2018/index.json",
+        "/tags/2019/index.json",
+        "/tags/google/index.json",
+        "/tags/fonts/index.json",
+        "/tags/display/index.json",
+        "/tags/amazon/index.json",
+        "/tags/jobs/index.json",
+        "/tags/node/index.json",
+        "/tags/web/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/sustainability/index.json",
         "/tags/environments/index.json",
         "/tags/which/index.json",
@@ -1886,43 +2375,87 @@
         "/tags/webcam/index.json",
         "/tags/webpagetest/index.json",
         "/tags/video/index.json",
+<<<<<<< HEAD
         "/tags/bag/index.json",
+=======
+        "/tags/web-components/index.json",
+        "/tags/svelte/index.json",
+        "/tags/micro/index.json",
+        "/tags/microfrontend/index.json",
+        "/tags/bag/index.json",
+        "/tags/nuxt/index.json",
+        "/tags/api/index.json",
+        "/tags/vue/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/config/index.json",
         "/tags/forms/index.json",
         "/tags/inputs/index.json",
         "/tags/rebar/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/css/index.json",
+        "/tags/layout/index.json",
+        "/tags/sqlite3/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/database/index.json",
         "/tags/expressive/index.json",
         "/tags/lifecycle/index.json",
         "/tags/base/index.json",
+<<<<<<< HEAD
         "/tags/audit/index.json",
         "/tags/context/index.json",
         "/tags/getting/index.json",
+=======
+        "/tags/speed/index.json",
+        "/tags/audit/index.json",
+        "/tags/undefined/index.json",
+        "/tags/context/index.json",
+        "/tags/getting/index.json",
+        "/tags/routing/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/vuejs/index.json",
         "/tags/colours/index.json",
         "/tags/plotly/index.json",
         "/tags/plotlyreact/index.json",
         "/tags/finallyfixedit/index.json",
         "/tags/quotes/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/indieweb/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/indiweb/index.json",
         "/tags/gettingstarted/index.json",
         "/tags/recruiters/index.json",
         "/tags/ecommerce/index.json",
         "/tags/bias/index.json",
         "/tags/cognitive/index.json",
+<<<<<<< HEAD
         "/tags/styling/index.json",
+=======
+        "/tags/tutorials/index.json",
+        "/tags/styling/index.json",
+        "/tags/images/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/responsive/index.json",
         "/tags/tools/index.json",
         "/tags/missionary/index.json",
         "/tags/mercenary/index.json",
         "/tags/binding/index.json",
         "/tags/zoom/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/react/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/graphs/index.json",
         "/tags/unflux/index.json",
         "/tags/sql/index.json",
         "/tags/distinct/index.json",
         "/tags/influxdb/index.json",
         "/tags/debt/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/functions/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/retention/index.json",
         "/tags/downsampling/index.json",
         "/tags/resolution/index.json",
@@ -1934,18 +2467,39 @@
         "/tags/nodemon/index.json",
         "/tags/docker/index.json",
         "/tags/issue/index.json",
+<<<<<<< HEAD
         "/tags/workers/index.json",
         "/tags/parallel/index.json",
         "/tags/building/index.json",
         "/tags/naming/index.json",
         "/tags/liner/index.json",
+=======
+        "/tags/testing/index.json",
+        "/tags/workers/index.json",
+        "/tags/parallel/index.json",
+        "/tags/speclate/index.json",
+        "/tags/building/index.json",
+        "/tags/naming/index.json",
+        "/tags/pond/index.json",
+        "/tags/garden/index.json",
+        "/tags/liner/index.json",
+        "/tags/design/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/sprints/index.json",
         "/tags/designsprints/index.json",
         "/tags/birdguard/index.json",
         "/tags/mutate/index.json",
+<<<<<<< HEAD
         "/tags/venue/index.json",
         "/tags/lawsuite/index.json",
         "/tags/questionaire/index.json",
+=======
+        "/tags/js/index.json",
+        "/tags/venue/index.json",
+        "/tags/lawsuite/index.json",
+        "/tags/questionaire/index.json",
+        "/tags/modules/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/cssmodules/index.json",
         "/tags/uml/index.json",
         "/tags/diagram/index.json",
@@ -1954,15 +2508,32 @@
         "/tags/lenses/index.json",
         "/tags/photography/index.json",
         "/tags/focus/index.json",
+<<<<<<< HEAD
         "/tags/cloudflare/index.json",
         "/tags/availability/index.json",
         "/tags/service-workers/index.json",
         "/tags/autofill/index.json",
         "/tags/apple/index.json",
+=======
+        "/tags/podcast/index.json",
+        "/tags/atg/index.json",
+        "/tags/cloudflare/index.json",
+        "/tags/cdn/index.json",
+        "/tags/availability/index.json",
+        "/tags/service-workers/index.json",
+        "/tags/autofill/index.json",
+        "/tags/html/index.json",
+        "/tags/apple/index.json",
+        "/tags/london/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/office/index.json",
         "/tags/gshq/index.json",
         "/tags/spies/index.json",
         "/tags/window/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/components/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/discovery/index.json",
         "/tags/styleguide/index.json",
         "/tags/channel4/index.json",
@@ -1975,6 +2546,11 @@
         "/tags/backgrounds/index.json",
         "/tags/remove/index.json",
         "/tags/editing/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/frameworks/index.json",
+        "/tags/javascript/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/developmentandnbsp/index.json",
         "/tags/app-store/index.json",
         "/tags/tfl/index.json",
@@ -1990,18 +2566,32 @@
         "/tags/mockups/index.json",
         "/tags/lowfi/index.json",
         "/tags/cleaner/index.json",
+<<<<<<< HEAD
         "/tags/hosting/index.json",
+=======
+        "/tags/performance/index.json",
+        "/tags/hosting/index.json",
+        "/tags/avoid/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/words/index.json",
         "/tags/english/index.json",
         "/tags/gds/index.json",
         "/tags/chrome/index.json",
         "/tags/platform/index.json",
         "/tags/status/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/lnug/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/fakerocks/index.json",
         "/tags/screencast/index.json",
         "/tags/recording/index.json",
         "/tags/petitions/index.json",
         "/tags/parliament/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/uk/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/democracy/index.json",
         "/tags/intro/index.json",
         "/tags/seo/index.json",
@@ -2009,8 +2599,17 @@
         "/tags/markup/index.json",
         "/tags/litepages/index.json",
         "/tags/scrum/index.json",
+<<<<<<< HEAD
         "/tags/guide/index.json",
         "/tags/perception/index.json",
+=======
+        "/tags/agile/index.json",
+        "/tags/guide/index.json",
+        "/tags/loading/index.json",
+        "/tags/animation/index.json",
+        "/tags/perception/index.json",
+        "/tags/accessibility/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/mspaint/index.json",
         "/tags/lint/index.json",
         "/tags/floorplan/index.json",
@@ -2030,6 +2629,10 @@
         "/tags/wip/index.json",
         "/tags/microsoft/index.json",
         "/tags/developer/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/businessmodel/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/hiding/index.json",
         "/tags/jam/index.json",
         "/tags/collaboration/index.json",
@@ -2039,27 +2642,52 @@
         "/tags/flags/index.json",
         "/tags/continuousdelivery/index.json",
         "/tags/simple/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/headless/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/dom/index.json",
         "/tags/bikes/index.json",
         "/tags/rubbish/index.json",
         "/tags/pseudo-classes/index.json",
         "/tags/functional/index.json",
+<<<<<<< HEAD
         "/tags/2d/index.json",
         "/tags/atomicdesign/index.json",
         "/tags/patternlabs/index.json",
+=======
+        "/tags/state/index.json",
+        "/tags/2d/index.json",
+        "/tags/atomicdesign/index.json",
+        "/tags/patternlabs/index.json",
+        "/tags/documentation/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/eslint/index.json",
         "/tags/danglingandnbspcontainers/index.json",
         "/tags/disallow/index.json",
         "/tags/sizes/index.json",
         "/tags/large/index.json",
+<<<<<<< HEAD
         "/tags/views/index.json",
         "/tags/urls/index.json",
+=======
+        "/tags/perf/index.json",
+        "/tags/transitions/index.json",
+        "/tags/views/index.json",
+        "/tags/urls/index.json",
+        "/tags/npm/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/photo/index.json",
         "/tags/blackleopard/index.json",
         "/tags/offline/index.json",
         "/tags/docs/index.json",
         "/tags/hcm/index.json",
         "/tags/towerbridge/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/logging/index.json",
+        "/tags/ux/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/netlify/index.json",
         "/tags/shorteners/index.json",
         "/tags/formik/index.json",
@@ -2075,15 +2703,28 @@
         "/tags/conference/index.json",
         "/tags/freelance/index.json",
         "/tags/serverless/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/aws/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/commit/index.json",
         "/tags/convention/index.json",
         "/tags/git/index.json",
         "/tags/mobile/index.json",
         "/tags/coverage/index.json",
         "/tags/bestandnbsppractice/index.json",
+<<<<<<< HEAD
         "/tags/default/index.json",
         "/tags/svg/index.json",
         "/tags/polyfills/index.json",
+=======
+        "/tags/vscode/index.json",
+        "/tags/es6/index.json",
+        "/tags/default/index.json",
+        "/tags/svg/index.json",
+        "/tags/polyfills/index.json",
+        "/tags/browsers/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/support/index.json",
         "/tags/browserlist/index.json",
         "/tags/designandnbspsprint/index.json",
@@ -2093,24 +2734,43 @@
         "/tags/contentful/index.json",
         "/tags/dates/index.json",
         "/tags/position/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/newrelic/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/kitchen/index.json",
         "/tags/floor/index.json",
         "/tags/scrolling/index.json",
         "/tags/scott/index.json",
+<<<<<<< HEAD
         "/tags/proptypes/index.json",
         "/tags/hotjar/index.json",
+=======
+        "/tags/police/index.json",
+        "/tags/proptypes/index.json",
+        "/tags/hotjar/index.json",
+        "/tags/tracking/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/faq/index.json",
         "/tags/recompose/index.json",
         "/tags/styled-components/index.json",
         "/tags/styled-system/index.json",
         "/tags/hex/index.json",
         "/tags/hapi/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/react-router@4/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/talks/index.json",
         "/tags/videos/index.json",
         "/tags/versions/index.json",
         "/tags/testdouble/index.json",
         "/tags/indy/index.json",
         "/tags/testcafe/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/e2e/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/buds/index.json",
         "/tags/rightofaccess/index.json",
         "/tags/async/index.json",
@@ -2123,7 +2783,13 @@
         "/tags/travis/index.json",
         "/tags/carpet/index.json",
         "/tags/dogs/index.json",
+<<<<<<< HEAD
         "/tags/trade/index.json",
+=======
+        "/tags/variable/index.json",
+        "/tags/trade/index.json",
+        "/tags/check-list/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/house/index.json",
         "/tags/designandnbspsystems/index.json",
         "/tags/disney/index.json",
@@ -2141,9 +2807,17 @@
         "/tags/progressiveandnbspenhancement/index.json",
         "/tags/metadata/index.json",
         "/tags/contract/index.json",
+<<<<<<< HEAD
         "/tags/specificity/index.json",
         "/tags/conferences/index.json",
         "/tags/fast/index.json",
+=======
+        "/tags/history/index.json",
+        "/tags/specificity/index.json",
+        "/tags/conferences/index.json",
+        "/tags/fast/index.json",
+        "/tags/bundler/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/principles/index.json",
         "/tags/alley/index.json",
         "/tags/blueandnbspball/index.json",
@@ -2151,6 +2825,11 @@
         "/tags/colour/index.json",
         "/tags/color/index.json",
         "/tags/just/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/desk/index.json",
+        "/tags/standingandnbspdesk/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/cornerandnbspdesk/index.json",
         "/tags/audi/index.json",
         "/tags/q5/index.json",
@@ -2159,7 +2838,13 @@
         "/tags/netflix/index.json",
         "/tags/jenkins/index.json",
         "/tags/ci/index.json",
+<<<<<<< HEAD
         "/tags/choo/index.json",
+=======
+        "/tags/devops/index.json",
+        "/tags/choo/index.json",
+        "/tags/budget/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/numbers/index.json",
         "/tags/voice/index.json",
         "/tags/guidelines/index.json",
@@ -2167,6 +2852,10 @@
         "/tags/writing/index.json",
         "/tags/cheatandnbspsheet/index.json",
         "/tags/cheat/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/remote/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/snap/index.json",
         "/tags/osx/index.json",
         "/tags/inclusiveandnbspdesign/index.json",
@@ -2179,8 +2868,15 @@
         "/tags/excel/index.json",
         "/tags/product/index.json",
         "/tags/changeandnbspmanagement/index.json",
+<<<<<<< HEAD
         "/tags/dragandnbspnandnbspdrop/index.json",
         "/tags/ui/index.json",
+=======
+        "/tags/government/index.json",
+        "/tags/dragandnbspnandnbspdrop/index.json",
+        "/tags/ui/index.json",
+        "/tags/retail/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/matching/index.json",
         "/tags/fallback/index.json",
         "/tags/fout/index.json",
@@ -2192,12 +2888,22 @@
         "/tags/assertions/index.json",
         "/tags/spaces/index.json",
         "/tags/ternary/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/code/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/bundle/index.json",
         "/tags/homepage/index.json",
         "/tags/morph/index.json",
         "/tags/borderandnbspgradient/index.json",
         "/tags/background/index.json",
+<<<<<<< HEAD
         "/tags/materialandnbspconference/index.json",
+=======
+        "/tags/pwas/index.json",
+        "/tags/materialandnbspconference/index.json",
+        "/tags/playlist/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/meetings/index.json",
         "/tags/declarativeandnbsppipe/index.json",
         "/tags/declarativeandnbsppipeline/index.json",
@@ -2216,11 +2922,19 @@
         "/tags/solutions/index.json",
         "/tags/analysis/index.json",
         "/tags/progressiveandnbspimages/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/optimisation/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/hacking/index.json",
         "/tags/pentest/index.json",
         "/tags/criticalandnbsppath/index.json",
         "/tags/rendering/index.json",
         "/tags/request/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/microservices/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/wisebox/index.json",
         "/tags/lights/index.json",
         "/tags/sedley/index.json",
@@ -2232,6 +2946,10 @@
         "/tags/commandandnbspqueue/index.json",
         "/tags/stable/index.json",
         "/tags/nodeandnbsp/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/monitoring/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/prometheus/index.json",
         "/tags/guideandnbspdogs/index.json",
         "/tags/sharedandnbspsurfaces/index.json",
@@ -2242,6 +2960,10 @@
         "/tags/storyandnbsppoints/index.json",
         "/tags/noestimates/index.json",
         "/tags/eppingandnbspforest/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/recycling/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/tdd/index.json",
         "/tags/teams/index.json",
         "/tags/waste/index.json",
@@ -2250,6 +2972,10 @@
         "/tags/disabled/index.json",
         "/tags/validation/index.json",
         "/tags/custom-commands/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/bundling/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/classnames/index.json",
         "/tags/cssandnbspscope/index.json",
         "/tags/ffmpeg/index.json",
@@ -2257,13 +2983,23 @@
         "/tags/metrics/index.json",
         "/tags/notandnbsptested/index.json",
         "/tags/datacenter/index.json",
+<<<<<<< HEAD
         "/tags/jeffconf/index.json",
+=======
+        "/tags/scale/index.json",
+        "/tags/jeffconf/index.json",
+        "/tags/maps/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/intelligence/index.json",
         "/tags/business/index.json",
         "/tags/swardley/index.json",
         "/tags/change/index.json",
         "/tags/boilingandnbspfrogs/index.json",
         "/tags/gchq/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/deployment/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/strategy/index.json",
         "/tags/timeandnbspwellandnbspspent/index.json",
         "/tags/darkandnbsppatterns/index.json",
@@ -2274,6 +3010,10 @@
         "/tags/philosophies/index.json",
         "/tags/domandnbspdiffing/index.json",
         "/tags/grandstand/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/bbc/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/sass/index.json",
         "/tags/skeleton/index.json",
         "/tags/serviceandnbspworkers/index.json",
@@ -2297,18 +3037,30 @@
         "/tags/store/index.json",
         "/tags/revert/index.json",
         "/tags/undo/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/auth/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/ssh/index.json",
         "/tags/ios/index.json",
         "/tags/andnbspapple/index.json",
         "/tags/andnbspscam/index.json",
         "/tags/hugo/index.json",
         "/tags/finances/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/no-js/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/div/index.json",
         "/tags/open-rights-group/index.json",
         "/tags/watch/index.json",
         "/tags/ansible/index.json",
         "/tags/uri/index.json",
         "/tags/gmail/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/filter/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/email/index.json",
         "/tags/plus/index.json",
         "/tags/flexbox/index.json",
@@ -2318,19 +3070,34 @@
         "/tags/fegreater/index.json",
         "/tags/jsdom/index.json",
         "/tags/webdriver/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/fetch/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/amp/index.json",
         "/tags/mtb/index.json",
         "/tags/olympics/index.json",
         "/tags/forgiveness/index.json",
         "/tags/istio/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/kubernetes/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/trainline/index.json",
         "/tags/www/index.json",
         "/tags/camping/index.json",
         "/tags/cornwall/index.json",
         "/tags/campsite/index.json",
         "/tags/contraintlayout/index.json",
+<<<<<<< HEAD
         "/tags/imagesperf/index.json",
         "/tags/horizontal/index.json",
+=======
+        "/tags/semanticandnbspreleases/index.json",
+        "/tags/imagesperf/index.json",
+        "/tags/horizontal/index.json",
+        "/tags/libs/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/fold/index.json",
         "/tags/crawl/index.json",
         "/tags/testandnbspit/index.json",
@@ -2344,12 +3111,22 @@
         "/tags/virtual-dom/index.json",
         "/tags/diffing/index.json",
         "/tags/webhooks/index.json",
+<<<<<<< HEAD
         "/tags/openandnbspsource/index.json",
+=======
+        "/tags/streaming/index.json",
+        "/tags/openandnbspsource/index.json",
+        "/tags/caching/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/tables/index.json",
         "/tags/contrast/index.json",
         "/tags/anaytics/index.json",
         "/tags/css-animation/index.json",
         "/tags/keyframes/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/code-reviews/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/quality/index.json",
         "/tags/team-work/index.json",
         "/tags/pageobject/index.json",
@@ -2360,6 +3137,10 @@
         "/tags/realtime/index.json",
         "/tags/bash/index.json",
         "/tags/terminal/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/automation/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/gif/index.json",
         "/tags/diversity/index.json",
         "/tags/spreadsheet/index.json",
@@ -2369,10 +3150,18 @@
         "/tags/vagrant/index.json",
         "/tags/nearform/index.json",
         "/tags/peerdependencies/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/graphql/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/moving/index.json",
         "/tags/specs/index.json",
         "/tags/cobol/index.json",
         "/tags/legacy/index.json",
+<<<<<<< HEAD
+=======
+        "/tags/redux/index.json",
+>>>>>>> 2a6e6e9... lists latest
         "/tags/json/index.json"
     ],
     "layout": [
@@ -2383,6 +3172,13 @@
         "client/icons/play.svg",
         "client/icons/monitor.svg",
         "client/global-styles-compiled.css",
+<<<<<<< HEAD
         "client/index-compiled.js"
+=======
+        "client/index-compiled.js",
+        "client/freesketch/freesketch_gothic_light_demo-webfont.eot",
+        "client/freesketch/freesketch_gothic_light_demo-webfont.woff",
+        "client/freesketch/freesketch_gothic_light_demo-webfont.ttf"
+>>>>>>> 2a6e6e9... lists latest
     ]
 }
