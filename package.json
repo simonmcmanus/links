@@ -7,7 +7,7 @@
     "watch": "speclate --watch",
     "offline": "npm run js && npm run html",
     "build": "mkdir -p docs && npm run update && npm run js && npm run html",
-    "html": "speclate --build ",
+    "html1": "speclate --build ",
     "style": "speclate --scss",
     "start": "speclate --dev 5009",
     "update": "node scripts/update.js",
@@ -21,7 +21,7 @@
     "js-watch": "watchify ./client/index.js -o ./client/index-compiled.js",
     "sass-watch": "node-sass ./pages/layout.scss  --watch",
     "import-blog": "node ./scripts/import-blog.js",
-    "clean":  " rm -Rf posts &&  rm -Rf docs"
+    "clean": " rm -Rf posts &&  rm -Rf docs"
   },
   "author": "",
   "license": "ISC",
