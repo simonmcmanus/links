@@ -39,7 +39,7 @@
     "showdown": "^1.9.0",
     "slugify": "^1.3.4",
     "speclate": "^19.0.1",
-    "speclate-service-worker": "1.3.x",
+    "speclate-service-worker": "3.x.x",
     "superagent": "^3.5.2",
     "turndown": "^5.0.3",
     "uglify-js": "^2.4.10",
