@@ -21,7 +21,7 @@
     "js-watch": "watchify ./client/index.js -o ./client/index-compiled.js",
     "sass-watch": "node-sass ./pages/layout.scss  --watch",
     "import-blog": "node ./scripts/import-blog.js",
-    "clean":  " rm -Rf posts &&  rm -Rf docs"
+    "clean": " rm -Rf posts &&  rm -Rf docs"
   },
   "author": "",
   "license": "ISC",

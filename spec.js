@@ -164,7 +164,6 @@ module.exports = {
     },
 
     files: [
-      'user.svg',
       'cv.html',
       'client/icons/play.svg',
       'client/icons/monitor.svg',
