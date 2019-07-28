@@ -47,7 +47,7 @@ superagent
       })
 
     console.log('out', __dirname + '../links.json')
-    fs.writeFile(__dirname + '../links.json', JSON.stringify(selectors, null, 4), function (e, d) {
+    fs.writeFile(__dirname + '/../links.json', JSON.stringify(selectors, null, 4), function (e, d) {
       console.log(chalk.blue('Fetching latest links...'))
       console.log(chalk.green('  ok'))
     })
