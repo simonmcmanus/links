@@ -14,7 +14,7 @@ Previously sizlate required [sizzle](https://sizzlejs.com/) to operate in the br
   
 Page.js helped me get speclate-router up and running quickly, at that time, just running speclate in the client seemed a long way off. 
 
-### Speclate-router will be  depricated 
+### Speclate-router will be  deprecated 
 
 Version 9 will be the last standalone version of `speclate-router`. From @19, Speclate includes a dramatically similified router, which can be included like so: 
 
