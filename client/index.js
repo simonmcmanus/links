@@ -8,7 +8,7 @@
 ga('create', 'UA-40911437-2', 'auto')
 ga('send', 'pageview')
 
-var router = require('../node_modules/speclate/router/index.js')
+var router = require('speclate/router')
 var appCacheNanny = require('appcache-nanny')
 
 window.Raven = require('raven-js')

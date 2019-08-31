@@ -19,9 +19,7 @@ Page.js helped me get speclate-router up and running quickly, at that time, just
 Version 9 will be the last standalone version of `speclate-router`. From @19, Speclate includes a dramatically similified router, which can be included like so: 
 
 ```
-
 var router = require('speclate/router')
-
 ```
 
 The router will behave exactly as it did before. Just with a lot less code. When the router is loaded it looks for any links on the page that match the routes specified in the spec. When it finds one, it binds to the link click so speclate  can handle swapping out the pages with the appropriate transitions. 
