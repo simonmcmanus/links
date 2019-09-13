@@ -36,7 +36,6 @@ html {
     #content{
         padding-top: 50px;
     }
-
 }
 
 .honey {
@@ -46,6 +45,7 @@ html {
     display: block;
     padding: 1em;
     overflow: auto;
+    
 }
 html.loading {
     background-color: $shadow;
@@ -59,6 +59,7 @@ section, .section {
     padding: .5em;
     border-radius: 3px;
     min-height: 40px;
+    padding-top: 2em;
     margin-bottom: 1em;
     background: #2b2b2cb0;
 
@@ -66,12 +67,17 @@ section, .section {
         margin: 0.4em;
         padding-bottom: 1em;
     }
+    li {
+        font-family: arial;
+    }
 }
 
 
 #content {
-    font-family:Poppins;
+    font-family: 'Source Serif Pro', serif;
     height: 100vh;
+
+    margin-bottom: 4em;
 }
 
 @media only screen and (min-width: 900px)  {
@@ -91,9 +97,7 @@ h1 {
 	font-weight: lighter !important;
 	color:$heading;
     line-height: 0.9em;
-    box-shadow: #000;
-    font-family: sketch_gothiclight;
-    text-shadow: 2px 2px $shadow;
+    text-shadow: 1px 1px #fefe;
 }
 
 h2 {
@@ -136,6 +140,7 @@ a {
 
 #container {
     padding: 0 1em;
+    margin-bottom: 10em;
 }
 
 .notice {
