@@ -35,7 +35,7 @@ module.exports = {
       '.links-title': '10 most recent links',
       '.links_holder': {
         component: 'link',
-        data: allLinks.slice(-10)
+        data: allLinks.slice(-10).reverse()
       },
       'meta[name=description]': {
         content: 'Links from Simon McManus'
