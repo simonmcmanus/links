@@ -35,7 +35,7 @@ module.exports = {
       '.links-title': '10 most recent links',
       '.links_holder': {
         component: 'link',
-        data: allLinks.slice(-10).reverse()
+        data: allLinks.slice(-10)
       },
       'meta[name=description]': {
         content: 'Links from Simon McManus'
@@ -167,8 +167,7 @@ module.exports = {
       'cv.html',
       'client/icons/play.svg',
       'client/icons/monitor.svg',
-      'client/global-styles-compiled.css',
-      'client/index-compiled.js'
+      'client/global-styles-compiled.css'
     ]
   }
 }
