@@ -8,19 +8,6 @@ $heading: #8f8d9a !default;
 $shadow:#1f1e1e !default;
 $boxes: #ccc !default;
 
-
-@font-face {
-    font-family: 'sketch_gothiclight';
-    src: url('/client/freesketch/freesketch_gothic_light_demo-webfont.eot');
-    src: url('/client/freesketch/freesketch_gothic_light_demo-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/client/freesketch/freesketch_gothic_light_demo-webfont.woff') format('woff'),
-         url('/client/freesketch/freesketch_gothic_light_demo-webfont.ttf') format('truetype'),
-         url('/fonts/freesketch/freesketch_gothic_light_demo-webfont.svg#sketch_gothiclight') format('svg');
-
-    font-style: normal;
-}
-
-
 html {
 	body {
         margin: 0;

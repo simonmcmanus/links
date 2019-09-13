@@ -168,10 +168,7 @@ module.exports = {
       'client/icons/play.svg',
       'client/icons/monitor.svg',
       'client/global-styles-compiled.css',
-      'client/index-compiled.js',
-      'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
-      'client/freesketch/freesketch_gothic_light_demo-webfont.woff',
-      'client/freesketch/freesketch_gothic_light_demo-webfont.ttf'
+      'client/index-compiled.js'
     ]
   }
 }
