@@ -167,7 +167,8 @@ module.exports = {
       'cv.html',
       'client/icons/play.svg',
       'client/icons/monitor.svg',
-      'client/global-styles-compiled.css'
+      'client/global-styles-compiled.css',
+      'client/index-compiled.js'
     ]
   }
 }
