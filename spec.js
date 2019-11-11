@@ -155,6 +155,7 @@ module.exports = {
   },
 
   defaultSpec: {
+
   },
   options: {
     outputDir: '/docs',

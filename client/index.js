@@ -11,6 +11,8 @@ ga('send', 'pageview')
 var router = require('speclate/router')
 var appCacheNanny = require('appcache-nanny')
 
+var Link = require('../components/link/link')
+
 window.Raven = require('raven-js')
 var consolePlugin = require('raven-js/plugins/console')
 
@@ -45,6 +47,7 @@ if (history.pushState) {
 } else {
   analytics('send', 'event', 'no-history-push-state')
 }
+
 
 ga('create', 'UA-40911437-2', 'auto')
 ga('send', 'pageview')
