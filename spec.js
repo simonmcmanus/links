@@ -2,8 +2,13 @@
 const links = require('./links')
 const getPosts = require('./lib/get-posts')
 
-const posts = getPosts()
-
+const posts = getPosts().sort((a, b) =>{
+  var dateA = a['.dateUrl'].split('-').join('')
+  var dateB = b['.dateUrl'].split('-').join('')
+  if (dateA <= dateB) return -1;
+  if (dateA => dateB) return 1;
+  return 0;
+}).reverse()
 // var tags = require('./lib/tags')(links.concat(postsSummary));
 var tags = require('./lib/tags')(links)
 const urlSafe = require('./lib/url-safe')
@@ -52,7 +57,7 @@ module.exports = {
       '.page-title': 'Blog posts',
       '.holder': {
         component: 'posts',
-        data: posts.reverse()
+        data: posts
       },
       'meta[name=description]': {
         content: 'Links from Simon McManus'
