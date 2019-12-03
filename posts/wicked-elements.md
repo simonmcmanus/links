@@ -32,7 +32,7 @@ In this case using the `is` attribute selector seems to work really nicely:
 wickedElements.define('[is=word-count]', ...)
 ```
 
-This means we can send markup that works for the lowest possible tech (a <code><p></code> tag). There is no hydration or anything else when the browser js kicks in.  The browser javascript just makes the existing elements interactive. Kinda how progressive enhancement is meant to work.
+This means we can send markup that works for the lowest possible tech (a <code><p></code> tag). There is no hydration or anything other re-rendering when the browser js kicks in.  The browser javascript just makes the existing elements interactive. Kinda how progressive enhancement is meant to work.
 
 Wicked elements isn't the same as custom elements, but does provide a similar API (except for how you select the elements). The thing I like about Wicked elements is that it doesn't make assuptions about how the markup is rendered, it just enhances the markup that has already been rendered. 
 
