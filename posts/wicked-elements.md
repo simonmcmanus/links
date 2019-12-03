@@ -1,7 +1,7 @@
 ---
 tags: customElements
 title: Wicked Elements
-date: Wed, 13 Nov 2019 12:18:52 +0000
+date: Wed, 3 Dec 2019 12:18:52 +0000
 ---
 
 [CustomElements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) give us the ability to create custom html tags that you can use in your markup like so:  
