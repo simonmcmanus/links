@@ -10,11 +10,13 @@ date: Wed, 3 Dec 2019 12:18:52 +0000
 <word-count> 
 ```
 
-But to use the above tag on a page the browser still needs to run some Javascript before it can render the custom element. The browser also needs to [support custom elements](https://caniuse.com/#feat=custom-elementsv1) to render anything at all.
 
 ```js
 customElements.define('word-count', WordCount, { extends: 'p' });
 ```
+
+
+But to use the above tag on a page the browser still needs to run some Javascript before it can render the custom element. The browser also needs to [support custom elements](https://caniuse.com/#feat=custom-elementsv1) to render anything at all.
 
  So the Progressive Enhancement story isn't great, and its for this reason I've often avoided custom elements.
 
