@@ -1,3 +1,5 @@
+$border-width:5px;
+
 
 
 // /* transition from page to home */
@@ -98,7 +100,7 @@ ul.nav {
                 stroke: #fff !important;
                 background:#eee;
                 border-radius: 50%;
-                border: 4px solid #373638;
+                border: $border-width solid #191919;
                 box-shadow: inset 0px 0px 0px .3px black;
 
             }
@@ -115,23 +117,23 @@ ul.nav {
 @mixin item($background, $class) {
     @keyframes rotate-#{$class}  {
         0% {
-            border-right: 4px solid  $background;
+            border-right: $border-width solid  $background;
         }
         25% {
-            border-bottom: 4px solid $background;
+            border-bottom: $border-width solid $background;
         }
         50% {
-            border-left: 4px solid $background;
+            border-left: $border-width solid $background;
         }
         75% {
-            border-top: 4px solid $background;
+            border-top: $border-width solid $background;
         }
     }
 
     html.loading ul.nav li.#{$class} svg {
-        border: 4px solid $shadow;
+        border: $border-width solid $shadow;
         animation: rotate-#{$class} 2s infinite;
-        border: 4px solid $shadow;
+        border: $border-width solid $shadow;
     }
 
 

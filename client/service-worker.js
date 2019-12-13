@@ -1,5 +1,5 @@
 var serviceWorker = require('speclate-service-worker')
-var spec = require('../spec')
+var offlineSpec = require('../offline-spec')
 var version = '2.2'
 
-// serviceWorker(spec, version)
+serviceWorker(offlineSpec, version)

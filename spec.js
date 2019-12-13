@@ -2,8 +2,13 @@
 const links = require('./links')
 const getPosts = require('./lib/get-posts')
 
-const posts = getPosts()
-
+const posts = getPosts().sort((a, b) =>{
+  var dateA = a['.dateUrl'].split('-').join('')
+  var dateB = b['.dateUrl'].split('-').join('')
+  if (dateA <= dateB) return -1;
+  if (dateA => dateB) return 1;
+  return 0;
+}).reverse()
 // var tags = require('./lib/tags')(links.concat(postsSummary));
 var tags = require('./lib/tags')(links)
 const urlSafe = require('./lib/url-safe')
@@ -161,10 +166,7 @@ module.exports = {
       'client/icons/play.svg',
       'client/icons/monitor.svg',
       'client/global-styles-compiled.css',
-      'client/index-compiled.js',
-      'client/freesketch/freesketch_gothic_light_demo-webfont.eot',
-      'client/freesketch/freesketch_gothic_light_demo-webfont.woff',
-      'client/freesketch/freesketch_gothic_light_demo-webfont.ttf'
+      'client/index-compiled.js'
     ]
   }
 }

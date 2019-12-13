@@ -1,6 +1,6 @@
 
 
-$background: #373638 !default;
+$background: #37363899 !default;
 $text: #a0a3a7 !default;
 $text-highlight: #d4d4d4 !default;
 $focus: #000 !default;
@@ -8,48 +8,62 @@ $heading: #8f8d9a !default;
 $shadow:#1f1e1e !default;
 $boxes: #ccc !default;
 
-
-@font-face {
-    font-family: 'sketch_gothiclight';
-    src: url('/client/freesketch/freesketch_gothic_light_demo-webfont.eot');
-    src: url('/client/freesketch/freesketch_gothic_light_demo-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/client/freesketch/freesketch_gothic_light_demo-webfont.woff') format('woff'),
-         url('/client/freesketch/freesketch_gothic_light_demo-webfont.ttf') format('truetype'),
-         url('/fonts/freesketch/freesketch_gothic_light_demo-webfont.svg#sketch_gothiclight') format('svg');
-
-    font-style: normal;
-}
-
 html {
-	padding-top: 50px;
-	height: 80%;
+	body {
+        margin: 0;
+        margin: 0;
+    }
     line-height: 1.5em;
     background: $background;
     color: $text;
 
-  transition: background-color 0.2s ease;
+    background: radial-gradient(circle, #000000cf 0%, black 83%);
+    background-position: bottom;
+    transition: background-color 0.2s ease;
+    #content{
+        padding-top: 50px;
+    }
 }
 
+.honey {
+    background: center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(25,25,25)' viewBox='0 0 100 169.5'%3E%3Cpolygon points='50,34.75 93.5,59.75 93.5,109.75 50,134.75 6.5,109.75 6.5,59.75'%3E%3C/polygon%3E%3Cpolygon points='0,-50 43.5,-25 43.5,25 0,50 -43.5,25 -43.5,-25'%3E%3C/polygon%3E%3Cpolygon points='100,-50 143.5,-25 143.5,25 100,50 56.5,25 56.5,-25'%3E%3C/polygon%3E%3Cpolygon points='0,119.5 43.5,144.5 43.5,194.5 0,219.5 -43.5,194.5 -43.5,144.5'%3E%3C/polygon%3E%3Cpolygon points='100,119.5 143.5,144.5 143.5,194.5 100,219.5 56.5,194.5 56.5,144.5'%3E%3C/polygon%3E%3C/svg%3E");
+
+    background-size: 9px;
+    display: block;
+    padding: 1em;
+    overflow: auto;
+    
+}
 html.loading {
-    background: $shadow;
+    background-color: $shadow;
 }
 section, .section {
+
+    border: 1px solid $focus;
+
+    border-radius: 5px;
     background: $boxes;
     padding: .5em;
     border-radius: 3px;
     min-height: 40px;
     margin-bottom: 1em;
-    background: #d2d2d208;
+    background: #2b2b2cb0;
 
     h4 {
         margin: 0.4em;
         padding-bottom: 1em;
     }
+    li {
+        font-family: arial;
+    }
 }
 
 
 #content {
-    font-family:Poppins;
+    font-family: 'Source Serif Pro', serif;
+    height: 100vh;
+
+    margin-bottom: 4em;
 }
 
 @media only screen and (min-width: 900px)  {
@@ -69,9 +83,7 @@ h1 {
 	font-weight: lighter !important;
 	color:$heading;
     line-height: 0.9em;
-    box-shadow: #000;
-    font-family: sketch_gothiclight;
-    text-shadow: 2px 2px $shadow;
+    text-shadow: 1px 1px #fefe;
 }
 
 h2 {
@@ -114,6 +126,7 @@ a {
 
 #container {
     padding: 0 1em;
+    margin-bottom: 10em;
 }
 
 .notice {

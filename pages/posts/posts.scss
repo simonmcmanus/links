@@ -1,22 +1,18 @@
 
 
-.links_holder {
-    margin: 0;
-    padding: 0;
-    
-}
-
-.links_holder  li {
-
+.holder  h3 {
     animation: fadeIn 0.5s linear;
-    animation-fill-mode: both;
-
 }
 
 
-
+.post_item {
+  line-height: 3em;
+  margin: 1.4em 0;
   
-  // Keyframe animation
+}
+
+
+// Keyframe animation
   @-webkit-keyframes fadeIn {
     0% {
       opacity: 0;
