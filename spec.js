@@ -70,7 +70,7 @@ module.exports = {
     }
   },
 
-  '/posts/:title/index.html': {
+  '/posts/:titleSlug/index.html': {
     page: 'post',
     lists: ['posts']
   },
