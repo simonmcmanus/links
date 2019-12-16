@@ -25,7 +25,6 @@ if (history.pushState) {
     },
     after: function (error, markup, page) {
       var scrollTo = 0
-      //            $('html,body').scrollTop(scrollTo)
 
       ga('send', 'pageview', {
         page: window.location.pathname,
