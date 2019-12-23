@@ -13,76 +13,21 @@ var urlFormat = 'YYYY-MM-DD'
 superagent
   .get('https://5vu7ki44h5.execute-api.eu-west-2.amazonaws.com/dev/links')
   .end(function (error, data) {
-    var selectors = data.body
+    var links = data.body
       .filter((link) => {
         return (link.title, link.url)
       })
       .map((link) => {
-        var tags = [ false ] // if no tags remove the list.
-        if (link.tags !== '') {
-          tags = link.tags.split(',').map(function (item) {
-            return {
-              innerHTML: item.replace(/ /g, '&nbsp;'),
-              href: '/tags/' + item.replace(/ /g, '-') + '/index.html'
-            }
-          })
+        const tags = link.tags.split(',')
+        if(tags) {
+          link.tags = tags
         }
-
-        return {
-          '.title': link.title || 'sd',
-          '.dateUrl': moment(new Date(link.created)).format(urlFormat),
-          '.summary': (link.summary !== '') ? encoder.htmlEncode(link.summary) : false,
-          '.tag': tags,
-          'a.created': {
-            href: '/links/' + moment(new Date(link.created)).format(urlFormat) + '/index.html',
-            innerHTML: moment(new Date(link.created)).format('MMMM Do YYYY')
-          },
-          img: {
-            src: 'https://www.google.com/s2/favicons?domain=' + url.parse(link.url).hostname
-          },
-          'a.link': {
-            href: link.url.slice('/')
-          }
-        }
+        return link
       })
-
-    console.log('out', __dirname + '../links.json')
-    fs.writeFile(__dirname + '/../links.json', JSON.stringify(selectors, null, 4), function (e, d) {
+console.log(__dirname + '/../lists/links.json')
+    fs.writeFile(__dirname + '/../lists/links.json', JSON.stringify(links, null, 4), function (e, d) {
+      if(e) throw e;
       console.log(chalk.blue('Fetching latest links...'))
       console.log(chalk.green('  ok'))
     })
   })
-
-//   var postSelectors = require('./posts').filter((post) => {
-//     return (
-//         post.title !== '' &&
-//         post.content !== '' &&
-//         post.title.slice(0, 10) !== 'links for '
-//     )
-//   }).map((post) => {
-
-//     return {
-//         '.title': post.title,
-//         url: '/posts/' + urlSafe(post.title) + '/index.html',
-//         '.dateUrl':  moment(new Date(post.created)).format(urlFormat),
-//         '.summary': post.content,
-//         '.tag': post.tags.split(',').map(function(item) {
-//             return {
-//                 innerHTML: item.replace(/ /g, '&nbsp;'),
-//                 href: '/tags/' + item.replace(/ /g, '-')  + '/index.html'
-//             }
-//         }),
-//         'a.created': {
-//             href: '/posts/' + urlSafe(post.title) + '/index.html',
-//             innerHTML: moment(new Date(post.created)).format('MMMM Do YYYY')
-//         },
-//         'a.link': {
-//             href: '/posts/' + urlSafe(post.title) + '/index.html'
-//         }
-//     }
-//   });
-
-//   fs.writeFile(__dirname + '/posts-selectors.json', JSON.stringify(  postSelectors, null, 4), function (e, d) {
-//     console.log(chalk.blue('Updating blog posts'))
-//     console.log(chalk.green('  ok'))
-// })
