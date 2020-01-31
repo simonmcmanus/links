@@ -22,9 +22,9 @@ superagent
         if(tags) {
           link.tags = tags
         }
+        link.date = link.created.substring(0, 10)
         return link
       })
-console.log(__dirname + '/../lists/links.json')
     fs.writeFile(__dirname + '/../lists/links.json', JSON.stringify(links, null, 4), function (e, d) {
       if(e) throw e;
       console.log(chalk.blue('Fetching latest links...'))
