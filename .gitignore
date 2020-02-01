@@ -6,3 +6,4 @@ client/global-styles-compiled.css
 client/index-compiled.js
 npm-debug.log
 package-lock.json
+report.*.json
