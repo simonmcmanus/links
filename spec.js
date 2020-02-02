@@ -139,6 +139,7 @@ module.exports = {
       ".links_holder": {
         component: "link",
         lists: ["links"],
+        filters: ["byTags"],
         mapper: "links"
       }
     }
