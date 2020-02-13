@@ -1,77 +1,60 @@
-const links = require("./links");
-const getPosts = require("./lib/get-posts");
-
-const posts = getPosts()
-  .sort((a, b) => {
-    var dateA = a[".dateUrl"].split("-").join("");
-    var dateB = b[".dateUrl"].split("-").join("");
-    if (dateA <= dateB) return -1;
-    if (dateA => dateB) return 1;
-    return 0;
-  })
-  .reverse();
-// var tags = require('./lib/tags')(links.concat(postsSummary));
-var tags = require("./lib/tags")(links);
-const urlSafe = require("./lib/url-safe");
-const allLinks = links.slice(0);
-links.reverse();
 module.exports = {
-  //   '/': {
-  //     page: 'home',
-  //     spec: {
-  //       title: 'Simon McManus'
-  //     }
-  //   },
-  //   '/talks.html': {
-  //     page: 'talks',
-  //     spec: {
-  //       title: 'Talks from Simon McManus'
-  //     }
-  //   },
-  //   '/hire.html': {
-  //     page: 'hire',
-  //     spec: {
-  //       title: 'Hire Simon McManus'
-  //     }
-  //   },
-  //   '/links.html': {
-  //     page: 'links',
-  //     spec: {
-  //       title: 'Recent links from Simon McManus',
-  //       '.links-title': '10 most recent links',
-  //       '.links_holder': {
-  //         component: 'link',
-  //         lists: ['links'],
-  //         mapper: 'links',
-  //         filters: ['mostRecent']
-  //       },
-  //       'meta[name=description]': {
-  //         content: 'Links from Simon McManus'
-  //       },
-  //       'meta[name=keywords]': {
-  //         content: 'links'
-  //       }
-  //     }
-  //   },
-  //   '/posts.html': {
-  //     page: 'posts',
-  //     spec: {
-  //       title: 'Recent posts from Simon McManus',
-  //       '.page-title': 'Blog posts',
-  //       '.holder': {
-  //         component: 'posts',
-  //         lists: ['posts'],
-  //         mapper: 'posts',
-  //         filters: ['mostRecent']
-  //       },
-  //       'meta[name=description]': {
-  //         content: 'Links from Simon McManus'
-  //       },
-  //       'meta[name=keywords]': {
-  //         content: 'links'
-  //       }
-  //     }
-  //   },
+    '/': {
+      page: 'home',
+      spec: {
+        title: 'Simon McManus'
+      }
+    },
+    // '/talks.html': {
+    //   page: 'talks',
+    //   spec: {
+    //     title: 'Talks from Simon McManus'
+    //   }
+    // },
+    '/hire.html': {
+      page: 'hire',
+      spec: {
+        title: 'Hire Simon McManus'
+      }
+    },
+    '/links.html': {
+      page: 'links',
+      spec: {
+        title: 'Recent links from Simon McManus',
+        '.links-title': '10 most recent links',
+        '.links_holder': {
+          component: 'link',
+          lists: ['links'],
+          mapper: 'links',
+          filters: ['mostRecent']
+        },
+        'meta[name=description]': {
+          content: 'Links from Simon McManus'
+        },
+        'meta[name=keywords]': {
+          content: 'links'
+        }
+      }
+    },
+    '/posts.html': {
+      page: 'posts',
+      spec: {
+        title: 'Recent posts from Simon McManus',
+        '.page-title': 'Blog posts',
+        '.holder': {
+          component: 'posts',
+          lists: ['posts'],
+          mapper: 'posts',
+          filters: ['mostRecent']
+        },
+        'meta[name=description]': {
+          content: 'Links from Simon McManus'
+        },
+        'meta[name=keywords]': {
+          content: 'links'
+        }
+      }
+    },
 
   // '/:date/index.html': {
   //     page: 'links',
@@ -87,48 +70,57 @@ module.exports = {
   //       },
   //       '.links_holder': {
   //         component: 'link',
-  //         lists: ['posts', 'links'],
+  //         lists: [    'links'],
   //         filters: ['byDate'],
   //         mapper: 'links'
   //       }
   //     }
   //   },
-  //   '/tags/index.html': {
-  //     page: 'links',
-  //     spec: {
-  //       title: 'Tags from Simon McManus',
-  //       '.links-title': 'Tags from Simon McManus',
-  //       '.links_holder': {
-  //         component: 'tag',
-  //         data: {
-  //           '.tag': tags
-  //         }
-  //       },
-  //       'meta[name=description]': {
-  //         content: 'Tags from Simon McManus'
-  //       },
-  //       'meta[name=keywords]': {
-  //         content: 'tags,links'
-  //       }
-  //     }
-  //   },
+    // '/tags/index.html': {
+    //   page: 'links',
+    //   spec: {
+    //     title: 'Tags from Simon McManus',
+    //     '.links-title': 'Tags from Simon McManus',
+    //     '.links_holder': {
+    //       component: 'tag',
+    //       data: {
+    //         '.tag': tags
+    //       }
+    //     },
+    //     'meta[name=description]': {
+    //       content: 'Tags from Simon McManus'
+    //     },
+    //     'meta[name=keywords]': {
+    //       content: 'tags,links'
+    //     }
+    //   }
+    // },
 
-  //   '/posts/:titleSlug/index.html': {
-  //     page: 'post',
-  //     lists: ['posts'],
-  //     filters: ['byTitleSlug'],
-  //     mapper: 'post',
-  //     spec: {
-  //     }
-  //   },
+    '/posts/:titleSlug/index.html': {
+      lists: ['posts'],
+      filters: ['byTitleSlug'],
+      mapper: 'post',
+      page: 'posts', 
+      spec: {
+        title: ':titleSlug',
+        '.page-title': 'Blog posts',
+        '.holder': {
+          component: 'posts-title',
+          lists: ['posts'],
+          mapper: 'posts',
+          filters: ['byTitleSlug'],
+        },
+      }
+    },
 
   "/tags/:tags/index.html": {
-    page: "links",
-    lists: ["links"],
+    page: "tag",
+    lists: ["links", "posts", "categories"],
     filters: ["byTags"],
     rssMapper: "rssMapper",
     spec: {
       title: ":tags | Simon McManus",
+      '.tag': ":tags",
       ".links-title": "Links tagged:  :tags",
       "meta[name=description]": {
         content: "Links tagged :tags"
@@ -136,11 +128,23 @@ module.exports = {
       "meta[name=keywords]": {
         content: ":tags"
       },
+      ".category": {
+        lists: ["categories"],
+        component: 'category',
+        filters: ["byTags"],
+        mapper: "category"
+      },
       ".links_holder": {
-        component: "link",
+        component: "posts-title",
         lists: ["links"],
         filters: ["byTags"],
         mapper: "links"
+      },
+      ".posts_holder": {
+        component: "posts-title",
+        lists: ["posts"],
+        filters: ["byTags"],
+        mapper: "posts"
       }
     }
   },

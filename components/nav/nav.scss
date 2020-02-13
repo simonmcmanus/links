@@ -1,5 +1,8 @@
 $border-width:5px;
 
+ul.nav {
+    height: 7em;
+}
 
 
 // /* transition from page to home */
@@ -20,7 +23,9 @@ html[data-speclate-url="/index.html"] ul.nav li {
     }
 }
 
-
+html[data-speclate-page="tag"] ul.nav {
+    display: none;
+}
 
 
 
@@ -31,6 +36,7 @@ html[data-speclate-page="links"] ul.nav li,
 html[data-speclate-url="/talks.html"] ul.nav li,
 html[data-speclate-url="/posts.html"] ul.nav li,
 html[data-speclate-page="post"] ul.nav li
+html[data-speclate-page="tag"] ul.nav li
 {
     height: 0;
     max-height: 0;

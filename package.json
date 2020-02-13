@@ -41,6 +41,7 @@
     "speclate": "^19.3.0",
     "speclate-service-worker": "3.x.x",
     "superagent": "^3.5.2",
+    "tailwindcss": "^1.2.0",
     "turndown": "^5.0.3",
     "uglify-js": "^2.4.10",
     "watchify": "^3.11.1"
