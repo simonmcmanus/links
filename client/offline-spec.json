@@ -1,15 +1,23 @@
 {
     "components": [
+        "posts/posts.html",
+        "category/category.html",
         "link/link.html"
     ],
     "pages": [
-        "links/links.html"
+        "posts/posts.html",
+        "post/post.html",
+        "tag/tag.html"
     ],
     "routes": [
         "/",
+        "/posts.html",
+        "/posts/:titleSlug/index.html",
         "/tags/:tags/index.html"
     ],
     "specs": [
+        "/posts.json",
+        "/posts/:titleSlug/index.json",
         "/tags/:tags/index.json"
     ],
     "layout": [

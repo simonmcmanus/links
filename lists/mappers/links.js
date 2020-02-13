@@ -1,5 +1,6 @@
 module.exports = function (post) {
 
+    
     var tags =  post.tags
     .filter(function(tag) {
         return tag.length > 0

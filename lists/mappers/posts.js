@@ -1,11 +1,11 @@
 module.exports = function (post) {
 
-    return {
+    var post = {
         '.title': post.title,
         url: 'index.html',
         '.date': post.date,
-       // '.dateUrl': moment(new Date(post.date)).format(urlFormat),
-        '.summary': post.content,
+    // '.dateUrl': moment(new Date(post.date)).format(urlFormat),
+        '.summary': post.markup,
         '.tags': {
             //data: tags,
             component: 'tag'
@@ -18,5 +18,6 @@ module.exports = function (post) {
             href: '/posts/' + post.titleSlug + '/' + 'index.html'
         }
     }
+    return post
 
 }

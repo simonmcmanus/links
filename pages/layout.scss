@@ -6,6 +6,8 @@ $heading: #a7a5b1 !default;
 $shadow: #1f1e1e !default;
 $boxes: #ccc !default;
 
+
+
 html {
   body {
     margin: 0;
@@ -123,7 +125,7 @@ a {
 #container {
   padding: 0 1em;
   margin-bottom: 10em;
-  margin-top: 7em;
+  
 }
 
 .warning {
@@ -179,3 +181,29 @@ html[data-speclate-url="/tags/index.html"] a.tag {
 
 @import "../components/loader/loader.scss";
 @import "../components/link/link.scss";
+
+
+
+.button {
+  background: blue;
+  color: white;
+  border-radius: 7px;
+  border: 1px solid $background;
+  padding: .3em .8em;
+  background-color: $text-highlight;
+  color: $background;
+  margin: 0 .5em 0 0;
+}
+
+.button:hover {
+  color: $focus;
+}
+
+
+  .cta {
+    text-align: center;
+    margin: 0 auto;
+    line-height: 5em;
+    padding: .3em .8em;
+    font-size: 2em;
+  }
