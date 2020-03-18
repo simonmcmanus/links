@@ -1,21 +1,31 @@
 {
     "components": [
-        "posts/posts.html",
-        "category/category.html",
-        "link/link.html"
-    ],
-    "pages": [
+        "link/link.html",
         "posts/posts.html",
         "post/post.html",
+        "category/category.html",
+        "posts-title/posts-title.html"
+    ],
+    "pages": [
+        "home/home.html",
+        "hire/hire.html",
+        "links/links.html",
+        "posts/posts.html",
         "tag/tag.html"
     ],
     "routes": [
         "/",
+        "/",
+        "/hire.html",
+        "/links.html",
         "/posts.html",
         "/posts/:titleSlug/index.html",
         "/tags/:tags/index.html"
     ],
     "specs": [
+        "index.json",
+        "/hire.json",
+        "/links.json",
         "/posts.json",
         "/posts/:titleSlug/index.json",
         "/tags/:tags/index.json"

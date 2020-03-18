@@ -1,3 +1,6 @@
 module.exports = function (item) {    
-    return (item.titleSlug === this.params && this.params.titleSlug)
+    if (!this.params || !this.params.titleSlug) {
+        return false
+    }
+    return (item.titleSlug === this.params.titleSlug)
 }

@@ -9,7 +9,13 @@ ga('create', 'UA-40911437-2', 'auto')
 ga('send', 'pageview')
 
 var router = require('speclate/router')
+
+
 var appCacheNanny = require('appcache-nanny')
+const {define, get, upgrade, whenDefined} = require('wicked-elements');
+
+
+
 
 window.Raven = require('raven-js')
 var consolePlugin = require('raven-js/plugins/console')
@@ -19,7 +25,9 @@ consolePlugin(Raven, console, {})
 
 if (history.pushState) {
   ga('send', 'event', 'history-push-state')
-  router({
+
+
+  var routerClick = router({
     preFetch: function ($container) {
       $container.innerHTML = ''
     },
@@ -41,6 +49,21 @@ if (history.pushState) {
       }
     }
   })
+
+  const onclick = (p) => {
+    return (e) => {
+      // call onclick here and work out the params to pass 
+       e.preventDefault()
+       onClick()
+      console.log('click', e, p)
+    }
+  }
+  define('a', {
+    onclick:routerClick('a')
+  })
+  
+
+ 
 } else {
   analytics('send', 'event', 'no-history-push-state')
 }
