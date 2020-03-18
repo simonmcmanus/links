@@ -25,7 +25,7 @@
         height: auto;
       }
       .box {
-        float: left;
+        display: inline-block;
         padding: 0.2em 0em 0em 0em;
         margin-bottom: 1em;
         font-size: 1.1em;
@@ -77,13 +77,22 @@
       }
       .skill-description {
         font-size: 1em;
-        height: 5em;
+       
         padding: 0.5em 0em 0em 0.5em;
         line-height: 1.4em;
+        font-weight: 1;
       }
       @media (min-width: 800px) {
+
+        .section.tools {
+          display: inline-block;
+          
+        }
         .box {
-          width: 50%;
+          vertical-align: top;
+          width: 49%;
+          font-weight: bold;
+          font-size: 1em;
         }
         h3.summary,
         div.dates {
@@ -130,7 +139,18 @@
           text-decoration: none;
         }
         .box {
-          width: 50%;
+          width: 48%;
+          display: inline-block;
+        }
+        .section.tools {
+          display: inline-block;
+          
+        }
+        .box {
+          vertical-align: top;
+          width: 49%;
+          font-weight: bold;
+          font-size: 1em;
         }
         #contactDetails {
           float: right;
@@ -193,11 +213,31 @@
           <ol class="vcalendar">
             <li class="experience vevent">
               <h3 class="summary">
+                <a href="https://limescan.net/">Limescan</a>
+              </h3>
+              <div class="dates">
+                <abbr class="dtstart" title="2019-06-01">June 2019</abbr> -
+                <abbr>March 2020</abbr>
+              </div>
+
+              <ul class="description">
+                <li>
+                  <a href="https://nuxtjs.org/">Nuxt</a>/<a
+                    href="https://vuejs.org/"
+                    >Vue.js</a
+                  >
+                  application to manage and visualise data from software-defined
+                  wireless probes.
+                </li>
+              </ul>
+            </li>
+            <li class="experience vevent">
+              <h3 class="summary">
                 <a href="http://dominos.co.uk">Dominos Pizza Group</a>
               </h3>
               <div class="dates">
                 <abbr class="dtstart" title="2019-05-01">July 2019</abbr> -
-                <abbr class="dtstart" title="2020-01-31">January 2020</abbr> -
+                <abbr class="dtstart" title="2020-01-31">January 2020</abbr>
               </div>
 
               <ul class="description">
@@ -213,26 +253,7 @@
               </ul>
             </li>
 
-            <li class="experience vevent">
-              <h3 class="summary">
-                <a href="https://limescan.net/">Limescan</a>
-              </h3>
-              <div class="dates">
-                <abbr class="dtstart" title="2019-06-01">June 2019</abbr> -
-                <abbr>Present</abbr>
-              </div>
-
-              <ul class="description">
-                <li>
-                  <a href="https://nuxtjs.org/">Nuxt</a>/<a
-                    href="https://vuejs.org/"
-                    >Vue.js</a
-                  >
-                  application to manage and visualise data from software-defined
-                  wireless probes.
-                </li>
-              </ul>
-            </li>
+            
             <li class="experience vevent">
               <h3 class="summary">
                 <a href="http://nearform.com/">NearForm</a>
@@ -340,7 +361,7 @@
               </ul>
             </li>
           </ol>
-
+          <p>
           I've also worked with
           <a href="https://www.gosquared.com/">GoSquared</a>,
           <a href="http://configurator.vw.com/ihdcc/configurator.html"
@@ -350,6 +371,7 @@
             >Nike</a
           >
           and <a href="https://www.bt.com">BT</a>.
+        </p>
         </div>
       </div>
       <div style="page-break-after:always"></div>
@@ -375,7 +397,7 @@
         <h2 class="item-title">
           Tools
         </h2>
-        <div class="section">
+        <div class="section tools">
           <div class="box">
             Content (HTML)
             <div class="skill-description">
@@ -431,6 +453,17 @@
             </div>
           </div>
           <div class="box">
+            Offline
+            <div class="skill-description">
+              Commercial experience making offline web apps. Developed
+              <a href="https://github.com/simonmcmanus/speclate-service-worker"
+                >speclate-service-worker</a
+              >
+              to provide services worker support for many of the sites I
+              support.
+            </div>
+          </div>    
+          <div class="box">
             Node.js
             <div class="skill-description">
               Node specialist with extensive commercial and open source
@@ -446,19 +479,7 @@
               Performance focussed at both ends, Experience with using tools to
               monitor performance changes over time.
             </div>
-          </div>
-
-          <div class="box">
-            Offline
-            <div class="skill-description">
-              Commercial experience making offline web apps. Developed
-              <a href="https://github.com/simonmcmanus/speclate-service-worker"
-                >speclate-service-worker</a
-              >
-              to provide services worker support for many of the sites I
-              support.
-            </div>
-          </div>
+          </div> 
 
           <div class="box">
             Testing
