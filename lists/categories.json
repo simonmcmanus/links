@@ -11,40 +11,43 @@
     },
     {
         "tags": ["enhanceconf", "EnhanceConf"],
-        "summary": "A 2016 conference dedicated to progressive enhancement",
+        "summary": "A 2016 conference dedicated to Progressive Enhancement",
         "title": "EnhanceConf"
     },
     {
         "title": "London",
         "summary": "Here you will find my links and thoughts about London and the Node community.",
-        "tags": []
-    },
-    {
-        "title": "Essex",
-        "tags": []
+        "tags": ["London"]
     },
     {
         "title": "Loughton",
-        "tags": []
+        "summary": "A loughton local, Essex is where I call home.",
+        "tags": ["loughton"]
     },
     {
         "title": "Pond",
-        "tags": []
+        "summary": "My little pond, a work in progress...",
+        "image": "https://pbs.twimg.com/media/ENlpMtYWoAAn6MC?format=jpg&name=medium",
+        "tags": ["pond"]
     },
     {
-        "title": "Gardening",
+        "title": "Garden",
+        "summary": "Various gardening links",
         "tags": []
     },
     {
         "title": "Sizlate",
-        "tags": []
+        "summary": "insert data into html files using just css selectors using sizlate <a href='https://www.npmjs.com/package/sizlate'>sizlate</a>", 
+        "tags": ["sizlate"]
     },
     {
         "title": "Speclate",
-        "tags": []
+        "summary": "Define websites using a spec.js file. Render each page at build time, in the browser and offline.<br />Ensure the best rendering experience is always available to the widest possible audience.",
+        "tags": ["speclate"]
     },
     {
         "title": "DotJS Ltd",
-        "tags": [] 
+        "summary": "London based Node.js consultancy services",
+        "tags": ["dotjs"] 
     }
 ]

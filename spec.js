@@ -105,7 +105,7 @@ module.exports = {
         title: ':titleSlug',
         '.page-title': 'Blog posts',
         '.holder': {
-          component: 'posts-title',
+          component: 'post',
           lists: ['posts'],
           mapper: 'posts',
           filters: ['byTitleSlug'],

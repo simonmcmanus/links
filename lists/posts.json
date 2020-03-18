@@ -18,7 +18,7 @@
             "Google",
             "Google Maps",
             "location",
-            "location service",
+            "location-service",
             "Maps",
             "SDK",
             "Web21C"
@@ -540,7 +540,7 @@
         "tags": [
             "BT",
             "ccTiddly",
-            "database design",
+            "database-design",
             "mysql",
             "Osmosoft",
             "phpmyadmin",
@@ -856,7 +856,8 @@
         "date": "2010-06-28",
         "markup": "<p>I was recently asked how to use <a href=\"http://ckeditor.com/\">CKEditor</a> with a standalone <a href=\"http://tiddlywiki.com\">TiddlyWiki</a>. <a href=\"http://ckeditor.com/\">CKEditor</a> is the replacement for FCKEditor. I've been using it for a while in MyDocs (a customisation of <a href=\"http://tiddlydocs.com\">TiddlyDocs</a>) but thought I would take this opportunity to document how it can be used in a standalone TiddlyWiki.  </p>\n<p>First off we need to get all the tiddlers required for <a href=\"ckeditor.com\">CKEditor</a>, the easiest way to do that is to cook the <a href=\"http://svn.tiddlywiki.org/Trunk/verticals/ckeditor/index.html.recipe\">ckeditor vertical recipe</a>.  </p>\n<p>For your convenience I've uploaded the <a href=\"tiddlywiki.com\">TiddlyWiki</a> file it produces <a href=\"http://simonmcmanus.com/stuff/ckeditor/index.html\">here</a>.  </p>\n<p>Now we need to download the <a href=\"ckeditor.com\">CKEditor</a> files, You can download them <a href=\"http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.3.1/ckeditor_3.3.1.zip\">here</a>.  </p>\n<p>Finally you just need to change the location set in the <a href=\"http://simonmcmanus.com/stuff/ckeditor/index.html#MarkupPreHead\">MarkupPreHead</a> tiddler so it points to the CKEditor folder you just downloaded. In my case:  </p>\n<script type=\"text/javascript\" src=\"**./ckeditor/ckeditor.js**\"></script>\n<p>If you are using cook you will need to save the MarkupPreHead tiddler from within the TiddlyWiki file for it to be set correctly. I have already done so in the example provided.  </p>\n<p>You may also want to change the values in the \"CKEditorSettings\" tiddler.  </p>\n<p>Save your changes, refresh the browser and that should do it.  </p>\n<p><strong>Update:</strong>  </p>\n<p>As some folks experienced problems getting this setup I have provided a zip file of the output:<br />\n<a href=\"http://simonmcmanus.com/stuff/ckeditor/twCKEditor.zip\">  \nhttp://simonmcmanus.com/stuff/ckeditor/twCKEditor.zip</a></p>",
         "tags": [
-            "CKEditor TiddlyWiki",
+            "CKEditor",
+            "TiddlyWiki",
             "osmososft"
         ]
     },
@@ -880,7 +881,8 @@
             "n95",
             "nats",
             "nokia",
-            "nokia n95 rc helicotor gps simonmcmanu",
+            "n95",
+            "nokia",
             "Osmosoft",
             "osmososft"
         ]
@@ -918,7 +920,7 @@
             "ctiddly",
             "flickr",
             "google ajax search",
-            "googleimages",
+            "images",
             "mashup",
             "Osmosoft",
             "osmososft",
@@ -945,7 +947,9 @@
         "markup": "<p>&nbsp;  </p>\n<p>One of the big motivations behind <a href=\"http://enhanceconf.com\">EnhanceConf</a> &nbsp;was education. Conferences are a great place to learn but the associated costs often make them difficult for many to attend. In the spirit of progressive enhancement, we want to make EnhanceConf available to the widest possible audience.  </p>\n<p>We have allocated a number of scholarship tickets for people who would like to attend but cannot pay for a ticket.  </p>\n<h3 id=\"howtoapply\">How to Apply</h3>\n<p>Send a short email to info@enhanceconf.com with a title of EnhanceConf Scholarship.  </p>\n<p><strong>In your email please include:</strong>  </p>\n<ul>\n<li>Who are you?  </li>\n<li>What do you do?  </li>\n<li>Why would you like the scholarship?  </li>\n</ul>\n<h3 id=\"whoshouldapply\">Who should apply:</h3>\n<p>The scholarships are available to anyone not normally able to attend a conference. If that might be you (even if you're not in one of the groups below) then please apply.  </p>\n<p>Some of the groups we are especially keen to support include:  </p>\n<ul>\n<li>Ethnic minorities </li>\n<li>Women</li>\n<li>LGBTQIA+</li>\n<li>Disabled people</li>\n<li>Charity workers</li>\n<li>Education / students</li>\n<li>Open source projects</li>\n<li>Industry newcomers</li>\n</ul>\n<p>If you have any questions, just send an email to info@enhanceconf.com  </p>\n<p><strong>Details:&nbsp;</strong>  </p>\n<p>All emails will be treated in the strictest confidence, we will not announce who the scholarships go to but you’re welcome to say so yourself.  </p>\n<p>Successful applicants will get a standard conference ticket.  </p>\n<p>We are only able to cover the cost of the conference ticket so please consider your travel costs before applying.</p>",
         "tags": [
             "EnhanceConf",
-            "progressive enhancement"
+            "scholarship",
+            "eduation",
+            "progressive-enhancement"
         ]
     },
     {
@@ -954,11 +958,12 @@
         "date": "2016-08-13",
         "markup": "<p>The <a href=\"http://lnug.org\">London Node User group website</a> is a static site hosted on <a href=\"https://pages.github.com/\">github pages,</a> it renders at build time, in the browser and works offline using <a href=\"http://github.com/simonmcmanus/speclate\">Speclate</a>.  </p>\n<p>The idea behind <a href=\"https://github.com/simonmcmanus/speclate\">Speclate</a>&nbsp;is you have a single file (a spec) which defines how your routes, pages&nbsp;and components fit together. A spec can be used to generate a static site and lots more too. &nbsp;With the help of <a href=\"https://github.com/simonmcmanus/speclate-router\">speclate-router</a>&nbsp;we generate a router which swaps out the appropriate HTML elements to transition nicely between pages.  </p>\n<p>Let's look at a simple example:  </p>\n<pre><code class=\"js language-js\">module.exports = {  \n     '/': {  \n         page: 'home',  \n         selectors: {  \n             title: 'Home',  \n             'a.home': {  \n                 className: 'active'  \n             }  \n         }  \n     },  \n     '/contact.html': {  \n         page: 'contact',  \n         selectors: {  \n             title: 'Contact',  \n             'a.contact': {  \n                 className: 'active'  \n             }  \n        }  \n     }  \n};\n</code></pre>\n<p>This spec will produce index.html and contact.html based on the&nbsp;contents of <a href=\"https://github.com/simonmcmanus/speclate-example/blob/master/pages/home/home.html\">/pages/home/home.html</a> and <a href=\"https://github.com/simonmcmanus/speclate-example/blob/master/pages/contact/contact.html\">/pages/contact/contact.html</a>&nbsp;and the values in the selectors object.  </p>\n<p>At the moment Speclate relies on a couple of conventions. <a href=\"https://github.com/simonmcmanus/speclate-example/blob/master/pages/layout.html\">/pages/layout.html</a> needs to contain an element with an id of \"container\"for the pages to be appended to. This will move to config eventually.  </p>\n<p>I've created a<a href=\"https://github.com/simonmcmanus/speclate-example\">&nbsp;simple example app</a>. You can see the <a href=\"http://speclate-example.netlify.com/\">demo running</a>&nbsp;on <a href=\"http://netlify.com\">Netlify</a>, and get the <a href=\"https://github.com/simonmcmanus/speclate-example\">source code on</a> <a href=\"https://github.com/simonmcmanus/speclate-example\">GitHub</a>. You can also read more about the spec format in the <a href=\"https://github.com/simonmcmanus/speclate\">speclate&nbsp;</a><a href=\"https://github.com/simonmcmanus/speclate\">readme</a>.  </p>\n<h2 id=\"rendering\">Rendering</h2>\n<p>Underneath the hood Speclate uses <a href=\"https://github.com/simonmcmanus/sizlate\">Sizlate</a> which makes extensive use of <a href=\"https://sizzlejs.com\">Sizzle</a>, the selector engine from jQuery. &nbsp;On the server, <a href=\"https://github.com/cheeriojs/cheerio\">Cheerio</a> provides a fast DOM implementation&nbsp;for generating the markup.  </p>\n<p>Rendering can be broken down into three steps. Firstly we replace the main page (using #container), then we apply the page spec, this will apply selectors and components to the page and lastly we apply the global selectors to the markup. This allows us to effect elements in the main layout such as the page title.  </p>\n<p>In the example there are three commands in the <a href=\"https://github.com/simonmcmanus/speclate-example/blob/master/package.json\">package.json</a>&nbsp;to generate the<a href=\"http://speclate-example.netlify.com/\">&nbsp;site</a>:  </p>\n<pre><code class=\"js language-js\">\"scripts\": {\n    \"markup\": \"speclate\",\n    \"client\": \"browserify ./client/router.js &gt; ./client/router-compiled.js\",\n    \"build\": \"npm run client &amp;&amp; npm run markup\"\n}\n</code></pre>\n<p>'npm run markup' will generate a functional HTML site. 'npm run client' uses browserify to generate the <a href=\"https://github.com/simonmcmanus/speclate-example/blob/master/client/router.js\">client-side router</a> and 'npm run build' generates the whole site by running both commands.  </p>\n<h2 id=\"offline\">Offline</h2>\n<p>Currently, the <a href=\"http://lnug.org\">LNUG</a>&nbsp;website works offline using an&nbsp;<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache\">AppCache.manifest</a> file. That file is generated from the spec like so:  </p>\n<pre><code class=\"js language-js\">speclate.site.appCache(spec, [  \n'/css.css',  \n'/images/lnug-logo.svg'  \n])\n</code></pre>\n<p>We use <a href=\"https://github.com/gr2m/appcache-nanny\">appCache Nanny</a> to handle updates but the experience is still not great. The latest releases of Speclate now use the fetch API so it opens up lots of possibilities with Service Workers.</p>",
         "tags": [
-            "progressive enhancement",
+            "progressive-enhancement",
+            "london",
             "sizlate",
             "lnug",
             "speclate",
-            "static sites"
+            "static-sites"
         ]
     },
     {
@@ -967,7 +972,10 @@
         "date": "2014-02-19",
         "markup": "<p>In Sublime 3, &nbsp;go to `tools &gt; build system &gt; new build system` and paste the below into the file:</p>\n<blockquote>\n  <p>{<br />\n  \"working_dir\": \"${project_path:${folder:${file_path}}}\",<br />\n  \"cmd\": [\"npm\", \"test\"]<br />\n  }</p>\n</blockquote>\n<p>Now you will have a build system that will run the NPM test command in your current project directory.</p>",
         "tags": [
-            "node"
+            "node",
+            "sublime",
+            "npm",
+            "test"
         ]
     },
     {
@@ -976,7 +984,9 @@
         "date": "2011-04-05",
         "markup": "<p>Publishing this here for my own convenience.  </p>\n<pre><code class=\"js language-js\">background: #FF8D2C; /\\* for non-css3 browsers \\*/\n\n/\\* For WebKit (Safari, Google Chrome etc) \\*/\n\nbackground: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FF8D2C));\n\n/\\* For Mozilla/Gecko (Firefox etc) \\*/\n\nbackground: -moz-linear-gradient(top, #FFFFFF, #FF8D2C);\n\n/\\* For Internet Explorer 5.5 - 7 \\*/\n\nfilter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FF8D2C);\n\n/\\* For Internet Explorer 8 \\*/\n\n\\-ms-filter: \"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FF8D2C)\";\n</code></pre>",
         "tags": [
-            "osmososft"
+            "osmososft",
+            "css",
+            "gradient"
         ]
     },
     {
@@ -985,7 +995,10 @@
         "date": "2012-04-11",
         "markup": "<p>I couldn't find this code anywhere on the internets yesterday, posting here for my own convenience.  </p>\n<pre><code class=\"js language-js\">\n</code></pre>\n<p>js\nvar options = {</p>\n<p>host: 'api.twitter.com',</p>\n<p>port: 80,</p>\n<p>path: '/path',</p>\n<p>method: 'GET',</p>\n<p>encoding: 'utf8'</p>\n<p>};</p>\n<p>http.get({ host: options.host, path: options.path }, function(res2){</p>\n<pre><code>var data = [];\n\nres2.on('data', function(chunk) { \n\n    data.push(chunk); \n\n});\n\n\n\nres2.on('end', function() { // wait for the request to finish\n\n    res.json(data.join('')); \n\n})\n</code></pre>\n<p>});</p>\n<pre><code>\n</code></pre>",
         "tags": [
-            "chunk data"
+            "chunk data",
+            "http",
+            "node",
+            "js"
         ]
     },
     {
@@ -994,7 +1007,10 @@
         "date": "2013-01-03",
         "markup": "<p>I'm in the middle of looking for some memory leaks at the moment, in order to isolate them I wanted to confirm exactly how much memory was being used by a given line of code after garbage collection.  </p>\n<p>Fortunately V8 allows you to manually force garbage collection from within Javascript.  </p>\n<p>When you run your node script just add the option: '--expose-gc'  </p>\n<p>e.g:  </p>\n<pre><code class=\"js language-js\">node --expose-gc test.js\n</code></pre>\n<p>And then from within the Javascript just do:  </p>\n<pre><code class=\"js language-js\">global.gc();  \n</code></pre>\n<p>That's it, good luck finding those leaks!</p>",
         "tags": [
-            false
+            "node",
+            "garbage-collection",
+            "memory",
+            "leaks"
         ]
     },
     {
@@ -1003,7 +1019,11 @@
         "date": "2012-04-12",
         "markup": "<p>If you want to serve a static directory from express you can do it with the following line of code.  </p>\n<p>The first parameter is the route, the second parameter is the path to the directory.  </p>\n<pre><code class=\"js language-js\">\n</code></pre>\n<p>js\napp.use('/public', express.static(__dirname + '/public'));</p>\n<pre><code>\n</code></pre>\n<p>Posting here for my own convenience.</p>",
         "tags": [
-            false
+            "express",
+            "public",
+            "files",
+            "static",
+            "code"
         ]
     },
     {
@@ -1012,11 +1032,11 @@
         "date": "2012-01-05",
         "markup": "<p>I've spent the last three years working on single page applications of various shapes and sizes. I don't like em, &nbsp;this post isn't about why but I will just say I like data to be exposed at the lowest level (HTTP) and not require Javascript to turn it into something useful. &nbsp; All that being said I've been lucky enough to work with some clever folks and the end results have all been very interesting and pushed boundaries in their own way.  </p>\n<p>At <a href=\"http://2011.full-frontal.org/\">Full Frontal</a>&nbsp;I enjoyed listening to&nbsp;<a href=\"https://twitter.com/#!/slicknet\">Nicholas Zakas</a>&nbsp;talking about <a href=\"http://www.slideshare.net/nzakas/scalable-javascript-application-architecture\">Scalable Javascript Application Architecture</a>. In many ways he described the architecture we used for the <a href=\"http://configurator.vw.com\">Volkswagen Configurator</a>. Earlier in the day <a href=\"http://hawksworx.com/\">Phil Hawksworth</a> had been talking about <a href=\"http://speakerdeck.com/u/philhawksworth/p/excessive-enhancement\">Excessive Enhancement</a>.  </p>\n<p>It struck me that while most front end MVC&nbsp;frameworks make it easy to build Javascript applications, making them work as web applications (without Javascript) becomes much more difficult. This is largely due to the fact that you define and build your application, templates/page structure using the browser's Javascript interpreter.  </p>\n<p>I'm of the view that if you architect something properly you can get the same full experience provided by Javascript applications but still have a reliable fallback for those who do not have Javascript enabled. That is what I call a proper web application.  </p>\n<p>In the back of my mind I've been thinking about Charlie Robbins excellent post:&nbsp;<a href=\"http://blog.nodejitsu.com/scaling-isomorphic-javascript-code\">Scaling Isomorphic Javascript Code</a>&nbsp;which talks elegantly about why MVC might not be the best pattern in an environment where you can execute Javascript on the server. He suggests the Resource-View-Presenter pattern.  </p>\n<p>It seemed that the way we currently split our frameworks between front and back end reduces reuse of configuration/code and actually encourages duplication.  </p>\n<p>I wanted to try defining all of these things on the server, so they could be consumed on the server and client.  </p>\n<p>As soon as the talk finished I found myself writing code. This blog post talks about what I have been building and why.  </p>\n<h2 id=\"sharingurlsbetweenclientandserver\">Sharing URLs between client and server</h2>\n<p>Allow me to deviate for a moment.  </p>\n<p>On large applications it's common practice to split the code and teams between front and back end developers. &nbsp;This often results in duplication and&nbsp;unnecessary&nbsp;bugs. &nbsp;A common example being maintaining URLs in two places. &nbsp;In the browser we might a have a URLs object:  </p>\n<pre><code class=\"js language-js\">namespace.urls = {\n    login: '/login',  \n    user: '/user/:username',\n    ....\n}\n</code></pre>\n<p>And then on the server the same URLs would be defined possibly using a different syntax. &nbsp;Changing one does not change the other, and with split teams this can result in&nbsp;unnecessary&nbsp;bugs.  </p>\n<p>With <a href=\"http://nodejs.org/\">Node.js</a> it's&nbsp;particularly&nbsp;easy to share exactly the same URL object on the client and server. If you ensure your HTML links are populated from the same URL object your application will continue to function when URLs change.  </p>\n<p>This is what I've been doing in some of my Node apps:  </p>\n<pre><code class=\"js language-js\">(function(exports){\n      exports.HOME = '/';\n    exports.LOGIN = '/login';\n    exports.USERS = '/users';\n    exports.USER = '/users/:user';\n    // also add URL functions here that can be shared between client and server.\n    exports.build = function(str, tokens) {\n        for(token in tokens){\n            str = str.replace(':'+token, tokens\\[token\\]);\n        }\n        return str;\n    };\n})(typeof exports === 'undefined' ? namespace.urls={} : exports);\n</code></pre>\n<p>That allows it to be used as a Node module using require('./urls.js') and when served to the browser the URLs are available at namespace.urls.  </p>\n<p>I've been using&nbsp;<a href=\"http://expressjs.com/\">Express.js</a>,&nbsp;the parameter sytax seems to work nicely with <a href=\"https://github.com/PaulKinlan/leviroutes\">Levi routes</a> on the front end.  </p>\n<p>This seems like common sense. It's a fine example of <a href=\"http://en.wikipedia.org/wiki/Don't_repeat_yourself\">DRY.</a> &nbsp;Define as much as possible in server-side JS and then allow it to be consumed by the client-side JS reusing as much logic as possible.  </p>\n<h2 id=\"reusablemodules\">Reusable modules</h2>\n<p><a href=\"http://tiddlywiki.com/\">TiddlyWiki</a> has the concept of plugins which are essentially just a chunk of HTML/CSS/JS relevant to a particular piece of functionality which could be added to HTML using a special syntax:  </p>\n<pre><code class=\"js language-js\">&lt;&lt;pluginName&gt;&gt;\n</code></pre>\n<p>On the <a href=\"http://configurator.vw.com\">Volkswagen Configurator</a> we also have the concept of UI's which were reusable chunks of HTML/CSS/JS which could be appended into any DOM node.  </p>\n<p>Both are essentially variants of the&nbsp;<a href=\"http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth\">Module Pattern</a>&nbsp;with added support for HTML and CSS as part of the module. &nbsp;Both methods work really nicely just so long as you've got Javascript turned on.  </p>\n<p>I started to build a simple Node.js app which could parse a modules folder and serve the resources at appropriate URLs. See the following folder structure:  </p>\n<p><img src=\"https://img.skitch.com/20120102-cyxfm2b6pgs8c5fasj7b1ppg5b.jpg\" alt=\"\" title=\"Folder Strucutre\" />  </p>\n<p>Generated the following URLs:  </p>\n<pre><code class=\"js language-js\">/contact.css\n/contact.html\n/contact.js\n/content.css\n/content.html\n/content.js\n/flickr.css\n/flickr.html\n/flickr.js\n</code></pre>\n<p>You will notice there is an app.js file in the flickr folder which contains the server-side JS required by the module. Later this will provide a getData method to asynchronously&nbsp;generate a templating object which can populate the HTML.  </p>\n<h2 id=\"defineyourviewsontheserver\">Define your views on the server</h2>\n<p>In browserland it's really easy to mess around with the DOM. You can completely transform a page, especially&nbsp;when you start appending modules of HTML/CSS/JS to DOM nodes. The problem comes when you want to show the same view to something that doesn't understand Javascript, an RSS feed or search engine for example.  </p>\n<p>I decided to create a view specification which could be read by the server and also served to the browser. Doing so should make it really easy to render the exact same HTML with or without Javascript enabled. &nbsp;Using <a href=\"https://github.com/simonmcmanus/sizlate\">Sizlate</a>&nbsp;I started with this (it has since changed):  </p>\n<pre><code class=\"js language-js\">var views = [{\n    url: '/user/:user'  \n    view: 'userpage',\n    modules: [\n        'photos',\n        'login',\n        'timeline'\n    ]\n }];\n</code></pre>\n<p>In the following example I have left out the JS and CSS files.&nbsp; The view is just a folder containing a HTML file of the same name and an optional app.js (as with the modules). It assumes the view HTML file contains a &nbsp;tag with a id corresponding&nbsp;to each of the modules specified for the view.  </p>\n<p>I like this simple approach but in order for it to scale I may soon need to start using HTML data attributes instead of ids. This is what the folder structure looked like:<br />\n<img src=\"https://img.skitch.com/20120102-naqptbhb5cn63tgcx7gky8f83x.jpg\" alt=\"\" />  </p>\n<p>project/views/userpage/userpage.html (the view HTML file) contains:  </p>\n<pre><code class=\"js language-js\">&lt;html&gt;\n&lt;body&gt;\n    &lt;nav&gt;...&lt;/nav&gt;\n    &lt;div id=\"photos\" /&gt;\n    &lt;div id=\"login\" /&gt;\n    &lt;div id=\"timeline\" /&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n</code></pre>\n<p>The end result would look something like this:  </p>\n<pre><code class=\"js language-js\">&lt;html&gt;\n&lt;body&gt;\n    &lt;nav&gt;...&lt;/nav&gt;\n    &lt;div id=\"photos\"&gt;\n        .. contents of /modules/photos/photos.html appended in here\n    &lt;/div&gt;\n    &lt;div id=\"login\"&gt;\n        .. contents of /modules/login/login.html appended in here\n    &lt;/div&gt;\n&amp;nbsp; &amp;nbsp; &lt;div id=\"timeline\"&gt;\n        .. contents of /modules/timeline/timeline.html appended in here\n    &lt;/div&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n</code></pre>\n<h2 id=\"concatenationnbspvscaching\">Concatenation&nbsp;vs Caching</h2>\n<p>At this stage I was able to build a sample app with my re-usable modules and a view. I thought it would be useful to concatenate all the JS and CSS files together for each view. It turns out I was wrong.  </p>\n<p>In a situation where you're reusing modules across multiple views concatinating per view makes no sense because you end up serving the same CSS across multiple URLs. The CSS/JS will be cached per view, not per module.  </p>\n<p>I decided it was actually better to use the URLs generated for the CSS/JS&nbsp;by the modules so they can be cached at the most granular level. &nbsp;Both methods will be possible.&nbsp; Currently CSS modules are served inline with the module HTML (not the document HEAD). &nbsp;There will be some work to ensure that all CSS LINK tags are moved to the document HEAD before the view is rendered. <a href=\"https://github.com/tmpvar/jsdom\">JSDOM</a> should make that quite easy.  </p>\n<h2 id=\"historyapi\">History API</h2>\n<p>With views and modules defined on the server I've started to put together a front end framework which can consume the same application specification and make the whole experience a bit more&nbsp;pleasant. &nbsp;I'm currently experimenting with generating popstate listeners from the specification which can then fire off the default/custom transitions between views.  </p>\n<h2 id=\"whatsgoingonhere\">Whats going on here?</h2>\n<p>Essentially I have started building a framework for mixing up reusable modules of HTML/CSS/JS in ways usually associated with Javascript applications but with progressive&nbsp;enhancement&nbsp;as one of its core values.  </p>\n<p>The functionality described above will almost certainly change. &nbsp;What I have built so far is a simple proof of concept to test the best way to define views in this way using Sizlate.  </p>\n<p>At the moment I'm working on a sample app pulling in data from Flickr to demonstrate how it might all fit together in the real world. &nbsp;Its pretty messy and requires lots of work but you can see the code <a href=\"https://github.com/simonmcmanus/framework\">here</a>.  </p>\n<p>I thought it was worth blogging about my approach just to get some feedback. Please do let me know what you think. All idea's, contributions,&nbsp;criticisms&nbsp;welcomed.  </p>\n<p>I'm going to be talking about Sizlate at the London Node user group on the 25th January at the Forward Offices in Camden, London. <a href=\"http://lnugjanuary12.eventbrite.co.uk/\">Please register here if you would like to attend.</a></p>",
         "tags": [
-            "application architecture",
-            "application templates",
-            "javascript application",
-            "javascript applications",
-            "page applications",
+            "application-architecture",
+            "application-templates",
+            "javascript-application",
+            "javascript-applications",
+            "single-page-applications",
             "Image",
             "lnug"
         ]
@@ -1028,11 +1048,13 @@
         "markup": "<p><strong>Foundations</strong>  </p>\n<p>When building a house the foundations are fundamental to it's structural&nbsp;integrity. Without good strong foundations the house is weak and liable to fall over at any moment.  </p>\n<p>Things on the web also have foundations in the form of HTML and URIs. &nbsp;JavaScript can then be layered on top to improve the experience. It's called progressive enhancement and people seem to be forgetting about it these days.  </p>\n<p>It's pretty simple, build your HTML and CSS &nbsp;first and then override the default behaviours with JavaScript. &nbsp;This will ensure you are building on solid foundations.  </p>\n<p>When generating HTML on the server, you can easily re-use it with JavaScript. Its far better than generating the HTML in the browser (with JavaScript) and either ignoring Search engines or having to duplicate your logic on the server for SEO, accessibility and things like RSS feeds.  </p>\n<p>Here are some rather sweeping statements:  </p>\n<p><strong>1.</strong> JavaScript should NEVER be used&nbsp;to process data in the browser.  </p>\n<p><strong>2.</strong> JavaScript should rarely be used in the browser to generate html (sharing code with server-side JavaScript is acceptable).  </p>\n<p>I did warn you they were rather sweeping.  </p>\n<p>I've heard it said that if you want to provide an app/flash like experience you need to use JavaScript to render your pages: You need to build single page JavaScript apps.  </p>\n<p>history.pushState() tells us otherwise. You can read about it <a href=\"https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history\" title=\"history.pushState docs\">here</a>.  </p>\n<p>Basically it makes it possible for what we now call single page web apps to exist across multiple pages while still providing nice page transitions (no page refresh).  </p>\n<p><strong>history.pushState() - A Fallback</strong>  </p>\n<p>History.pushState is all well and good but it's only available in WebKit and Firefox(4) at the moment. &nbsp;Maybe that is why people are seeing <a href=\"http://www.isolani.co.uk/blog/javascript/BreakingTheWebWithHashBangs\">hashbangs</a> as an alternative solution. Personally I would rather fallback to a fragment identifier (#) only in situations where history.pushState is not available.  </p>\n<p>There would need to be a bit of JavaScript at the top of each page redirecting users to the appropriate fragment identifier in browsers that do not support pushState.  </p>\n<p>So when pushState is not available:  </p>\n<p>http://simonmcmanus.com/page.html  </p>\n<p>might redirect to :  </p>\n<p>http://simonmcmanus.com#page.html  </p>\n<p>which would then go and fetch the contents from  </p>\n<p>http://simonmcmanus.com/page.html  </p>\n<p>If a page is loaded with the fragment identifier in a browser that supports pushState the hash should be removed and pushState used.  </p>\n<p><strong>Summary</strong>  </p>\n<p>When you require JavaScript for templating and data processing you are on a very slippery slope to writing JavaScript applications.  </p>\n<p>We have for a long time been able to&nbsp;obfuscate our data with technologies like Flash, I for one have avoided these technologies because I believe that when we publish data properly on the web it becomes more re-usable, findable, accessible and actually has far greater potential.  </p>\n<p>By all means use JavaScript, but please don't rely on it.</p>",
         "tags": [
             "hashbang",
-            "javascript apps",
+            "javascript-apps",
             "osmososft",
-            "progressive enhancement",
+            "web",
+            "apps",
+            "progressive-enhancement",
             "pushState",
-            "web apps"
+            "web-apps"
         ]
     },
     {
@@ -1042,7 +1064,9 @@
         "markup": "<p>Over the last 6 months, with the help of some trusted advisors, I’ve been putting together the line-up for <a href=\"http://enhanceconf.com\">EnhanceConf</a>.  </p>\n<p>The whole event is dedicated to <a href=\"http://en.wikipedia.org/wiki/Progressive_enhancement\">progressive enhancement</a>, but what does that even mean in 2016? Well, that’s the point of EnhanceConf. We get to spend the 4th of March in The Great Room figuring it out.  </p>\n<p><a href=\"https://simonmcmanus.files.wordpress.com/2016/01/great-room.jpg\"><img src=\"https://simonmcmanus.files.wordpress.com/2016/01/great-room.jpg?w=300\" alt=\"great-room\" /></a>  </p>\n<p>We are going to start the day thinking about why we do progressive enhancement. <a href=\"http://natbuckley.co.uk/\">Nat Buckley</a> will look at many of the assumptions we make in modern web development. <a href=\"http://maban.co.uk/\">Anna Debenham</a> will then look at some of the unusual devices people use to interact with our sites/apps. <a href=\"https://twitter.com/stilkov\">Stefan Tilkov</a> will provide an architect's perspective.  </p>\n<p>In the second section, we are going to look at some real world examples. We’ve got <a href=\"https://twitter.com/misprintedtype\">Ola Gasidlo</a> from Styla/Hoodie and <a href=\"http://www.theguardian.com/profile/oliver-joseph-ash\">Oliver Joseph Ash</a> from the Guardian talking about their experiences making things work offline. <a href=\"https://twitter.com/ForbesLindesay\">Forbes Lindesay</a> will be talking about building apps that can render on the server and in the browser.  </p>\n<p>After lunch, we are going to think a bit more about design and UX. Does progressive enhancement constrain design? <a href=\"https://twitter.com/philhawksworth\">Phil Hawksworth</a> and <a href=\"http://stephen-waller.com/\">Stephen Waller</a> will debate. <a href=\"http://jensimmons.com/\">Jen Simmons</a> will explain why 2016 will be the year that web layouts change and how to use these new techniques as an enhancement. <a href=\"http://adamsilver.io/\">Adam Silver</a> will talk about embracing simplicity.  </p>\n<p>In the final section, we are going to look to the future. How can we build interfaces given how little we know about the people and devices using them? <a href=\"https://www.abilitynet.org.uk/robinchristopherson\">Robin Christopherson</a> will be talking about inclusive design. <a href=\"https://twitter.com/radiomorillo\">Stephanie Morillo</a> will talk about copy and what to think about when writing it. Aaron Gustafson will round off the event by talking about building for devices that don’t exist yet.  </p>\n<p>After each section, we are going to have 20 minutes of Q&amp;A run by <a href=\"https://twitter.com/adactio\">Jeremy Keith</a>.  </p>\n<p>As if that wasn't enough, the Planning Adaptive Interfaces <a href=\"http://enhanceconf.com/workshop.html\">workshop</a> provides a unique opportunity to get training from <a href=\"https://twitter.com/AaronGustafson\">Aaron Gustafson</a> while he's in London. We are giving a limited number of copies of Aaron’s e-book <a href=\"http://adaptivewebdesign.info\">Adaptive Web Design</a> with combined conference and workshop tickets.  </p>\n<p><a href=\"http://enhanceconf.com/tickets.html\">Reserve your seat</a></p>",
         "tags": [
             "EnhanceConf",
-            "progressive enhancement"
+            "conference",
+            "line-up",
+            "progressive-enhancement"
         ]
     },
     {
@@ -1051,7 +1075,11 @@
         "date": "2014-04-08",
         "markup": "<p>One year ago today&nbsp;I formed my&nbsp;company <a href=\"http://dotjs.co.uk\">DotJS Ltd</a> offering Node.js consultancy services to London and beyond.</p>\n<p>It's been a bloody great year and I just wanted to say thank you to everyone that has helped me on my way.</p>\n<p>Thank you!</p>",
         "tags": [
-            "node"
+            "node",
+            "dotjs",
+            "business",
+            "london",
+            "company"
         ]
     },
     {
@@ -1060,7 +1088,10 @@
         "date": "2016-10-12",
         "markup": "<p>I have alway been keen to provide a good offline experience for the <a href=\"http://lnug.org\">London Node user group</a> website. I’m pretty bad with directions and London is even worse with internet coverage. Knowing I can always get the map and address on my phone is very handy. We already use AppCache with the help of <a href=\"https://github.com/gr2m/appcache-nanny\">app-cache-nanny</a> but with its upcoming <a href=\"https://www.fxsitecompat.com/en-CA/docs/2015/application-cache-api-has-been-deprecated/\">depreciation</a> I wanted to investigate how service workers might improve the whole experience.  </p>\n<p><a href=\"http://github.com/simonmcmanus/speclate\">Speclate</a> is the tool we use to build the static LNUG website, it uses <a href=\"http://github.com/simonmcmanus/sizlate\">Sizlate</a> which is a basic templating engine allowing data to be inserted into HTML using the Sizzle selector engine from jQuery.  </p>\n<p>In this example we take a HTML&nbsp;string and modify the innerHTML of the h1 element:  </p>\n<p>https://gist.github.com/simonmcmanus/17e23f4bb3c3cd9e0afdcf09e11b226e#file-init-offline-js  </p>\n<p>https://gist.github.com/simonmcmanus/903b0ce6d2cb190bfbc4a50cc57c0b36  </p>\n<p>Sizlate can also take a DOM node when running in the browser:  </p>\n<p>https://gist.github.com/simonmcmanus/5d19c1918d0a58790f3040dac8afbb5d  </p>\n<p>Sizlate uses <a href=\"https://github.com/cheeriojs/cheerio\">Cheerio</a> to provide a fast DOM implementation at build time, in the browser it &nbsp;needs something with jQuery like API to access to the DOM.  </p>\n<p>Speclate extends Sizlate with the idea of components and pages. &nbsp;A spec.js file sits in the project root and defines the sites structure. Notably how the routes, pages, components and data all fit together. The exported Javascript object is used to combine the various HTML files that make up the pages. At build time it renders static HTML files for each page but it can also render just the parts of the page that change as users navigate around the site.  </p>\n<p>Here is a simple spec for a site with two pages:  </p>\n<p>https://gist.github.com/simonmcmanus/d91ca1949a91a49669d80d60ab49e9a9  </p>\n<p>Given that spec, three files need to be present:  </p>\n<ul>\n<li><p>./pages/home/home.html</p></li>\n<li><p>./pages/contact/contact.html</p></li>\n<li><p>./pages/layout.html</p></li>\n</ul>\n<p>Those paths are all relative to the spec.js file which should sit in the root of a project.  </p>\n<p>Here is a slightly more complicated site spec, it makes use of components and global selectors. Components are defined in the spec and only applied to the page (not the layout). The selectors are applied to the whole page after it has been appended to the layout which means you can modify things like the page title:  </p>\n<p>https://gist.github.com/simonmcmanus/afd3f2a0355f17b0f1efa7f739b9e41a  </p>\n<p>In this example it also uses the ‘contact’ component which needs to contain an li element and&nbsp;should be located&nbsp;at:  </p>\n<p>./components/contact/contact.html  </p>\n<p>You can see the full LNUG site spec here:  </p>\n<p><a href=\"https://github.com/lnug/website/blob/master/spec.js\">https://github.com/lnug/website/blob/master/spec.js</a>  </p>\n<h2 id=\"applicationshelllayouts\">Application Shell - layouts</h2>\n<p><a href=\"https://github.com/simonmcmanus/speclate\">Speclate</a> requires a pages/layout.html file which contains the outer layout for a site. The layout usually contains the nav, header and footer. For the LNUG site the markup in the layout.html file produces this:  </p>\n<p><img src=\"https://simonmcmanus.files.wordpress.com/2016/10/screen-shot-2016-10-08-at-07-30-42.png\" alt=\"screen-shot-2016-10-08-at-07-30-42\" />  </p>\n<p>layout.html contains an element with id of container which the page content is inserted into.&nbsp;The first time you visit a site you’re served the layout as part of the complete page generated at build time. As you browse to routes defined in the spec, <a href=\"https://www.npmjs.com/package/speclate-router\">speclate-router</a> reuses the layout and just updates the contents of the #container element with the new page and its components. By reusing the page layout we only render the parts of the page that change. This isn’t done with any clever virtual DOM diffing, we just know which parts of the page are going to change from the spec, and only change those parts. By not re-rending elements that don’t change it’s much easier to make smooth transitions between pages.  </p>\n<p><a href=\"https://developer.mozilla.org/en/docs/Web/API/Service_Worker_API\">Service workers</a> allow us to cache the layout.html file for all the routes defined in the spec. When a user hits a route it loads layout.html from the cache. The Javascript in layout.html triggers speclate-router to try and fetch the latest spec for the page and render it. This provides an application shell which can show the main nav to a returning visitor in under 300ms. It works well but I wonder if we could be even more efficient by only creating one cache entry for /pages/layout.html and referencing that when we intercept the fetch requests.  </p>\n<h2 id=\"partialupdates\">Partial updates</h2>\n<p>When making a change to the LNUG site using appCache, Speclate modifies a version hash in the appcache.manifest file. AppCache nanny detects the change and updates everything in the browser cache. The LNUG layout, pages, components and CSS files rarely change but the site gets updated several times each month with new information about speakers and their talks. That’s probably more often than most users visit the site.  </p>\n<p>Busting the whole cache each time we make a minor change is in not making efficient use of our&nbsp;user’s cache.  </p>\n<h2 id=\"longlivetheserviceworker\">Long live the Service Worker</h2>\n<p>Service workers can intercept fetch requests which allows us to be far more efficient with the user’s cache. With Speclate 7.0 when you generate a site it creates a .json file in docs/speclate/api for each page defined in the spec. Each file contains just the information needed to render the page. For the current LNUG homepage the spec <a href=\"https://github.com/lnug/website/blob/master/docs/api/speclate/index.json\">looks like this</a>.  </p>\n<p><a href=\"https://www.npmjs.com/package/speclate-service-worker\">speclate-service-worker</a> uses a network first strategy for requests to the speclate/api folder. Every time a user loads a page it tries to get the latest JSON page spec from the server. If the user is offline, it falls back to the cache. All other requests are served straight from the cache. By only loading a small spec file from the server we are able to present a fully rendered site with the latest data from the server over a throttled 2g connection in just over a second. By not busting the whole cache for regular updates we can keep the service worker until we want to make changes to the page, component and CSS files. This ensures we always serve the latest info while at the same time dramatically reducing the amount of data a returning visitor has to download. Speciate-Router and speclate-service-worker are both focused around loading the whole site into the service worker and rendering it from there (after first page load of course). This only works with very small sites but with some tweaks they could both handle partial loading.  </p>\n<h2 id=\"support\">Support</h2>\n<p>We don’t want to drop appCache, the LNUG analytics show there are users who don’t have service workers available. Here is the code we use to check if services workers are available, falling back to appCacheNanny when they’re not:  </p>\n<p>https://gist.github.com/simonmcmanus/c85cfe81eb45dd9aed52321d463469a4  </p>\n<p>Note how the appCache nanny on ‘updateready’ sits outside of the else statement, this ensures returning visitors with appCache and services workers available are upgraded to use service workers.  </p>\n<p>Returning visitors are shown the layout while the server&nbsp;is checked for updates. This can result in the footer being visible and then disappearing to the bottom of the page when the content is loaded. That should be resolved with the addition of some nice CSS transition. (<a href=\"https://github.com/lnug/website/issues/132\">we have an open issue btw</a>)  </p>\n<p>This implementation has an interesting side effect. If a user turns Javascript off after loading the site with Javascript and service workers enabled they will only see the layout. The page content will never load. All the Javascript resources are being loaded from the cache so the Javascript will never fail due to network conditions and we have static HTML files to revert to if the Javascript fails to load for some other reason.  </p>\n<p>Speclate ensures everything is defined and maintained once in the spec file which helps bring down the cost of these layered enhancements. We start off with completely static HTML files. If the browser supports <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_pushState()_method\">history.pushstate</a> client-side routing is provided. If the browser supports service workers returning visitors get a really fast experience on and offline. If they don’t, well, it’ll still work offline with appCache support.  </p>\n<p>If you would like to try Speclate I‘ve updated the example app to use service workers:  </p>\n<p><a href=\"https://github.com/simonmcmanus/speclate-example\">https://github.com/simonmcmanus/speclate-example</a>  </p>\n<p>Please let me know if you have any comments, feedback or questions. Im also very grateful to all those who have blogging about service workers, notably, <a href=\"https://jakearchibald.com/\">Jake Archibald</a>, <a href=\"https://adactio.com/journal/9775\">Jeremy Keith</a> and <a href=\"https://www.smashingmagazine.com/2016/02/making-a-service-worker/\">Lyza Danger Gardner</a>. Getting the LNUG site working with service workers was much easier thanks to your articles and sample code. :)</p>",
         "tags": [
-            "lnug"
+            "lnug",
+            "offline",
+            "speclate",
+            "service-workers"
         ]
     },
     {
@@ -1069,7 +1100,11 @@
         "date": "2017-09-25",
         "markup": "<pre><code class=\"js language-js\"> \"@npm-namespace/package-name\": \"git+https://private.github.com/team/repo.git#branch\",\n</code></pre>\n<p>Posting here because I can never remember the syntax. :)</p>",
         "tags": [
-            false
+            "git",
+            "branch",
+            "npm",
+            "package",
+            "development"
         ]
     },
     {
@@ -1079,10 +1114,11 @@
         "markup": "<p>I'm in the process of moving this blog from <a href=\"https://wordpress.com/\">Wordpress.com</a> over to <a href=\"https://simonmcmanus.com\">simonmcmanus.com</a> hosted on <a href=\"https://netlify.com\">netlify.com</a>. </p>\n<p>Its a work in progress, I've disabled all tagging functionality while I port the content over. Please bare with me if you expereince any problems. </p>\n<p>Thanks </p>",
         "tags": [
             "blog",
-            " simonmcmanus",
-            " netlify",
-            " wordpress",
-            " WIP"
+            "simonmcmanus",
+            "netlify",
+            "wordpress",
+            "WIP",
+            "static-site"
         ]
     },
     {
@@ -1092,12 +1128,12 @@
         "markup": "<p>I've made some big changes to speclate and sizlate recently. The API stays the same, but under the hood things are much leaner.</p>\n<h3 id=\"nomoresizzle\">No more sizzle</h3>\n<p>Previously sizlate required <a href=\"https://sizzlejs.com/\">sizzle</a> to operate in the browser, this meant using jQuery or something similar. With support for <code>querySelectorAll()</code> being <a href=\"https://caniuse.com/#feat=queryselector\">so good</a> we can now do all our dom selection/manipulation with just speclate. At build time speclate still uses <a href=\"https://cheerio.js.org/\">cheerio</a> to provide the dom functions it needs to render the pages and components.</p>\n<h3 id=\"nomorepagejs\">No more Page.js</h3>\n<p>Page.js helped me get speclate-router up and running quickly, at that time, just running speclate in the client seemed a long way off. </p>\n<h3 id=\"speclaterouterwillbedeprecated\">Speclate-router will be  deprecated</h3>\n<p>Version 9 will be the last standalone version of <code>speclate-router</code>. From @19, Speclate includes a dramatically similified router, which can be included like so: </p>\n<pre><code>var router = require('speclate/router')\n</code></pre>\n<p>The router will behave exactly as it did before. Just with a lot less code. When the router is loaded it looks for any links on the page that match the routes specified in the spec. When it finds one, it binds to the link click so speclate  can handle swapping out the pages with the appropriate transitions. </p>\n<h3 id=\"smarterserviceworkers\">Smarter Service workers</h3>\n<p>Previously the spec was broken up to the relevant pieces at build time, but the generated service worker javascript file would still pull in a full copy of the spec, effectively meaning that each user would download the spec twice. </p>\n<p>This has now changed so that <code>speciate-cli</code> generates a minimal version of the spec, effectively just containing a list of the pages and components that are used by that page, so that they can be made available offline. </p>\n<p>The changes described above are introduced in versions: </p>\n<ul>\n<li>speclate@19.x.x</li>\n<li>speclate-service-worker@3.x.x</li>\n</ul>",
         "tags": [
             "speclate",
-            "  sizlate",
-            " sizzle",
-            " pagejs",
-            " routing",
-            " router",
-            " offline"
+            "sizlate",
+            "sizzle",
+            "pagejs",
+            "routing",
+            "router",
+            "offline"
         ]
     },
     {
@@ -1110,7 +1146,8 @@
             "node",
             "link",
             "linking",
-            "development"
+            "development",
+            "local"
         ]
     },
     {
@@ -1119,7 +1156,9 @@
         "date": "2019-12-03",
         "markup": "<p><a href=\"https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements\">Custom Elements</a> give us the ability to create custom html tags that you can use in your markup like so:  </p>\n<pre><code class=\"html language-html\">&lt;word-count&gt; \n</code></pre>\n<pre><code class=\"js language-js\">customElements.define('word-count', WordCount, { extends: 'p' });\n</code></pre>\n<p>But to use the above tag on a page the browser still needs to run some Javascript before it can render the custom element. The browser also needs to <a href=\"https://caniuse.com/#feat=custom-elementsv1\">support custom elements</a> to render anything at all.</p>\n<p>So the Progressive Enhancement story isn't great, and its for this reason I've often avoided custom elements.</p>\n<p>With <a href=\"https://github.com/WebReflection/wicked-elements\">Wicked Elements</a> you can bind the component behaviour using css selectors. As we are not using the tag name to select which elements on the page to apply the behaviour to, we can send standard html tags in the initial request and the client side javascript just enhances them with interactivity afterwards.</p>\n<p>So our component gets sent to the browser like so: </p>\n<pre><code class=\"html language-html\">&lt;p is=\"word-count\"&gt;12&lt;/p&gt; \n</code></pre>\n<p>In this case using the <code>is</code> attribute selector seems to work really nicely: </p>\n<pre><code class=\"js language-js\">wickedElements.define('[is=word-count]', ...)\n</code></pre>\n<p>This means we can send markup that works for the lowest possible tech (a <code>&lt;p&gt;</code> tag). There is no hydration or anything other re-rendering when the browser js kicks in.  The browser javascript just makes the existing elements interactive. Kinda how progressive enhancement is meant to work.</p>\n<p>Wicked elements isn't the same as custom elements, but does provide a similar API (except for how you select the elements). The thing I like about Wicked elements is that it doesn't make assuptions about how the markup is rendered, it just enhances the markup that has already been rendered. </p>\n<p>I think its actually <a href=\"https://github.com/WebReflection/regular-elements\">regular elements</a> that adds the ability to bind behaviour with a css selector. Wicked elements combines a couple of extra modules to make things a bit easier.</p>\n<p>I've been playing with it alongside <a href=\"https://www.npmjs.com/package/speclate\">Speclate</a> which also uses CSS selectors so there are some very nice parallels, but that's a whole post in its own right. :)  </p>",
         "tags": [
-            "customElements"
+            "customElements",
+            "js",
+            "framework"
         ]
     }
 ]

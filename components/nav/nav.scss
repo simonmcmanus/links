@@ -23,9 +23,6 @@ html[data-speclate-url="/index.html"] ul.nav li {
     }
 }
 
-html[data-speclate-page="tag"] ul.nav {
-    display: none;
-}
 
 
 
@@ -35,7 +32,7 @@ html[data-speclate-url="/links.html"] ul.nav li,
 html[data-speclate-page="links"] ul.nav li,
 html[data-speclate-url="/talks.html"] ul.nav li,
 html[data-speclate-url="/posts.html"] ul.nav li,
-html[data-speclate-page="post"] ul.nav li
+html[data-speclate-page="posts"] ul.nav li,
 html[data-speclate-page="tag"] ul.nav li
 {
     height: 0;
@@ -64,12 +61,10 @@ html[data-speclate-page="tag"] ul.nav li
 /* override to show current nav item  */
 html[data-speclate-url="/hire.html"] ul.nav li.hire,
 html[data-speclate-url="/links.html"] ul.nav li.links,
-html[data-speclate-url="/posts.html"] ul.nav li.wordpress,
 html[data-speclate-page="links"] ul.nav li.links,
 html[data-speclate-url="/talks.html"] ul.nav li.talks,
-html[data-speclate-page="post"] ul.nav li.wordpress {
+html[data-speclate-page="posts"] ul.nav li.wordpress {
     opacity: 1;
-
     h3 {
         font-size: 2em;
         margin: .4em;
