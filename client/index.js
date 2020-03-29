@@ -51,19 +51,13 @@ if (history.pushState) {
     }
   })
 
- console.log('rs', routerClick)
 
+console.log('setup links ')
 
-//  var links = document.getElementsByTagName('a')
-//  for (var i = 0; i < links.length; i++)
-// {
-//   links[i].addEventListener('click', routerClick)
-  
-// }
-  define('a', {
-    onclick:routerClick
-  })
-  
+define('a', {
+  onclick:routerClick
+})
+
 
  
 } else {
