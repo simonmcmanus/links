@@ -5,12 +5,12 @@ module.exports = {
         title: 'Simon McManus'
       }
     },
-    // '/talks.html': {
-    //   page: 'talks',
-    //   spec: {
-    //     title: 'Talks from Simon McManus'
-    //   }
-    // },
+    '/talks.html': {
+      page: 'talks',
+      spec: {
+        title: 'Talks from Simon McManus'
+      }
+    },
     '/hire.html': {
       page: 'hire',
       spec: {
