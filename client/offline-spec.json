@@ -36,6 +36,7 @@
     ],
     "extras": [
         "cv.html",
+        "favicon.ico",
         "client/icons/play.svg",
         "client/icons/monitor.svg",
         "client/global-styles-compiled.css",

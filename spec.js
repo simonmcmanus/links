@@ -157,10 +157,12 @@ module.exports = {
 
     files: [
       "cv.html",
+      "favicon.ico",
       "client/icons/play.svg",
       "client/icons/monitor.svg",
       "client/global-styles-compiled.css",
-      "client/index-compiled.js"
+      "client/index-compiled.js",
+      
     ]
   }
 };
