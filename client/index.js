@@ -8,26 +8,27 @@
 ga('create', 'UA-40911437-2', 'auto')
 ga('send', 'pageview')
 
-var router = require('speclate/router')
+var speclateClient = require('speclate/router')
 
 
 var appCacheNanny = require('appcache-nanny')
 const {define, get, upgrade, whenDefined} = require('wicked-elements');
 
+if(window.location.host === 'simonmcmanus.com') {
+  window.Raven = require('raven-js')
+  var consolePlugin = require('raven-js/plugins/console')
+  
+  Raven.config('https://70b5edd3041d40659e92ae57e9e9808b@sentry.io/156588').install()
+  consolePlugin(Raven, console, {})  
+}
 
 
-
-window.Raven = require('raven-js')
-var consolePlugin = require('raven-js/plugins/console')
-
-Raven.config('https://70b5edd3041d40659e92ae57e9e9808b@sentry.io/156588').install()
-consolePlugin(Raven, console, {})
 
 if (history.pushState) {
   ga('send', 'event', 'history-push-state')
 
 
-  var routerClick = router({
+  var routerClick = speclateClient({
     preFetch: function ($container) {
       $container.innerHTML = ''
     },
@@ -50,16 +51,17 @@ if (history.pushState) {
     }
   })
 
-  const onclick = (p) => {
-    return (e) => {
-      // call onclick here and work out the params to pass 
-       e.preventDefault()
-       onClick()
-      console.log('click', e, p)
-    }
-  }
+ console.log('rs', routerClick)
+
+
+//  var links = document.getElementsByTagName('a')
+//  for (var i = 0; i < links.length; i++)
+// {
+//   links[i].addEventListener('click', routerClick)
+  
+// }
   define('a', {
-    onclick:routerClick('a')
+    onclick:routerClick
   })
   
 

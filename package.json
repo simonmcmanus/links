@@ -9,7 +9,7 @@
     "build": "mkdir -p docs && npm run update && npm run js && npm run html",
     "html": "speclate --build ",
     "style": "speclate --scss",
-    "start": "speclate --dev 5009",
+    "start": "speclate --dev 84",
     "update": "node scripts/update.js",
     "js-dev": "npm run js && mv ./client/index-compiled.js ./docs/client/index-compiled.js",
     "js": "npm run prep-js && npm run js-app",
@@ -44,7 +44,9 @@
     "tailwindcss": "^1.2.0",
     "turndown": "^5.0.3",
     "uglify-js": "^2.4.10",
-    "watchify": "^3.11.1",
+    "watchify": "^3.11.1"
+  },
+  "devDependencies": {
     "wicked-elements": "^1.1.3"
   }
 }
