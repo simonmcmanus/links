@@ -8,7 +8,7 @@ module.exports = function (post) {
         '.summary': post.markup,
         '.tag':  post.tags.map((tag) => {
             return {
-                "href": "/tags/node/index.html",
+                "href": "/tags/" + tag + "/index.html",
                 "innerHTML": tag
             }
         }),
