@@ -5,6 +5,11 @@
         "title": "Node.js"
     },
     {
+        "tags": ["js"],
+        "summary": "Ideas, thoughts and links about Javascript developement and the London community.",
+        "title": "Javascript"
+    },
+    {
         "tags": ["lnug"],
         "summary": "London Node User Group (LNUG) is a friendly monthly meetup for people using Node.js for fun or profit. Here you will find a number of links related to the website and podcast.",
         "title": "London Node User Group"

@@ -6,10 +6,12 @@ module.exports = function (post) {
         '.date': post.date,
     // '.dateUrl': moment(new Date(post.date)).format(urlFormat),
         '.summary': post.markup,
-        '.tags': {
-            //data: tags,
-            component: 'tag'
-        },
+        '.tags':  post.tags.map((tag) => {
+            return {
+                "href": "/tags/node/index.html",
+                "innerHTML": tag
+            }
+        }),
         'a.created': {
             //href: url,
             innerHTML: post.date

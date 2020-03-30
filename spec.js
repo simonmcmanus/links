@@ -38,7 +38,7 @@ module.exports = {
     },
     '/posts.html': {
       page: 'posts',
-      spec: {
+      spec: { 
         title: 'Recent posts from Simon McManus',
         '.page-title': 'Blog posts',
         '.holder': {

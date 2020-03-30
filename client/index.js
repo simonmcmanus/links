@@ -10,9 +10,10 @@ ga('send', 'pageview')
 
 var speclateClient = require('speclate/router')
 
-
 var appCacheNanny = require('appcache-nanny')
 const {define, get, upgrade, whenDefined} = require('wicked-elements');
+
+const requireLists = require('./speclate-required-lists')
 
 if(window.location.host === 'simonmcmanus.com') {
   window.Raven = require('raven-js')
@@ -22,13 +23,9 @@ if(window.location.host === 'simonmcmanus.com') {
   consolePlugin(Raven, console, {})  
 }
 
-
-
 if (history.pushState) {
   ga('send', 'event', 'history-push-state')
-
-
-  var routerClick = speclateClient({
+  var speclate = speclateClient({
     preFetch: function ($container) {
       $container.innerHTML = ''
     },
@@ -49,17 +46,8 @@ if (history.pushState) {
         })
       }
     }
-  })
-
-
-console.log('setup links ')
-
-define('a', {
-  onclick:routerClick
-})
-
-
- 
+  }, {}, requireLists)
+  define('a', { onclick: speclate.clickHandler })
 } else {
   analytics('send', 'event', 'no-history-push-state')
 }
