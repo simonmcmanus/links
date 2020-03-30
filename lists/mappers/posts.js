@@ -6,7 +6,7 @@ module.exports = function (post) {
         '.date': post.date,
     // '.dateUrl': moment(new Date(post.date)).format(urlFormat),
         '.summary': post.markup,
-        '.tags':  post.tags.map((tag) => {
+        '.tag':  post.tags.map((tag) => {
             return {
                 "href": "/tags/node/index.html",
                 "innerHTML": tag
