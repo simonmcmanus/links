@@ -19,7 +19,6 @@ module.exports = function (post) {
 
     return {
         '.title': post.title,
-        url: 'index.html',
         '.date': post.date,
        // '.dateUrl': moment(new Date(post.date)).format(urlFormat),
         '.summary': post.summary || false,
@@ -29,7 +28,8 @@ module.exports = function (post) {
             innerHTML: post.date
         },
         'a.link': {
-            href: '/posts/' + post.titleSlug + '/' + 'index.html'
+            target: '_blank',
+            href: post.url
         }
     }
 
