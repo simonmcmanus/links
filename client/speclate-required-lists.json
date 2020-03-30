@@ -1,5 +1,17 @@
 {
-    "lists": [],
-    "filters": [],
-    "mappers": []
+    "lists": [
+        "links",
+        "posts",
+        "categories"
+    ],
+    "filters": [
+        "mostRecent",
+        "byTitleSlug",
+        "byTags"
+    ],
+    "mappers": [
+        "links",
+        "posts",
+        "category"
+    ]
 }
