@@ -82,10 +82,10 @@ module.exports = {
     //     title: 'Tags from Simon McManus',
     //     '.links-title': 'Tags from Simon McManus',
     //     '.links_holder': {
+    //       lists: ["categories"],
     //       component: 'tag',
-    //       data: {
-    //         '.tag': tags
-    //       }
+    //       filters: [],
+    //       mapper: "category"
     //     },
     //     'meta[name=description]': {
     //       content: 'Tags from Simon McManus'
@@ -144,7 +144,7 @@ module.exports = {
         component: "posts-title",
         lists: ["posts"],
         filters: ["byTags"],
-        mapper: "posts"
+        mapper: "posts",
       }
     }
   },

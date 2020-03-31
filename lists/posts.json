@@ -603,21 +603,6 @@
         ]
     },
     {
-        "titleSlug": "mime-types-in-for-server-side-tiddlywikis-download-a-html-file-from-a-link",
-        "title": "MIME Types in for Server Side TiddlyWikis - Download a HTML file from a link",
-        "date": "2007-11-21",
-        "markup": "<p>One of the things we like about TiddlySpot is the way that it immediately provides the save as dialog box when you click the download link. For a demo at the UC Hot House we needed to do something similar. Here is what I did it. If any one knows of a better way to achieve the same goal please let me know.  </p>\n<p>With PHP its nice and easy to return a different MIME type. This can be done using one line of code :  </p>\n<p>header(\"Content-Type: application/zip zip\");  </p>\n<p>There a many different MIME types available, Wikipedia provides a summary of some of the more relevant types at :  </p>\n<p><a href=\"http://en.wikipedia.org/wiki/Internet_media_type\" title=\"http://en.wikipedia.org/wiki/Internet_media_type\">http://en.wikipedia.org/wiki/Internet_media_type</a>  </p>\n<p>Setting the MIME type to HTML simple loads the webpage into the browser becuase it knows how to display html files. There were two ways to produce the save dialog box, firstly the above example. By telling the browser to expect a Zip file it immediately returns the save as box. I was not overly happy with this because it was not a zip file and the dialog box informed the user they were going to be downloading a PC ZIP Achive :  </p>\n<p><img src=\"https://simonmcmanus.files.wordpress.com/2007/11/picture-2.png\" alt=\"picture-2.png\" /></p>\n<p>After some googling I discovered that browsers will return the save as dialog for any file formats that they do not understand. So I changed the MIME type to :  </p>\n<p>header(\"Content-Type: application/zisdfsdfpsdf zisdfp\");  </p>\n<p>and got the same except it was defaulting to saying it was saving a .php file in the save dialog box.  </p>\n<p>This of course only returns an empty file: To make it save the tiddlywiki file I then added :<br />\n[sourcecode language='php']  </p>\n<p>header(\"Pragma: public\");<br />\nheader(\"Expires: 0\");<br />\nheader(\"Cache-Control: must-revalidate, post-check=0, pre-check=0\");<br />\nheader(\"Cache-Control: public\");<br />\nheader(\"Content-Description: File Transfer\");<br />\nheader(\"Content-Type: application/sdfzip zipsdfsdf\");  </p>\n<p>$file = @fopen('index.html',\"rb\");<br />\nif ($file) {<br />\nwhile(!feof($file)) {<br />\nprint(fread($file, 1024*8));<br />\nflush();<br />\nif (connection_status()!=0) {<br />\n@fclose($file);<br />\ndie();<br />\n}<br />\n}<br />\n@fclose($file);<br />\n}  </p>\n<p>[/sourcecode]<br />\nThe fact that it was saving a PHP file was a problem. This was actually very simple to resolve :I created a .htaccess file in the folder containing the above code and entered :  </p>\n<p>AddType application/x-httpd-php .htm<br />\nAddType application/x-httpd-php .html  </p>\n<p>This means that any .html and .htm files will now be processed by the PHP engine. The final step it to change the filename of the file containing the above PHP code so that it is a HTML file.  </p>\n<p>The end result is the file should prompt you to save a HTML from one click.</p>",
-        "tags": [
-            "ccTiddly",
-            "HTML",
-            "MIME",
-            "Osmosoft",
-            "ServerSide",
-            "SimonMcManus",
-            "TiddlySpot"
-        ]
-    },
-    {
         "titleSlug": "cctiddly-2x-an-overview",
         "title": "ccTiddly 2.x - An Overview",
         "date": "2007-11-26",

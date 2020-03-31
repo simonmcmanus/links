@@ -9,6 +9,7 @@
     ],
     "pages": [
         "home/home.html",
+        "talks/talks.html",
         "hire/hire.html",
         "links/links.html",
         "posts/posts.html",
@@ -17,6 +18,7 @@
     "routes": [
         "/",
         "/",
+        "/talks.html",
         "/hire.html",
         "/links.html",
         "/posts.html",
@@ -25,6 +27,7 @@
     ],
     "specs": [
         "index.json",
+        "/talks.json",
         "/hire.json",
         "/links.json",
         "/posts.json",
