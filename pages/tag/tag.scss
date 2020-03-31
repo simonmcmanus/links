@@ -5,6 +5,12 @@ ul {
     margin-bottom: 3em;
 }
 
+ul:empty::before {
+    content: '- no items - ';
+    height: 100px;
+    width: 100px;
+}
+
 footer {
     text-align: center;
 }
