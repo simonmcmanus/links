@@ -23,6 +23,18 @@ if(window.location.host === 'simonmcmanus.com') {
   consolePlugin(Raven, console, {})  
 }
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+    // Registration was successful
+    console.log('ServiceWorkerr registration successful with scope: ', registration.scope)
+  }).catch(function (err) {
+    // registration failed :(
+    console.log('ServiceWorker registration failed: ', err)
+  })
+}
+
+
+
 if (history.pushState) {
   ga('send', 'event', 'history-push-state')
   var speclate = speclateClient({
