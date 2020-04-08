@@ -42,7 +42,7 @@
     },
     {
         "title": "Sizlate",
-        "summary": "insert data into html files using just css selectors using sizlate <a href='https://www.npmjs.com/package/sizlate'>sizlate</a>", 
+        "summary": "insert data into html files using just css selectors using <a href='https://www.npmjs.com/package/sizlate'>sizlate</a>", 
         "tags": ["sizlate"]
     },
     {
