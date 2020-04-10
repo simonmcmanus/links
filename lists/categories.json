@@ -2,7 +2,8 @@
     {
         "tags": ["node"],
         "summary": "Ideas, thoughts and links about Node.js developement and the London community. If you would like some help with a Node.js project, please <a href='/hire/index.html'>get in contact</a>. ",
-        "title": "Node.js"
+        "title": "Node.js",
+        "contact": true
     },
     {
         "tags": ["js"],
