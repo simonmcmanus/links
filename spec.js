@@ -117,10 +117,12 @@ module.exports = {
     page: "tag",
     lists: ["links", "posts", "categories"],
     filters: ["byTags"],
-    rssMapper: "rssMapper",
     spec: {
       title: ":tags | Simon McManus",
       '.tag': ":tags",
+      'a.contact': {
+        href: 'mailto:mcmanus.simon@gmail.com?subject=Contact: :tags'
+      },
       ".links-title": "Links tagged:  :tags",
       "meta[name=description]": {
         content: "Links tagged :tags"
@@ -132,7 +134,12 @@ module.exports = {
         lists: ["categories"],
         component: 'category',
         filters: ["byTags"],
-        mapper: "category"
+        mapper: "category",
+        state: {
+          empty: {
+            component: 'cateory-empty.html'
+          }
+        }
       },
       ".links_holder": {
         component: "posts-title",
