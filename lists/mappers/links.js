@@ -3,10 +3,8 @@ const generateTags = (tags) => {
     if(!tags || tags.length === 0 ) {
         return  [ false ] 
     }
-    var a= tags
+    tags = tags
         .filter(function(tag) {
-            console.log('tag', tag, tag.length > 0)
-            return false
             return tag.length > 0
         })
         .map(function(tag) {
@@ -16,11 +14,18 @@ const generateTags = (tags) => {
                 innerHTML: tag
             }
         }) 
-        console.log('a', a)
-        return a;
+    if(!tags || tags.length === 0 ) {
+        return  [ false ] 
+    }
+    return tags
 }
 
 module.exports = function (post) {
+    if(!post) {
+        return {
+            ".title": 'No Links'
+        }
+    }
     var out = {
         '.title': post.title,
         '.date': post.date,
@@ -36,6 +41,5 @@ module.exports = function (post) {
             href: post.url
         }
     }
-    console.log('-<', out);
     return out;
 }

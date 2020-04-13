@@ -135,9 +135,10 @@ module.exports = {
         component: 'category',
         filters: ["byTags"],
         mapper: "category",
-        state: {
+        states: {
           empty: {
-            component: 'cateory-empty.html'
+            component: 'category',
+            mapper: 'category'
           }
         }
       },
@@ -152,6 +153,11 @@ module.exports = {
         lists: ["posts"],
         filters: ["byTags"],
         mapper: "posts",
+        states: {
+          empty: {
+            component: 'no-posts'
+          }
+        }
       }
     }
   },
