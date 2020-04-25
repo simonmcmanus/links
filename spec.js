@@ -169,6 +169,7 @@ module.exports = {
     },
 
     files: [
+      'client/test.mjs',
       'cv.html',
       'client/icons/play.svg',
       'client/icons/monitor.svg',
