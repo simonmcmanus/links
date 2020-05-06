@@ -1,26 +1,28 @@
-const generateTags = (tags) => {
-    
-    if(!tags || tags.length === 0 ) {
-        return  [ false ] 
-    }
-    tags = tags
-        .filter(function(tag) {
-            return tag.length > 0
-        })
-        .map(function(tag) {
-            return {
-
-                href: '/tags/' + tag + '/' + 'index.html',
-                innerHTML: tag
-            }
-        }) 
-    if(!tags || tags.length === 0 ) {
-        return  [ false ] 
-    }
-    return tags
-}
 
 module.exports = function (post) {
+
+    const generateTags = (tags) => {
+    
+        if(!tags || tags.length === 0 ) {
+            return  [ false ] 
+        }
+        tags = tags
+            .filter(function(tag) {
+                return tag.length > 0
+            })
+            .map(function(tag) {
+                return {
+    
+                    href: '/tags/' + tag + '/' + 'index.html',
+                    innerHTML: tag
+                }
+            }) 
+        if(!tags || tags.length === 0 ) {
+            return  [ false ] 
+        }
+        return tags
+    }
+    
     if(!post) {
         return {
             ".title": 'No Links'
