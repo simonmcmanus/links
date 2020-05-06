@@ -8,3 +8,4 @@ npm-debug.log
 package-lock.json
 report.*.json
 speclate-rquired-lists.json
+offline-spec.json
