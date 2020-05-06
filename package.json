@@ -6,17 +6,17 @@
   "scripts": {
     "offline": "npm run js && npm run html",
     "build": "npm run update && npm run js &&  npm run html",
-    "html": "speclate --build ",
+    "html": "npm run speclate ",
+    "speclate": "speclate --build ",
     "style": "speclate --scss",
     "start": "speclate --dev 84",
     "update": "node scripts/update.js",
-    "js-dev": "npm run js && mv ./client/index-compiled.js ./docs/client/index-compiled.js",
+    "js-app": "rollup -c ./rollup.config.js --watch",
     "service-worker": "browserify ./client/service-worker.js > ./docs/service-worker.js",
     "js": "npm run prep-js && npm run js-app && npm run service-worker",
     "prep-js": "mkdir -p ./docs/client",
     "js-app-uncompiled": "browserify ./client/index.js  > ./docs/client/index-compiled.js",
     "js-app-all": "browserify ./client/index.js  | uglifyjs > ./client/index-compiled.js",
-    "js-app": "browserify ./client/index.js  > ./client/index-compiled.js",
     "js-service-worker": "browserify ./client/service-worker.js > ./docs/service-worker.js",
     "watch": "speclate --watch",
     "watch:js": "watchify ./client/index.js -o ./docs/client/index-compiled.js",
@@ -27,9 +27,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-json": "^4.0.3",
+    "@rollup/plugin-node-resolve": "^7.1.3",
     "appcache-nanny": "^1.1.0",
     "async": "^2.6.2",
     "browserify": "^16.5.1",
+    "chokidar": "^3.3.1",
     "fs-readdir-recursive": "^1.1.0",
     "ga-browser": "^1.0.0",
     "gray-matter": "^4.0.2",
@@ -39,15 +43,16 @@
     "raven-js": "^3.11.0",
     "showdown": "^1.9.0",
     "slugify": "^1.3.4",
-    "speclate": "^19.3.0",
     "speclate-service-worker": "3.x.x",
-    "superagent": "^3.5.2",
+    "superagent": "^3.8.3",
     "tailwindcss": "^1.2.0",
     "turndown": "^5.0.3",
     "uglify-js": "^2.4.10",
     "watchify": "^3.11.1"
   },
   "devDependencies": {
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "wicked-elements": "^1.1.3"
   }
 }
