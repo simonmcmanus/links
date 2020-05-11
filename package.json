@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "offline": "npm run js && npm run html",
-    "build": "npm run html &&  npm run js ",
+    "build": "npm run update && npm run html &&  npm run js ",
     "html": "npm run speclate ",
     "speclate": "speclate --build ",
     "style": "speclate --scss",
@@ -44,10 +44,7 @@
     "speclate": "20.0.0-1",
     "speclate-service-worker": "3.x.x",
     "superagent": "^3.8.3",
-    "tailwindcss": "^1.2.0",
-    "turndown": "^5.0.3",
-    "uglify-js": "^2.4.10",
-    "watchify": "^3.11.1"
+    "turndown": "^5.0.3"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.0.3",
