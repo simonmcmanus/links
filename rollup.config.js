@@ -1,6 +1,8 @@
 
 import resolve from '@rollup/plugin-node-resolve'
-
+import notify from 'rollup-plugin-notify'
+import minify from 'rollup-plugin-babel-minify'
+import commonjs from '@rollup/plugin-commonjs'
 
 export default 
 
@@ -33,6 +35,9 @@ export default
           moduleDirectory: 'node_modules'
         }
       }),
+      commonjs(),
+      minify(),
+      notify()
     ],
     output: {
       file: './docs/client/index-compiled.js',
