@@ -13,7 +13,7 @@ export default
   //   },
   // },
   {
-    input: '../wicked-elements/esm/index.js',
+    input: './node_modules/wicked-elements/esm/index.js',
     plugins: [
       resolve({
         customResolveOptions: {
