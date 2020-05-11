@@ -11,7 +11,7 @@
     "style": "speclate --scss",
     "start": "speclate --dev 84",
     "update": "node scripts/update.js",
-    "js-app": "rollup -c ./rollup.config.js --watch",
+    "js-app": "rollup -c ./rollup.config.js",
     "service-worker": "browserify ./client/service-worker.js > ./docs/service-worker.js",
     "js": "npm run prep-js && npm run js-app && npm run service-worker",
     "prep-js": "mkdir -p ./docs/client",
