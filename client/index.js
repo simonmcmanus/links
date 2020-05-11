@@ -1,5 +1,4 @@
 import { client } from 'speclate'
-import { define } from  'wicked-elements'
 import requireLists from './speclate-required.js'
 
 
@@ -29,4 +28,4 @@ var speclate = client(clientOptions, {}, requireLists)
 var siteURL = "http://" + top.location.host.toString();
 const internalLinkSelector = "a[href^='"+siteURL+"'], a[href^='/'], a[href^='./'], a[href^='../'], a[href^='#']"
 // we could just check these against the spec. 
-define(internalLinkSelector, { onclick: speclate.clickHandler })
+wickedElements.define(internalLinkSelector, { onclick: speclate.linkHandler })
