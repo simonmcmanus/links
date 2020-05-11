@@ -27,8 +27,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@rollup/plugin-commonjs": "^11.1.0",
-    "@rollup/plugin-json": "^4.0.3",
     "@rollup/plugin-node-resolve": "^7.1.3",
     "appcache-nanny": "^1.1.0",
     "async": "^2.6.2",
@@ -43,6 +41,7 @@
     "raven-js": "^3.11.0",
     "showdown": "^1.9.0",
     "slugify": "^1.3.4",
+    "speclate": "20.0.0-1",
     "speclate-service-worker": "3.x.x",
     "superagent": "^3.8.3",
     "tailwindcss": "^1.2.0",
@@ -51,6 +50,7 @@
     "watchify": "^3.11.1"
   },
   "devDependencies": {
+    "@rollup/plugin-json": "^4.0.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "wicked-elements": "^1.1.3"
