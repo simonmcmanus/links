@@ -1,5 +1,5 @@
-import { client } from '/client/speclate-module.js'
-import { define } from  '/client/wicked-elements-module.js'
+import { client } from 'speclate'
+import { define } from  'wicked-elements'
 import requireLists from './speclate-required.js'
 
 
