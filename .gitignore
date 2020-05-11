@@ -9,3 +9,4 @@ package-lock.json
 report.*.json
 speclate-rquired-lists.json
 offline-spec.json
+client/speclate-required.js
