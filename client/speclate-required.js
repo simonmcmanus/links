@@ -10,6 +10,7 @@ export default {
     "components": [
         "link",
         "posts",
+        "tag",
         "post",
         "category",
         "posts-title",
@@ -28,7 +29,7 @@ export default {
     "mappers": [
         "links",
         "posts",
-        "post",
-        "category"
+        "category",
+        "post"
     ]
 }

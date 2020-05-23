@@ -76,25 +76,25 @@ module.exports = {
   //       }
   //     }
   //   },
-    // '/tags/index.html': {
-    //   page: 'links',
-    //   spec: {
-    //     title: 'Tags from Simon McManus',
-    //     '.links-title': 'Tags from Simon McManus',
-    //     '.links_holder': {
-    //       lists: ["categories"],
-    //       component: 'tag',
-    //       filters: [],
-    //       mapper: "category"
-    //     },
-    //     'meta[name=description]': {
-    //       content: 'Tags from Simon McManus'
-    //     },
-    //     'meta[name=keywords]': {
-    //       content: 'tags,links'
-    //     }
-    //   }
-    // },
+    '/tags/index.html': {
+      page: 'links',
+      spec: {
+        title: 'Tags from Simon McManus',
+        '.links-title': 'Tags from Simon McManus',
+        '.links_holder': {
+          lists: ["categories"],
+          component: 'tag',
+          filters: [],
+          mapper: "category"
+        },
+        'meta[name=description]': {
+          content: 'Tags from Simon McManus'
+        },
+        'meta[name=keywords]': {
+          content: 'tags,links'
+        }
+      }
+    },
 
     '/posts/:titleSlug/index.html': {
       lists: ['posts'],
