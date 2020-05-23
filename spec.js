@@ -40,7 +40,7 @@ module.exports = {
       page: 'posts',
       spec: { 
         title: 'Recent posts from Simon McManus',
-        '.page-title': 'Blog posts',
+        //'.page-title': 'Recent Posts',
         '.holder': {
           component: 'posts',
           lists: ['posts'],
@@ -103,7 +103,6 @@ module.exports = {
       page: 'posts', 
       spec: {
         title: ':titleSlug',
-        '.page-title': 'Blog posts',
         '.holder': {
           component: 'post',
           lists: ['posts'],
