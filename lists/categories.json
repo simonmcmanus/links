@@ -6,6 +6,7 @@
     },
     {
         "tags": ["js"],
+        "image": "http://localhost:84/client/assets/categories/js.png",
         "summary": "Ideas, thoughts and links about Javascript developement and the London community.",
         "title": "Javascript"
     },
@@ -32,7 +33,6 @@
     {
         "title": "Pond",
         "summary": "My little pond, a work in progress...",
-        "image": "https://pbs.twimg.com/media/ENlpMtYWoAAn6MC?format=jpg&name=medium",
         "tags": ["pond"]
     },
     {

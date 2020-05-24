@@ -172,7 +172,8 @@ module.exports = {
       "favicon.ico",
       "client/icons/play.svg",
       "client/icons/monitor.svg",
-      "client/global-styles-compiled.css"
+      "client/global-styles-compiled.css",
+      "client/assets/categories/js.png"
       
     ]
   }
