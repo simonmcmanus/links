@@ -1,22 +1,91 @@
-
 [data-speclate-page="tag"] .nav {
     display: none;
 }
+
 .hero {
-    
-    position: sticky; top: 0px; width: 100%; 
-    
+    position: sticky;
+    top: 0px;
+    width: 100%;
     object-fit: cover;
-    
-    
 }
 
 h3.category {
     margin-left: 1em;
     width: 100%;
-position: relative;
-color: #ffffff61;
+    position: relative;
+    color: #ffffff61;
+    font-size: 4em;
+}
 
-font-size: 4em;
-    
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,900&family=Headland+One&family=IBM+Plex+Mono&display=swap');
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    min-height: 40vh;
+    height: auto;
+    background-size: cover;
+    max-width: 100%;
+    background-position: bottom;
+    object-fit: cover;
+    height: 100%;
+    padding: 0;
+    font-family: 'Headland One', serif;
+    background-color: #0b0b0b;
+    position: sticky;
+    top: -7em;
+    margin-bottom: 4em;
+    .title {
+        font-size: 4em;
+        z-index: 100;
+    }
+    .summary {
+        width: 100% !important;
+        position: absolute;
+        padding-top: 1em;
+        min-height: 4em;
+        padding-bottom: 1em;
+        background-color: #0b0b0b;
+        bottom: 0;
+        line-height: 2em;
+        z-index: 10;
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: #0b0b0b;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+}
+
+.summary {
+    position: sticky;
+}
+
+header h1,
+header h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 100%;
+    text-shadow: 1px 0px 0 black;
+}
+
+header#shared {
+    display: none;
+}
+
+h2 {
+    position: sticky;
+    top: 0em; // Threshold is required
+}
+
+p {
+    line-height: 3em;
 }
