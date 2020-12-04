@@ -125,7 +125,6 @@ module.exports = {
             'a.contact': {
                 href: 'mailto:mcmanus.simon@gmail.com?subject=Contact: :tags'
             },
-            ".links-title": "Links tagged:  :tags",
             "meta[name=description]": {
                 content: "Links tagged :tags"
             },
