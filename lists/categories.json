@@ -1,5 +1,6 @@
 [{
         "tags": ["node"],
+        "image": "http://localhost:84/client/assets/categories/js.png",
         "summary": "Ideas, thoughts and links about Node.js developement and the London community. If you would like some help with a Node.js project, please <a href='/hire/index.html'>get in contact</a>. ",
         "title": "Node.js"
     },
@@ -22,13 +23,14 @@
     },
     {
         "title": "London",
-        "summary": "Here you will find my links and thoughts about London and the Node community.",
+        "image": "https://www.dalaric.com/wp-content/uploads/AdobeStock_203994937x1-1000x675.jpg",
+        "summary": "❤ London",
         "tags": ["London"]
     },
     {
         "title": "Loughton",
         "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Loughton%2C_Lopping_Hall_-_geograph.org.uk_-_548944.jpg",
-        "summary": "A loughton local, Essex is where I call home.",
+        "summary": "A loughton local, Essex is where I call home. ❤️ Loughton",
         "tags": ["loughton"]
     },
     {

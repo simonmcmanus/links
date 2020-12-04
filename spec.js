@@ -120,7 +120,7 @@ module.exports = {
             title: ":tags | Simon McManus",
             '.tag': ":tags",
             'link[rel=canonical]': {
-                href: 'https://simonmcmanus.com/:tags'
+                href: 'https://simonmcmanus.com/tags/:tags'
             },
             'a.contact': {
                 href: 'mailto:mcmanus.simon@gmail.com?subject=Contact: :tags'
