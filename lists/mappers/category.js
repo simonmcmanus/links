@@ -4,14 +4,16 @@ module.exports = function(category) {
             ".title": this.params.tags
         }
     }
-    console.log(category.image)
+    let headerStyle = 'min-height: 0;';
+    if (category.image) {
+        headerStyle = "background-image: radial-gradient(circle, rgba(.6,.6,.6,.4) 0%, rgba(1, 1, 1,.9) 100%), url(" + category.image + ");"
+    }
 
     return {
         ".title": category.title || '',
-        ".summary": category.summary,
+        ".summary": category.summary || false,
         "header": {
-
-            style: "background-image: radial-gradient(circle, rgba(.6,.6,.6,.4) 0%, rgba(1, 1, 1,.9) 100%), url(" + category.image + ");"
+            style: headerStyle
         }
     }
 

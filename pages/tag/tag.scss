@@ -3,7 +3,8 @@ ul .post_item {
 }
 
 ul {
-    margin-bottom: 3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 ul:empty::before {
@@ -14,8 +15,4 @@ ul:empty::before {
 
 footer {
     text-align: center;
-}
-
-.category-summary {
-    margin-top: 6em;
 }

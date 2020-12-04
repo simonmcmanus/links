@@ -13,6 +13,7 @@ export default {
         "tag",
         "post",
         "category",
+        "category-empty",
         "posts-title",
         "no-posts"
     ],

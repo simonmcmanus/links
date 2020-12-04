@@ -1,5 +1,39 @@
-[data-speclate-page="tag"] .nav {
-    display: none;
+[data-speclate-page="tag"] {
+    .nav {
+        display: none;
+    }
+    header#shared {
+        display: none;
+    }
+    header {
+        min-height: 40vh;
+        height: auto;
+        background-size: cover;
+        max-width: 100%;
+        background-position: bottom;
+        object-fit: cover;
+        height: 100%;
+        padding: 0;
+        font-family: 'Headland One', serif;
+        background-color: #0b0b0b;
+        position: sticky;
+        .title {
+            font-size: 4em;
+            z-index: 100;
+        }
+        .summary {
+            width: 100%;
+            padding-top: 1em;
+            padding: 23em;
+            min-height: 4em;
+            padding-bottom: 1em;
+            background-color: #0b0b0b;
+            bottom: 0;
+            padding-top: 1em;
+            line-height: 2em;
+            z-index: 10;
+        }
+    }
 }
 
 .hero {
@@ -24,48 +58,13 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    min-height: 40vh;
-    height: auto;
-    background-size: cover;
-    max-width: 100%;
-    background-position: bottom;
-    object-fit: cover;
-    height: 100%;
-    padding: 0;
-    font-family: 'Headland One', serif;
-    background-color: #0b0b0b;
-    position: sticky;
-    top: -7em;
-    margin-bottom: 4em;
-    .title {
-        font-size: 4em;
-        z-index: 100;
-    }
-    .summary {
-        width: 100% !important;
-        position: absolute;
-        padding-top: 1em;
-        min-height: 4em;
-        padding-bottom: 1em;
-        background-color: #0b0b0b;
-        bottom: 0;
-        line-height: 2em;
-        z-index: 10;
-    }
-}
-
 footer {
     width: 100%;
     background-color: #0b0b0b;
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 2em 0;
     bottom: 0;
-}
-
-.summary {
-    position: sticky;
 }
 
 header h1,
@@ -77,10 +76,6 @@ header h2 {
     text-shadow: 1px 0px 0 black;
 }
 
-header#shared {
-    display: none;
-}
-
 h2 {
     position: sticky;
     top: 0em; // Threshold is required
@@ -88,4 +83,14 @@ h2 {
 
 p {
     line-height: 3em;
+}
+
+html.loading .category-summary {
+    transition: transform 0.3s ease;
+    transform: translateY(-120px);
+}
+
+.category-summary {
+    transform: translateY(0px);
+    transition: transform 0.3s ease;
 }

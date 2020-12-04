@@ -119,6 +119,9 @@ module.exports = {
         spec: {
             title: ":tags | Simon McManus",
             '.tag': ":tags",
+            'link[rel=canonical]': {
+                href: 'https://simonmcmanus.com/:tags'
+            },
             'a.contact': {
                 href: 'mailto:mcmanus.simon@gmail.com?subject=Contact: :tags'
             },
@@ -136,7 +139,7 @@ module.exports = {
                 mapper: "category",
                 states: {
                     empty: {
-                        component: 'category',
+                        component: 'category-empty',
                         mapper: 'category'
                     }
                 }
