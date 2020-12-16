@@ -1,29 +1,27 @@
-
 li.link.section {
     margin: 2em 0;
     border-radius: 5px;
     min-height: 40px;
+    list-style: none;
+    font-size: 1.8em;
     padding-top: .5em;
     border: 1px solid $focus;
-
     a {
         h5 {
-        
             color: #8e9297;
-        .favIcon {
-            margin-right: 6px;
-            top: 1px;
-            position: relative;
-            
+            .favIcon {
+                margin-right: 6px;
+                top: 1px;
+                position: relative;
+            }
+            .title {
+                text-decoration: underline;
+                color: #d4d4d4;
+            }
+            margin: 0;
+            font-size: 1.2em;
+            margin-bottom: .5em;
         }
-        .title {
-            text-decoration: underline;
-            color: #d4d4d4;
-        }
-        margin: 0;
-        font-size: 1.2em;
-        margin-bottom: .5em;
-    }
     }
     .created {
         text-align: right;
@@ -33,9 +31,7 @@ li.link.section {
         padding: 0;
         height: 2em;
     }
-
     blockquote {
-        
         margin: 1em 0;
         padding: 0.5em 10px;
         quotes: "\201C""\201D""\2018""\2019";
@@ -47,24 +43,18 @@ li.link.section {
         line-height: 0.1em;
         vertical-align: -0.4em;
     }
-
     blockquote:before {
         content: open-quote;
         margin-right: 0.25em;
     }
-
     blockquote:after {
         content: close-quote;
         margin-left: 0.25em;
     }
-
     blockquote p {
         display: inline;
     }
-
-
     .tags {
-        height: 3em;
         font-size: 0.8em;
         line-height: 3em;
     }
@@ -73,5 +63,3 @@ li.link.section {
         color: white;
     }
 }
-
-

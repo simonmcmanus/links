@@ -2,13 +2,25 @@ module.exports = {
     '/': {
         page: 'home',
         spec: {
-            title: 'Simon McManus'
+            title: 'Simon McManus',
+            '.links_holder': {
+                component: 'posts-title',
+                lists: ['links'],
+                mapper: 'links',
+                filters: ['lastFive']
+            },
         }
     },
     '/talks.html': {
         page: 'talks',
         spec: {
             title: 'Talks from Simon McManus'
+        }
+    },
+    '/about.html': {
+        page: 'about',
+        spec: {
+            title: 'About Simon McManus'
         }
     },
     '/hire.html': {

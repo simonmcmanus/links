@@ -2,19 +2,20 @@ export default {
     "pages": [
         "home",
         "talks",
+        "about",
         "hire",
         "links",
         "posts",
         "tag"
     ],
     "components": [
+        "posts-title",
         "link",
         "posts",
         "tag",
         "post",
         "category",
         "category-empty",
-        "posts-title",
         "no-posts"
     ],
     "lists": [
@@ -23,6 +24,7 @@ export default {
         "categories"
     ],
     "filters": [
+        "lastFive",
         "mostRecent",
         "byTitleSlug",
         "byTags"
