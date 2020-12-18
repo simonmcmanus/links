@@ -5,34 +5,15 @@ export default {
         "about",
         "hire",
         "links",
-        "posts",
-        "tag"
+        "posts"
     ],
     "components": [
         "posts-title",
         "link",
         "posts",
-        "tag",
-        "post",
-        "category",
-        "category-empty",
-        "no-posts"
+        "tag"
     ],
-    "lists": [
-        "links",
-        "posts",
-        "categories"
-    ],
-    "filters": [
-        "lastFive",
-        "mostRecent",
-        "byTitleSlug",
-        "byTags"
-    ],
-    "mappers": [
-        "links",
-        "posts",
-        "category",
-        "post"
-    ]
+    "lists": [],
+    "filters": [],
+    "mappers": []
 }

@@ -1,310 +1,175 @@
-    $border-width:5px;
-    $external-size: 30px;
-    $circumference:6em;
-    @keyframes popout {
-        from {
-            transform: scale(0)
-        }
-        80% {
-            transform: scale(1.2)
-        }
-        to {
-            transform: scale(1)
-        }
-    }
-    
-    @-webkit-keyframes popout {
-        from {
-            -webkit-transform: scale(0)
-        }
-        80% {
-            -webkit-transform: scale(1.2)
-        }
-        to {
-            -webkit-transform: scale(1)
-        }
-    }
-    
-    // /* transition from page to home */
-    html[data-speclate-url="/index.html"] ul.nav li {
-        transition: opacity .2s ease-in .2s, min-height .2s ease-in, margin .2s ease-in, padding .2s ease-in, background-size .2s ease-in, font-size .1s ease-in;
-        svg {
-            transition: width .2s ease-in, height .2s ease-in;
-        }
-    }
-    
-    ul.nav {
-        position: sticky;
-        display: inline-flex;
-        flex-wrap: wrap;
-        flex: 1;
-        display: flex;
-        li {
-            flex-flow: initial;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
+@import 'item',
+'animation',
+'footer';
+$border-width:5px;
+$external-size: 30px;
+$circumference:6em;
+ul.nav.internal {
+    position: sticky;
+    display: flex;
+    padding-left: 1em;
+    padding-bottom: 2em;
+    li {
+        flex-basis: 100%;
+        position: relative;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        text-align: center;
+        margin-bottom: 1em;
+        transition: flex-basis 1s;
+        transition: max-width 1s;
+        a {
+            display: inline-block;
             position: relative;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            width: 104px;
+            border: 1px solid white;
+            margin-top: 0;
+            margin-bottom: 0;
+            border-radius: $circumference;
+            height: $circumference;
+            width: $circumference;
             text-align: center;
-            margin-left: 1em;
-            margin-right: 1em;
-            margin-bottom: 1em;
-            &:after {}
-            a {
-                display: flex;
-                position: relative;
-                color: white;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                -webkit-box-flex: 1;
-                -ms-flex-positive: 1;
-                flex-grow: 1;
-                width: 105px;
-                border: 0;
-                display: block;
-                &:visited {
-                    color: white;
-                }
-                svg {
-                    display: inline-block;
-                    vertical-align: middle;
-                    height: 1em;
-                    width: 1em;
-                    padding: 4px 20px;
-                    top: 15px;
-                    position: relative;
-                    overflow: visible;
-                    stroke: #fff !important;
-                }
-                h3 {
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin: 15px 10px;
-                    display: block;
-                    transition: all 0.3s;
-                }
+            h3 {
+                display: inline-block;
+                margin: 0 1em;
             }
-        }
-        &.internal {
-            padding-left: 4em;
-            padding-bottom: 2em;
-            li {
-                border: 1px solid white;
-                margin-top: 0;
-                margin-bottom: 0;
+            svg {
+                top: 10px;
+                position: relative;
+                transform: scale(0.7);
+                transition: transform 0.5s ease-in 0.4s;
+            }
+            transition: transform .8s ease-in-out;
+            .spinner {
+                transition: transform .8s ease-in-out;
                 border-radius: $circumference;
                 height: $circumference;
                 width: $circumference;
-                max-width: $circumference;
-                transition: transform .4s ease-in-out;
-                a {
-                    transition: transform .4s ease-in-out;
-                }
-                h3 {
-                    font-size: 1.4em;
-                }
-                svg {
-                    transform: scale(1.5);
-                    transition: transform 0.4s ease-in;
-                }
-                &:after {
-                    content: "";
-                    width: 0;
-                    transform: rotate(160deg);
-                    z-index: -1;
-                    position: absolute;
-                    bottom: -$circumference/6;
-                    transform: scale(0.5) translateY(-7px);
-                    left: $circumference/3;
-                    border-top: $circumference/6 solid;
-                    border-color: inherit;
-                    border-left: $circumference/6 solid transparent;
-                    border-right: $circumference/6 solid transparent;
-                }
-                &:hover {
+                margin: 0;
+                padding: 0;
+            }
+            &:after {
+                content: "";
+                width: 0;
+                transform: rotate(160deg);
+                z-index: -1;
+                position: absolute;
+                bottom: -$circumference/6;
+                transform: scale(0.5) translateY(-7px);
+                left: $circumference/3;
+                border-top: $circumference/6 solid;
+                border-color: inherit;
+                border-left: $circumference/6 solid transparent;
+                border-right: $circumference/6 solid transparent;
+            }
+            &:hover {
+                .spinner {
                     transition: transform .8s ease-in-out;
-                    transform: rotate(260deg);
-                    box-shadow: inset 0px 0px 0px 1px #fff;
-                    a {
-                        transition: transform .8s ease-in-out;
-                        transform: rotate(-266deg);
-                    }
-                    svg {
-                        transform: scale(1.8);
-                    }
+                    transform: rotate(-266deg);
                 }
+                transition: transform .8s ease-in-out;
+                transform: rotate(260deg);
+                box-shadow: inset 0px 0px 0px 1px #fff;
             }
         }
-        &.external {
-            position: sticky;
-            top: 20px;
-            z-index: 1;
-            li {
-                margin-top: 2em;
-                z-index: 100 !important;
-                animation: popout .3s ease;
-                position: relative;
-                top: -.5em;
-                &:before {
-                    content: " ";
-                    border-bottom: 50px solid;
-                    border-color: inherit;
-                    position: absolute;
-                    top: 50px;
-                }
-                &:before,
-                &:after {
-                    z-index: -100 !important;
-                    position: absolute;
-                    border-left: 26px solid transparent;
-                    border-right: 26px solid transparent;
-                    margin-left: 26px;
-                    border-bottom-width: 30px;
-                    border-top-width: 20px;
-                }
-                &:before {
-                    top: -1em;
-                }
-                &:after {
-                    top: 13px;
-                }
-                max-height: 0;
-                min-height: 0;
-                margin-bottom: 1em;
-                svg {
-                    top: -.2em;
-                    transform: scale(1.4);
-                    transition: transform .2s ease-in-out;
-                }
-                a {
-                    height: 1em;
-                    h3 {
-                        display: none;
-                    }
-                }
-                transition: transform .2s ease-in-out;
-                &:hover {
-                    transform: scale(1.3);
-                    svg {
-                        transform: scale(2.5);
-                    }
-                }
-                &:after {
-                    content: "";
-                    bottom: 1em;
-                    left: 0em;
-                    border-top: 1em solid;
-                    border-color: inherit;
-                    border-left: 1.6em solid transparent;
-                    border-right: 1.5em solid transparent;
-                }
-            }
-        }
+        //     a {
+        //         transition: transform .4s ease-in-out;
+        //         display: flex;
+        //         position: relative;
+        //         color: white;
+        //         -webkit-box-orient: vertical;
+        //         -webkit-box-direction: normal;
+        //         -ms-flex-direction: column;
+        //         flex-direction: column;
+        //         -webkit-box-flex: 1;
+        //         -ms-flex-positive: 1;
+        //         border: 0;
+        //         display: block;
+        //         &:visited {
+        //             color: white;
+        //         }
+        //         svg {
+        //             display: inline-block;
+        //             vertical-align: middle;
+        //             height: 1em;
+        //             width: 1em;
+        //             padding: 4px 20px;
+        //             top: 15px;
+        //             position: relative;
+        //             overflow: visible;
+        //             stroke: #fff !important;
+        //             transform: scale(1.5);
+        //             transition: transform 0.4s ease-in;
+        //         }
+        //         h3 {
+        //             display: inline-block;
+        //             margin: 15px 10px;
+        //             display: block;
+        //             transition: all 0.3s;
+        //             font-size: 1.4em;
+        //         }
+        //     }
     }
-    
-    html[data-speclate-url="/hire.html"] ul.nav,
-    html[data-speclate-url="/links.html"] ul.nav,
-    html[data-speclate-page="links"] ul.nav,
-    html[data-speclate-url="/talks.html"] ul.nav,
-    html[data-speclate-url="/posts.html"] ul.nav,
-    html[data-speclate-page="posts"] ul.nav,
-    html[data-speclate-page="tag"] ul.nav,
-    html[data-speclate-page="about"] ul.nav {
-        left: 0;
-        li {
-            transition: width .5s ease-in .2s;
-            width: 0;
-            opacity: 0;
-            pointer-events: none;
-            svg {
-                transition: width .2s ease-in, height .2s ease-in;
-            }
+}
+
+// // /* transition from page to home */
+// html[data-speclate-url="/index.html"] ul.nav li {
+//     transition: opacity .2s ease-in .2s, min-height .2s ease-in, margin .2s ease-in, padding .2s ease-in, background-size .2s ease-in, font-size .1s ease-in;
+//     svg {
+//         transition: width .2s ease-in, height .2s ease-in;
+//     }
+// }
+// on a page, hide all the nav which is not relevenat
+html[data-speclate-page="links"] ul.nav,
+html[data-speclate-page="posts"] ul.nav,
+html[data-speclate-page="tag"] ul.nav,
+html[data-speclate-page="about"] ul.nav {
+    li {
+        a {
+            flex-basis: 0;
         }
-    }
-    /* override to show current nav item  */
-    
-    html[data-speclate-url="/hire.html"] ul.nav li.hire,
-    html[data-speclate-url="/links.html"] ul.nav li.links,
-    html[data-speclate-page="links"] ul.nav li.links,
-    html[data-speclate-url="/talks.html"] ul.nav li.talks,
-    html[data-speclate-url="/posts.html"] ul.nav li.posts,
-    html[data-speclate-page="posts"] ul.nav li.posts,
-    html[data-speclate-page="about"] ul.nav li.about {
-        opacity: 1;
-        width: auto;
-        h3 {
-            font-size: 2em;
-            margin: .4em;
-            margin-left: 1em;
-        }
+        opacity: 0;
+        max-width: 0;
+        pointer-events: none;
         svg {
-            transform: scale(1.4);
-            margin-left: 1.5em;
+            transition: transform 0.5s ease-in;
         }
     }
-    
-    @mixin item($background, $class) {
-        @keyframes rotate-#{$class} {
-            0% {
-                border-right: $border-width solid $background;
-            }
-            25% {
-                border-bottom: $border-width solid $background;
-            }
-            50% {
-                border-left: $border-width solid $background;
-            }
-            75% {
-                border-top: $border-width solid $background;
-            }
-        }
-        html[data-speclate-page=#{$class}] h3 {
-            color: $background;
-        }
-        // html[data-speclate-page=#{$class}] h5 {
-        //     color: $background;
-        // }
-        html[data-speclate-page=#{$class}] ul.nav.internal {
-            border-bottom: 2px solid $background;
-            padding-bottom: 0;
-            li a h3 {
-                margin: 7px;
-                margin-left: 4em;
-                transition: margin 0.3s ease-in 0.2s;
-            }
-            li a svg {
-                transform: scale(3);
-                margin-left: 0;
-                top: 2em;
-                height: 1.3em;
-                position: relative;
-            }
-        }
-        html[data-speclate-page=#{$class}] ul.nav li.#{$class} a h3 {
-            color: $background;
-        }
-        html body {
-            li.#{$class} {
-                border-color: $background;
-                background: $background;
-            }
-        }
+}
+
+
+/* override to show current nav item  */
+
+html[data-speclate-page="talks"] ul.nav.internal li.talks,
+html[data-speclate-page="links"] body ul.nav.internal li.links,
+html[data-speclate-page="posts"] ul.nav.internal li.posts,
+html[data-speclate-page="about"] ul.nav.internal li.about {
+    opacity: 1;
+    a {
+        flex-basis: 100%;
     }
-    
-    @include item(#92B558, 'links');
-    @include item(#8e44ad, 'hire');
-    @include item(#8e44ad, 'about');
-    @include item(#8e44ad, 'contact');
-    @include item(#d35400, 'talks');
-    @include item(#C48F65, 'posts');
-    @include item(#1da1f2, 'twitter');
-    @include item(#c6cbd1, 'github');
-    @include item(#F2552C, 'vimeo');
-    @include item(#ff0084, 'flickr');
-    @include item(#ff0000, 'youtube');
-    @include item(#29487d, 'facebook');
+    h3 {
+        font-size: 2em;
+        margin: .4em;
+        margin-left: 1em;
+        left: 3em;
+        position: relative;
+        top: -39px;
+    }
+    svg {
+        top: 20px;
+        transform: scale(1.7)
+    }
+}
+
+@include item(#92B558, 'links');
+@include item(#8e44ad, 'hire');
+@include item(#8e44ad, 'about');
+@include item(#8e44ad, 'contact');
+@include item(#d35400, 'talks');
+@include item(#C48F65, 'posts');
+@include item(#1da1f2, 'twitter');
+@include item(#c6cbd1, 'github');
+@include item(#F2552C, 'vimeo');
+@include item(#ff0084, 'flickr');
+@include item(#ff0000, 'youtube');
+@include item(#29487d, 'facebook');

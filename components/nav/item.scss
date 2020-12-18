@@ -1,0 +1,11 @@
+@mixin item($background, $class) {
+    html body {
+        li.#{$class} a {
+            border-color: $background;
+            background: $background;
+        }
+    }
+    html[data-speclate-page=#{$class}] ul.nav li.#{$class} a h3 {
+        color: $background;
+    }
+}
