@@ -9,3 +9,12 @@
         color: $background;
     }
 }
+
+@mixin footer($background, $class) {
+    html body footer {
+        li.#{$class} {
+            border-color: $background;
+            background: $background;
+        }
+    }
+}

@@ -89,7 +89,6 @@ html[data-speclate-page="about"] ul.nav {
         transition: flex-basis $duration ease-in-out;
         flex-basis: 0;
         opacity: 0;
-        pointer-events: none;
         a {
             width: 0;
         }
@@ -117,6 +116,7 @@ html[data-speclate-page="about"] ul.nav li.about {
         width: initial;
     }
     h3 {
+        transition: all $duration/4 ease-in $duration/2;
         font-size: 2em;
         margin-left: 4em;
         margin-top: 0;
@@ -126,7 +126,8 @@ html[data-speclate-page="about"] ul.nav li.about {
     }
     svg {
         top: 30px;
-        transform: scale(1.7)
+        transform: scale(1.7);
+        transition: all $duration ease-in;
     }
 }
 
@@ -220,9 +221,9 @@ html[data-speclate-page="home"] ul.nav li {
 @include item(#8e44ad, 'contact');
 @include item(#d35400, 'talks');
 @include item(#C48F65, 'posts');
-@include item(#1da1f2, 'twitter');
-@include item(#c6cbd1, 'github');
-@include item(#F2552C, 'vimeo');
-@include item(#ff0084, 'flickr');
-@include item(#ff0000, 'youtube');
-@include item(#29487d, 'facebook');
+@include footer(#1da1f2, 'twitter');
+@include footer(#c6cbd1, 'github');
+@include footer(#F2552C, 'vimeo');
+@include footer(#ff0084, 'flickr');
+@include footer(#ff0000, 'youtube');
+@include footer(#29487d, 'facebook');
