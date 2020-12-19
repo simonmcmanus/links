@@ -28,6 +28,4 @@ const tweet = async(text) => {
             console.log(JSON.stringify(error))
             throw error;
         })
-
-
 }
