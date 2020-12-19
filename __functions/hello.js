@@ -3,7 +3,7 @@ exports.handler = async function(event, context) {
     tweet('test tweet')
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: "Hello World" })
+        body: JSON.stringify({ message: "Hello tweet" })
     };
 }
 
