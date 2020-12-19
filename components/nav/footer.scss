@@ -1,9 +1,13 @@
 footer {
+    margin: 0 10%;
     ul {
-        display: flex;
-        justify-content: space-between;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: auto;
         margin-bottom: 8em;
         li {
+            min-width: 7em;
             z-index: 100 !important;
             animation: popout .3s ease;
             position: relative;
@@ -41,6 +45,7 @@ footer {
             min-height: 0;
             margin-bottom: 1em;
             svg {
+                stroke: white;
                 transform: scale(0.8);
                 transition: transform .2s ease-in-out;
             }

@@ -8,11 +8,13 @@ $duration:0.8s;
 $nudge-duration:0.4s;
 ul.nav.internal {
     position: sticky;
-    display: flex;
+    display: inline-flex;
     padding-left: 1em;
     padding-bottom: 2em;
+    flex-wrap: wrap;
     width: 100%;
     li {
+        max-width: $circumference * 1.5;
         flex-basis: 100%;
         position: relative;
         -webkit-box-orient: vertical;
@@ -39,11 +41,13 @@ ul.nav.internal {
                 top: 10px;
                 position: relative;
                 transform: scale(0.7);
-                transition: transform $duration/2 ease-in-out $duration/3;
+                transition: transform $duration/2 cubic-bezier(0.76, 0, 0.24, 1) $duration/3;
             }
-            transition: transform $duration ease-in-out;
+            transition: transform $duration cubic-bezier(0.76, 0, 0.24, 1);
+            ;
             .spinner {
-                transition: transform $duration ease-in-out;
+                transition: transform $duration cubic-bezier(0.76, 0, 0.24, 1);
+                ;
                 border-radius: $circumference;
                 height: $circumference;
                 width: $circumference;
@@ -65,11 +69,11 @@ ul.nav.internal {
             }
             &:hover {
                 .spinner {
-                    transition: transform $nudge-duration ease-in-out;
-                    transform: rotate(-360deg);
+                    transition: transform $nudge-duration*2 ease-out $nudge-duration;
+                    transform: rotate(-350deg);
                 }
-                transition: transform $nudge-duration ease-in-out;
-                transform: rotate(360deg);
+                transition: transform $nudge-duration*2 cubic-bezier(0.76, 0, 0.24, 1);
+                transform: rotate(350deg);
                 box-shadow: inset 0px 0px 0px 2px #fff;
                 svg {
                     transform: scale(1);
@@ -82,7 +86,7 @@ ul.nav.internal {
 // on a page, hide all the nav which is not relevenat
 html[data-speclate-page="links"] ul.nav,
 html[data-speclate-page="posts"] ul.nav,
-html[data-speclate-page="tag"] ul.nav,
+html[data-speclate-page="tags"] ul.nav,
 html[data-speclate-page="talks"] ul.nav,
 html[data-speclate-page="about"] ul.nav {
     li {
@@ -103,6 +107,7 @@ html[data-speclate-page="about"] ul.nav {
 
 html[data-speclate-page="talks"] ul.nav li.talks,
 html[data-speclate-page="links"] body ul.nav li.links,
+html[data-speclate-page="tags"] body ul.nav li.links,
 html[data-speclate-page="posts"] ul.nav li.posts,
 html[data-speclate-page="about"] ul.nav li.about {
     opacity: 1;
@@ -136,8 +141,10 @@ html[data-speclate-page="home"] ul.nav li {
     animation-iteration-count: infinite;
     animation-name: twitch;
     animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
     .spinner {
         animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
         animation-name: twitch-rev;
         animation-duration: 20s;
     }
