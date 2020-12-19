@@ -16,7 +16,7 @@ exports.handler = async(event, context) => {
             Key: `links.json`,
         })
 
-        if (error) return { statusCode: 500, body: JSON.stringify(error) }
+        //if (error) return { statusCode: 500, body: JSON.stringify(error) }
 
         return {
             statusCode: 200,
