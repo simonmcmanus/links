@@ -15,6 +15,7 @@ exports.handler = async(event, context) => {
             // The key/name of your file
             Key: `links.json`,
         })
+        console.log(result)
 
         //if (error) return { statusCode: 500, body: JSON.stringify(error) }
 
