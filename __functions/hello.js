@@ -18,8 +18,8 @@ var client = new Twitter({
 
 
 
-const tweet = (text) => {
-    client.post('statuses/update', { status: text })
+const tweet = async(text) => {
+    return await client.post('statuses/update', { status: text })
         .then(function(tweet) {
             console.log(tweet);
         })
