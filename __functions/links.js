@@ -15,7 +15,7 @@ exports.handler = async(event, context) => {
             // The key/name of your file
             Key: `links.json`,
         })
-        console.log(data.Body.toString('utf-8'))
+        console.log(result.Body.toString('utf-8'))
 
 
 
