@@ -1,5 +1,6 @@
 exports.handler = async function(event, context) {
 
+
     await tweet('test tweet')
     return {
         statusCode: 200,
@@ -24,6 +25,7 @@ const tweet = async(text) => {
             console.log(tweet);
         })
         .catch(function(error) {
+            console.log(JSON.stringify(error))
             throw error;
         })
 
