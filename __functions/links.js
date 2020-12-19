@@ -23,7 +23,7 @@ exports.handler = async(event, context) => {
             headers: {
                 "content-type": result ? result.ContentType : "application/json",
             },
-            body: JSON.stringify({...result, Body: result.Body.toString("utf-8") }),
+            body: JSON.stringify({ result }),
         }
     } catch (e) {
         return { statusCode: 500, body: e.message }
