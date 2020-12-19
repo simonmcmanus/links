@@ -15,14 +15,14 @@ exports.handler = async(event, context) => {
             // The key/name of your file
             Key: `links.json`,
         })
-        console.log(result)
+        console.log(data.Body.toString('utf-8'))
 
-        //if (error) return { statusCode: 500, body: JSON.stringify(error) }
+
 
         return {
             statusCode: 200,
 
-            body: JSON.stringify(result),
+            body: JSON.stringify(result.body),
         }
     } catch (e) {
         return { statusCode: 500, body: e.message }
