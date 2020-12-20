@@ -10,12 +10,17 @@ var encoder = new Encoder("entity");
 var urlFormat = "YYYY-MM-DD";
 
 superagent
-    .get("https://5vu7ki44h5.execute-api.eu-west-2.amazonaws.com/dev/links")
+    .get("https://tet--simonmcmanus.netlify.app/.netlify/functions/list-links")
+    .set('Accept', 'application/json')
     .end(function(error, data) {
 
         if (!data)
             return
-        var links = data.body
+
+
+
+
+        var links = data
             .filter(link => {
                 return link.title, link.url;
             })
