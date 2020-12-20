@@ -1,13 +1,3 @@
-exports.handler = async function(event, context) {
-
-
-    await tweet('test tweet')
-    return {
-        statusCode: 200,
-        body: JSON.stringify({ message: "Hello tweet" })
-    };
-}
-
 var Twitter = require('twitter');
 
 var client = new Twitter({
@@ -29,3 +19,5 @@ const tweet = async(text) => {
             throw error;
         })
 }
+
+exports = { tweet }
