@@ -6,7 +6,6 @@
     "scripts": {
         "offline": "npm run js && npm run html",
         "build": "npm run update && npm run html &&  npm run js ",
-
         "html": "npm run speclate ",
         "speclate": "speclate --build ",
         "style": "speclate --scss",
@@ -44,7 +43,8 @@
         "speclate": "^20.0.0-2",
         "speclate-service-worker": "3.x.x",
         "superagent": "^3.8.3",
-        "turndown": "^5.0.3"
+        "turndown": "^5.0.3",
+        "twitter": "^1.7.1"
     },
     "devDependencies": {
         "@rollup/plugin-json": "^4.0.3",
