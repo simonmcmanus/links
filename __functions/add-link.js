@@ -41,10 +41,10 @@ exports.handler = async(event, context) => {
 
         }
         await build()
-
+        return { statusCode: 200, body: 'done' }
 
     } catch (e) {
         console.log(e)
-            //return { statusCode: 500, body: e.message }
+        return { statusCode: 500, body: e.message }
     }
 }
