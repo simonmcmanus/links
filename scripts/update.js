@@ -14,13 +14,13 @@ superagent
     .set('Accept', 'application/json')
     .end(function(error, data) {
 
+
+
+
         if (!data)
             return
 
-
-
-
-        var links = data
+        var links = data.body
             .filter(link => {
                 return link.title, link.url;
             })
@@ -29,7 +29,10 @@ superagent
                 if (tags) {
                     link.tags = tags;
                 }
-                link.date = link.created.substring(0, 10);
+                if (link.created) {
+
+                    link.date = link.created.substring(0, 10) || new Date();
+                }
                 return link;
             });
         fs.writeFile(
