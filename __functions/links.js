@@ -1,6 +1,7 @@
 const AWS = require("aws-sdk")
 
 const tweet = require('./tweet')
+const build = require('./build')
 
 exports.handler = async(event, context) => {
 
@@ -20,10 +21,6 @@ exports.handler = async(event, context) => {
     })
 
     try {
-
-
-
-
         var params = {
             Key: "links.json",
             Bucket: 'netlify-files',
@@ -39,8 +36,9 @@ exports.handler = async(event, context) => {
             Body: JSON.stringify(links, null, 4)
         }).promise()
         await tweet(input.url)
+        await build()
 
-        console.log('fin', updated)
+
     } catch (e) {
         console.log(e)
             //return { statusCode: 500, body: e.message }
