@@ -16,10 +16,10 @@ exports.handler = async(event, context) => {
     try {
 
         const body = JSON.parse(event.body)
-        const headers = JSON.parse(event.headers)
 
 
-        console.log(headers)
+
+        console.log(event.headers)
         const input = {
             created: new Date(),
             url: body.url,
