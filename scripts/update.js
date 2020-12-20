@@ -10,7 +10,7 @@ var encoder = new Encoder("entity");
 var urlFormat = "YYYY-MM-DD";
 
 superagent
-    .get("https://tet--simonmcmanus.netlify.app/.netlify/functions/list-links")
+    .get("https://simonmcmanus.netlify.app/.netlify/functions/list-links")
     .set('Accept', 'application/json')
     .end(function(error, data) {
 
