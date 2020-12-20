@@ -12,7 +12,15 @@ exports.handler = async(event, context) => {
             Bucket: 'netlify-files',
         }
         const s3Objects = await s3.getObject(params).promise();
-        return { statusCode: 200, body: s3Objects.Body.toString('utf-8') }
+
+
+        return {
+            statusCode: 200,
+            body: s3Objects.Body.toString('utf-8'),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }
     } catch (e) {
         return { statusCode: 500, body: e.message }
     }
