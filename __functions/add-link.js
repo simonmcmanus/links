@@ -6,6 +6,8 @@ const build = require('./build')
 exports.handler = async(event, context) => {
 
 
+
+
     const s3 = new AWS.S3({
         accessKeyId: process.env.MY_AWS_ACCESS_KEY_ID,
         secretAccessKey: process.env.MY_AWS_SECRET_ACCESS_KEY,
@@ -14,10 +16,12 @@ exports.handler = async(event, context) => {
     try {
 
         const body = JSON.parse(event.body)
+        const headers = JSON.parse(event.headers)
 
 
+        console.log(headers)
         const input = {
-            create: new Date(),
+            created: new Date(),
             url: body.url,
             title: body.title,
             summary: body.summary,
