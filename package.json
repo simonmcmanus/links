@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "offline": "npm run js && npm run html",
-        "build-disabled": "npm run update && npm run html &&  npm run js ",
-        "build": "echo hello && mkdir ./docs",
+        "build": "npm run update && npm run html &&  npm run js ",
         "html": "npm run speclate ",
         "speclate": "speclate --build ",
         "style": "speclate --scss",
