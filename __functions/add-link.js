@@ -19,7 +19,7 @@ exports.handler = async(event, context) => {
 
 
 
-        console.log(event.headers)
+        console.log(event.headers['x-api-key'])
         const input = {
             created: new Date(),
             url: body.url,
