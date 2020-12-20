@@ -37,7 +37,7 @@ exports.handler = async(event, context) => {
             Body: JSON.stringify(links, null, 4)
         }).promise()
         if (body.tweet === 'tweet') {
-            await tweet(input.url)
+            await tweet(input.url + ' more links at https://simonmcmanus.com/links.html')
 
         }
         await build()
