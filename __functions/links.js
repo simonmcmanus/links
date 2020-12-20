@@ -7,6 +7,7 @@ exports.handler = async(event, context) => {
 
     const body = JSON.parse(event.body)
 
+    console.log('bn', body)
     const input = {
         create: new Date(),
         url: body.url,
@@ -35,7 +36,10 @@ exports.handler = async(event, context) => {
             Key: params.Key,
             Body: JSON.stringify(links, null, 4)
         }).promise()
-        await tweet(input.url)
+        if (body.tweet === 'true') {
+            await tweet(input.url)
+
+        }
         await build()
 
 
