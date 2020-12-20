@@ -9,7 +9,7 @@ var client = new Twitter({
 
 
 
-exports.tweet = async(text) => {
+module.exports = async(text) => {
     return await client.post('statuses/update', { status: text })
         .then(function(tweet) {
             console.log(tweet);
