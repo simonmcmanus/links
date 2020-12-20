@@ -9,7 +9,7 @@ var client = new Twitter({
 
 
 
-const tweet = async(text) => {
+exports.tweet = async(text) => {
     return await client.post('statuses/update', { status: text })
         .then(function(tweet) {
             console.log(tweet);
@@ -19,5 +19,3 @@ const tweet = async(text) => {
             throw error;
         })
 }
-
-exports = { tweet }

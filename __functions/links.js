@@ -1,6 +1,6 @@
 const AWS = require("aws-sdk")
 
-const { tweet } = require('./tweet')
+const tweet = require('./tweet')
 
 exports.handler = async(event, context) => {
 
