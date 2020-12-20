@@ -36,7 +36,7 @@ exports.handler = async(event, context) => {
             Key: params.Key,
             Body: JSON.stringify(links, null, 4)
         }).promise()
-        if (body.tweet === 'true') {
+        if (body.tweet === 'tweet') {
             await tweet(input.url)
 
         }
