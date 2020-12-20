@@ -5,16 +5,6 @@ const build = require('./build')
 
 exports.handler = async(event, context) => {
 
-    const body = JSON.parse(event.body)
-
-    console.log('bn', body)
-    const input = {
-        create: new Date(),
-        url: body.url,
-        title: body.title,
-        summary: body.summary,
-        tags: body.tags
-    }
 
     const s3 = new AWS.S3({
         accessKeyId: process.env.MY_AWS_ACCESS_KEY_ID,
@@ -22,6 +12,18 @@ exports.handler = async(event, context) => {
     })
 
     try {
+
+        const body = JSON.parse(event.body)
+
+
+        const input = {
+            create: new Date(),
+            url: body.url,
+            title: body.title,
+            summary: body.summary,
+            tags: body.tags
+        }
+
         var params = {
             Key: "links.json",
             Bucket: 'netlify-files',
