@@ -45,7 +45,13 @@ exports.handler = async(event, context) => {
             Body: JSON.stringify(links, null, 4)
         }).promise()
         if (body.tweet === 'tweet') {
-            await tweet(input.url + ' more links at https://simonmcmanus.com/links.html')
+
+
+            const items = tags.split(',').map((item) => {
+                return `https://simonmcmanus.com/tags/${item}/index.html`
+
+            }).join(' ')
+            await tweet(`${input.url} tagged: ${items}`)
 
         }
         await build()
