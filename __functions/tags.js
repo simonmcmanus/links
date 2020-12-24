@@ -15,7 +15,7 @@ exports.handler = async(event, context) => {
         }
 
         const searchTerm = event.queryStringParameters.search
-        console.log('p', event.queryStringParameters)
+        console.log('p', searchTerm)
 
 
         const s3Objects = await s3.getObject(params).promise();
@@ -30,7 +30,7 @@ exports.handler = async(event, context) => {
         var keyed = {};
         allTags.forEach(function(tag) {
 
-            if (!searchTerm || searchTerm && tag.indexOf(searchTerm)) {
+            if (!searchTerm || searchTerm && tag.indexOf(searchTerm) > -1) {
                 keyed[tag] = true;
 
             }
