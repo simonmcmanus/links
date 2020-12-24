@@ -31,11 +31,7 @@ exports.handler = async(event, context) => {
             keyed[tag] = true;
         })
 
-        var uniqueTags = Object.keys(keyed).map(function(tag) {
-            return {
-                value: tag
-            }
-        })
+        var uniqueTags = Object.keys(keyed).map(function(tag) => tag)
         console.log('->', uniqueTags)
         return { statusCode: 200, body: JSON.stringify(uniqueTags) }
 
