@@ -39,6 +39,8 @@ exports.handler = async(event, context) => {
         })
 
         var uniqueTags = Object.keys(keyed).map((tag) => tag)
+
+        uniqueTags.unshift(searchTerm)
         console.log('->', uniqueTags)
         return {
             statusCode: 200,
