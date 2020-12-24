@@ -14,9 +14,11 @@ exports.handler = async(event, context) => {
             Bucket: 'netlify-files',
         }
 
-        const searchTerm = event.headers['search']
+        console.log(event.headers)
 
-        console.log('search term', searchTerm)
+        const searchTerm = event.queryStringParameters.search
+        console.log('p', searchTerm)
+
 
         const s3Objects = await s3.getObject(params).promise();
 
@@ -50,4 +52,4 @@ exports.handler = async(event, context) => {
         console.log(e)
         return { statusCode: 500, body: e.message }
     }
-},
+}
