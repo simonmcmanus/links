@@ -16,6 +16,7 @@ exports.handler = async(event, context) => {
 
         const searchTerm = event.headers['search']
 
+        console.log('search term', searchTerm)
 
         const s3Objects = await s3.getObject(params).promise();
 
@@ -49,4 +50,4 @@ exports.handler = async(event, context) => {
         console.log(e)
         return { statusCode: 500, body: e.message }
     }
-}
+},
