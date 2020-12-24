@@ -10,11 +10,8 @@ exports.handler = async(event, context) => {
 
     try {
 
-        const body = JSON.parse(event.body)
 
 
-
-        console.log(body.text)
 
         var params = {
             Key: "links.json",
