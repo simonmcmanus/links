@@ -36,8 +36,8 @@ exports.handler = async(event, context) => {
                 value: tag
             }
         })
-
-        return { statusCode: 200, body: uniqueTags }
+        console.log('->', uniqueTags)
+        return { statusCode: 200, body: JSON.stringify(uniqueTags) }
 
     } catch (e) {
         console.log(e)
