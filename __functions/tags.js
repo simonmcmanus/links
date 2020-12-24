@@ -17,6 +17,10 @@ exports.handler = async(event, context) => {
             Key: "links.json",
             Bucket: 'netlify-files',
         }
+
+        const searchTerm = event.queryStringParameters.search
+
+
         const s3Objects = await s3.getObject(params).promise();
 
         const links = JSON.parse(s3Objects.Body.toString('utf-8'))
@@ -28,7 +32,11 @@ exports.handler = async(event, context) => {
         })
         var keyed = {};
         allTags.forEach(function(tag) {
-            keyed[tag] = true;
+
+            if (search && keyed[tag].indexOf(search)) {
+                keyed[tag] = true;
+
+            }
         })
 
         var uniqueTags = Object.keys(keyed).map((tag) => tag)
