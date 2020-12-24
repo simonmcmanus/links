@@ -14,8 +14,7 @@ exports.handler = async(event, context) => {
             Bucket: 'netlify-files',
         }
 
-        const searchTerm = event.queryStringParameters.search
-        console.log('p', searchTerm)
+        const searchTerm = event.headers['search']
 
 
         const s3Objects = await s3.getObject(params).promise();
