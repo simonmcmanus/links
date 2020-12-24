@@ -16,7 +16,7 @@ exports.handler = async(event, context) => {
 
         console.log(event.headers)
 
-        const searchTerm = event.queryStringParameters.search
+        const searchTerm = event.headers.search
         console.log('p', searchTerm)
 
 
