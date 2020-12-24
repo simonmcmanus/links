@@ -20,7 +20,7 @@ exports.handler = async(event, context) => {
         const s3Objects = await s3.getObject(params).promise();
 
         const links = JSON.parse(s3Objects.Body.toString('utf-8'))
-        const allTags
+        let allTags
         links.forEach(function(link) {
             var prepped = link.tags.split(',')
             allTags = allTags.concat(prepped)
