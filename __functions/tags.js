@@ -33,7 +33,13 @@ exports.handler = async(event, context) => {
 
         var uniqueTags = Object.keys(keyed).map((tag) => tag)
         console.log('->', uniqueTags)
-        return { statusCode: 200, body: JSON.stringify(uniqueTags) }
+        return {
+            statusCode: 200,
+            body: JSON.stringify(uniqueTags),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }
 
     } catch (e) {
         console.log(e)
