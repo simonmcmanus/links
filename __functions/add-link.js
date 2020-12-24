@@ -47,7 +47,7 @@ exports.handler = async(event, context) => {
         if (body.tweet === 'tweet') {
 
 
-            const items = tags.split(',').map((item) => {
+            const items = body.tags.split(',').map((item) => {
                 return `https://simonmcmanus.com/tags/${item}/index.html`
 
             }).join(' ')
