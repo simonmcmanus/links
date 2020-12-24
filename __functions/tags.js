@@ -16,7 +16,7 @@ exports.handler = async(event, context) => {
 
         console.log(event.headers)
 
-        const searchTerm = event.headers.search
+        const searchTerm = event.headers.search.toLowerCase()
         console.log('p', searchTerm)
 
 
