@@ -33,7 +33,7 @@ exports.handler = async(event, context) => {
         var keyed = {};
         allTags.forEach(function(tag) {
 
-            if (search && tag.indexOf(search)) {
+            if (search && tag.indexOf(searchTerm)) {
                 keyed[tag] = true;
 
             }
