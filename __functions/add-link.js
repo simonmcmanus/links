@@ -48,7 +48,9 @@ exports.handler = async(event, context) => {
 
 
             const items = body.tags.split(',').map((item) => {
-                return `https://simonmcmanus.com/tags/${item}/index.html`
+
+                item
+                return `https://simonmcmanus.com/tags/${item.toLowerCase()}/index.html`
 
             }).join(' ')
             await tweet(`${input.url} tagged: ${items}`)
