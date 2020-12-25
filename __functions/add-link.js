@@ -54,7 +54,7 @@ exports.handler = async(event, context) => {
 
                 return `https://simonmcmanus.com/tags/${item.toLowerCase()}/index.html`
 
-            }).join(' ')
+            })
 
             await tweet(input.url, items)
 
