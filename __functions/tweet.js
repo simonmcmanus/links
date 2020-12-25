@@ -8,10 +8,10 @@ var client = new Twitter({
 });
 
 
-const replies = (in_reply_to_status_id, tags) => {
+const replies = async(in_reply_to_status_id, tags) => {
 
     return tags.map(async(tag) => {
-        client.post('statuses/update', {
+        return await client.post('statuses/update', {
             status: `@smm_links  tag: ${tag}`,
             in_reply_to_status_id,
 
