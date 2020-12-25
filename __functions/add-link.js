@@ -21,7 +21,7 @@ exports.handler = async(event, context) => {
 
 
         if (body.url === '') {
-            return
+            return { statusCode: 400, body: 'no-url' }
         }
 
         const input = {
