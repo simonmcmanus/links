@@ -55,9 +55,9 @@ exports.handler = async(event, context) => {
                 return `https://simonmcmanus.com/tags/${item.toLowerCase()}/index.html`
 
             }).join(' ')
-            setTimeout(() => {
-                await tweet(input.url, items)
-            }, 6000)
+
+            await tweet(input.url, items)
+
 
 
         }
