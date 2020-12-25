@@ -56,7 +56,7 @@ exports.handler = async(event, context) => {
 
             }).join(' ')
             setTimeout(() => {
-                await tweet(`${input.url} tagged: ${items}`)
+                await tweet(input.url, items)
             }, 6000)
 
 
