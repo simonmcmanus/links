@@ -8,7 +8,7 @@ var client = new Twitter({
 });
 
 
-const replies = async(in_reply_to_status_id, tags) => {
+const replies = (in_reply_to_status_id, tags) => {
 
     return tags.map(async(tag) => {
         return await client.post('statuses/update', {
