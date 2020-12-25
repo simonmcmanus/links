@@ -20,8 +20,10 @@ exports.handler = async(event, context) => {
         const body = JSON.parse(event.body)
 
 
+        if (body.url === '') {
+            return
+        }
 
-        console.log()
         const input = {
             created: new Date(),
             url: body.url,
@@ -44,19 +46,21 @@ exports.handler = async(event, context) => {
             Key: params.Key,
             Body: JSON.stringify(links, null, 4)
         }).promise()
-        if (body.tweet === 'tweet') {
 
+        await build()
+        if (body.tweet === 'tweet') {
 
             const items = body.tags.split(',').map((item) => {
 
-                item
                 return `https://simonmcmanus.com/tags/${item.toLowerCase()}/index.html`
 
             }).join(' ')
-            await tweet(`${input.url} tagged: ${items}`)
+            setTimeout(() => {
+                await tweet(`${input.url} tagged: ${items}`)
+            }, 6000)
+
 
         }
-        await build()
         return { statusCode: 200, body: 'done' }
 
     } catch (e) {
