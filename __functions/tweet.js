@@ -24,7 +24,7 @@ module.exports = async(text, tags) => {
 
     return await client.post('statuses/update', { status: text })
         .then(async function(tweet) {
-            return await Promise.all(replies(tweet.id_str, ['a', 'b']))
+            return await Promise.all(replies(tweet.id_str, tags))
         })
         .catch(function(error) {
             console.log(JSON.stringify(error))
