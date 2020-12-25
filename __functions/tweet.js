@@ -8,11 +8,11 @@ var client = new Twitter({
 });
 
 
-const replies = (in_reply_to_status_id, tags) => {
 
+const replies = (in_reply_to_status_id, tags) => {
     return tags.map(async(tag) => {
         return await client.post('statuses/update', {
-            status: `@smm_links  tag: ${tag}`,
+            status: `related: ${tag}`,
             in_reply_to_status_id,
 
         })
@@ -24,8 +24,8 @@ module.exports = async(text, tags) => {
 
     return await client.post('statuses/update', { status: text })
         .then(function async(tweet) {
-            await Promise.all(replies(tweet.id, tags))
 
+            await Promise.all(replies(tweet.id_str, ['a', 'b']))
         })
         .catch(function(error) {
             console.log(JSON.stringify(error))
