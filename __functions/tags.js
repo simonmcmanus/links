@@ -1,6 +1,6 @@
 const AWS = require("aws-sdk")
 
-const { extractUniqueTags } = require('../lib/get-tags.js')
+const { searchTags } = require('../lib/get-tags.js')
 
 
 exports.handler = async(event, context) => {
@@ -24,9 +24,10 @@ exports.handler = async(event, context) => {
         const s3Objects = await s3.getObject(params).promise();
 
         const tags = JSON.parse(s3Objects.Body.toString('utf-8'))
-        const uniqueTags = extractUniqueTags(tags, searchTerm)
+            //console.log(tags)
+        const uniqueTags = searchTags(tags, searchTerm)
+        console.log('ut', searchTerm)
 
-        console.log('->', uniqueTags)
         return {
             statusCode: 200,
             body: JSON.stringify({
