@@ -3,6 +3,7 @@ const AWS = require("aws-sdk")
 const tweet = require('./tweet')
 const build = require('./build')
 
+import { extractUniqueTags } from '../lib/get/tags.js'
 exports.handler = async(event, context) => {
 
 
@@ -41,10 +42,19 @@ exports.handler = async(event, context) => {
         const links = JSON.parse(s3Objects.Body.toString('utf-8'))
         links.push(input)
 
-        const updated = await s3.putObject({
+        const tags = extractUniqueTags(links)
+
+        await s3.putObject({
             Bucket: params.Bucket,
             Key: params.Key,
             Body: JSON.stringify(links, null, 4)
+        }).promise()
+
+
+        await s3.putObject({
+            Bucket: params.Bucket,
+            Key: 'tags.json',
+            Body: JSON.stringify(tags, null, 4)
         }).promise()
 
         await build()

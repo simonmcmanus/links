@@ -1,5 +1,8 @@
 const AWS = require("aws-sdk")
 
+const
+import { extractUniqueTags } from '../lib/get/tags.js'
+
 exports.handler = async(event, context) => {
 
 
@@ -23,24 +26,8 @@ exports.handler = async(event, context) => {
         const s3Objects = await s3.getObject(params).promise();
 
         const links = JSON.parse(s3Objects.Body.toString('utf-8'))
-        let allTags = []
-        links.forEach(function(link) {
-            var prepped = link.tags.split(',')
-            allTags = allTags.concat(prepped)
+        const uniqueTags = extractUniqueTags(links)
 
-        })
-        var keyed = {};
-        allTags.forEach(function(tag) {
-
-            if (!searchTerm || searchTerm && tag.indexOf(searchTerm) > -1) {
-                keyed[tag] = true;
-
-            }
-        })
-
-        var uniqueTags = Object.keys(keyed).map((tag) => tag)
-
-        uniqueTags.unshift(searchTerm)
         console.log('->', uniqueTags)
         return {
             statusCode: 200,
