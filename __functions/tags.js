@@ -1,7 +1,6 @@
 const AWS = require("aws-sdk")
 
-
-import { extractUniqueTags } from '../lib/get/tags.js'
+const { extractUniqueTags } = require('../lib/get/tags.js')
 
 exports.handler = async(event, context) => {
 
@@ -13,14 +12,14 @@ exports.handler = async(event, context) => {
 
     try {
         var params = {
-            Key: "links.json",
+            Key: "tags.json",
             Bucket: 'netlify-files',
         }
         const searchTerm = event.headers.search.toLowerCase()
         const s3Objects = await s3.getObject(params).promise();
 
-        const links = JSON.parse(s3Objects.Body.toString('utf-8'))
-        const uniqueTags = extractUniqueTags(links, searchTerm)
+        const tags = JSON.parse(s3Objects.Body.toString('utf-8'))
+        const uniqueTags = extractUniqueTags(tags, searchTerm)
 
         console.log('->', uniqueTags)
         return {
