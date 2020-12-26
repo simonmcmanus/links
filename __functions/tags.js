@@ -18,7 +18,7 @@ exports.handler = async(event, context) => {
         }
         let searchTerm = '';
         if (event.headers.search) {
-            searchTerm = event.headers.search.toLowerCase()
+            searchTerm = event.queryStringParameters.search.toLowerCase()
         }
 
         const s3Objects = await s3.getObject(params).promise();
