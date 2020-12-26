@@ -26,6 +26,14 @@ exports.handler = async(event) => {
         }
 
 
+        var params = {
+            Key: "links.json",
+            Bucket: 'netlify-files',
+        }
+        const s3Objects = await s3.getObject(params).promise();
+
+        const links = JSON.parse(s3Objects.Body.toString('utf-8'))
+
         const alreadyAdded = links.some((link) => link.url === body.url)
 
         if (alreadyAdded) { // link already exists
@@ -41,13 +49,6 @@ exports.handler = async(event) => {
             tags: body.tags
         }
 
-        var params = {
-            Key: "links.json",
-            Bucket: 'netlify-files',
-        }
-        const s3Objects = await s3.getObject(params).promise();
-
-        const links = JSON.parse(s3Objects.Body.toString('utf-8'))
 
 
 
