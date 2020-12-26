@@ -56,7 +56,7 @@ exports.handler = async(event) => {
         links.push(input)
 
         const tags = extractUniqueTags(links)
-        console.log('tags', tags)
+
         await s3.putObject({
             Bucket: params.Bucket,
             Key: params.Key,
