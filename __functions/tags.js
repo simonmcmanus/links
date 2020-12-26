@@ -1,6 +1,7 @@
 const AWS = require("aws-sdk")
 
-const { extractUniqueTags } = require('../lib/get/tags.js')
+const { extractUniqueTags } = require('../lib/get-tags.js')
+
 
 exports.handler = async(event, context) => {
 
