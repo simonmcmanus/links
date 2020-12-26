@@ -21,6 +21,7 @@ exports.handler = async(event) => {
 
 
         if (body.url === '') {
+            console.log('error: no url')
             return { statusCode: 400, body: 'no-url' }
         }
 
@@ -49,6 +50,7 @@ exports.handler = async(event) => {
 
 
         if (byUrl[input]) { // link already exists
+            console.log('error: url exist')
             return { statusCode: 400, body: 'URL Already Saved' }
         }
         links.push(input)
