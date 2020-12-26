@@ -26,9 +26,7 @@ exports.handler = async(event) => {
         }
 
 
-        const alreadyAdded = links.some((link) => {
-            return link.url === input
-        })
+        const alreadyAdded = links.some((link) => link.url === input)
 
         if (alreadyAdded) { // link already exists
             console.log('error: url exist')
@@ -94,5 +92,3 @@ exports.handler = async(event) => {
         return { statusCode: 500, body: e.message }
     }
 }
-
-exports.handler()
