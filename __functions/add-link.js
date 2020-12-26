@@ -2,8 +2,7 @@ const AWS = require("aws-sdk")
 
 const tweet = require('./tweet')
 const build = require('./build')
-
-import { extractUniqueTags } from '../lib/get/tags.js'
+const { extractUniqueTags } = require('../lib/get/tags.js')
 exports.handler = async(event, context) => {
 
 
