@@ -52,9 +52,6 @@ exports.handler = async(event) => {
 
 
 
-
-
-
         links.push(input)
 
         const tags = extractUniqueTags(links)
