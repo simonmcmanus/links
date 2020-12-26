@@ -17,8 +17,8 @@ exports.handler = async(event, context) => {
             Bucket: 'netlify-files',
         }
         let searchTerm = '';
-        if (event.headers.search) {
-            searchTerm = event.queryStringParameters.search.toLowerCase()
+        if (event.headers && event.headers.search) {
+            searchTerm = event.headers.search.toLowerCase()
         }
 
         const s3Objects = await s3.getObject(params).promise();
@@ -29,7 +29,9 @@ exports.handler = async(event, context) => {
         console.log('->', uniqueTags)
         return {
             statusCode: 200,
-            body: JSON.stringify(uniqueTags),
+            body: JSON.stringify({
+                tags: uniqueTags
+            }),
             headers: {
                 'Content-Type': 'application/json',
             },
