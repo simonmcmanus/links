@@ -3,12 +3,12 @@ const AWS = require("aws-sdk")
 const tweet = require('./tweet')
 const build = require('./build')
 const { extractUniqueTags } = require('../lib/get-tags.js')
-exports.handler = async(event, context) => {
+exports.handler = async(event) => {
 
 
-    if (event.headers['x-api-key'] !== process.env.API_KEY) {
-        return { statusCode: 404 }
-    }
+    // if (event.headers['x-api-key'] !== process.env.API_KEY) {
+    //     return { statusCode: 404 }
+    // }
 
     const s3 = new AWS.S3({
         accessKeyId: process.env.MY_AWS_ACCESS_KEY_ID,
@@ -42,7 +42,7 @@ exports.handler = async(event, context) => {
         links.push(input)
 
         const tags = extractUniqueTags(links)
-
+        console.log('tags', tags)
         await s3.putObject({
             Bucket: params.Bucket,
             Key: params.Key,
