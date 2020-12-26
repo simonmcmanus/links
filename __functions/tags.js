@@ -30,9 +30,9 @@ exports.handler = async(event, context) => {
 
         return {
             statusCode: 200,
-            body: JSON.stringify({
-                tags: uniqueTags
-            }),
+            body: JSON.stringify(
+                uniqueTags
+            ),
             headers: {
                 'Content-Type': 'application/json',
             },
