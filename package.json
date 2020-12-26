@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "module": "index.js",
     "scripts": {
         "offline": "npm run js && npm run html",
         "build": "npm run update && npm run html &&  npm run js ",
