@@ -25,6 +25,16 @@ exports.handler = async(event) => {
             return { statusCode: 400, body: 'no-url' }
         }
 
+
+        const alreadyAdded = links.some((link) => {
+            return link.url === input
+        })
+
+        if (alreadyAdded) { // link already exists
+            console.log('error: url exist')
+            return { statusCode: 400, body: 'URL Already Saved' }
+        }
+
         const input = {
             created: new Date(),
             url: body.url,
@@ -42,17 +52,10 @@ exports.handler = async(event) => {
         const links = JSON.parse(s3Objects.Body.toString('utf-8'))
 
 
-        const byUrl = links.reduce((acc, link) => {
-            acc[link.url] = true
-            return acc;
-        }, {})
 
 
 
-        if (byUrl[input]) { // link already exists
-            console.log('error: url exist')
-            return { statusCode: 400, body: 'URL Already Saved' }
-        }
+
         links.push(input)
 
         const tags = extractUniqueTags(links)
@@ -91,3 +94,5 @@ exports.handler = async(event) => {
         return { statusCode: 500, body: e.message }
     }
 }
+
+exports.handler()
