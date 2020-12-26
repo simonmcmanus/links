@@ -39,6 +39,18 @@ exports.handler = async(event) => {
         const s3Objects = await s3.getObject(params).promise();
 
         const links = JSON.parse(s3Objects.Body.toString('utf-8'))
+
+
+        const byUrl = links.reduce((acc, link) => {
+            acc[link.url] = true
+            return acc;
+        }, {})
+
+
+
+        if (byUrl[input]) { // link already exists
+            return { statusCode: 400, body: 'URL Already Saved' }
+        }
         links.push(input)
 
         const tags = extractUniqueTags(links)
