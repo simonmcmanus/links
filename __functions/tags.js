@@ -26,7 +26,7 @@ exports.handler = async(event, context) => {
         const tags = JSON.parse(s3Objects.Body.toString('utf-8'))
             //console.log(tags)
         const uniqueTags = searchTags(tags, searchTerm)
-        console.log('ut', searchTerm)
+
 
         return {
             statusCode: 200,

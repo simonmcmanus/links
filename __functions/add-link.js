@@ -6,9 +6,9 @@ const { extractUniqueTags } = require('../lib/get-tags.js')
 exports.handler = async(event) => {
 
 
-    // if (event.headers['x-api-key'] !== process.env.API_KEY) {
-    //     return { statusCode: 404 }
-    // }
+    if (event.headers['x-api-key'] !== process.env.API_KEY) {
+        return { statusCode: 404 }
+    }
 
     const s3 = new AWS.S3({
         accessKeyId: process.env.MY_AWS_ACCESS_KEY_ID,
