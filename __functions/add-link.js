@@ -49,9 +49,6 @@ exports.handler = async(event) => {
             tags: body.tags
         }
 
-
-
-
         links.push(input)
 
         const tags = extractUniqueTags(links)
