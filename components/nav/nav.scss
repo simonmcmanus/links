@@ -4,13 +4,15 @@
 $border-width:5px;
 $external-size: 30px;
 $circumference:6em;
-$duration:0.8s;
+$duration:0.6s;
 $nudge-duration:0.4s;
+$border-color:#e0d9d9;
 ul.nav.internal {
     position: sticky;
     display: inline-flex;
-    padding-left: 1em;
-    padding-bottom: 2em;
+    justify-content: center;
+    padding-bottom: 4em;
+    padding-top: 4em;
     flex-wrap: wrap;
     width: 100%;
     li {
@@ -26,7 +28,7 @@ ul.nav.internal {
         a {
             display: inline-block;
             position: relative;
-            border: 1px solid white;
+            border: 1px solid $border-color;
             margin-top: 0;
             margin-bottom: 0;
             max-width: $circumference;
@@ -42,7 +44,7 @@ ul.nav.internal {
                 top: 10px;
                 position: relative;
                 transform: scale(0.7);
-                transition: transform $duration/2 cubic-bezier(0.76, 0, 0.24, 1) $duration/3;
+                transition: transform $duration/3 ease-in $duration/3;
             }
             transition: transform $duration cubic-bezier(0.76, 0, 0.24, 1);
             ;
@@ -68,18 +70,6 @@ ul.nav.internal {
                 border-left: $circumference/6 solid transparent;
                 border-right: $circumference/6 solid transparent;
             }
-            &:hover {
-                .spinner {
-                    transition: transform $nudge-duration*2 ease-out $nudge-duration;
-                    transform: rotate(-350deg);
-                }
-                transition: transform $nudge-duration*2 cubic-bezier(0.76, 0, 0.24, 1);
-                transform: rotate(350deg);
-                box-shadow: inset 0px 0px 0px 2px #fff;
-                svg {
-                    transform: scale(1);
-                }
-            }
         }
     }
 }
@@ -103,6 +93,47 @@ html[data-speclate-page="about"] ul.nav {
     }
 }
 
+// animate out other menu items - when clicked 
+html[data-speclate-url="/about.html"].loading ul.nav li.posts,
+html[data-speclate-url="/about.html"].loading ul.nav li.links,
+html[data-speclate-url="/about.html"].loading ul.nav li.talks {
+    animation-name: fade-out;
+    animation-iteration-count: once;
+    animation-duration: $duration/2;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+}
+
+html[data-speclate-url="/posts.html"].loading ul.nav li.about,
+html[data-speclate-url="/posts.html"].loading ul.nav li.links,
+html[data-speclate-url="/posts.html"].loading ul.nav li.talks {
+    animation-name: fade-out;
+    animation-iteration-count: once;
+    animation-duration: $duration/2;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+}
+
+html[data-speclate-url="/links.html"].loading ul.nav li.about,
+html[data-speclate-url="/links.html"].loading ul.nav li.posts,
+html[data-speclate-url="/links.html"].loading ul.nav li.talks {
+    animation-name: fade-out;
+    animation-iteration-count: once;
+    animation-duration: $duration/2;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+}
+
+html[data-speclate-url="/talks.html"].loading ul.nav li.about,
+html[data-speclate-url="/talks.html"].loading ul.nav li.posts,
+html[data-speclate-url="/talks.html"].loading ul.nav li.links {
+    animation-name: fade-out;
+    animation-iteration-count: once;
+    animation-duration: $duration/2;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+}
+
 
 /* override to show current nav item  */
 
@@ -113,31 +144,66 @@ html[data-speclate-page="posts"] ul.nav li.posts,
 html[data-speclate-page="about"] ul.nav li.about {
     opacity: 1;
     flex-basis: auto;
-    transition: all $duration ease-in;
-    transform: rotate(275deg);
+    transform: rotate(360deg);
+    // transform: rotate(-390deg);
+    animation-name: switch-on;
+    animation-iteration-count: once;
+    animation-duration: $duration*2;
+    animation-timing-function: ease-in;
     .spinner {
-        transform: rotate(-275deg);
+        animation-name: switch-on;
+        animation-iteration-count: once;
+        animation-duration: $duration*2;
+        animation-direction: reverse;
+        animation-timing-function: ease-in;
+        transform: rotate(-360deg);
     }
     a {
         width: initial;
     }
+    &:hover {
+        transform: rotate(0deg);
+    }
     h3 {
-        transition: all $duration/4 ease-in $duration/2;
+        animation-name: hide-then-show;
+        animation-iteration-count: once;
+        animation-duration: $duration*2;
+        transition: all $duration/4 ease-in $duration;
         font-size: 2em;
-        margin-left: 4em;
-        margin-top: 0;
+        margin: 0em;
         position: relative;
-        top: -22px;
+        top: 2em;
         margin-bottom: 4em;
     }
     svg {
         top: 30px;
         transform: scale(1.7);
-        transition: all $duration ease-in;
+        transition: all $duration/2 ease-in;
     }
 }
 
-html[data-speclate-page="home"] ul.nav li {
+html.loading ul.nav li a {
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    h3 {
+        opacity: 0;
+    }
+    svg {
+        top: 30px;
+        transform: scale(1.7);
+    }
+    .spinner {
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        animation-duration: 1s;
+    }
+}
+
+html[data-speclate-page="home"]:not(.loading) ul.nav li {
     transition: all $duration/3 ease-in;
     animation-iteration-count: infinite;
     animation-name: twitch;
@@ -166,6 +232,64 @@ html[data-speclate-page="home"] ul.nav li {
         .spinner {
             animation-delay: 4s;
         }
+    }
+    &:hover {
+        .spinner {
+            transition: transform $nudge-duration*2 ease-out $nudge-duration;
+            transform: rotate(-65deg);
+        }
+        transition: transform $nudge-duration*2 cubic-bezier(0.76, 0, 0.24, 1);
+        transform: rotate(65deg);
+        svg {
+            transform: scale(1);
+        }
+    }
+}
+
+@keyframes hide-then-show {
+    from {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes switch-on {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
