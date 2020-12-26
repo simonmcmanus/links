@@ -16,7 +16,11 @@ exports.handler = async(event, context) => {
             Key: "tags.json",
             Bucket: 'netlify-files',
         }
-        const searchTerm = event.headers.search.toLowerCase()
+        let searchTerm = '';
+        if (event.headers.search) {
+            searchTerm = event.headers.search.toLowerCase()
+        }
+
         const s3Objects = await s3.getObject(params).promise();
 
         const tags = JSON.parse(s3Objects.Body.toString('utf-8'))
