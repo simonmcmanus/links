@@ -21,7 +21,6 @@ const replies = (in_reply_to_status_id, tags) => {
     })
 }
 
-
 module.exports = async(text, tags) => {
 
     return await client.post('statuses/update', { status: text })
