@@ -15,6 +15,7 @@ const replies = (in_reply_to_status_id, tags) => {
         return await client.post('statuses/update', {
             status: `More ${tag} links: ${url}`,
             in_reply_to_status_id,
+            "conversation_id": in_reply_to_status_id
 
         })
     })
