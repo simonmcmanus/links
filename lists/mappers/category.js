@@ -4,9 +4,9 @@ module.exports = function(category) {
             ".title": this.params.tags
         }
     }
-    let headerStyle = 'min-height:3em;';
+    let headerStyle = 'min-height:9em;';
     if (category.image) {
-        headerStyle = "background-image: radial-gradient(circle, rgba(.6,.6,.6,.4) 0%, rgba(1, 1, 1,.9) 100%), url(" + category.image + ");"
+        headerStyle = headerStyle + "background-image: radial-gradient(circle, rgba(.6,.6,.6,.4) 0%, rgba(1, 1, 1,.9) 100%), url(" + category.image + ");"
     }
 
     return {

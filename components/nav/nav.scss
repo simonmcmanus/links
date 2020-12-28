@@ -8,7 +8,7 @@ $duration:.5s;
 $nudge-duration:0.4s;
 $border-color:#e0d9d9;
 ul.nav.internal {
-    position: sticky;
+    position: relative;
     display: inline-flex;
     justify-content: center;
     padding-bottom: 2em;
@@ -245,6 +245,10 @@ html[data-speclate-page="home"]:not(.loading) ul.nav li {
             transform: scale(1);
         }
     }
+}
+
+html[data-speclate-page="tag"] ul.nav {
+    display: none;
 }
 
 @keyframes hide-then-show {
