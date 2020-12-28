@@ -7,3 +7,14 @@
         list-style: circle;
     }
 }
+
+.panels {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        min-width: 50%;
+        background-color: red;
+        border: 0;
+        margin: 0;
+    }
+}

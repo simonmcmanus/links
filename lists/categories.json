@@ -6,7 +6,6 @@
     },
     {
         "tags": ["js"],
-        "image": "http://localhost:84/client/assets/categories/js.png",
         "summary": "Ideas, thoughts and links about Javascript developement and the London community.",
         "title": "Javascript"
     },
