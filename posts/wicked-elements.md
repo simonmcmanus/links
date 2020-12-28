@@ -1,5 +1,5 @@
 ---
-tags: customElements
+tags: customElements,web
 title: Wicked Elements
 date: Wed, 3 Dec 2019 12:18:52 +0000
 ---
