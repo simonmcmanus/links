@@ -8,13 +8,50 @@
     }
 }
 
+@mixin panel($url) {
+    background-image: url($url);
+    background-size: 4em;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
 .panels {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     li {
-        min-width: 50%;
-        background-color: red;
+        margin: 2em;
+        width: auto;
+        min-width: 10em;
+        padding: 1em;
         border: 0;
-        margin: 0;
+        padding-left: 4em;
+        background-color: #000;
+        &.garden {
+            @include panel("https: //streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRriMKjqjhkBvG85s/lawnmover-xptg4s7pre805moktw65k9w.png")
+        }
+        &.director {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRgUWKjqqYR4nY3GH/movie-production-epoyk5x2lu4pway7totjl.png");
+        }
+        &.resident {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRQwpKjq1buTjoTMp/clock-tower-lts8wrvol7qg4r9m92ziq6.png");
+        }
+        &.web,
+        &.javascript {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRJEkfyZ4aB2ooQrh/laptop-coding-2te16zxktqnojz3gvjgus.png");
+        }
+        &.organiser {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRJEkfyZ4aB2ooQrh/coding-learning-1-kv1026smh1j7ravcg3jsp4.png");
+        }
+        &.host {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRRT6KjqpRnUmxJew/podcast-1-ob004svgdnm9otgzcniff.png");
+        }
+        &.best {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRRT6KjqpRnUmxJew/podcast-1-ob004svgdnm9otgzcniff.png");
+        }
+        a {
+            padding-top: 4em;
+            height: 8em;
+        }
     }
 }
