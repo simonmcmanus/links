@@ -214,3 +214,7 @@ html[data-speclate-url="/tags/index.html"] a.tag {
     padding: .3em .8em;
     font-size: 2em;
 }
+
+html.loading footer {
+    display: none;
+}
