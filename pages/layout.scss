@@ -47,6 +47,7 @@ html.loading {
 section,
 .section,
 footer {
+    min-height: 30vh;
     border-radius: 5px;
     background: $boxes;
     padding: 0.5em;
