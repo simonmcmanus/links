@@ -5,6 +5,14 @@ $focus: #0f0f0f !default;
 $heading: #a7a5b1 !default;
 $shadow: #202020 !default;
 $boxes: #ccc !default;
+html.debug {
+    #container {
+        &>* {
+            border: 1px solid blue;
+        }
+    }
+}
+
 html {
     body {
         margin: 0;
@@ -56,13 +64,15 @@ footer {
     margin-bottom: 1em;
     margin: 2em;
     background: $focus;
-    h4 {
-        margin: 0.4em;
-        padding-bottom: 1em;
-    }
     li {
         font-family: arial;
     }
+}
+
+h4 {
+    margin: 0.4em;
+    padding-bottom: 1em;
+    text-align: center;
 }
 
 #content {
