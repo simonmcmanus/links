@@ -1,7 +1,4 @@
 html[data-speclate-page="tag"] {
-    header#shared {
-        display: none;
-    }
     header {
         background-size: cover;
         min-height: 6em;
@@ -28,6 +25,9 @@ html[data-speclate-page="tag"] {
     }
     .category-summary {
         padding: 1em;
+        h4 {
+            text-align: left;
+        }
     }
 }
 
