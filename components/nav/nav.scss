@@ -1,12 +1,13 @@
 @import 'item',
 'animation',
+'twitch',
 'footer';
 $border-width:5px;
 $external-size: 30px;
-$circumference:6em;
-$duration:.5s;
+$circumference:3em;
+$duration:1s;
 $nudge-duration:0.4s;
-$border-color:#e0d9d9;
+$border-color:#ECECEC;
 ul.nav.internal {
     position: relative;
     display: inline-flex;
@@ -23,8 +24,6 @@ ul.nav.internal {
         -webkit-box-direction: normal;
         text-align: center;
         margin-bottom: 1em;
-        transition: flex-basis $duration;
-        transition: max-width $duration;
         a {
             display: inline-block;
             position: relative;
@@ -36,16 +35,6 @@ ul.nav.internal {
             height: $circumference;
             width: $circumference;
             text-align: center;
-            h3 {
-                display: inline-block;
-                margin: 0 1em;
-            }
-            svg {
-                top: 10px;
-                position: relative;
-                transform: scale(0.7);
-                transition: transform $duration/2 ease-in $duration/3;
-            }
             transition: transform $duration cubic-bezier(0.76, 0, 0.24, 1);
             ;
             .spinner {
@@ -57,13 +46,17 @@ ul.nav.internal {
                 margin: 0;
                 padding: 0;
             }
+            svg {
+                width: 1.5em;
+                top: .4em;
+                position: relative;
+            }
             &:after {
                 content: "";
                 width: 0;
-                z-index: -1;
                 position: absolute;
                 bottom: -$circumference/6;
-                transform: scale(0.5) translateY(-7px);
+                transform: scale(.6) translateY(0px);
                 left: $circumference/3;
                 border-top: $circumference/6 solid;
                 border-color: inherit;
@@ -75,111 +68,25 @@ ul.nav.internal {
 }
 
 // on a page, hide all the nav which is not relevenat
-html[data-speclate-page="links"] ul.nav,
-html[data-speclate-page="posts"] ul.nav,
-html[data-speclate-page="tags"] ul.nav,
-html[data-speclate-page="talks"] ul.nav,
-html[data-speclate-page="about"] ul.nav {
-    li {
-        transition: flex-basis $duration ease-in-out;
-        flex-basis: 0;
-        opacity: 0;
-        a {
-            width: 0;
-        }
-        svg {
-            transition: transform $duration/8 ease-in;
-        }
-    }
-}
-
-// animate out other menu items - when clicked 
-html[data-speclate-url="/about.html"].loading ul.nav li.posts,
-html[data-speclate-url="/about.html"].loading ul.nav li.links,
-html[data-speclate-url="/about.html"].loading ul.nav li.talks {
-    animation-name: fade-out;
-    animation-iteration-count: once;
-    animation-duration: $duration/2;
-    animation-fill-mode: forwards;
-    animation-delay: 0;
-}
-
-html[data-speclate-url="/posts.html"].loading ul.nav li.about,
-html[data-speclate-url="/posts.html"].loading ul.nav li.links,
-html[data-speclate-url="/posts.html"].loading ul.nav li.talks {
-    animation-name: fade-out;
-    animation-iteration-count: once;
-    animation-duration: $duration/2;
-    animation-fill-mode: forwards;
-    animation-delay: 0;
-}
-
-html[data-speclate-url="/links.html"].loading ul.nav li.about,
-html[data-speclate-url="/links.html"].loading ul.nav li.posts,
-html[data-speclate-url="/links.html"].loading ul.nav li.talks {
-    animation-name: fade-out;
-    animation-iteration-count: once;
-    animation-duration: $duration/2;
-    animation-fill-mode: forwards;
-    animation-delay: 0;
-}
-
-html[data-speclate-url="/talks.html"].loading ul.nav li.about,
-html[data-speclate-url="/talks.html"].loading ul.nav li.posts,
-html[data-speclate-url="/talks.html"].loading ul.nav li.links {
-    animation-name: fade-out;
-    animation-iteration-count: once;
-    animation-duration: $duration/2;
-    animation-fill-mode: forwards;
-    animation-delay: 0;
-}
-
-
-/* override to show current nav item  */
-
-html[data-speclate-page="talks"] ul.nav li.talks,
-html[data-speclate-page="links"] body ul.nav li.links,
-html[data-speclate-page="tags"] body ul.nav li.links,
-html[data-speclate-page="posts"] ul.nav li.posts,
-html[data-speclate-page="about"] ul.nav li.about {
-    opacity: 1;
-    flex-basis: auto;
-    transform: rotate(360deg);
-    // transform: rotate(-390deg);
-    animation-name: switch-on;
-    animation-iteration-count: once;
-    animation-duration: $duration*2;
-    animation-timing-function: ease-in;
-    .spinner {
-        animation-name: switch-on;
-        animation-iteration-count: once;
-        animation-duration: $duration*2;
-        animation-direction: reverse;
-        animation-timing-function: ease-in;
-        transform: rotate(-360deg);
-    }
-    a {
-        width: initial;
-    }
+html[data-speclate-page="links"] ul.nav li:not(.links),
+html[data-speclate-page="posts"] ul.nav li:not(.posts),
+html[data-speclate-page="tags"] ul.nav li:not(.tags),
+html[data-speclate-page="talks"] ul.nav li:not(.talks),
+html[data-speclate-page="about"] ul.nav li:not(.about) {
+    transition: all $duration;
+    transform: translateY(-5em) scale(.9);
     &:hover {
-        transform: rotate(0deg);
+        transform: translateY(-4.5em) translate3d(100, 100, 30);
     }
-    h3 {
-        animation-name: hide-then-show;
-        animation-iteration-count: once;
-        animation-duration: $duration*2;
-        transition: all $duration/4 ease-in $duration;
-        font-size: 2em;
-        margin: 0em;
-        position: relative;
-        top: 2em;
-        margin-bottom: 4em;
-    }
-    svg {
-        top: 30px;
-        transform: scale(1.4);
-        transition: all $duration/2 ease-in;
-    }
+}
+
+html[data-speclate-page="links"] ul.nav li.links,
+html[data-speclate-page="posts"] ul.nav li.posts,
+html[data-speclate-page="tags"] ul.nav li.tags,
+html[data-speclate-page="talks"] ul.nav li.talks,
+html[data-speclate-page="about"] ul.nav li.about {
+    transition: transform $duration;
+    transform: rotate(360deg);
 }
 
 html.loading ul.nav li a {
@@ -188,167 +95,13 @@ html.loading ul.nav li a {
     animation-timing-function: linear;
     animation-duration: $duration;
     animation-fill-mode: forwards;
-    h3 {
-        opacity: 0;
-    }
-    svg {
-        top: 30px;
-        transform: scale(1.4);
-    }
+    animation-play-state: play;
     .spinner {
         animation-name: spin;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         animation-direction: reverse;
         animation-duration: $duration;
-    }
-}
-
-html[data-speclate-page="home"]:not(.loading) ul.nav li {
-    transition: all $duration/3 ease-in;
-    animation-iteration-count: infinite;
-    animation-name: twitch;
-    animation-duration: 25s;
-    animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-    .spinner {
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        animation-name: twitch-rev;
-        animation-duration: $duration*10;
-    }
-    &:nth-child(2) {
-        animation-delay: 1s;
-        .spinner {
-            animation-delay: 1s;
-        }
-    }
-    &:nth-child(3) {
-        animation-delay: 3s;
-        .spinner {
-            animation-delay: 3s;
-        }
-    }
-    &:nth-child(4) {
-        animation-delay: 4s;
-        .spinner {
-            animation-delay: 4s;
-        }
-    }
-    &:hover {
-        .spinner {
-            transition: transform $nudge-duration*2 ease-out $nudge-duration;
-            transform: rotate(-65deg);
-        }
-        transition: transform $nudge-duration*2 cubic-bezier(0.76, 0, 0.24, 1);
-        transform: rotate(65deg);
-        svg {
-            transform: scale(1);
-        }
-    }
-}
-
-html[data-speclate-page="tag"] ul.nav {
-    display: none;
-}
-
-@keyframes hide-then-show {
-    from {
-        opacity: 0;
-    }
-    90% {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes switch-on {
-    from {
-        transform: rotate(10deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes twitch {
-    from {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(0deg);
-    }
-    45% {
-        transform: rotate(6deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    70% {
-        transform: rotate(0deg);
-    }
-    80% {
-        transform: rotate(-4deg);
-    }
-    85% {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes twitch-rev {
-    from {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(0deg);
-    }
-    45% {
-        transform: rotate(-6deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    70% {
-        transform: rotate(0deg);
-    }
-    80% {
-        transform: rotate(4deg);
-    }
-    90% {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(0deg);
     }
 }
 
