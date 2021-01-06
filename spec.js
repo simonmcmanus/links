@@ -4,7 +4,7 @@ module.exports = {
         spec: {
             title: 'Simon McManus',
             '.links_holder': {
-                component: 'posts-title',
+                component: 'item',
                 lists: ['links'],
                 mapper: 'links',
                 filters: ['lastFive']
@@ -35,7 +35,7 @@ module.exports = {
             title: 'Recent links from Simon McManus',
             '.links-title': '10 most recent links',
             '.links_holder': {
-                component: 'link',
+                component: 'item',
                 lists: ['links'],
                 mapper: 'links',
                 filters: ['mostRecent']
@@ -54,7 +54,7 @@ module.exports = {
             title: 'Recent posts from Simon McManus',
             //'.page-title': 'Recent Posts',
             '.holder': {
-                component: 'posts',
+                component: 'item',
                 lists: ['posts'],
                 mapper: 'posts',
                 filters: ['mostRecent']
