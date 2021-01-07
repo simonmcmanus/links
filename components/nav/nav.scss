@@ -12,8 +12,8 @@ ul.nav.internal {
     position: relative;
     display: inline-flex;
     justify-content: center;
-    padding-bottom: 2em;
-    padding-top: 2em;
+    padding-top: 1.9em;
+    margin: 0;
     flex-wrap: wrap;
     width: 100%;
     li {
@@ -25,6 +25,7 @@ ul.nav.internal {
         text-align: center;
         margin-bottom: 1em;
         a {
+            font-family: 'Slabo 13px', Serif;
             display: inline-block;
             position: relative;
             border: 1px solid $border-color;

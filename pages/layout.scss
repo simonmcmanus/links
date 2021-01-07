@@ -1,7 +1,7 @@
 $background: #1b2533 !default;
 $text: #ECECEC !default;
 $text-highlight: white !default;
-$focus: #222831 !default;
+$focus: #222831f2 !default;
 $heading: #a7a5b1 !default;
 $shadow: #202020 !default;
 $boxes: #ccc !default;
@@ -18,16 +18,15 @@ html.debug {
 }
 
 html {
+    background: $focus;
     body {
         margin: 0;
         margin: 0;
+        background: $background;
+        color: $text;
+        background: radial-gradient(circle at top, #30475E 5em, #000000 100vh);
+        height: 100%;
     }
-    line-height: 1.5em;
-    background: $background;
-    color: $text;
-    background: radial-gradient(circle, #30475E 0%, #000000 83%);
-    background-position: bottom;
-    transition: background-color 0.2s ease;
 }
 
 #container {
@@ -37,10 +36,10 @@ html {
 }
 
 .honey {
-    background: center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(25,25,25)' viewBox='0 0 100 169.5'%3E%3Cpolygon points='50,34.75 93.5,59.75 93.5,109.75 50,134.75 6.5,109.75 6.5,59.75'%3E%3C/polygon%3E%3Cpolygon points='0,-50 43.5,-25 43.5,25 0,50 -43.5,25 -43.5,-25'%3E%3C/polygon%3E%3Cpolygon points='100,-50 143.5,-25 143.5,25 100,50 56.5,25 56.5,-25'%3E%3C/polygon%3E%3Cpolygon points='0,119.5 43.5,144.5 43.5,194.5 0,219.5 -43.5,194.5 -43.5,144.5'%3E%3C/polygon%3E%3Cpolygon points='100,119.5 143.5,144.5 143.5,194.5 100,219.5 56.5,194.5 56.5,144.5'%3E%3C/polygon%3E%3C/svg%3E");
+    background: top url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(25,25,25)' viewBox='0 0 100 169.5'%3E%3Cpolygon points='50,34.75 93.5,59.75 93.5,109.75 50,134.75 6.5,109.75 6.5,59.75'%3E%3C/polygon%3E%3Cpolygon points='0,-50 43.5,-25 43.5,25 0,50 -43.5,25 -43.5,-25'%3E%3C/polygon%3E%3Cpolygon points='100,-50 143.5,-25 143.5,25 100,50 56.5,25 56.5,-25'%3E%3C/polygon%3E%3Cpolygon points='0,119.5 43.5,144.5 43.5,194.5 0,219.5 -43.5,194.5 -43.5,144.5'%3E%3C/polygon%3E%3Cpolygon points='100,119.5 143.5,144.5 143.5,194.5 100,219.5 56.5,194.5 56.5,144.5'%3E%3C/polygon%3E%3C/svg%3E");
     background-size: 10px;
     display: block;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .honey-teir1 {
@@ -68,9 +67,10 @@ footer {
     margin-bottom: 1em;
     margin: 2em;
     background: $focus;
-    li {
-        font-family: arial;
-    }
+}
+
+section {
+    animation: pop-in 0.5s;
 }
 
 h4 {
@@ -81,6 +81,7 @@ h4 {
 
 #content {
     font-family: "Source Serif Pro", serif;
+    letter-spacing: .4px;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -97,13 +98,16 @@ a {
 }
 
 header {
-    background-color: $background;
+    background-color: $focus;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid $background;
+    border-bottom: 1px solid $shadow;
     z-index: 200;
     margin: 0;
     padding: 1em;
+    h1 {
+        font-family: 'Slabo 13px', Serif;
+    }
 }
 
 h1 {

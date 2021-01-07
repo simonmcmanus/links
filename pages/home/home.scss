@@ -2,9 +2,14 @@
 
 @mixin panel($url) {
     background-image: url($url);
-    background-size: 4em;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position-x: center;
+    display: block;
+    top: -1em;
+    content: ' ';
+    width: 5em;
+    position: absolute;
+    height: 5em;
 }
 
 .panels {
@@ -12,38 +17,60 @@
     flex-wrap: wrap;
     justify-content: space-between;
     li {
-        margin: 2em;
-        width: auto;
-        min-width: 10em;
-        padding: 1em;
         border: 0;
-        padding-left: 4em;
-        background-color: #000;
-        &.garden {
-            @include panel("https: //streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRriMKjqjhkBvG85s/lawnmover-xptg4s7pre805moktw65k9w.png")
+        position: relative;
+        margin: 1em 4em;
+        text-align: center;
+        width: 100%;
+        &:nth-child(even) {
+            padding-right: 3em;
+            &:after {
+                right: -0.5em;
+            }
         }
-        &.director {
+        &:nth-child(odd) {
+            padding-left: 3em;
+            &:after {
+                left: 0;
+            }
+        }
+        &.garden::after {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRriMKjqjhkBvG85s/lawnmover-xptg4s7pre805moktw65k9w.png")
+        }
+        &.director::after {
             @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRgUWKjqqYR4nY3GH/movie-production-epoyk5x2lu4pway7totjl.png");
         }
-        &.resident {
-            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRQwpKjq1buTjoTMp/clock-tower-lts8wrvol7qg4r9m92ziq6.png");
+        &.resident::after {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRbY3Kjq1buGYAp6g/house-8-ctuhr8nzyawwax1tlquxok.png");
         }
-        &.web,
-        &.javascript {
+        &.web::after {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkReNfKjquQFhrereX/ux-ui-layout-2-kfy9prfxesgiv46404kyv.png");
+        }
+        &.javascript::after {
             @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRJEkfyZ4aB2ooQrh/laptop-coding-2te16zxktqnojz3gvjgus.png");
         }
-        &.organiser {
+        &.organiser::after {
             @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRJEkfyZ4aB2ooQrh/coding-learning-1-kv1026smh1j7ravcg3jsp4.png");
         }
-        &.host {
+        &.host::after {
             @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRRT6KjqpRnUmxJew/podcast-1-ob004svgdnm9otgzcniff.png");
         }
-        &.best {
-            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRRT6KjqpRnUmxJew/podcast-1-ob004svgdnm9otgzcniff.png");
+        &.best::after {
+            @include panel("https://streamline-p3ouction-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRRT6KjqpRnUmxJew/podcast-1-ob004svgdnm9otgzcniff.png");
+        }
+        &.lead::after {
+            @include panel("https://streamline-production-bucket.cellar-c2.services.clever-cloud.com/icons/low/subc_M9YctUtkRjt2fyZTjolqFPhC/team-hierarchy-3-2-f81txuz4sycynx7ireenw.png");
         }
         a {
             padding-top: 4em;
-            height: 8em;
+            height: 1em;
+            width: auto;
+            border-radius: 4px;
+            padding: 1em;
+            position: relative;
+            display: block;
+            background-color: $focus;
+            border: 1px solid black;
         }
     }
 }
