@@ -1,21 +1,31 @@
 html[data-speclate-page="tag"] {
+    #container {
+        transform: translateY(-9em);
+    }
+    .posts_holder {
+        text-align: center;
+    }
     header {
-        background-size: cover;
-        min-height: 6em;
-        max-width: 100%;
-        height: auto;
-        background-position: bottom;
-        object-fit: cover;
-        padding: 0;
-        font-family: 'Headland One', serif;
-        background-color: #0b0b0b;
-        position: sticky;
         h2 {
             margin: 0;
+            padding-top: 2em;
+            padding-left: .5em;
         }
         .title {
             font-size: 4em;
             z-index: 100;
+        }
+        &.category {
+            background-size: cover;
+            min-height: 6em;
+            max-width: 100%;
+            height: auto;
+            background-position: bottom;
+            object-fit: cover;
+            padding: 0;
+            font-family: 'Headland One', serif;
+            position: sticky;
+            z-index: 1;
         }
     }
     .category {
@@ -24,9 +34,9 @@ html[data-speclate-page="tag"] {
         }
     }
     .category-summary {
-        padding: 1em;
         h4 {
             text-align: left;
+            padding-left: 1em;
         }
     }
 }

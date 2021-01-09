@@ -33,6 +33,7 @@ html {
     position: relative;
     z-index: 100;
     padding-bottom: 10em;
+    transition: transform 2s
 }
 
 .honey {
@@ -95,6 +96,13 @@ h4 {
 
 a {
     color: $text;
+    span {
+        text-decoration: none;
+    }
+}
+
+ul.items {
+    padding: 1em;
 }
 
 header {
@@ -102,12 +110,16 @@ header {
     position: sticky;
     top: 0;
     border-bottom: 1px solid $shadow;
-    z-index: 200;
+    z-index: 600;
     margin: 0;
     padding: 1em;
     h1 {
         font-family: 'Slabo 13px', Serif;
     }
+}
+
+header.shared {
+    z-index: 100;
 }
 
 h1 {
@@ -217,7 +229,7 @@ html[data-speclate-url="/tags/index.html"] a.tag {
     background-color: $text-highlight;
     color: $background;
     margin: 0 .5em 0 0;
-    line-height: 2.5em;
+    line-height: 2.2em;
 }
 
 .button:hover {

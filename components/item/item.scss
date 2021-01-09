@@ -15,7 +15,6 @@ li.link.section {
                 position: relative;
             }
             .title {
-                text-decoration: underline;
                 color: #d4d4d4;
             }
             margin: 0;
@@ -33,6 +32,7 @@ li.link.section {
     }
     blockquote {
         margin: 1em 0;
+        line-height: 1.5em;
         padding: 0.5em 10px;
         quotes: "\201C""\201D""\2018""\2019";
     }
@@ -50,17 +50,27 @@ li.link.section {
     blockquote:after {
         content: close-quote;
         margin-left: 0.25em;
+        line-height: 1.2em;
     }
     blockquote p {
         display: inline;
     }
     .tags {
         font-size: 0.8em;
-        line-height: 3em;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-grow: 3;
+        align-items: flex-end;
+        flex-flow: row wrap;
+        display: flex;
+        span {
+            line-height: 4em;
+        }
     }
     .tag {
         border-radius: 3px;
-        padding: 4px 8px;
+        padding: 0 10px;
+        -webkit-column-break-inside: avoid;
         margin: 5px;
     }
 }

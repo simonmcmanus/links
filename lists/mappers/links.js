@@ -1,10 +1,10 @@
-
-module.exports = function (post) {
+module.exports = function(post) {
 
     const generateTags = (tags) => {
-    
-        if(!tags || tags.length === 0 ) {
-            return  [ false ] 
+        console.log(tags)
+
+        if (!tags || tags.length === 0) {
+            return [false]
         }
         tags = tags
             .filter(function(tag) {
@@ -12,18 +12,18 @@ module.exports = function (post) {
             })
             .map(function(tag) {
                 return {
-    
+
                     href: '/tags/' + tag + '/' + 'index.html',
                     innerHTML: tag
                 }
-            }) 
-        if(!tags || tags.length === 0 ) {
-            return  [ false ] 
+            })
+        if (!tags || tags.length === 0) {
+            return [false]
         }
         return tags
     }
-    
-    if(!post) {
+
+    if (!post) {
         return {
             ".title": 'No Links'
         }
@@ -31,9 +31,9 @@ module.exports = function (post) {
     var out = {
         '.title': post.title,
         '.date': post.date,
-       // '.dateUrl': moment(new Date(post.date)).format(urlFormat),
+        // '.dateUrl': moment(new Date(post.date)).format(urlFormat),
         '.summary': post.summary || false,
-        '.tag': generateTags(post.tags) ,
+        '.tag': generateTags(post.tags),
         'a.created': {
             href: '/' + post.date + '/index.html',
             innerHTML: post.date
