@@ -121,7 +121,7 @@ module.exports = {
             '.holder': {
                 component: 'post',
                 lists: ['posts'],
-                mapper: 'posts',
+                mapper: 'post',
                 filters: ['byTitleSlug'],
             },
         }
