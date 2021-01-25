@@ -16,7 +16,8 @@
         "title": "London Node User Group"
     },
     {
-        "tags": ["enhanceconf", "EnhanceConf"],
+        "tags": ["enhanceconf", "EnhanceConf", "enhance-conf"],
+        "image": "https://live.staticflickr.com/5779/23025597740_9ab7da49e7_b.jpg",
         "summary": "A 2016 conference dedicated to Progressive Enhancement",
         "title": "EnhanceConf"
     },
@@ -62,5 +63,12 @@
         "title": "Generative Adversarial Networks",
         "summary": "GANs are a clever way of training a generative model by framing the problem as a supervised learning problem with two sub-models: the generator model that we train to generate new examples, and the discriminator model that tries to classify examples as either real (from the domain) or fake (generated).",
         "tags": ["GAN"]
+    },
+    {
+        "title": "Guide Dogs",
+        "image": "https://www.rnib.org.uk/sites/default/files/Ryan_guide-dog.jpg",
+
+        "summary": "Guide Dogs for the Blind",
+        "tags": ["guide-dogs", "guide-dogs-for-the-blind", "guide dogs"]
     }
 ]

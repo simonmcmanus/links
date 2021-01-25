@@ -1,249 +1,266 @@
-$background: #1b2533 !default;
-$text: #ECECEC !default;
-$text-highlight: white !default;
-$focus: #222831f2 !default;
-$heading: #a7a5b1 !default;
-$shadow: #202020 !default;
-$boxes: #ccc !default;
-html.debug {
-    #container {
-        &>* {
+    $background: #1b2533 !default;
+    $text: #ECECEC !default;
+    $text-highlight: white !default;
+    $focus: #222831f2 !default;
+    $heading: #a7a5b1 !default;
+    $shadow: #202020 !default;
+    $boxes: #ccc !default;
+    $transition_duration: 1s !default;
+    html.debug {
+        #container {
+            &>* {
+                border: 1px solid blue;
+            }
+        }
+        ul.nav.internal {
             border: 1px solid blue;
+            li {}
         }
     }
-    ul.nav.internal {
-        border: 1px solid blue;
-        li {}
+    
+    html {
+        background: $focus;
+        body {
+            margin: 0;
+            margin: 0;
+            background: $background;
+            color: $text;
+            background: radial-gradient(circle at top, #30475E 5em, #000000 100vh);
+            height: 100%;
+        }
     }
-}
-
-html {
-    background: $focus;
-    body {
-        margin: 0;
-        margin: 0;
-        background: $background;
+    
+    #container {
+        position: relative;
+        z-index: 100;
+        padding-bottom: 10em;
+        transition: transform 2s
+    }
+    
+    .honey {
+        background: top url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(25,25,25)' viewBox='0 0 100 169.5'%3E%3Cpolygon points='50,34.75 93.5,59.75 93.5,109.75 50,134.75 6.5,109.75 6.5,59.75'%3E%3C/polygon%3E%3Cpolygon points='0,-50 43.5,-25 43.5,25 0,50 -43.5,25 -43.5,-25'%3E%3C/polygon%3E%3Cpolygon points='100,-50 143.5,-25 143.5,25 100,50 56.5,25 56.5,-25'%3E%3C/polygon%3E%3Cpolygon points='0,119.5 43.5,144.5 43.5,194.5 0,219.5 -43.5,194.5 -43.5,144.5'%3E%3C/polygon%3E%3Cpolygon points='100,119.5 143.5,144.5 143.5,194.5 100,219.5 56.5,194.5 56.5,144.5'%3E%3C/polygon%3E%3C/svg%3E");
+        background-size: 10px;
+        display: block;
+        overflow: hidden;
+    }
+    
+    .honey-teir1 {
+        border-top: 1px solid $background;
+        border-bottom: 1px solid $background;
+        background: center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='$background' viewBox='0 0 100 169.5'%3E%3Cpolygon points='50,34.75 93.5,59.75 93.5,109.75 50,134.75 6.5,109.75 6.5,59.75'%3E%3C/polygon%3E%3Cpolygon points='0,-50 43.5,-25 43.5,25 0,50 -43.5,25 -43.5,-25'%3E%3C/polygon%3E%3Cpolygon points='100,-50 143.5,-25 143.5,25 100,50 56.5,25 56.5,-25'%3E%3C/polygon%3E%3Cpolygon points='0,119.5 43.5,144.5 43.5,194.5 0,219.5 -43.5,194.5 -43.5,144.5'%3E%3C/polygon%3E%3Cpolygon points='100,119.5 143.5,144.5 143.5,194.5 100,219.5 56.5,194.5 56.5,144.5'%3E%3C/polygon%3E%3C/svg%3E");
+        background-size: 9px;
+        display: block;
+        overflow: auto;
+    }
+    
+    html.loading {
+        background-color: $shadow;
+    }
+    
+    section,
+    .section,
+    footer {
+        min-height: 30vh;
+        border-radius: 5px;
+        background: $boxes;
+        padding: 0.5em;
+        border-radius: 3px;
+        min-height: 40px;
+        margin-bottom: 1em;
+        margin: 2em;
+        background: $focus;
+    }
+    
+    #container>section {
+        animation: slide-in-blurred-bottom $transition_duration/6 ease-in-out both;
+    }
+    
+    #container .items li.section {
+        animation: swoosh-in $transition_duration/4 cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        &>* {
+            animation: fade-in $transition_duration/2 cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+        .tag {
+            // animation: popout $transition_duration/3 ease-in-out both $transition_duration;
+        }
+    }
+    
+    @for $i from 1 through 10 {
+        html body #container ul.items li.section:nth-child(#{$i}n) {
+            animation-delay: #{$i * 140}ms;
+        }
+    }
+    
+    h4 {
+        margin: 0.4em;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    
+    #content {
+        font-family: "Source Serif Pro", serif;
+        letter-spacing: .4px;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    @media only screen and (min-width: 900px) {
+        #content .contained {
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+    }
+    
+    a {
         color: $text;
-        background: radial-gradient(circle at top, #30475E 5em, #000000 100vh);
-        height: 100%;
+        span {
+            text-decoration: none;
+        }
     }
-}
-
-#container {
-    position: relative;
-    z-index: 100;
-    padding-bottom: 10em;
-    transition: transform 2s
-}
-
-.honey {
-    background: top url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(25,25,25)' viewBox='0 0 100 169.5'%3E%3Cpolygon points='50,34.75 93.5,59.75 93.5,109.75 50,134.75 6.5,109.75 6.5,59.75'%3E%3C/polygon%3E%3Cpolygon points='0,-50 43.5,-25 43.5,25 0,50 -43.5,25 -43.5,-25'%3E%3C/polygon%3E%3Cpolygon points='100,-50 143.5,-25 143.5,25 100,50 56.5,25 56.5,-25'%3E%3C/polygon%3E%3Cpolygon points='0,119.5 43.5,144.5 43.5,194.5 0,219.5 -43.5,194.5 -43.5,144.5'%3E%3C/polygon%3E%3Cpolygon points='100,119.5 143.5,144.5 143.5,194.5 100,219.5 56.5,194.5 56.5,144.5'%3E%3C/polygon%3E%3C/svg%3E");
-    background-size: 10px;
-    display: block;
-    overflow: hidden;
-}
-
-.honey-teir1 {
-    border-top: 1px solid $background;
-    border-bottom: 1px solid $background;
-    background: center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='$background' viewBox='0 0 100 169.5'%3E%3Cpolygon points='50,34.75 93.5,59.75 93.5,109.75 50,134.75 6.5,109.75 6.5,59.75'%3E%3C/polygon%3E%3Cpolygon points='0,-50 43.5,-25 43.5,25 0,50 -43.5,25 -43.5,-25'%3E%3C/polygon%3E%3Cpolygon points='100,-50 143.5,-25 143.5,25 100,50 56.5,25 56.5,-25'%3E%3C/polygon%3E%3Cpolygon points='0,119.5 43.5,144.5 43.5,194.5 0,219.5 -43.5,194.5 -43.5,144.5'%3E%3C/polygon%3E%3Cpolygon points='100,119.5 143.5,144.5 143.5,194.5 100,219.5 56.5,194.5 56.5,144.5'%3E%3C/polygon%3E%3C/svg%3E");
-    background-size: 9px;
-    display: block;
-    overflow: auto;
-}
-
-html.loading {
-    background-color: $shadow;
-}
-
-section,
-.section,
-footer {
-    min-height: 30vh;
-    border-radius: 5px;
-    background: $boxes;
-    padding: 0.5em;
-    border-radius: 3px;
-    min-height: 40px;
-    margin-bottom: 1em;
-    margin: 2em;
-    background: $focus;
-}
-
-section {
-    animation: pop-in 0.5s;
-}
-
-h4 {
-    margin: 0.4em;
-    padding-bottom: 1em;
-    text-align: center;
-}
-
-#content {
-    font-family: "Source Serif Pro", serif;
-    letter-spacing: .4px;
-    width: 100vw;
-    overflow-x: hidden;
-}
-
-@media only screen and (min-width: 900px) {
-    #content .contained {
-        padding-left: 20%;
-        padding-right: 20%;
+    
+    ul.items {
+        padding: 1em;
     }
-}
-
-a {
-    color: $text;
-    span {
-        text-decoration: none;
+    
+    header {
+        background-color: $focus;
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid $shadow;
+        z-index: 600;
+        margin: 0;
+        padding: 1em;
+        h1 {
+            font-family: 'Slabo 13px', Serif;
+        }
     }
-}
-
-ul.items {
-    padding: 1em;
-}
-
-header {
-    background-color: $focus;
-    position: sticky;
-    top: 0;
-    border-bottom: 1px solid $shadow;
-    z-index: 600;
-    margin: 0;
-    padding: 1em;
+    
+    header.shared {
+        z-index: 100;
+    }
+    
     h1 {
-        font-family: 'Slabo 13px', Serif;
+        font-size: 3em;
+        margin: 0;
+        font-weight: lighter !important;
+        color: $heading;
+        line-height: 0.9em;
     }
-}
-
-header.shared {
-    z-index: 100;
-}
-
-h1 {
-    font-size: 3em;
-    margin: 0;
-    font-weight: lighter !important;
-    color: $heading;
-    line-height: 0.9em;
-}
-
-h2 {
-    line-height: 1.5em;
-    padding: 0;
-    color: $heading;
-    text-shadow: 1px 1px $shadow;
-}
-
-h3 {
-    color: $text-highlight;
-    line-height: 2em;
-    padding: 0;
-}
-
-h4 {
-    color: #de6b48;
-    font-size: 1.3em;
-    overflow: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    margin-left: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0px 0px;
-}
-
-li {
-    list-style-type: none;
-    margin: 5px 0;
-}
-
-a {
-    text-decoration: none;
-    color: #d4d4d4;
-}
-
-.warning {
-    background-color: rgba(255, 235, 59, 0.53);
-    padding: 1em;
-    margin: 0;
-    border-radius: 0.1em;
-}
-
-.hire-notice {
-    background-color: #854b9cf2;
-    border-bottom: 1px solid black;
-    color: white;
-    padding: 1em;
-    margin: 0;
-    border-radius: 0.1em;
-    position: absolute;
-    z-index: 101;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    line-height: 1.5;
-    overflow: hidden;
-    animation: 0.6s ease-in 0s 1 alternate slideDown;
-}
-
-@-webkit-keyframes slideDown {
-    from {
-        transform: translateY(-100px);
+    
+    h2 {
+        line-height: 1.5em;
+        padding: 0;
+        color: $heading;
+        text-shadow: 1px 1px $shadow;
     }
-    to {
-        transform: translateY(0);
+    
+    h3 {
+        color: $text-highlight;
+        line-height: 2em;
+        padding: 0;
     }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100px);
+    
+    h4 {
+        color: #de6b48;
+        font-size: 1.3em;
+        overflow: hidden;
     }
-    to {
-        transform: translateY(0);
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin-left: 0;
     }
-}
-
-html[data-speclate-url="/tags/index.html"] a.tag {
-    display: block;
-    margin: 1em;
-}
-
-// @import '../components/loader/loader.scss';
-@import "../components/nav/nav.scss";
-@import "../components/loader/loader.scss";
-.button {
-    color: white;
-    padding: .3em;
-    background-color: $text-highlight;
-    color: $background;
-    margin: 0 .5em 0 0;
-    line-height: 2.2em;
-}
-
-.button:hover {
-    color: $focus;
-}
-
-.cta {
-    text-align: center;
-    margin: 0 auto;
-    line-height: 5em;
-    padding: .3em .8em;
-    font-size: 2em;
-}
-
-html.loading footer {
-    display: none;
-}
+    
+    ul {
+        margin: 0;
+        padding: 0px 0px;
+    }
+    
+    li {
+        list-style-type: none;
+        margin: 5px 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #d4d4d4;
+    }
+    
+    .warning {
+        background-color: rgba(255, 235, 59, 0.53);
+        padding: 1em;
+        margin: 0;
+        border-radius: 0.1em;
+    }
+    
+    .hire-notice {
+        background-color: #854b9cf2;
+        border-bottom: 1px solid black;
+        color: white;
+        padding: 1em;
+        margin: 0;
+        border-radius: 0.1em;
+        position: absolute;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        line-height: 1.5;
+        overflow: hidden;
+        animation: 0.6s ease-in 0s 1 alternate slideDown;
+    }
+    
+    @-webkit-keyframes slideDown {
+        from {
+            transform: translateY(-100px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    
+    html[data-speclate-url="/tags/index.html"] a.tag {
+        display: block;
+        margin: 1em;
+    }
+    
+    // @import '../components/loader/loader.scss';
+    @import "../components/nav/nav.scss";
+    @import "../components/loader/loader.scss";
+    .button {
+        color: white;
+        padding: .3em;
+        background-color: $text-highlight;
+        color: $background;
+        margin: 0 .5em 0 0;
+        line-height: 2.2em;
+    }
+    
+    .button:hover {
+        color: $focus;
+    }
+    
+    .cta {
+        text-align: center;
+        margin: 0 auto;
+        line-height: 5em;
+        padding: .3em .8em;
+        font-size: 2em;
+    }
+    
+    html.loading footer {
+        display: none;
+    }

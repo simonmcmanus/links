@@ -1,8 +1,6 @@
 module.exports = function(post) {
 
     const generateTags = (tags) => {
-        console.log(tags)
-
         if (!tags || tags.length === 0) {
             return [false]
         }
@@ -28,12 +26,14 @@ module.exports = function(post) {
             ".title": 'No Links'
         }
     }
+    const tags = generateTags(post.tags)
+        //console.log('ttt', tags)
     var out = {
         '.title': post.title,
         '.date': post.date,
         // '.dateUrl': moment(new Date(post.date)).format(urlFormat),
         '.summary': post.summary || false,
-        '.tag': generateTags(post.tags),
+        '.tag': tags,
         'a.created': {
             href: '/' + post.date + '/index.html',
             innerHTML: post.date

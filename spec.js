@@ -33,8 +33,10 @@ module.exports = {
         page: 'links',
         spec: {
             title: 'Simons recent links',
-            '.links-title': '10 most recent links from Simon',
+            '.links-title': 'Recent links from Simon',
             '.links_holder': {
+
+
                 component: 'item',
                 lists: ['links'],
                 mapper: 'links',
@@ -94,6 +96,7 @@ module.exports = {
             title: 'Tags from Simon McManus',
             '.links-title': 'Tags from Simon McManus',
             '.links_holder': {
+
                 lists: ["categories"],
                 component: 'tag',
                 filters: [],

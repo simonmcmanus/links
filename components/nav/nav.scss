@@ -5,7 +5,7 @@
 $border-width:5px;
 $external-size: 30px;
 $circumference:3em;
-$duration:1s;
+$duration:$transition_duration;
 $nudge-duration:0.4s;
 $border-color:#ECECEC;
 ul.nav.internal {

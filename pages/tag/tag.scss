@@ -1,4 +1,7 @@
 html[data-speclate-page="tag"] {
+    ul.tags {
+        display: none !important;
+    }
     #container {
         transform: translateY(-9em);
     }
@@ -12,7 +15,7 @@ html[data-speclate-page="tag"] {
             padding-left: .5em;
         }
         .title {
-            font-size: 4em;
+            font-size: 2em;
             z-index: 100;
         }
         &.category {
