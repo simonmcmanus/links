@@ -66,7 +66,7 @@ ul.nav.internal {
 }
 
 html[data-speclate-page] body ul.nav li a {
-    transition: transform 1s !important;
+    transition: transform $duration/2;
 }
 
 // on a page, hide all the nav which is not relevenat
@@ -107,16 +107,16 @@ html ul.nav li a.loading {
     animation-name: spin;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: $duration /2;
+    animation-duration: $duration;
     animation-fill-mode: forwards;
-    animation-play-state: play;
     animation-iteration-count: infinite;
     .spinner {
         animation-iteration-count: infinite;
         animation-name: spin;
+        animation-fill-mode: forwards;
         animation-timing-function: linear;
         animation-direction: reverse;
-        animation-duration: $duration /2;
+        animation-duration: $duration;
     }
 }
 

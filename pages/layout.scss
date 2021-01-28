@@ -72,7 +72,8 @@
     }
     
     #container>section {
-        animation: slide-in-blurred-bottom $transition_duration/6 ease-in-out both;
+        animation: slide-in-blurred-bottom $transition_duration/4 ease-in-out both;
+        animation-delay: 300ms;
     }
     
     #container .items li.section {
@@ -87,7 +88,7 @@
     
     @for $i from 1 through 10 {
         html body #container ul.items li.section:nth-child(#{$i}n) {
-            animation-delay: #{$i * 140}ms;
+            animation-delay: #{(290) + $i   * 140}ms;
         }
     }
     
