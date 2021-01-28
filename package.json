@@ -42,7 +42,7 @@
         "rollup-plugin-notify": "^1.1.0",
         "showdown": "^1.9.0",
         "slugify": "^1.3.4",
-        "speclate": "^20.10.0",
+        "speclate": "^20.1.0",
         "speclate-service-worker": "3.x.x",
         "superagent": "^3.8.3",
         "turndown": "^5.0.3",
