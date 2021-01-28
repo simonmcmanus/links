@@ -37,11 +37,7 @@ ul.nav.internal {
             height: $circumference;
             width: $circumference;
             text-align: center;
-            transition: transform $duration cubic-bezier(0.76, 0, 0.24, 1);
-            ;
             .spinner {
-                transition: transform $duration cubic-bezier(0.76, 0, 0.24, 1);
-                ;
                 border-radius: $circumference;
                 height: $circumference;
                 width: $circumference;
@@ -69,41 +65,58 @@ ul.nav.internal {
     }
 }
 
+html[data-speclate-page] body ul.nav li a {
+    transition: transform 1s !important;
+}
+
 // on a page, hide all the nav which is not relevenat
-html[data-speclate-page="links"] ul.nav li:not(.links),
-html[data-speclate-page="posts"] ul.nav li:not(.posts),
-html[data-speclate-page="tag"] ul.nav li:not(.tags),
-html[data-speclate-page="talks"] ul.nav li:not(.talks),
-html[data-speclate-page="about"] ul.nav li:not(.about) {
-    transition: all $duration;
+html[data-speclate-page="links"] ul.nav li:not(.links) a,
+html[data-speclate-page="posts"] ul.nav li:not(.posts) a,
+html[data-speclate-page="tag"] ul.nav li:not(.tags) a,
+html[data-speclate-page="talks"] ul.nav li:not(.talks) a,
+html[data-speclate-page="about"] ul.nav li:not(.about) a {
     transform: translateY(-5em) scale(.9);
-    &:hover {
-        transform: translateY(-4.5em) translate3d(100, 100, 30);
-    }
+    // &:hover {
+    //     transform: translateY(-4.5em) translate3d(100, 100, 30);
+    // }
 }
 
-html[data-speclate-page="links"] ul.nav li.links,
-html[data-speclate-page="posts"] ul.nav li.posts,
-html[data-speclate-page="tags"] ul.nav li.tags,
-html[data-speclate-page="talks"] ul.nav li.talks,
-html[data-speclate-page="about"] ul.nav li.about {
-    transition: transform $duration;
-    transform: rotate(360deg);
-}
-
-html.loading ul.nav li a {
+html[data-speclate-page="links"] ul.nav li.links a,
+html[data-speclate-page="posts"] ul.nav li.posts a,
+html[data-speclate-page="tags"] ul.nav li.tags a,
+html[data-speclate-page="talks"] ul.nav li.talks a,
+html[data-speclate-page="about"] ul.nav li.about a {
+    // transform: rotate(320deg);
     animation-name: spin;
-    animation-iteration-count: infinite;
+    animation-iteration-count: once;
     animation-timing-function: linear;
-    animation-duration: $duration;
+    animation-duration: $duration /2;
     animation-fill-mode: forwards;
     animation-play-state: play;
     .spinner {
         animation-name: spin;
+        animation-fill-mode: forwards;
         animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        animation-iteration-count: once;
         animation-direction: reverse;
-        animation-duration: $duration;
+        animation-duration: $duration /2;
+    }
+}
+
+html ul.nav li a.loading {
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: $duration /2;
+    animation-fill-mode: forwards;
+    animation-play-state: play;
+    animation-iteration-count: infinite;
+    .spinner {
+        animation-iteration-count: infinite;
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-direction: reverse;
+        animation-duration: $duration /2;
     }
 }
 
