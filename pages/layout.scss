@@ -265,3 +265,11 @@
     html.loading footer {
         display: none;
     }
+    
+    .simonmcmanus-container {
+        position: absolute;
+        height: 150%;
+        right: 0;
+        top: 0;
+        border: 0px solid $focus;
+    }
