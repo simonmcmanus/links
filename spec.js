@@ -185,6 +185,7 @@ module.exports = {
         },
 
         files: [
+            'google221a99ae521d425f.html',
             "cv.html",
             "favicon.ico",
             "client/icons/play.svg",
