@@ -5,7 +5,7 @@ title: Engineering Principles
 date: Sat May 08 2021 07:41:00 GMT+0100 (British Summer Time)
 ---
    
-   Over the last year Ive found myself facing lots of new problems, Ive found myself referring to my engineering principles a lot. I thought it would be worth writing them down here.  This is going to be an evolving list of my engineering principles. 
+Over the last year few Ive found myself referring to my engineering principles quite regularly. I thought it would be worth writing them down here.  This is going to be an evolving list of my engineering principles. 
 
 ## Define your problem first 
 
@@ -23,7 +23,7 @@ By having clearly defined problem statement, we can provide possible solutions i
 Always try to do the simplest possible thing first so that you can learn from it before you move onto the next thing. By having a clearly defined problem statement that makes it much easier to provide a simple solution that can be measured against the specific problem. 
 What is the smallest step we can take to validate this hypothesis?
 
-Why complex systems fail 
+[Why complex systems fail](https://how.complexsystems.fail)
 
 
 ## Work in the smallest possible increments 
@@ -32,19 +32,18 @@ Work closely with designers, optimise for tight feedback loops and short sprints
 
 Understand this happens at multiple levels,  you have multiple loops in play at any time.  Keep them tight and fast.
 
-## Do Less - and be up front about it
+## Plan to do Less - and be up front about it
 
-The biggest reason software projects fails is being overly ambitious. 
-
-
-do less in a shorter time and you
+The main reason software projects fails is being overly ambitious. 
 
 
 
 ## Separate delivery and discovery 
 
 Predictability in software is hard, but my best advice for being predictable is to separate discovery and delivery.
- This does not necessarily mean doing all the discovery up front, and yes we are always discovering, but the ability to de-risk a delivery by removing the big discovery work is something Ive seen work a number of times now. 
+This does not necessarily mean doing all the discovery up front, and yes we are always discovering, but the ability to de-risk a delivery by removing the big discovery work is something Ive seen work a number of times now. 
+
+https://leaddev.com/scaling-software-systems/primer-engineering-delivery-metrics
 
 
 ## Understand Priorities 
@@ -65,14 +64,6 @@ Assumptions hide complexity - The best way to remove assumptions from a task it 
 ## Embrace the unknown 
 
 This might seems to be at odds with removing assumptions but it's actually closely connected. By Ackowledging what we don't know we remove assumptions from the process. We can then dedicate time to understanding and solving those problems  in an isolated and measured way.
-
-Unknowns occur at two levels 
-
-* Requirements 
-    * What needs to be build
-* Solutions 
-    * How it will be build
-    * What it will be built on top of 
 
 
 ## Last responsible moment
