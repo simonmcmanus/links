@@ -88,5 +88,5 @@ I will try to keep this list up to date, did I miss anything obvious? What are y
 
 Please let me know on twitter.
 
-@simonmcmanus
+[@simonmcmanus](https://twitter.com/simonmcmanus)
 
