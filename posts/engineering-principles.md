@@ -23,23 +23,18 @@ By having a clearly defined problem statement, we can provide possible solutions
 *****
 ## Keep it simple 
 
-Always try to do the simplest possible thing first so that you can learn from it before you move onto the next thing. Clearly defined problem statements make it much easier to provide a simple solution that can be measured against the specific problem. 
-What is the smallest step we can take to validate this hypothesis?
+Work in small increments, Take the smallest step possible to validate your hypothysis before taking the next step. What is the smallest step we can take to validate this hypothesis?
 
 [Why complex systems fail](https://how.complexsystems.fail)
 
 *****
 
-## Work in the smallest possible increments 
+## Tight Feedback Loops
 
-Work closely with designers, optimise for tight feedback loops and short sprints. The sooner you can get real users testing your solutions the better. 
+Work closely with designers, optimise for tight feedback loops and short iteration cycles. The sooner you can get real users testing your solutions the better. 
 
 Understand this happens at multiple levels,  you have multiple loops in play at any time.  Keep them tight and fast.
 
-*****
-## Plan to do Less
-
-The main reason software projects fail is being overly ambitious. 
 
 *****
 
