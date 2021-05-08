@@ -5,7 +5,7 @@ title: Engineering Principles
 date: Sat May 08 2021 07:41:00 GMT+0100 (British Summer Time)
 ---
    
-Over the last year few Ive found myself referring to my engineering principles quite regularly. I thought it would be worth writing them down here.  This is going to be an evolving list of my engineering principles. 
+Over the last year Ive been leading teams with new technologies im less familiar with. I've found myself referring to my engineering principles quite regularly. I thought it would be worth writing them down here.  This is going to be an evolving list of my engineering principles. 
 
 ## Define your problem first 
 
@@ -84,7 +84,7 @@ As engineers we never stop learning which means there is always room for improve
 
 
 
-I will try to keep this list up to date, did I miss anything obvious? What do you think?
+I will try to keep this list up to date, did I miss anything obvious? What are your engineering principles?
 
 Please let me know on twitter.
 
