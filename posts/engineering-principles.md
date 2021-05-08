@@ -8,11 +8,11 @@ date: Sat May 08 2021 07:41:00 GMT+0100 (British Summer Time)
 Over the last year, I've found myself referring to my engineering principles quite regularly. I thought it would be worth writing them down here.  This is going to be an evolving list of my engineering principles. 
 
 *****
-## Define your problem first 
+## Define the Problem first 
 
 To identify a good solution, you must first be clear about the problem it is meant to solve. 
 Working on a solution without a problem can introduce complexity with little or no value.
-For best results, they should be business/user problems rather than technology problems. 
+For best results, start with the business/user problems. 
 
 *****
 
@@ -23,7 +23,7 @@ By having a clearly defined problem statement, we can provide possible solutions
 *****
 ## Keep it simple 
 
-Work in small increments, Take the smallest step possible to validate your hypothysis before taking the next step. What is the smallest step we can take to validate this hypothesis?
+Work in small simple increments, Take the smallest step possible so that you can learn something before taking the next step. What is the smallest step/s we can take to validate this hypothesis?
 
 [Why complex systems fail](https://how.complexsystems.fail)
 
@@ -45,10 +45,6 @@ This does not necessarily mean doing all the discovery upfront, and yes we are a
 
 https://leaddev.com/scaling-software-systems/primer-engineering-delivery-metrics
 
-*****
-## Understand Priorities 
-
-One benefit of working incrementally is the ability to focus on tasks, but it's only possible when the priorities are laid out. A well-prioritised product backlog is the simplest way to maintain this.
 
 *****
 ## Avoid and Justify complexity 
@@ -64,7 +60,7 @@ Assumptions hide complexity - The best way to remove assumptions is to break a t
 *****
 ## Embrace the unknown 
 
-This might seems to be at odds with removing assumptions but it's closely connected. By Acknowledging what we don't know we remove assumptions from the process. We can then dedicate time to understanding and solving those problems in an isolated and measured way.
+This might seems to be at odds with removing assumptions but it's closely connected. By Acknowledging what we don't know we remove assumptions from the process. We can then dedicate time to understanding and solving those problems in isolation.
 
 *****
 ## Last responsible moment
