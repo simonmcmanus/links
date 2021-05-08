@@ -68,22 +68,19 @@ This might seems to be at odds with removing assumptions but it's actually close
 
 ## Last responsible moment
 
-Technology changes at a relentless pace,  be it the external landscape or you internal stack. And then there are requirements changes :).   On big projects it’s often tempting to do some work up front to figure out the best solution.  The reality is that this is best done as close to the real work being done to ensure the solutions are relevant.
+Technology changes at a relentless pace,  be it the external landscape or you internal stack. And then there are changes to requirements.   On big projects it’s often tempting to do some work up front to figure out the best solution.  The reality is that this is best done as close to the real work being done to ensure the solutions are relevant.
 
 
 ## Integrate continuously 
 
-In order to work at scale it’s necessary to separate concerns and have clear boundaries so people work independently,  but the risk is the pieces built in isolation won't work in unison.  You can mitigate this risk by always combining the different pieces as often as possible.
+In order to work at scale it’s necessary to separate concerns and have clear boundaries so people work independently, the risk is the pieces built in isolation won't work in unison.  You can mitigate this risk by always combining the different pieces as often as possible.
 
-A couple of examples:
-    * merging to master every day - no long lived branches
-    * Deploy to a real prod environment from day 1
 
 
 
 ## Continuous improvement   
 
-As engineers we never stop learning which means there is always room for improvement.  Actively seek it out and challenge assumptions around the status quo is important. It's important that engineers feel empowered to bring about change. 
+As engineers we never stop learning which means there is always room for improvement.  Actively seek it out and challenging assumptions around the status quo is important. It's important that engineers feel empowered to bring about change. 
 
 
 
