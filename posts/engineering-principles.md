@@ -5,7 +5,7 @@ title: Engineering Principles
 date: Sat May 08 2021 07:41:00 GMT+0100 (British Summer Time)
 ---
    
-As a contractor I was used to have extensive expereince with most of the technologies I would be working on. Over the last year Ive been leading teams working with new technologies im less familiar with. I've found myself referring to my engineering principles quite regularly. I thought it would be worth writing them down here.  This is going to be an evolving list of my engineering principles. 
+As a contractor I was used to have extensive expereince with the technologies I would be working on. Over the last year Ive been leading teams working with new technologies im less familiar with. I've found myself referring to my engineering principles quite regularly. I thought it would be worth writing them down here.  This is going to be an evolving list of my engineering principles. 
 
 *****
 ## Define your problem first 
