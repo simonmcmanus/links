@@ -5,7 +5,7 @@ title: Engineering Principles
 date: Sat May 08 2021 07:41:00 GMT+0100 (British Summer Time)
 ---
    
-Over the last year, I've found myself referring to my engineering principles quite regularly. I thought it would be worth writing them down here.  This is going to be an evolving list of my engineering principles. 
+Over the last year, I've found myself referring to my engineering principles quite regularly. I thought it would be worth writing them down my top 10 here.  This is going to be an evolving list of my engineering principles. 
 
 *****
 ## Define the Problem first 
@@ -37,19 +37,9 @@ Understand this happens at multiple levels,  you have multiple loops in play at 
 
 
 *****
-
-## Separate delivery and discovery 
-
-Predictability in software is hard, but my best advice for being predictable is to separate discovery and delivery.
-This does not necessarily mean doing all the discovery upfront, and yes we are always discovering, but the ability to de-risk a delivery by removing the big discovery work is something I've seen work several times now. 
-
-https://leaddev.com/scaling-software-systems/primer-engineering-delivery-metrics
-
-
-*****
 ## Justify complexity 
 
-As engineers we trade in complexity everyday. It's not always possible to avoid complexity but we can minise it by instisting any complexity introduced has to demonstrate it will add more user/business value. This is a great way to keep unnecessary tech/requirements away from your code. [Be boring](https://adamsilver.io/blog/the-boring-front-end-developer/). 
+As engineers we trade in complexity everyday. It's not always possible to avoid complexity but we can minise it by insisting any complexity introduced has to demonstrate it will add more user/business value. This is a great way to keep unnecessary tech/requirements away from your code. [Be boring](https://adamsilver.io/blog/the-boring-front-end-developer/). 
 
 *****
 
