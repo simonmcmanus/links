@@ -23,7 +23,7 @@ By having a clearly defined problem statement, we can provide possible solutions
 *****
 ## Keep it simple 
 
-Work in small simple increments, Take the smallest step possible so that you can learn something before taking the next step. What is the smallest step/s we can take to validate this hypothesis?
+Work in small simple increments, Take the smallest, simplist step possible so that you can learn something before taking the next step. What is the smallest step/s we can take to validate this hypothesis?
 
 [Why complex systems fail](https://how.complexsystems.fail)
 
@@ -47,9 +47,9 @@ https://leaddev.com/scaling-software-systems/primer-engineering-delivery-metrics
 
 
 *****
-## Avoid and Justify complexity 
+## Justify complexity 
 
-As engineers we trade in complexity everyday. We need to justify any complexity added to a project against the user/business value it produces. This is a great way to keep unnecessary tech/requirements away from your code. 
+As engineers we trade in complexity everyday. It's not always possible to avoid complexity but we can minise it by instisting any complexity introduced has to demonstrate it will add more user/business value. This is a great way to keep unnecessary tech/requirements away from your code. [Be boring](https://adamsilver.io/blog/the-boring-front-end-developer/). 
 
 *****
 
@@ -67,7 +67,8 @@ This might seems to be at odds with removing assumptions but it's closely connec
 
 Technology changes at a relentless pace,  be it the external landscape or your internal stack. And then there are changes to requirements.   On big projects, it’s often tempting to do some work upfront to figure out the best solution.  The reality is that this is best done as close to the real work being done to ensure the solutions are relevant.
 
-*****
+
+
 ## Integrate continuously 
 
 To operate at scale, it’s necessary to separate concerns and have clear boundaries so people work independently, the risk is the pieces built-in isolation won't work in unison.  You can mitigate this risk by always combining the different pieces as often as possible.
@@ -76,7 +77,7 @@ To operate at scale, it’s necessary to separate concerns and have clear bounda
 
 ## Continuous improvement   
 
-As engineers, we never stop learning which means there is always room for improvement.  Actively seek it out and challenging assumptions around the status quo is important. It's important that engineers feel empowered to bring about change. 
+As engineers, we never stop learning which means there is always room for improvement.  Actively seek it out and challenging assumptions around the status quo. It's important that engineers feel empowered to bring about change. 
 
 *****
 
